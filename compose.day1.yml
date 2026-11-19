@@ -1,0 +1,7 @@
+services:
+  mock-api:
+    build:
+      context: .
+      dockerfile: Dockerfile.day1
+    ports:
+      - "127.0.0.1:8000:8000"

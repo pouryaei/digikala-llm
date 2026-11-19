@@ -1,0 +1,7 @@
+FROM python:3.11-slim
+WORKDIR /app
+COPY requirements-day1.txt .
+RUN pip install --no-cache-dir -r requirements-day1.txt
+COPY qbc13_day1 ./qbc13_day1
+EXPOSE 8000
+CMD ["uvicorn", "qbc13_day1.mock_api:app", "--host", "0.0.0.0", "--port", "8000"]

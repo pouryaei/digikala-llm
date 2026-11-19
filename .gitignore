@@ -1,0 +1,11 @@
+
+# QBC13 local files
+.env
+.env.*
+!.env.example
+/digikala/*.csv
+/digikala/*.rar
+/data/raw/
+/QBC13_Day1_Kit.zip
+*.duckdb
+__pycache__/
