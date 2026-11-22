@@ -1,11 +1,31 @@
 
 # QBC13 local files
-.env
-.env.*
-!.env.example
 /digikala/*.csv
 /digikala/*.rar
 /data/raw/
 /QBC13_Day1_Kit.zip
 *.duckdb
 __pycache__/
+
+# Data, Databases & Parquet files
+data/
+*.parquet
+*.duckdb
+*.sqlite
+
+# Evaluation outputs & Indexes
+eval/
+*.index
+*.faiss
+artifacts/
+
+# Python Cache & Environments
+__pycache__/
+*.py[cod]
+.venv/
+btq/
+.ipynb_checkpoints/
+.env
+.env.*
+!.env.example
+
