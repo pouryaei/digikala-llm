@@ -1,0 +1,161 @@
+{
+  "version": "1.0",
+  "method": "Method A - Silver Ground Truth (Known-Item Search)",
+  "total_queries": 22,
+  "queries": [
+    {
+      "query_id": "Q01",
+      "query": "تاپ ورزشی زنانه کچوا",
+      "query_type": "short_keyword",
+      "target_product_id": "10070145",
+      "reference_title": "تاپ ورزشی زنانه کچوا مدل NH500"
+    },
+    {
+      "query_id": "Q02",
+      "query": "نمک صورتی دانه بندی",
+      "query_type": "short_keyword",
+      "target_product_id": "10011724",
+      "reference_title": "نمک صورتی دانه بندی نمکدان دماوند - 1000 گرم"
+    },
+    {
+      "query_id": "Q03",
+      "query": "شلوار دخترانه لوپیلو sh28",
+      "query_type": "short_keyword",
+      "target_product_id": "10001980",
+      "reference_title": "شلوار دخترانه لوپیلو مدل sh28"
+    },
+    {
+      "query_id": "Q04",
+      "query": "ویولن آکوستیک سوپرانو",
+      "query_type": "short_keyword",
+      "target_product_id": "10079239",
+      "reference_title": "ویولن آکوستیک مدل سوپرانو"
+    },
+    {
+      "query_id": "Q05",
+      "query": "ناخن گیر کودک دختر",
+      "query_type": "short_keyword",
+      "target_product_id": "10031688",
+      "reference_title": "ناخن گیر کودک مدل دختر"
+    },
+    {
+      "query_id": "Q06",
+      "query": "گردنبند نقاشی شهید سردار",
+      "query_type": "short_keyword",
+      "target_product_id": "10025981",
+      "reference_title": "گردنبند طرح نقاشی شهید سردار سلیمانی کد 83"
+    },
+    {
+      "query_id": "Q07",
+      "query": "کتاب رویاهایت را دنبال",
+      "query_type": "short_keyword",
+      "target_product_id": "10024512",
+      "reference_title": "کتاب رویاهایت را دنبال کن اثر جولی ارتز انتشارات اندیشه کهن"
+    },
+    {
+      "query_id": "Q08",
+      "query": "خرید کتاب مقاله ها اثر صمد با کیفیت مناسب",
+      "query_type": "semantic",
+      "target_product_id": "10015722",
+      "reference_title": "کتاب مجموعه مقاله ها اثر صمد بهرنگی نشر روزبهان"
+    },
+    {
+      "query_id": "Q09",
+      "query": "خرید عطر جیبی اسمارت کالکشن Cartier با کیفیت مناسب",
+      "query_type": "semantic",
+      "target_product_id": "10078853",
+      "reference_title": "عطر جیبی اسمارت کالکشن مدل Cartier TomFord حجم 30 میلی لیتر بسته 2 عددی"
+    },
+    {
+      "query_id": "Q10",
+      "query": "خرید جوراب ورزشی ساق بلند زنانه با کیفیت مناسب",
+      "query_type": "semantic",
+      "target_product_id": "10008874",
+      "reference_title": "جوراب ورزشی ساق بلند زنانه مدل 02"
+    },
+    {
+      "query_id": "Q11",
+      "query": "خرید دفتر نت موسیقی فضانورد و با کیفیت مناسب",
+      "query_type": "semantic",
+      "target_product_id": "10074612",
+      "reference_title": "دفتر نت موسیقی مدل فضانورد و ماه DN-387"
+    },
+    {
+      "query_id": "Q12",
+      "query": "خرید رویه بافت زنانه اسمارا RQIAN با کیفیت مناسب",
+      "query_type": "semantic",
+      "target_product_id": "10088352",
+      "reference_title": "رویه بافت زنانه اسمارا مدل RQIAN"
+    },
+    {
+      "query_id": "Q13",
+      "query": "خرید ست تاپ و شلوار ورزشی با کیفیت مناسب",
+      "query_type": "semantic",
+      "target_product_id": "10058930",
+      "reference_title": "ست تاپ و شلوار ورزشی زنانه کد OGH01"
+    },
+    {
+      "query_id": "Q14",
+      "query": "خرید شکلات خوری فیروزه کوبی 18 با کیفیت مناسب",
+      "query_type": "semantic",
+      "target_product_id": "10006329",
+      "reference_title": "شکلات خوری فیروزه کوبی کد 18"
+    },
+    {
+      "query_id": "Q15",
+      "query": "آیا کاربران از کیفیت و کارایی اسپری تمیز کننده کفش بلرتو راضی هستند؟",
+      "query_type": "review_qa",
+      "target_product_id": "10065041",
+      "reference_title": "اسپری تمیز کننده کفش بلرتو مدل BE1170 کد Bl150"
+    },
+    {
+      "query_id": "Q16",
+      "query": "آیا کاربران از کیفیت و کارایی کیف پول مردانه کویین Q50 راضی هستند؟",
+      "query_type": "review_qa",
+      "target_product_id": "10046185",
+      "reference_title": "کیف پول مردانه کویین مدل Q50"
+    },
+    {
+      "query_id": "Q17",
+      "query": "آیا کاربران از کیفیت و کارایی پلیور زنانه ax7 راضی هستند؟",
+      "query_type": "review_qa",
+      "target_product_id": "10002536",
+      "reference_title": "پلیور زنانه مدل ax7"
+    },
+    {
+      "query_id": "Q18",
+      "query": "آیا کاربران از کیفیت و کارایی ماش دستچین زرین برکت - راضی هستند؟",
+      "query_type": "review_qa",
+      "target_product_id": "10002507",
+      "reference_title": "ماش دستچین زرین برکت - 1 کیلوگرم"
+    },
+    {
+      "query_id": "Q19",
+      "query": "آیا کاربران از کیفیت و کارایی کیف رودوشی گودیکا 5120 راضی هستند؟",
+      "query_type": "review_qa",
+      "target_product_id": "10006791",
+      "reference_title": "کیف رودوشی گودیکا مدل 5120"
+    },
+    {
+      "query_id": "Q20",
+      "query": "آیا کاربران از کیفیت و کارایی صندل مردانه 254005802 راضی هستند؟",
+      "query_type": "review_qa",
+      "target_product_id": "10023647",
+      "reference_title": "صندل مردانه مدل 254005802"
+    },
+    {
+      "query_id": "Q21",
+      "query": "کدام دسته‌بندی بیشترین تعداد نظرات کاربران را دارد؟",
+      "query_type": "analytical",
+      "target_product_id": null,
+      "reference_title": null
+    },
+    {
+      "query_id": "Q22",
+      "query": "محصولاتی که اصلاً در فروشگاه وجود ندارند مثل خودروی تسلا",
+      "query_type": "edge_case_out_of_domain",
+      "target_product_id": null,
+      "reference_title": null
+    }
+  ]
+}

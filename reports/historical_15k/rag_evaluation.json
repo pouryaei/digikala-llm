@@ -1,0 +1,3493 @@
+{
+  "assets": {
+    "products": 15000,
+    "faiss_vectors": 15000,
+    "faiss_dimensions": 384,
+    "reviews": 26215,
+    "products_with_reviews": 3105,
+    "same_ids_and_order": true
+  },
+  "smoke": {
+    "product_id": 10133811,
+    "verified_reviews": 65,
+    "evidence": 8,
+    "no_review_abstention": true,
+    "ambiguous_product_abstention": true,
+    "comparison_is_product_scoped": true,
+    "real_api_calls": 0
+  },
+  "retrieval": {
+    "bm25": {
+      "mode": "bm25",
+      "target_queries": 20,
+      "Hit@1": 1.0,
+      "Hit@5": 1.0,
+      "MRR@5": 1.0,
+      "median_latency_seconds": 0.037956500000000004,
+      "queries": [
+        {
+          "query_id": "Q01",
+          "query_type": "short_keyword",
+          "query": "تاپ ورزشی زنانه کچوا",
+          "target_product_id": "10070145",
+          "retrieved_ids": [
+            "10070145",
+            "10875038",
+            "10854671",
+            "10362971",
+            "10854695"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.029317
+        },
+        {
+          "query_id": "Q02",
+          "query_type": "short_keyword",
+          "query": "نمک صورتی دانه بندی",
+          "target_product_id": "10011724",
+          "retrieved_ids": [
+            "10011724",
+            "10190286",
+            "10209503",
+            "10664036",
+            "10950059"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.023028
+        },
+        {
+          "query_id": "Q03",
+          "query_type": "short_keyword",
+          "query": "شلوار دخترانه لوپیلو sh28",
+          "target_product_id": "10001980",
+          "retrieved_ids": [
+            "10001980",
+            "11464911",
+            "12002089",
+            "11663064",
+            "11240571"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.024614
+        },
+        {
+          "query_id": "Q04",
+          "query_type": "short_keyword",
+          "query": "ویولن آکوستیک سوپرانو",
+          "target_product_id": "10079239",
+          "retrieved_ids": [
+            "10079239",
+            "11757195",
+            "10583032",
+            "10946509",
+            "11055245"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.018596
+        },
+        {
+          "query_id": "Q05",
+          "query_type": "short_keyword",
+          "query": "ناخن گیر کودک دختر",
+          "target_product_id": "10031688",
+          "retrieved_ids": [
+            "10031688",
+            "10046429",
+            "11444961",
+            "10693086",
+            "1067619"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.021626
+        },
+        {
+          "query_id": "Q06",
+          "query_type": "short_keyword",
+          "query": "گردنبند نقاشی شهید سردار",
+          "target_product_id": "10025981",
+          "retrieved_ids": [
+            "10025981",
+            "11593565",
+            "11800091",
+            "11939927",
+            "11718398"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.023146
+        },
+        {
+          "query_id": "Q07",
+          "query_type": "short_keyword",
+          "query": "کتاب رویاهایت را دنبال",
+          "target_product_id": "10024512",
+          "retrieved_ids": [
+            "10024512",
+            "11739182",
+            "10682738",
+            "10682754",
+            "10711878"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.025401
+        },
+        {
+          "query_id": "Q08",
+          "query_type": "semantic",
+          "query": "خرید کتاب مقاله ها اثر صمد با کیفیت مناسب",
+          "target_product_id": "10015722",
+          "retrieved_ids": [
+            "10015722",
+            "10119445",
+            "10470328",
+            "11908823",
+            "114502"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.044168
+        },
+        {
+          "query_id": "Q09",
+          "query_type": "semantic",
+          "query": "خرید عطر جیبی اسمارت کالکشن Cartier با کیفیت مناسب",
+          "target_product_id": "10078853",
+          "retrieved_ids": [
+            "10078853",
+            "10056847",
+            "10131395",
+            "10538438",
+            "10538636"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.031774
+        },
+        {
+          "query_id": "Q10",
+          "query_type": "semantic",
+          "query": "خرید جوراب ورزشی ساق بلند زنانه با کیفیت مناسب",
+          "target_product_id": "10008874",
+          "retrieved_ids": [
+            "10008874",
+            "10041975",
+            "10042124",
+            "10075828",
+            "11293743"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.036835
+        },
+        {
+          "query_id": "Q11",
+          "query_type": "semantic",
+          "query": "خرید دفتر نت موسیقی فضانورد و با کیفیت مناسب",
+          "target_product_id": "10074612",
+          "retrieved_ids": [
+            "10074612",
+            "10074471",
+            "10073492",
+            "10659394",
+            "10669084"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.043463
+        },
+        {
+          "query_id": "Q12",
+          "query_type": "semantic",
+          "query": "خرید رویه بافت زنانه اسمارا RQIAN با کیفیت مناسب",
+          "target_product_id": "10088352",
+          "retrieved_ids": [
+            "10088352",
+            "10390564",
+            "10869509",
+            "10571463",
+            "11460235"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.073569
+        },
+        {
+          "query_id": "Q13",
+          "query_type": "semantic",
+          "query": "خرید ست تاپ و شلوار ورزشی با کیفیت مناسب",
+          "target_product_id": "10058930",
+          "retrieved_ids": [
+            "10058930",
+            "10430197",
+            "10430278",
+            "11739181",
+            "11829288"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.04276
+        },
+        {
+          "query_id": "Q14",
+          "query_type": "semantic",
+          "query": "خرید شکلات خوری فیروزه کوبی 18 با کیفیت مناسب",
+          "target_product_id": "10006329",
+          "retrieved_ids": [
+            "10006329",
+            "11640063",
+            "11849820",
+            "11577197",
+            "11577256"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.031294
+        },
+        {
+          "query_id": "Q15",
+          "query_type": "review_qa",
+          "query": "آیا کاربران از کیفیت و کارایی اسپری تمیز کننده کفش بلرتو راضی هستند؟",
+          "target_product_id": "10065041",
+          "retrieved_ids": [
+            "10065041",
+            "11361750",
+            "10377245",
+            "10376789",
+            "10901593"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.047069
+        },
+        {
+          "query_id": "Q16",
+          "query_type": "review_qa",
+          "query": "آیا کاربران از کیفیت و کارایی کیف پول مردانه کویین Q50 راضی هستند؟",
+          "target_product_id": "10046185",
+          "retrieved_ids": [
+            "10046185",
+            "11355763",
+            "10085952",
+            "10805065",
+            "10804891"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.053233
+        },
+        {
+          "query_id": "Q17",
+          "query_type": "review_qa",
+          "query": "آیا کاربران از کیفیت و کارایی پلیور زنانه ax7 راضی هستند؟",
+          "target_product_id": "10002536",
+          "retrieved_ids": [
+            "10002536",
+            "10915524",
+            "11458447",
+            "10620252",
+            "10014752"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.049304
+        },
+        {
+          "query_id": "Q18",
+          "query_type": "review_qa",
+          "query": "آیا کاربران از کیفیت و کارایی ماش دستچین زرین برکت - راضی هستند؟",
+          "target_product_id": "10002507",
+          "retrieved_ids": [
+            "10002507",
+            "10003660",
+            "10003289",
+            "10002173",
+            "11052136"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.039078
+        },
+        {
+          "query_id": "Q19",
+          "query_type": "review_qa",
+          "query": "آیا کاربران از کیفیت و کارایی کیف رودوشی گودیکا 5120 راضی هستند؟",
+          "target_product_id": "10006791",
+          "retrieved_ids": [
+            "10006791",
+            "10085736",
+            "10009960",
+            "10018070",
+            "10021094"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.045341
+        },
+        {
+          "query_id": "Q20",
+          "query_type": "review_qa",
+          "query": "آیا کاربران از کیفیت و کارایی صندل مردانه 254005802 راضی هستند؟",
+          "target_product_id": "10023647",
+          "retrieved_ids": [
+            "10023647",
+            "10023621",
+            "11954610",
+            "10913583",
+            "11791028"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.040489
+        }
+      ],
+      "warmup_seconds": 0.018596
+    },
+    "dense": {
+      "mode": "dense",
+      "target_queries": 20,
+      "Hit@1": 0.55,
+      "Hit@5": 0.75,
+      "MRR@5": 0.6416666666666667,
+      "median_latency_seconds": 0.028317000000000002,
+      "queries": [
+        {
+          "query_id": "Q01",
+          "query_type": "short_keyword",
+          "query": "تاپ ورزشی زنانه کچوا",
+          "target_product_id": "10070145",
+          "retrieved_ids": [
+            "11987025",
+            "10774625",
+            "10058930",
+            "11264421",
+            "11855811"
+          ],
+          "rank": null,
+          "latency_seconds": 0.025532
+        },
+        {
+          "query_id": "Q02",
+          "query_type": "short_keyword",
+          "query": "نمک صورتی دانه بندی",
+          "target_product_id": "10011724",
+          "retrieved_ids": [
+            "10011724",
+            "10190286",
+            "10184154",
+            "11778496",
+            "10664036"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.032441
+        },
+        {
+          "query_id": "Q03",
+          "query_type": "short_keyword",
+          "query": "شلوار دخترانه لوپیلو sh28",
+          "target_product_id": "10001980",
+          "retrieved_ids": [
+            "10001980",
+            "11936474",
+            "11782460",
+            "11428488",
+            "10553297"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.027239
+        },
+        {
+          "query_id": "Q04",
+          "query_type": "short_keyword",
+          "query": "ویولن آکوستیک سوپرانو",
+          "target_product_id": "10079239",
+          "retrieved_ids": [
+            "10079239",
+            "11147704",
+            "10689116",
+            "10689214",
+            "11512114"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.023814
+        },
+        {
+          "query_id": "Q05",
+          "query_type": "short_keyword",
+          "query": "ناخن گیر کودک دختر",
+          "target_product_id": "10031688",
+          "retrieved_ids": [
+            "10031688",
+            "10046429",
+            "11959998",
+            "11278432",
+            "10163338"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.018676
+        },
+        {
+          "query_id": "Q06",
+          "query_type": "short_keyword",
+          "query": "گردنبند نقاشی شهید سردار",
+          "target_product_id": "10025981",
+          "retrieved_ids": [
+            "10025981",
+            "11958977",
+            "11702945",
+            "10324678",
+            "10301661"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.032344
+        },
+        {
+          "query_id": "Q07",
+          "query_type": "short_keyword",
+          "query": "کتاب رویاهایت را دنبال",
+          "target_product_id": "10024512",
+          "retrieved_ids": [
+            "10024512",
+            "11015458",
+            "10918829",
+            "10844580",
+            "1051653"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.024112
+        },
+        {
+          "query_id": "Q08",
+          "query_type": "semantic",
+          "query": "خرید کتاب مقاله ها اثر صمد با کیفیت مناسب",
+          "target_product_id": "10015722",
+          "retrieved_ids": [
+            "10015722",
+            "11086374",
+            "11971576",
+            "11115709",
+            "1076021"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.028218
+        },
+        {
+          "query_id": "Q09",
+          "query_type": "semantic",
+          "query": "خرید عطر جیبی اسمارت کالکشن Cartier با کیفیت مناسب",
+          "target_product_id": "10078853",
+          "retrieved_ids": [
+            "11975994",
+            "10806427",
+            "10072581",
+            "10593606",
+            "10200720"
+          ],
+          "rank": null,
+          "latency_seconds": 0.032718
+        },
+        {
+          "query_id": "Q10",
+          "query_type": "semantic",
+          "query": "خرید جوراب ورزشی ساق بلند زنانه با کیفیت مناسب",
+          "target_product_id": "10008874",
+          "retrieved_ids": [
+            "10769207",
+            "10008874",
+            "10041975",
+            "11371484",
+            "11147605"
+          ],
+          "rank": 2,
+          "latency_seconds": 0.031554
+        },
+        {
+          "query_id": "Q11",
+          "query_type": "semantic",
+          "query": "خرید دفتر نت موسیقی فضانورد و با کیفیت مناسب",
+          "target_product_id": "10074612",
+          "retrieved_ids": [
+            "10074612",
+            "11181916",
+            "10895817",
+            "10378634",
+            "10986796"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.025419
+        },
+        {
+          "query_id": "Q12",
+          "query_type": "semantic",
+          "query": "خرید رویه بافت زنانه اسمارا RQIAN با کیفیت مناسب",
+          "target_product_id": "10088352",
+          "retrieved_ids": [
+            "10475149",
+            "10088352",
+            "10641189",
+            "11031914",
+            "11271634"
+          ],
+          "rank": 2,
+          "latency_seconds": 0.028416
+        },
+        {
+          "query_id": "Q13",
+          "query_type": "semantic",
+          "query": "خرید ست تاپ و شلوار ورزشی با کیفیت مناسب",
+          "target_product_id": "10058930",
+          "retrieved_ids": [
+            "10680289",
+            "10846403",
+            "11849673",
+            "11527640",
+            "11527639"
+          ],
+          "rank": null,
+          "latency_seconds": 0.024603
+        },
+        {
+          "query_id": "Q14",
+          "query_type": "semantic",
+          "query": "خرید شکلات خوری فیروزه کوبی 18 با کیفیت مناسب",
+          "target_product_id": "10006329",
+          "retrieved_ids": [
+            "10006329",
+            "11640063",
+            "11849820",
+            "11324338",
+            "11894055"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.02729
+        },
+        {
+          "query_id": "Q15",
+          "query_type": "review_qa",
+          "query": "آیا کاربران از کیفیت و کارایی اسپری تمیز کننده کفش بلرتو راضی هستند؟",
+          "target_product_id": "10065041",
+          "retrieved_ids": [
+            "11361750",
+            "10901593",
+            "10065041",
+            "10605146",
+            "11305138"
+          ],
+          "rank": 3,
+          "latency_seconds": 0.029345
+        },
+        {
+          "query_id": "Q16",
+          "query_type": "review_qa",
+          "query": "آیا کاربران از کیفیت و کارایی کیف پول مردانه کویین Q50 راضی هستند؟",
+          "target_product_id": "10046185",
+          "retrieved_ids": [
+            "10804891",
+            "10046185",
+            "10085952",
+            "11797302",
+            "10965633"
+          ],
+          "rank": 2,
+          "latency_seconds": 0.026285
+        },
+        {
+          "query_id": "Q17",
+          "query_type": "review_qa",
+          "query": "آیا کاربران از کیفیت و کارایی پلیور زنانه ax7 راضی هستند؟",
+          "target_product_id": "10002536",
+          "retrieved_ids": [
+            "10002536",
+            "11018480",
+            "11432849",
+            "11970786",
+            "11171136"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.031435
+        },
+        {
+          "query_id": "Q18",
+          "query_type": "review_qa",
+          "query": "آیا کاربران از کیفیت و کارایی ماش دستچین زرین برکت - راضی هستند؟",
+          "target_product_id": "10002507",
+          "retrieved_ids": [
+            "10055609",
+            "11623353",
+            "11489222",
+            "11935419",
+            "11075929"
+          ],
+          "rank": null,
+          "latency_seconds": 0.030654
+        },
+        {
+          "query_id": "Q19",
+          "query_type": "review_qa",
+          "query": "آیا کاربران از کیفیت و کارایی کیف رودوشی گودیکا 5120 راضی هستند؟",
+          "target_product_id": "10006791",
+          "retrieved_ids": [
+            "10006791",
+            "10085736",
+            "10839410",
+            "11711116",
+            "11485920"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.030695
+        },
+        {
+          "query_id": "Q20",
+          "query_type": "review_qa",
+          "query": "آیا کاربران از کیفیت و کارایی صندل مردانه 254005802 راضی هستند؟",
+          "target_product_id": "10023647",
+          "retrieved_ids": [
+            "10330473",
+            "11492891",
+            "10023621",
+            "11583641",
+            "11273626"
+          ],
+          "rank": null,
+          "latency_seconds": 0.030908
+        }
+      ],
+      "warmup_seconds": 5.79951
+    },
+    "hybrid": {
+      "mode": "hybrid",
+      "target_queries": 20,
+      "Hit@1": 0.7,
+      "Hit@5": 0.9,
+      "MRR@5": 0.7833333333333333,
+      "median_latency_seconds": 0.030760000000000003,
+      "queries": [
+        {
+          "query_id": "Q01",
+          "query_type": "short_keyword",
+          "query": "تاپ ورزشی زنانه کچوا",
+          "target_product_id": "10070145",
+          "retrieved_ids": [
+            "10058930",
+            "10070145",
+            "10774625",
+            "10854671",
+            "11209149"
+          ],
+          "rank": 2,
+          "latency_seconds": 0.020009
+        },
+        {
+          "query_id": "Q02",
+          "query_type": "short_keyword",
+          "query": "نمک صورتی دانه بندی",
+          "target_product_id": "10011724",
+          "retrieved_ids": [
+            "10011724",
+            "10190286",
+            "10184154",
+            "10209503",
+            "10664036"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.014916
+        },
+        {
+          "query_id": "Q03",
+          "query_type": "short_keyword",
+          "query": "شلوار دخترانه لوپیلو sh28",
+          "target_product_id": "10001980",
+          "retrieved_ids": [
+            "10001980",
+            "11464911",
+            "10553297",
+            "11936474",
+            "11518240"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.019191
+        },
+        {
+          "query_id": "Q04",
+          "query_type": "short_keyword",
+          "query": "ویولن آکوستیک سوپرانو",
+          "target_product_id": "10079239",
+          "retrieved_ids": [
+            "10079239",
+            "11512114",
+            "11147704",
+            "11757195",
+            "10689116"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.014231
+        },
+        {
+          "query_id": "Q05",
+          "query_type": "short_keyword",
+          "query": "ناخن گیر کودک دختر",
+          "target_product_id": "10031688",
+          "retrieved_ids": [
+            "10031688",
+            "10046429",
+            "11444961",
+            "11959998",
+            "10581556"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.016384
+        },
+        {
+          "query_id": "Q06",
+          "query_type": "short_keyword",
+          "query": "گردنبند نقاشی شهید سردار",
+          "target_product_id": "10025981",
+          "retrieved_ids": [
+            "10025981",
+            "11958977",
+            "11593565",
+            "11702945",
+            "11800091"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.016642
+        },
+        {
+          "query_id": "Q07",
+          "query_type": "short_keyword",
+          "query": "کتاب رویاهایت را دنبال",
+          "target_product_id": "10024512",
+          "retrieved_ids": [
+            "10024512",
+            "10463815",
+            "11015458",
+            "11739182",
+            "10918829"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.017258
+        },
+        {
+          "query_id": "Q08",
+          "query_type": "semantic",
+          "query": "خرید کتاب مقاله ها اثر صمد با کیفیت مناسب",
+          "target_product_id": "10015722",
+          "retrieved_ids": [
+            "10015722",
+            "10458307",
+            "114426",
+            "10119445",
+            "10089320"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.044403
+        },
+        {
+          "query_id": "Q09",
+          "query_type": "semantic",
+          "query": "خرید عطر جیبی اسمارت کالکشن Cartier با کیفیت مناسب",
+          "target_product_id": "10078853",
+          "retrieved_ids": [
+            "10538438",
+            "10882615",
+            "10200720",
+            "10538636",
+            "10154415"
+          ],
+          "rank": null,
+          "latency_seconds": 0.028883
+        },
+        {
+          "query_id": "Q10",
+          "query_type": "semantic",
+          "query": "خرید جوراب ورزشی ساق بلند زنانه با کیفیت مناسب",
+          "target_product_id": "10008874",
+          "retrieved_ids": [
+            "10008874",
+            "10041975",
+            "10042124",
+            "10769207",
+            "11293743"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.030761
+        },
+        {
+          "query_id": "Q11",
+          "query_type": "semantic",
+          "query": "خرید دفتر نت موسیقی فضانورد و با کیفیت مناسب",
+          "target_product_id": "10074612",
+          "retrieved_ids": [
+            "10074612",
+            "10669567",
+            "10659422",
+            "10074471",
+            "10669549"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.028778
+        },
+        {
+          "query_id": "Q12",
+          "query_type": "semantic",
+          "query": "خرید رویه بافت زنانه اسمارا RQIAN با کیفیت مناسب",
+          "target_product_id": "10088352",
+          "retrieved_ids": [
+            "10088352",
+            "10475149",
+            "10390564",
+            "10641189",
+            "10869509"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.030759
+        },
+        {
+          "query_id": "Q13",
+          "query_type": "semantic",
+          "query": "خرید ست تاپ و شلوار ورزشی با کیفیت مناسب",
+          "target_product_id": "10058930",
+          "retrieved_ids": [
+            "10430197",
+            "10430278",
+            "10333337",
+            "10418338",
+            "10418391"
+          ],
+          "rank": null,
+          "latency_seconds": 0.339391
+        },
+        {
+          "query_id": "Q14",
+          "query_type": "semantic",
+          "query": "خرید شکلات خوری فیروزه کوبی 18 با کیفیت مناسب",
+          "target_product_id": "10006329",
+          "retrieved_ids": [
+            "10006329",
+            "11640063",
+            "11849820",
+            "11324338",
+            "11894055"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.038589
+        },
+        {
+          "query_id": "Q15",
+          "query_type": "review_qa",
+          "query": "آیا کاربران از کیفیت و کارایی اسپری تمیز کننده کفش بلرتو راضی هستند؟",
+          "target_product_id": "10065041",
+          "retrieved_ids": [
+            "11361750",
+            "10065041",
+            "10901593",
+            "11944866",
+            "10377245"
+          ],
+          "rank": 2,
+          "latency_seconds": 0.042222
+        },
+        {
+          "query_id": "Q16",
+          "query_type": "review_qa",
+          "query": "آیا کاربران از کیفیت و کارایی کیف پول مردانه کویین Q50 راضی هستند؟",
+          "target_product_id": "10046185",
+          "retrieved_ids": [
+            "10046185",
+            "10804891",
+            "10085952",
+            "11797302",
+            "10458312"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.041895
+        },
+        {
+          "query_id": "Q17",
+          "query_type": "review_qa",
+          "query": "آیا کاربران از کیفیت و کارایی پلیور زنانه ax7 راضی هستند؟",
+          "target_product_id": "10002536",
+          "retrieved_ids": [
+            "10002536",
+            "11018480",
+            "10915524",
+            "11432849",
+            "11458447"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.03785
+        },
+        {
+          "query_id": "Q18",
+          "query_type": "review_qa",
+          "query": "آیا کاربران از کیفیت و کارایی ماش دستچین زرین برکت - راضی هستند؟",
+          "target_product_id": "10002507",
+          "retrieved_ids": [
+            "11562413",
+            "10055609",
+            "10002507",
+            "11623353",
+            "10003660"
+          ],
+          "rank": 3,
+          "latency_seconds": 0.04283
+        },
+        {
+          "query_id": "Q19",
+          "query_type": "review_qa",
+          "query": "آیا کاربران از کیفیت و کارایی کیف رودوشی گودیکا 5120 راضی هستند؟",
+          "target_product_id": "10006791",
+          "retrieved_ids": [
+            "10006791",
+            "10085736",
+            "11491860",
+            "10018070",
+            "10679197"
+          ],
+          "rank": 1,
+          "latency_seconds": 0.037821
+        },
+        {
+          "query_id": "Q20",
+          "query_type": "review_qa",
+          "query": "آیا کاربران از کیفیت و کارایی صندل مردانه 254005802 راضی هستند؟",
+          "target_product_id": "10023647",
+          "retrieved_ids": [
+            "10023621",
+            "11523033",
+            "10023647",
+            "12002147",
+            "10330473"
+          ],
+          "rank": 3,
+          "latency_seconds": 0.037524
+        }
+      ],
+      "warmup_seconds": 0.017378
+    }
+  },
+  "retrieval_scope": "20 existing title-derived known-item queries; not a broad or human-labelled benchmark",
+  "non_target_query_ids": [
+    "Q21",
+    "Q22"
+  ],
+  "qa_summary": {
+    "cases": 16,
+    "passed": 16,
+    "answered": 12,
+    "abstained": 4,
+    "evidence": 72,
+    "exact_evidence": 72,
+    "median_seconds": 0.0168055,
+    "p95_seconds": 0.030308,
+    "api_calls": 0,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "live_gateway_tested": false,
+    "human_semantic_judgments": false
+  },
+  "qa_cases": [
+    {
+      "case_id": "Q15",
+      "product_id": 10065041,
+      "question": "آیا کاربران از کیفیت و کارایی اسپری تمیز کننده کفش بلرتو راضی هستند؟",
+      "expected_mode": "insufficient_evidence",
+      "clues": [],
+      "group": "existing_qa_query",
+      "pass": true,
+      "checks": {
+        "evidence_count": 0,
+        "exact_evidence_count": 0,
+        "all_evidence_exact_and_scoped": true,
+        "no_duplicate_ids": true,
+        "answer_references_in_evidence": true,
+        "stats_match_source": true,
+        "theme_references_valid": true
+      },
+      "keyword_check": null,
+      "result": {
+        "product_id": 10065041,
+        "answer_mode": "insufficient_evidence",
+        "answer": null,
+        "reason": "برای این شناسه در دادهٔ در دسترس هیچ نظری پیدا نشد.",
+        "evidence": [],
+        "scope": "indexed_catalogue",
+        "stats": {
+          "total_reviews": 0,
+          "text_review_count": 0,
+          "relevant_review_count": 0,
+          "valid_label_count": 0,
+          "recommended_count": 0,
+          "not_recommended_count": 0,
+          "no_idea_count": 0,
+          "recommendation_rate": null,
+          "complete_for_product": true
+        },
+        "meta": {
+          "generation_mode": "none",
+          "api_calls": 0,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "usage_known": true,
+          "total_seconds": 0.000477,
+          "retrieval_seconds": 0.000473,
+          "rag_total_seconds": 0.000642
+        },
+        "product": {
+          "product_id": 10065041,
+          "title_fa": "اسپری تمیز کننده کفش بلرتو مدل BE1170 کد Bl150",
+          "category1": "کفش زنانه و مردانه",
+          "category2": "مراقبت کفش و لوازم جانبی",
+          "sub_category": "clothe",
+          "brand": "بلرتو",
+          "price_recorded": 1290000.0,
+          "price_toman": null,
+          "price_conflict": 0,
+          "rating_100": null,
+          "rating_count": 0,
+          "review_count": 0,
+          "price_unit": "واحد ثبت‌شده (نامشخص)"
+        },
+        "product_resolution": "selected_id",
+        "status": "insufficient_evidence"
+      }
+    },
+    {
+      "case_id": "Q16",
+      "product_id": 10046185,
+      "question": "آیا کاربران از کیفیت و کارایی کیف پول مردانه کویین Q50 راضی هستند؟",
+      "expected_mode": "extractive",
+      "clues": [
+        "جنس",
+        "چرم",
+        "کیفیت"
+      ],
+      "group": "existing_qa_query",
+      "pass": true,
+      "checks": {
+        "evidence_count": 1,
+        "exact_evidence_count": 1,
+        "all_evidence_exact_and_scoped": true,
+        "no_duplicate_ids": true,
+        "answer_references_in_evidence": true,
+        "stats_match_source": true,
+        "theme_references_valid": true
+      },
+      "keyword_check": true,
+      "result": {
+        "product_id": 10046185,
+        "answer_mode": "extractive",
+        "answer": "در دادهٔ واقعیِ در دسترس برای این محصول، 3 نظر ثبت شده است.\n1 نظر با شواهد مرتبط پیدا شد. نتیجهٔ بررسی موضوع‌های پرسش:\n• کارایی و عملکرد: شاهد صریح کافی برای این بخش از سؤال در شواهد انتخاب‌شده پیدا نشد.\n• کیفیت و جنس: در 1 نظر نشانهٔ مرتبط پیدا شد (نظر 49137440).\n  نشانهٔ روشن مثبت در 1 نظر از 3 نظر دارای متن (نظر 49137440).\nاین شمارش قاعده‌محور است و همهٔ معنای ضمنی نظرها را پوشش نمی‌دهد.\n• «چرم طبیعی» (نظر 49137440)\nتعداد شواهد مرتبط کم است؛ این چند تجربه برای تعمیم به همهٔ خریداران کافی نیست.",
+        "evidence": [
+          {
+            "comment_id": 49137440,
+            "product_id": 10046185,
+            "text": "چرم طبیعی",
+            "source": "advantages_raw",
+            "polarity": "positive",
+            "recommendation_status": "recommended",
+            "rating_5": 4.0,
+            "score": 7.028125,
+            "themes": [
+              "کیفیت و جنس"
+            ]
+          }
+        ],
+        "scope": "indexed_catalogue",
+        "source": "catalog.sqlite3",
+        "stats": {
+          "total_reviews": 3,
+          "text_review_count": 3,
+          "relevant_review_count": 1,
+          "valid_label_count": 1,
+          "recommended_count": 1,
+          "not_recommended_count": 0,
+          "no_idea_count": 0,
+          "recommendation_rate": 1.0,
+          "complete_for_product": true
+        },
+        "theme_counts": [
+          {
+            "theme": "کیفیت و جنس",
+            "polarity": "positive",
+            "count": 1,
+            "denominator": 3,
+            "source": "explicit attributes and clear-sentiment text clauses",
+            "evidence_ids": [
+              49137440
+            ]
+          }
+        ],
+        "facet_coverage": [
+          {
+            "theme": "کارایی و عملکرد",
+            "matched_review_count": 0,
+            "evidence_ids": []
+          },
+          {
+            "theme": "کیفیت و جنس",
+            "matched_review_count": 1,
+            "evidence_ids": [
+              49137440
+            ]
+          }
+        ],
+        "intent": "aspect",
+        "requested_themes": [
+          "کارایی و عملکرد",
+          "کیفیت و جنس"
+        ],
+        "meta": {
+          "generation_mode": "extractive",
+          "retrieval_seconds": 0.001983,
+          "api_calls": 0,
+          "api_attempts": 0,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "usage_known": true,
+          "cached": false,
+          "citation_check": "exact source excerpts and product-scoped IDs",
+          "total_seconds": 0.00201,
+          "rag_total_seconds": 0.002401
+        },
+        "product": {
+          "product_id": 10046185,
+          "title_fa": "کیف پول مردانه کویین مدل Q50",
+          "category1": "اکسسوری مردانه",
+          "category2": "کیف پول مردانه",
+          "sub_category": "clothe",
+          "brand": "متفرقه",
+          "price_recorded": 3600000.0,
+          "price_toman": null,
+          "price_conflict": 0,
+          "rating_100": 94.0,
+          "rating_count": 3,
+          "review_count": 3,
+          "price_unit": "واحد ثبت‌شده (نامشخص)"
+        },
+        "product_resolution": "selected_id",
+        "status": "answered"
+      }
+    },
+    {
+      "case_id": "Q17",
+      "product_id": 10002536,
+      "question": "آیا کاربران از کیفیت و کارایی پلیور زنانه ax7 راضی هستند؟",
+      "expected_mode": "extractive",
+      "clues": [
+        "جنس",
+        "نازک",
+        "کیفیت"
+      ],
+      "group": "existing_qa_query",
+      "pass": true,
+      "checks": {
+        "evidence_count": 2,
+        "exact_evidence_count": 2,
+        "all_evidence_exact_and_scoped": true,
+        "no_duplicate_ids": true,
+        "answer_references_in_evidence": true,
+        "stats_match_source": true,
+        "theme_references_valid": true
+      },
+      "keyword_check": true,
+      "result": {
+        "product_id": 10002536,
+        "answer_mode": "extractive",
+        "answer": "در دادهٔ واقعیِ در دسترس برای این محصول، 2 نظر ثبت شده است.\n2 نظر با شواهد مرتبط پیدا شد. نتیجهٔ بررسی موضوع‌های پرسش:\n• کارایی و عملکرد: شاهد صریح کافی برای این بخش از سؤال در شواهد انتخاب‌شده پیدا نشد.\n• کیفیت و جنس: در 2 نظر نشانهٔ مرتبط پیدا شد (نظر 45395751، نظر 45186203).\n  نشانهٔ روشن مثبت در 1 نظر از 2 نظر دارای متن (نظر 45395751).\n  نشانهٔ روشن منفی در 1 نظر از 2 نظر دارای متن (نظر 45186203).\nاین شمارش قاعده‌محور است و همهٔ معنای ضمنی نظرها را پوشش نمی‌دهد.\n• «خیلی خوشگل بود جنسش هم حرف نداشت تنخورش هم خیلی خوب بود» (نظر 45395751)\n• «افتضاح انگار دست دوم بود فوق العاده نازک و کوچک و بدقواره مرجوع کردم» (نظر 45186203)\nتجربه‌ها یکسان نیستند؛ نمونه‌های مثبت و منفی یا نظرهای ترکیبی را جداگانه بررسی کنید.\nتعداد شواهد مرتبط کم است؛ این چند تجربه برای تعمیم به همهٔ خریداران کافی نیست.",
+        "evidence": [
+          {
+            "comment_id": 45395751,
+            "product_id": 10002536,
+            "text": "خیلی خوشگل بود جنسش هم حرف نداشت تنخورش هم خیلی خوب بود",
+            "source": "body_raw",
+            "polarity": "positive",
+            "recommendation_status": null,
+            "rating_5": 5.0,
+            "score": 5.171875,
+            "themes": [
+              "اندازه و تناسب",
+              "ظاهر و رنگ",
+              "کیفیت و جنس"
+            ]
+          },
+          {
+            "comment_id": 45186203,
+            "product_id": 10002536,
+            "text": "افتضاح انگار دست دوم بود فوق العاده نازک و کوچک و بدقواره مرجوع کردم",
+            "source": "body_raw",
+            "polarity": "negative",
+            "recommendation_status": "not_recommended",
+            "rating_5": 2.0,
+            "score": 5.2125,
+            "themes": [
+              "اصالت و مطابقت",
+              "اندازه و تناسب",
+              "ظاهر و رنگ",
+              "کیفیت و جنس"
+            ]
+          }
+        ],
+        "scope": "indexed_catalogue",
+        "source": "catalog.sqlite3",
+        "stats": {
+          "total_reviews": 2,
+          "text_review_count": 2,
+          "relevant_review_count": 2,
+          "valid_label_count": 1,
+          "recommended_count": 0,
+          "not_recommended_count": 1,
+          "no_idea_count": 0,
+          "recommendation_rate": 0.0,
+          "complete_for_product": true
+        },
+        "theme_counts": [
+          {
+            "theme": "کیفیت و جنس",
+            "polarity": "positive",
+            "count": 1,
+            "denominator": 2,
+            "source": "explicit attributes and clear-sentiment text clauses",
+            "evidence_ids": [
+              45395751
+            ]
+          },
+          {
+            "theme": "کیفیت و جنس",
+            "polarity": "negative",
+            "count": 1,
+            "denominator": 2,
+            "source": "explicit attributes and clear-sentiment text clauses",
+            "evidence_ids": [
+              45186203
+            ]
+          }
+        ],
+        "facet_coverage": [
+          {
+            "theme": "کارایی و عملکرد",
+            "matched_review_count": 0,
+            "evidence_ids": []
+          },
+          {
+            "theme": "کیفیت و جنس",
+            "matched_review_count": 2,
+            "evidence_ids": [
+              45395751,
+              45186203
+            ]
+          }
+        ],
+        "intent": "aspect",
+        "requested_themes": [
+          "کارایی و عملکرد",
+          "کیفیت و جنس"
+        ],
+        "meta": {
+          "generation_mode": "extractive",
+          "retrieval_seconds": 0.001901,
+          "api_calls": 0,
+          "api_attempts": 0,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "usage_known": true,
+          "cached": false,
+          "citation_check": "exact source excerpts and product-scoped IDs",
+          "total_seconds": 0.001922,
+          "rag_total_seconds": 0.002191
+        },
+        "product": {
+          "product_id": 10002536,
+          "title_fa": "پلیور زنانه مدل ax7",
+          "category1": "لباس زنانه",
+          "category2": "ژاکت و پلیور زنانه",
+          "sub_category": "clothe",
+          "brand": "متفرقه",
+          "price_recorded": 2500000.0,
+          "price_toman": null,
+          "price_conflict": 0,
+          "rating_100": 100.0,
+          "rating_count": 1,
+          "review_count": 2,
+          "price_unit": "واحد ثبت‌شده (نامشخص)"
+        },
+        "product_resolution": "selected_id",
+        "status": "answered"
+      }
+    },
+    {
+      "case_id": "Q18",
+      "product_id": 10002507,
+      "question": "آیا کاربران از کیفیت و کارایی ماش دستچین زرین برکت - راضی هستند؟",
+      "expected_mode": "extractive",
+      "clues": [
+        "کیفیت",
+        "پاک"
+      ],
+      "group": "existing_qa_query",
+      "pass": true,
+      "checks": {
+        "evidence_count": 4,
+        "exact_evidence_count": 4,
+        "all_evidence_exact_and_scoped": true,
+        "no_duplicate_ids": true,
+        "answer_references_in_evidence": true,
+        "stats_match_source": true,
+        "theme_references_valid": true
+      },
+      "keyword_check": true,
+      "result": {
+        "product_id": 10002507,
+        "answer_mode": "extractive",
+        "answer": "در دادهٔ واقعیِ در دسترس برای این محصول، 10 نظر ثبت شده است.\n4 نظر با شواهد مرتبط پیدا شد. نتیجهٔ بررسی موضوع‌های پرسش:\n• کارایی و عملکرد: شاهد صریح کافی برای این بخش از سؤال در شواهد انتخاب‌شده پیدا نشد.\n• کیفیت و جنس: در 4 نظر نشانهٔ مرتبط پیدا شد (نظر 52637493، نظر 54099073، نظر 46031150).\n  نشانهٔ روشن مثبت در 4 نظر از 10 نظر دارای متن (نظر 52637493، نظر 54099073، نظر 46031150).\nاین شمارش قاعده‌محور است و همهٔ معنای ضمنی نظرها را پوشش نمی‌دهد.\n• «کیفیت» (نظر 52637493)\n• «خوب و کیفیت عالی» (نظر 54099073)\n• «خیلی با کیفیت» (نظر 46031150)\n• «کیفیتش خوبه» (نظر 43207528)",
+        "evidence": [
+          {
+            "comment_id": 52637493,
+            "product_id": 10002507,
+            "text": "کیفیت",
+            "source": "advantages_raw",
+            "polarity": "positive",
+            "recommendation_status": "recommended",
+            "rating_5": 4.0,
+            "score": 7.015625,
+            "themes": [
+              "کیفیت و جنس"
+            ]
+          },
+          {
+            "comment_id": 54099073,
+            "product_id": 10002507,
+            "text": "خوب و کیفیت عالی",
+            "source": "body_raw",
+            "polarity": "positive",
+            "recommendation_status": "recommended",
+            "rating_5": 4.0,
+            "score": 6.8,
+            "themes": [
+              "کیفیت و جنس"
+            ]
+          },
+          {
+            "comment_id": 46031150,
+            "product_id": 10002507,
+            "text": "خیلی با کیفیت",
+            "source": "body_raw",
+            "polarity": "positive",
+            "recommendation_status": null,
+            "rating_5": 4.0,
+            "score": 6.79063,
+            "themes": [
+              "کیفیت و جنس"
+            ]
+          },
+          {
+            "comment_id": 43207528,
+            "product_id": 10002507,
+            "text": "کیفیتش خوبه",
+            "source": "body_raw",
+            "polarity": "positive",
+            "recommendation_status": "recommended",
+            "rating_5": 4.0,
+            "score": 6.78437,
+            "themes": [
+              "کیفیت و جنس"
+            ]
+          }
+        ],
+        "scope": "indexed_catalogue",
+        "source": "catalog.sqlite3",
+        "stats": {
+          "total_reviews": 10,
+          "text_review_count": 10,
+          "relevant_review_count": 4,
+          "valid_label_count": 7,
+          "recommended_count": 7,
+          "not_recommended_count": 0,
+          "no_idea_count": 0,
+          "recommendation_rate": 1.0,
+          "complete_for_product": true
+        },
+        "theme_counts": [
+          {
+            "theme": "کیفیت و جنس",
+            "polarity": "positive",
+            "count": 4,
+            "denominator": 10,
+            "source": "explicit attributes and clear-sentiment text clauses",
+            "evidence_ids": [
+              52637493,
+              54099073,
+              46031150
+            ]
+          }
+        ],
+        "facet_coverage": [
+          {
+            "theme": "کارایی و عملکرد",
+            "matched_review_count": 0,
+            "evidence_ids": []
+          },
+          {
+            "theme": "کیفیت و جنس",
+            "matched_review_count": 4,
+            "evidence_ids": [
+              52637493,
+              54099073,
+              46031150
+            ]
+          }
+        ],
+        "intent": "aspect",
+        "requested_themes": [
+          "کارایی و عملکرد",
+          "کیفیت و جنس"
+        ],
+        "meta": {
+          "generation_mode": "extractive",
+          "retrieval_seconds": 0.001929,
+          "api_calls": 0,
+          "api_attempts": 0,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "usage_known": true,
+          "cached": false,
+          "citation_check": "exact source excerpts and product-scoped IDs",
+          "total_seconds": 0.001947,
+          "rag_total_seconds": 0.002083
+        },
+        "product": {
+          "product_id": 10002507,
+          "title_fa": "ماش دستچین زرین برکت - 1 کیلوگرم",
+          "category1": "مواد غذایی",
+          "category2": "غلات و حبوبات ارگانیک",
+          "sub_category": "rural goods",
+          "brand": "متفرقه",
+          "price_recorded": 750000.0,
+          "price_toman": null,
+          "price_conflict": 0,
+          "rating_100": 84.0,
+          "rating_count": 11,
+          "review_count": 10,
+          "price_unit": "واحد ثبت‌شده (نامشخص)"
+        },
+        "product_resolution": "selected_id",
+        "status": "answered"
+      }
+    },
+    {
+      "case_id": "Q19",
+      "product_id": 10006791,
+      "question": "آیا کاربران از کیفیت و کارایی کیف رودوشی گودیکا 5120 راضی هستند؟",
+      "expected_mode": "extractive",
+      "clues": [
+        "کیفیت",
+        "جنس"
+      ],
+      "group": "existing_qa_query",
+      "pass": true,
+      "checks": {
+        "evidence_count": 1,
+        "exact_evidence_count": 1,
+        "all_evidence_exact_and_scoped": true,
+        "no_duplicate_ids": true,
+        "answer_references_in_evidence": true,
+        "stats_match_source": true,
+        "theme_references_valid": true
+      },
+      "keyword_check": true,
+      "result": {
+        "product_id": 10006791,
+        "answer_mode": "extractive",
+        "answer": "در دادهٔ واقعیِ در دسترس برای این محصول، 2 نظر ثبت شده است.\n1 نظر با شواهد مرتبط پیدا شد. نتیجهٔ بررسی موضوع‌های پرسش:\n• کارایی و عملکرد: شاهد صریح کافی برای این بخش از سؤال در شواهد انتخاب‌شده پیدا نشد.\n• کیفیت و جنس: در 1 نظر نشانهٔ مرتبط پیدا شد (نظر 44292044).\n  نشانهٔ روشن مثبت در 1 نظر از 2 نظر دارای متن (نظر 44292044).\nاین شمارش قاعده‌محور است و همهٔ معنای ضمنی نظرها را پوشش نمی‌دهد.\n• «کیفیت واقعا عالی» (نظر 44292044)\nتعداد شواهد مرتبط کم است؛ این چند تجربه برای تعمیم به همهٔ خریداران کافی نیست.",
+        "evidence": [
+          {
+            "comment_id": 44292044,
+            "product_id": 10006791,
+            "text": "کیفیت واقعا عالی",
+            "source": "body_raw",
+            "polarity": "positive",
+            "recommendation_status": "recommended",
+            "rating_5": 5.0,
+            "score": 5.05,
+            "themes": [
+              "کیفیت و جنس"
+            ]
+          }
+        ],
+        "scope": "indexed_catalogue",
+        "source": "catalog.sqlite3",
+        "stats": {
+          "total_reviews": 2,
+          "text_review_count": 2,
+          "relevant_review_count": 1,
+          "valid_label_count": 2,
+          "recommended_count": 1,
+          "not_recommended_count": 0,
+          "no_idea_count": 1,
+          "recommendation_rate": 0.5,
+          "complete_for_product": true
+        },
+        "theme_counts": [
+          {
+            "theme": "کیفیت و جنس",
+            "polarity": "positive",
+            "count": 1,
+            "denominator": 2,
+            "source": "explicit attributes and clear-sentiment text clauses",
+            "evidence_ids": [
+              44292044
+            ]
+          }
+        ],
+        "facet_coverage": [
+          {
+            "theme": "کارایی و عملکرد",
+            "matched_review_count": 0,
+            "evidence_ids": []
+          },
+          {
+            "theme": "کیفیت و جنس",
+            "matched_review_count": 1,
+            "evidence_ids": [
+              44292044
+            ]
+          }
+        ],
+        "intent": "aspect",
+        "requested_themes": [
+          "کارایی و عملکرد",
+          "کیفیت و جنس"
+        ],
+        "meta": {
+          "generation_mode": "extractive",
+          "retrieval_seconds": 0.001273,
+          "api_calls": 0,
+          "api_attempts": 0,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "usage_known": true,
+          "cached": false,
+          "citation_check": "exact source excerpts and product-scoped IDs",
+          "total_seconds": 0.001288,
+          "rag_total_seconds": 0.001428
+        },
+        "product": {
+          "product_id": 10006791,
+          "title_fa": "کیف رودوشی گودیکا مدل 5120",
+          "category1": "اکسسوری زنانه و مردانه",
+          "category2": "کیف زنانه و مردانه",
+          "sub_category": "clothe",
+          "brand": "گودیکا",
+          "price_recorded": 6000000.0,
+          "price_toman": null,
+          "price_conflict": 0,
+          "rating_100": 70.0,
+          "rating_count": 4,
+          "review_count": 2,
+          "price_unit": "واحد ثبت‌شده (نامشخص)"
+        },
+        "product_resolution": "selected_id",
+        "status": "answered"
+      }
+    },
+    {
+      "case_id": "Q20",
+      "product_id": 10023647,
+      "question": "آیا کاربران از کیفیت و کارایی صندل مردانه 254005802 راضی هستند؟",
+      "expected_mode": "insufficient_evidence",
+      "clues": [],
+      "group": "existing_qa_query",
+      "pass": true,
+      "checks": {
+        "evidence_count": 0,
+        "exact_evidence_count": 0,
+        "all_evidence_exact_and_scoped": true,
+        "no_duplicate_ids": true,
+        "answer_references_in_evidence": true,
+        "stats_match_source": true,
+        "theme_references_valid": true
+      },
+      "keyword_check": null,
+      "result": {
+        "product_id": 10023647,
+        "answer_mode": "insufficient_evidence",
+        "answer": null,
+        "reason": "برای این شناسه در دادهٔ در دسترس هیچ نظری پیدا نشد.",
+        "evidence": [],
+        "scope": "indexed_catalogue",
+        "stats": {
+          "total_reviews": 0,
+          "text_review_count": 0,
+          "relevant_review_count": 0,
+          "valid_label_count": 0,
+          "recommended_count": 0,
+          "not_recommended_count": 0,
+          "no_idea_count": 0,
+          "recommendation_rate": null,
+          "complete_for_product": true
+        },
+        "meta": {
+          "generation_mode": "none",
+          "api_calls": 0,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "usage_known": true,
+          "total_seconds": 0.000543,
+          "retrieval_seconds": 0.000541,
+          "rag_total_seconds": 0.00071
+        },
+        "product": {
+          "product_id": 10023647,
+          "title_fa": "صندل مردانه مدل 254005802",
+          "category1": "کفش مردانه",
+          "category2": "صندل مردانه",
+          "sub_category": "clothe",
+          "brand": "متفرقه",
+          "price_recorded": 2550000.0,
+          "price_toman": null,
+          "price_conflict": 0,
+          "rating_100": null,
+          "rating_count": 0,
+          "review_count": 0,
+          "price_unit": "واحد ثبت‌شده (نامشخص)"
+        },
+        "product_resolution": "selected_id",
+        "status": "insufficient_evidence"
+      }
+    },
+    {
+      "case_id": "P1",
+      "product_id": 10133811,
+      "question": "مردم بیشتر از چه چیزی در این محصول راضی بودند؟",
+      "expected_mode": "extractive",
+      "clues": [],
+      "expected_intent": "positive",
+      "group": "official_examples",
+      "pass": true,
+      "checks": {
+        "evidence_count": 8,
+        "exact_evidence_count": 8,
+        "all_evidence_exact_and_scoped": true,
+        "no_duplicate_ids": true,
+        "answer_references_in_evidence": true,
+        "stats_match_source": true,
+        "theme_references_valid": true
+      },
+      "keyword_check": null,
+      "result": {
+        "product_id": 10133811,
+        "answer_mode": "extractive",
+        "answer": "در دادهٔ واقعیِ در دسترس برای این محصول، 65 نظر ثبت شده است.\nدر 65 نظر دارای متن، موضوع‌های مثبت زیر با قواعد مشخص روی فیلدهای مزایا/معایب و جمله‌های دارای نشانهٔ روشنِ رضایت یا نارضایتی شناسایی شدند:\n• راحتی و وزن: 25 نظر از 65 (نظر 51564387، نظر 51069055، نظر 49053454؛ نمونهٔ شاهد).\n• قیمت و ارزش خرید: 21 نظر از 65 (نظر 50714362؛ نمونهٔ شاهد).\n• کیفیت و جنس: 8 نظر از 65 (نظر 48288959، نظر 48165061؛ نمونهٔ شاهد).\nهر نظر در هر موضوع یک‌بار شمرده می‌شود. این شمارش فقط اشاره‌های صریحی را پوشش می‌دهد که قواعد شناسایی کرده‌اند.\n• «سبک و خوش فرم» (نظر 51564387)\n• «قیمت توی شگفت انگیز عالی بود» (نظر 50714362)\n• «جنس درجه یک و خوش فرم» (نظر 48288959)\n• «تشابه با عکس» (نظر 50681413)",
+        "evidence": [
+          {
+            "comment_id": 51564387,
+            "product_id": 10133811,
+            "text": "سبک و خوش فرم",
+            "source": "advantages_raw",
+            "polarity": "positive",
+            "recommendation_status": "recommended",
+            "rating_5": 5.0,
+            "score": 7.040625,
+            "themes": [
+              "راحتی و وزن"
+            ]
+          },
+          {
+            "comment_id": 50714362,
+            "product_id": 10133811,
+            "text": "قیمت توی شگفت انگیز عالی بود",
+            "source": "advantages_raw",
+            "polarity": "positive",
+            "recommendation_status": "recommended",
+            "rating_5": 5.0,
+            "score": 7.0875,
+            "themes": [
+              "قیمت و ارزش خرید"
+            ]
+          },
+          {
+            "comment_id": 48288959,
+            "product_id": 10133811,
+            "text": "جنس درجه یک و خوش فرم",
+            "source": "advantages_raw",
+            "polarity": "positive",
+            "recommendation_status": null,
+            "rating_5": 5.0,
+            "score": 7.065625,
+            "themes": [
+              "کیفیت و جنس"
+            ]
+          },
+          {
+            "comment_id": 50681413,
+            "product_id": 10133811,
+            "text": "تشابه با عکس",
+            "source": "advantages_raw",
+            "polarity": "positive",
+            "recommendation_status": "recommended",
+            "rating_5": 4.0,
+            "score": 4.62812,
+            "themes": [
+              "راحتی و وزن",
+              "ظاهر و رنگ"
+            ]
+          },
+          {
+            "comment_id": 51069055,
+            "product_id": 10133811,
+            "text": "فوق سبک",
+            "source": "advantages_raw",
+            "polarity": "positive",
+            "recommendation_status": "recommended",
+            "rating_5": 5.0,
+            "score": 4.60313,
+            "themes": [
+              "راحتی و وزن"
+            ]
+          },
+          {
+            "comment_id": 48165061,
+            "product_id": 10133811,
+            "text": "ضخامت پارچه رویه کفش",
+            "source": "advantages_raw",
+            "polarity": "positive",
+            "recommendation_status": null,
+            "rating_5": 4.0,
+            "score": 4.6,
+            "themes": [
+              "راحتی و وزن",
+              "کیفیت و جنس"
+            ]
+          },
+          {
+            "comment_id": 49053454,
+            "product_id": 10133811,
+            "text": "زیره نرم",
+            "source": "advantages_raw",
+            "polarity": "positive",
+            "recommendation_status": "recommended",
+            "rating_5": 4.0,
+            "score": 4.55938,
+            "themes": [
+              "راحتی و وزن"
+            ]
+          },
+          {
+            "comment_id": 53208248,
+            "product_id": 10133811,
+            "text": "راحت",
+            "source": "advantages_raw",
+            "polarity": "positive",
+            "recommendation_status": "recommended",
+            "rating_5": 4.0,
+            "score": 4.54688,
+            "themes": [
+              "راحتی و وزن"
+            ]
+          }
+        ],
+        "scope": "indexed_catalogue",
+        "source": "catalog.sqlite3",
+        "stats": {
+          "total_reviews": 65,
+          "text_review_count": 65,
+          "relevant_review_count": 55,
+          "valid_label_count": 57,
+          "recommended_count": 40,
+          "not_recommended_count": 4,
+          "no_idea_count": 13,
+          "recommendation_rate": 0.7017543859649122,
+          "complete_for_product": true
+        },
+        "theme_counts": [
+          {
+            "theme": "راحتی و وزن",
+            "polarity": "positive",
+            "count": 25,
+            "denominator": 65,
+            "source": "explicit attributes and clear-sentiment text clauses",
+            "evidence_ids": [
+              51564387,
+              51069055,
+              49053454
+            ]
+          },
+          {
+            "theme": "قیمت و ارزش خرید",
+            "polarity": "positive",
+            "count": 21,
+            "denominator": 65,
+            "source": "explicit attributes and clear-sentiment text clauses",
+            "evidence_ids": [
+              50714362
+            ]
+          },
+          {
+            "theme": "کیفیت و جنس",
+            "polarity": "positive",
+            "count": 8,
+            "denominator": 65,
+            "source": "explicit attributes and clear-sentiment text clauses",
+            "evidence_ids": [
+              48288959,
+              48165061
+            ]
+          }
+        ],
+        "facet_coverage": [],
+        "intent": "positive",
+        "requested_themes": [],
+        "meta": {
+          "generation_mode": "extractive",
+          "retrieval_seconds": 0.020261,
+          "api_calls": 0,
+          "api_attempts": 0,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "usage_known": true,
+          "cached": false,
+          "citation_check": "exact source excerpts and product-scoped IDs",
+          "total_seconds": 0.020289,
+          "rag_total_seconds": 0.020504
+        },
+        "product": {
+          "product_id": 10133811,
+          "title_fa": "کفش پیاده روی مدل کلاسیک MESKBAFT",
+          "category1": "کفش زنانه و مردانه",
+          "category2": "کفش ورزشی زنانه و مردانه",
+          "sub_category": "clothe",
+          "brand": "متفرقه",
+          "price_recorded": 7000000.0,
+          "price_toman": null,
+          "price_conflict": 0,
+          "rating_100": 82.0,
+          "rating_count": 60,
+          "review_count": 65,
+          "price_unit": "واحد ثبت‌شده (نامشخص)"
+        },
+        "product_resolution": "selected_id",
+        "status": "answered"
+      }
+    },
+    {
+      "case_id": "P2",
+      "product_id": 10133811,
+      "question": "ایرادهای پرتکرار این محصول چیست؟",
+      "expected_mode": "extractive",
+      "clues": [],
+      "expected_intent": "negative",
+      "group": "official_examples",
+      "pass": true,
+      "checks": {
+        "evidence_count": 8,
+        "exact_evidence_count": 8,
+        "all_evidence_exact_and_scoped": true,
+        "no_duplicate_ids": true,
+        "answer_references_in_evidence": true,
+        "stats_match_source": true,
+        "theme_references_valid": true
+      },
+      "keyword_check": null,
+      "result": {
+        "product_id": 10133811,
+        "answer_mode": "extractive",
+        "answer": "در دادهٔ واقعیِ در دسترس برای این محصول، 65 نظر ثبت شده است.\nدر 65 نظر دارای متن، موضوع‌های منفی زیر با قواعد مشخص روی فیلدهای مزایا/معایب و جمله‌های دارای نشانهٔ روشنِ رضایت یا نارضایتی شناسایی شدند:\n• اندازه و تناسب: 3 نظر از 65 (نظر 48288959، نظر 52812706؛ نمونهٔ شاهد).\n• قیمت و ارزش خرید: 3 نظر از 65 (نظر 50685330؛ نمونهٔ شاهد).\n• کیفیت و جنس: 2 نظر از 65 (نظر 48165061؛ نمونهٔ شاهد).\nهر نظر در هر موضوع یک‌بار شمرده می‌شود. این شمارش فقط اشاره‌های صریحی را پوشش می‌دهد که قواعد شناسایی کرده‌اند.\n• «دقت کنین چون توپا سایز باز میکنه حتما یه سایز کوچکتر سفارش بدین که قشنگ پا رو بچسبه» (نظر 48288959)\n• «قیمت بالا» (نظر 50685330)\n• «جنس نوار پاشنه کش» (نظر 48165061)\n• «نداشتن پاشنه مناسب و در نتیجه خسته شدن پا» (نظر 50763783)\nتجربه‌ها یکسان نیستند؛ نمونه‌های مثبت و منفی یا نظرهای ترکیبی را جداگانه بررسی کنید.",
+        "evidence": [
+          {
+            "comment_id": 48288959,
+            "product_id": 10133811,
+            "text": "دقت کنین چون توپا سایز باز میکنه حتما یه سایز کوچکتر سفارش بدین که قشنگ پا رو بچسبه",
+            "source": "body_raw",
+            "polarity": "negative",
+            "recommendation_status": null,
+            "rating_5": 5.0,
+            "score": 5.259375,
+            "themes": [
+              "اندازه و تناسب"
+            ]
+          },
+          {
+            "comment_id": 50685330,
+            "product_id": 10133811,
+            "text": "قیمت بالا",
+            "source": "disadvantages_raw",
+            "polarity": "negative",
+            "recommendation_status": "no_idea",
+            "rating_5": 3.0,
+            "score": 7.028125,
+            "themes": [
+              "قیمت و ارزش خرید"
+            ]
+          },
+          {
+            "comment_id": 48165061,
+            "product_id": 10133811,
+            "text": "جنس نوار پاشنه کش",
+            "source": "disadvantages_raw",
+            "polarity": "negative",
+            "recommendation_status": null,
+            "rating_5": 4.0,
+            "score": 7.053125,
+            "themes": [
+              "کیفیت و جنس"
+            ]
+          },
+          {
+            "comment_id": 50763783,
+            "product_id": 10133811,
+            "text": "نداشتن پاشنه مناسب و در نتیجه خسته شدن پا",
+            "source": "disadvantages_raw",
+            "polarity": "negative",
+            "recommendation_status": "not_recommended",
+            "rating_5": 3.0,
+            "score": 4.69688,
+            "themes": []
+          },
+          {
+            "comment_id": 50714362,
+            "product_id": 10133811,
+            "text": "کفی میتونست بهتر باشه",
+            "source": "disadvantages_raw",
+            "polarity": "negative",
+            "recommendation_status": "recommended",
+            "rating_5": 5.0,
+            "score": 4.57812,
+            "themes": []
+          },
+          {
+            "comment_id": 50681413,
+            "product_id": 10133811,
+            "text": "عدم کاهش فشار",
+            "source": "disadvantages_raw",
+            "polarity": "negative",
+            "recommendation_status": "recommended",
+            "rating_5": 4.0,
+            "score": 4.55312,
+            "themes": []
+          },
+          {
+            "comment_id": 53105350,
+            "product_id": 10133811,
+            "text": "رویه کفش",
+            "source": "disadvantages_raw",
+            "polarity": "negative",
+            "recommendation_status": "no_idea",
+            "rating_5": 3.0,
+            "score": 4.5375,
+            "themes": []
+          },
+          {
+            "comment_id": 52812706,
+            "product_id": 10133811,
+            "text": "طبق سایزهای داده شده انتخاب کردم،کتونی بزرگ بود مرجوع کردم،درضمن به این کتونی نمیاد قیمت اصلیش ۷۰۰ تومن باشه",
+            "source": "body_raw",
+            "polarity": "negative",
+            "recommendation_status": "no_idea",
+            "rating_5": 3.0,
+            "score": 2.3375,
+            "themes": [
+              "اندازه و تناسب",
+              "قیمت و ارزش خرید"
+            ]
+          }
+        ],
+        "scope": "indexed_catalogue",
+        "source": "catalog.sqlite3",
+        "stats": {
+          "total_reviews": 65,
+          "text_review_count": 65,
+          "relevant_review_count": 12,
+          "valid_label_count": 57,
+          "recommended_count": 40,
+          "not_recommended_count": 4,
+          "no_idea_count": 13,
+          "recommendation_rate": 0.7017543859649122,
+          "complete_for_product": true
+        },
+        "theme_counts": [
+          {
+            "theme": "اندازه و تناسب",
+            "polarity": "negative",
+            "count": 3,
+            "denominator": 65,
+            "source": "explicit attributes and clear-sentiment text clauses",
+            "evidence_ids": [
+              48288959,
+              52812706
+            ]
+          },
+          {
+            "theme": "قیمت و ارزش خرید",
+            "polarity": "negative",
+            "count": 3,
+            "denominator": 65,
+            "source": "explicit attributes and clear-sentiment text clauses",
+            "evidence_ids": [
+              50685330
+            ]
+          },
+          {
+            "theme": "کیفیت و جنس",
+            "polarity": "negative",
+            "count": 2,
+            "denominator": 65,
+            "source": "explicit attributes and clear-sentiment text clauses",
+            "evidence_ids": [
+              48165061
+            ]
+          }
+        ],
+        "facet_coverage": [],
+        "intent": "negative",
+        "requested_themes": [],
+        "meta": {
+          "generation_mode": "extractive",
+          "retrieval_seconds": 0.016499,
+          "api_calls": 0,
+          "api_attempts": 0,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "usage_known": true,
+          "cached": false,
+          "citation_check": "exact source excerpts and product-scoped IDs",
+          "total_seconds": 0.016527,
+          "rag_total_seconds": 0.016867
+        },
+        "product": {
+          "product_id": 10133811,
+          "title_fa": "کفش پیاده روی مدل کلاسیک MESKBAFT",
+          "category1": "کفش زنانه و مردانه",
+          "category2": "کفش ورزشی زنانه و مردانه",
+          "sub_category": "clothe",
+          "brand": "متفرقه",
+          "price_recorded": 7000000.0,
+          "price_toman": null,
+          "price_conflict": 0,
+          "rating_100": 82.0,
+          "rating_count": 60,
+          "review_count": 65,
+          "price_unit": "واحد ثبت‌شده (نامشخص)"
+        },
+        "product_resolution": "selected_id",
+        "status": "answered"
+      }
+    },
+    {
+      "case_id": "P3",
+      "product_id": 10133811,
+      "question": "خریداران درباره کیفیت این محصول چه گفته‌اند؟",
+      "expected_mode": "extractive",
+      "clues": [
+        "کیفیت",
+        "جنس",
+        "دوخت"
+      ],
+      "expected_intent": "aspect",
+      "group": "official_examples",
+      "pass": true,
+      "checks": {
+        "evidence_count": 8,
+        "exact_evidence_count": 8,
+        "all_evidence_exact_and_scoped": true,
+        "no_duplicate_ids": true,
+        "answer_references_in_evidence": true,
+        "stats_match_source": true,
+        "theme_references_valid": true
+      },
+      "keyword_check": true,
+      "result": {
+        "product_id": 10133811,
+        "answer_mode": "extractive",
+        "answer": "در دادهٔ واقعیِ در دسترس برای این محصول، 65 نظر ثبت شده است.\n12 نظر با شواهد مرتبط پیدا شد. نتیجهٔ بررسی موضوع‌های پرسش:\n• کیفیت و جنس: در 12 نظر نشانهٔ مرتبط پیدا شد (نظر 48288959، نظر 48165061، نظر 50714362).\n  نشانهٔ روشن مثبت در 8 نظر از 65 نظر دارای متن (نظر 48288959، نظر 50714362، نظر 51832734).\n  نشانهٔ روشن منفی در 2 نظر از 65 نظر دارای متن (نظر 48165061).\nاین شمارش قاعده‌محور است و همهٔ معنای ضمنی نظرها را پوشش نمی‌دهد.\n• «جنس درجه یک و خوش فرم» (نظر 48288959)\n• «جنس نوار پاشنه کش» (نظر 48165061)\n• «کیفیت عالی» (نظر 50714362)\n• «کفش بدی نیست، ولی کیفیت کافی نداره، نسبتبه پولی که میدی خوبه، به صرفه هست.» (نظر 54176920)\nتجربه‌ها یکسان نیستند؛ نمونه‌های مثبت و منفی یا نظرهای ترکیبی را جداگانه بررسی کنید.",
+        "evidence": [
+          {
+            "comment_id": 48288959,
+            "product_id": 10133811,
+            "text": "جنس درجه یک و خوش فرم",
+            "source": "advantages_raw",
+            "polarity": "positive",
+            "recommendation_status": null,
+            "rating_5": 5.0,
+            "score": 7.065625,
+            "themes": [
+              "کیفیت و جنس"
+            ]
+          },
+          {
+            "comment_id": 48165061,
+            "product_id": 10133811,
+            "text": "جنس نوار پاشنه کش",
+            "source": "disadvantages_raw",
+            "polarity": "negative",
+            "recommendation_status": null,
+            "rating_5": 4.0,
+            "score": 7.053125,
+            "themes": [
+              "کیفیت و جنس"
+            ]
+          },
+          {
+            "comment_id": 50714362,
+            "product_id": 10133811,
+            "text": "کیفیت عالی",
+            "source": "advantages_raw",
+            "polarity": "positive",
+            "recommendation_status": "recommended",
+            "rating_5": 5.0,
+            "score": 7.13125,
+            "themes": [
+              "اندازه و تناسب",
+              "قیمت و ارزش خرید",
+              "کیفیت و جنس"
+            ]
+          },
+          {
+            "comment_id": 54176920,
+            "product_id": 10133811,
+            "text": "کفش بدی نیست، ولی کیفیت کافی نداره، نسبتبه پولی که میدی خوبه، به صرفه هست.",
+            "source": "body_raw",
+            "polarity": "mixed",
+            "recommendation_status": "no_idea",
+            "rating_5": 3.0,
+            "score": 6.98125,
+            "themes": [
+              "قیمت و ارزش خرید",
+              "کیفیت و جنس"
+            ]
+          },
+          {
+            "comment_id": 51832734,
+            "product_id": 10133811,
+            "text": "بسیار راحت و با کیفیت و سایز کاملا مناسب",
+            "source": "body_raw",
+            "polarity": "positive",
+            "recommendation_status": "recommended",
+            "rating_5": 5.0,
+            "score": 6.875,
+            "themes": [
+              "اندازه و تناسب",
+              "راحتی و وزن",
+              "کیفیت و جنس"
+            ]
+          },
+          {
+            "comment_id": 51920742,
+            "product_id": 10133811,
+            "text": "سبک ، طبی و کاملا اندازه و با کیفیت..",
+            "source": "body_raw",
+            "polarity": "positive",
+            "recommendation_status": "recommended",
+            "rating_5": 5.0,
+            "score": 6.86562,
+            "themes": [
+              "اندازه و تناسب",
+              "راحتی و وزن",
+              "کیفیت و جنس"
+            ]
+          },
+          {
+            "comment_id": 51744218,
+            "product_id": 10133811,
+            "text": "اندازه ، درست کیفیت عالی",
+            "source": "body_raw",
+            "polarity": "positive",
+            "recommendation_status": "recommended",
+            "rating_5": 5.0,
+            "score": 6.825,
+            "themes": [
+              "اندازه و تناسب",
+              "کیفیت و جنس"
+            ]
+          },
+          {
+            "comment_id": 51462525,
+            "product_id": 10133811,
+            "text": "کیفیت خوب",
+            "source": "title_raw",
+            "polarity": "positive",
+            "recommendation_status": "recommended",
+            "rating_5": 4.0,
+            "score": 6.27813,
+            "themes": [
+              "کیفیت و جنس"
+            ]
+          }
+        ],
+        "scope": "indexed_catalogue",
+        "source": "catalog.sqlite3",
+        "stats": {
+          "total_reviews": 65,
+          "text_review_count": 65,
+          "relevant_review_count": 12,
+          "valid_label_count": 57,
+          "recommended_count": 40,
+          "not_recommended_count": 4,
+          "no_idea_count": 13,
+          "recommendation_rate": 0.7017543859649122,
+          "complete_for_product": true
+        },
+        "theme_counts": [
+          {
+            "theme": "کیفیت و جنس",
+            "polarity": "positive",
+            "count": 8,
+            "denominator": 65,
+            "source": "explicit attributes and clear-sentiment text clauses",
+            "evidence_ids": [
+              48288959,
+              50714362,
+              51832734
+            ]
+          },
+          {
+            "theme": "کیفیت و جنس",
+            "polarity": "negative",
+            "count": 2,
+            "denominator": 65,
+            "source": "explicit attributes and clear-sentiment text clauses",
+            "evidence_ids": [
+              48165061
+            ]
+          }
+        ],
+        "facet_coverage": [
+          {
+            "theme": "کیفیت و جنس",
+            "matched_review_count": 12,
+            "evidence_ids": [
+              48288959,
+              48165061,
+              50714362
+            ]
+          }
+        ],
+        "intent": "aspect",
+        "requested_themes": [
+          "کیفیت و جنس"
+        ],
+        "meta": {
+          "generation_mode": "extractive",
+          "retrieval_seconds": 0.016469,
+          "api_calls": 0,
+          "api_attempts": 0,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "usage_known": true,
+          "cached": false,
+          "citation_check": "exact source excerpts and product-scoped IDs",
+          "total_seconds": 0.016494,
+          "rag_total_seconds": 0.016744
+        },
+        "product": {
+          "product_id": 10133811,
+          "title_fa": "کفش پیاده روی مدل کلاسیک MESKBAFT",
+          "category1": "کفش زنانه و مردانه",
+          "category2": "کفش ورزشی زنانه و مردانه",
+          "sub_category": "clothe",
+          "brand": "متفرقه",
+          "price_recorded": 7000000.0,
+          "price_toman": null,
+          "price_conflict": 0,
+          "rating_100": 82.0,
+          "rating_count": 60,
+          "review_count": 65,
+          "price_unit": "واحد ثبت‌شده (نامشخص)"
+        },
+        "product_resolution": "selected_id",
+        "status": "answered"
+      }
+    },
+    {
+      "case_id": "P4",
+      "product_id": 10133811,
+      "question": "آیا با توجه به تجربه کاربران ارزش خرید دارد؟",
+      "expected_mode": "extractive",
+      "clues": [],
+      "expected_intent": "value",
+      "group": "official_examples",
+      "pass": true,
+      "checks": {
+        "evidence_count": 8,
+        "exact_evidence_count": 8,
+        "all_evidence_exact_and_scoped": true,
+        "no_duplicate_ids": true,
+        "answer_references_in_evidence": true,
+        "stats_match_source": true,
+        "theme_references_valid": true
+      },
+      "keyword_check": null,
+      "result": {
+        "product_id": 10133811,
+        "answer_mode": "extractive",
+        "answer": "در دادهٔ واقعیِ در دسترس برای این محصول، 65 نظر ثبت شده است.\nاز 57 نظر دارای برچسب معتبر، 40 مورد خرید را پیشنهاد کرده‌اند (70.2%)، 4 مورد پیشنهاد نکرده‌اند و 13 مورد نظر مشخصی ثبت نکرده‌اند.\nدر میان نظرهای دارای برچسب، اکثریت خرید را پیشنهاد کرده‌اند.\nاین درصد یکی از نشانه‌های تجربهٔ کاربران است؛ ارزش خرید قطعی به نیاز و قیمت فعلی شما نیز بستگی دارد.\n• «عالی\nفقط به سایزبندی خود کفش دقت کنین.\nمن کفشام ۴۴ هست ولی طبق سایزبندی این کفش ۴۳ سفارش دادم و دقیق اندازه هست.\nدر مجموع قیمتش ۷۰۰ نیست.» (نظر 53712603)\n• «طبق سایزهای داده شده انتخاب کردم،کتونی بزرگ بود مرجوع کردم،درضمن به این کتونی نمیاد قیمت اصلیش ۷۰۰ تومن باشه» (نظر 52812706)\n• «واقعا ممنونم از این کیفیت و قیمت من توی شگفت انگیز خرید کردم که قیمتش عالی بود ممنون از فروشنده و دیجی کالا» (نظر 50714362)\n• «با این قیمت ک ارزش خرید نداره.توی تخفیف ویژه خریدم ۲۰۹.به نسبت قیمت کفش خوبیه» (نظر 49053454)\nتجربه‌ها یکسان نیستند؛ نمونه‌های مثبت و منفی یا نظرهای ترکیبی را جداگانه بررسی کنید.",
+        "evidence": [
+          {
+            "comment_id": 53712603,
+            "product_id": 10133811,
+            "text": "عالی\nفقط به سایزبندی خود کفش دقت کنین.\nمن کفشام ۴۴ هست ولی طبق سایزبندی این کفش ۴۳ سفارش دادم و دقیق اندازه هست.\nدر مجموع قیمتش ۷۰۰ نیست.",
+            "source": "body_raw",
+            "polarity": "positive",
+            "recommendation_status": "recommended",
+            "rating_5": 4.0,
+            "score": 8.92812,
+            "themes": [
+              "اندازه و تناسب",
+              "قیمت و ارزش خرید"
+            ]
+          },
+          {
+            "comment_id": 52812706,
+            "product_id": 10133811,
+            "text": "طبق سایزهای داده شده انتخاب کردم،کتونی بزرگ بود مرجوع کردم،درضمن به این کتونی نمیاد قیمت اصلیش ۷۰۰ تومن باشه",
+            "source": "body_raw",
+            "polarity": "negative",
+            "recommendation_status": "no_idea",
+            "rating_5": 3.0,
+            "score": 7.8375,
+            "themes": [
+              "اندازه و تناسب",
+              "قیمت و ارزش خرید"
+            ]
+          },
+          {
+            "comment_id": 50714362,
+            "product_id": 10133811,
+            "text": "واقعا ممنونم از این کیفیت و قیمت من توی شگفت انگیز خرید کردم که قیمتش عالی بود ممنون از فروشنده و دیجی کالا",
+            "source": "body_raw",
+            "polarity": "positive",
+            "recommendation_status": "recommended",
+            "rating_5": 5.0,
+            "score": 8.83437,
+            "themes": [
+              "قیمت و ارزش خرید",
+              "کیفیت و جنس"
+            ]
+          },
+          {
+            "comment_id": 49053454,
+            "product_id": 10133811,
+            "text": "با این قیمت ک ارزش خرید نداره.توی تخفیف ویژه خریدم ۲۰۹.به نسبت قیمت کفش خوبیه",
+            "source": "body_raw",
+            "polarity": "mixed",
+            "recommendation_status": "recommended",
+            "rating_5": 4.0,
+            "score": 8.74062,
+            "themes": [
+              "قیمت و ارزش خرید"
+            ]
+          },
+          {
+            "comment_id": 51599505,
+            "product_id": 10133811,
+            "text": "کفش راحتی هست و قیمتش در شگفت انگیز واقعا خوبه در کل من از خریدم خیلی راضیم",
+            "source": "body_raw",
+            "polarity": "positive",
+            "recommendation_status": "recommended",
+            "rating_5": 5.0,
+            "score": 8.73438,
+            "themes": [
+              "راحتی و وزن",
+              "قیمت و ارزش خرید"
+            ]
+          },
+          {
+            "comment_id": 48996555,
+            "product_id": 10133811,
+            "text": "در شگفت انگیز با قیمت ۲۰۹ گرفتم.به نسبت قیمت کفشای خیلی خوبی هستن",
+            "source": "body_raw",
+            "polarity": "positive",
+            "recommendation_status": "recommended",
+            "rating_5": 4.0,
+            "score": 8.70312,
+            "themes": [
+              "قیمت و ارزش خرید"
+            ]
+          },
+          {
+            "comment_id": 50592974,
+            "product_id": 10133811,
+            "text": "خوش پا و راحت قیمتش در پیشنهاد ویژه عالی هست",
+            "source": "body_raw",
+            "polarity": "positive",
+            "recommendation_status": "recommended",
+            "rating_5": 4.0,
+            "score": 8.6375,
+            "themes": [
+              "راحتی و وزن",
+              "قیمت و ارزش خرید"
+            ]
+          },
+          {
+            "comment_id": 52118715,
+            "product_id": 10133811,
+            "text": "با قیمت شگفت انگیز مناسب بود و بسیار راحت",
+            "source": "body_raw",
+            "polarity": "positive",
+            "recommendation_status": "recommended",
+            "rating_5": 5.0,
+            "score": 8.62813,
+            "themes": [
+              "راحتی و وزن",
+              "قیمت و ارزش خرید"
+            ]
+          }
+        ],
+        "scope": "indexed_catalogue",
+        "source": "catalog.sqlite3",
+        "stats": {
+          "total_reviews": 65,
+          "text_review_count": 65,
+          "relevant_review_count": 63,
+          "valid_label_count": 57,
+          "recommended_count": 40,
+          "not_recommended_count": 4,
+          "no_idea_count": 13,
+          "recommendation_rate": 0.7017543859649122,
+          "complete_for_product": true
+        },
+        "theme_counts": [],
+        "facet_coverage": [
+          {
+            "theme": "قیمت و ارزش خرید",
+            "matched_review_count": 29,
+            "evidence_ids": [
+              53712603,
+              52812706,
+              50714362
+            ]
+          }
+        ],
+        "intent": "value",
+        "requested_themes": [
+          "قیمت و ارزش خرید"
+        ],
+        "meta": {
+          "generation_mode": "extractive",
+          "retrieval_seconds": 0.020371,
+          "api_calls": 0,
+          "api_attempts": 0,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "usage_known": true,
+          "cached": false,
+          "citation_check": "exact source excerpts and product-scoped IDs",
+          "total_seconds": 0.020401,
+          "rag_total_seconds": 0.020875
+        },
+        "product": {
+          "product_id": 10133811,
+          "title_fa": "کفش پیاده روی مدل کلاسیک MESKBAFT",
+          "category1": "کفش زنانه و مردانه",
+          "category2": "کفش ورزشی زنانه و مردانه",
+          "sub_category": "clothe",
+          "brand": "متفرقه",
+          "price_recorded": 7000000.0,
+          "price_toman": null,
+          "price_conflict": 0,
+          "rating_100": 82.0,
+          "rating_count": 60,
+          "review_count": 65,
+          "price_unit": "واحد ثبت‌شده (نامشخص)"
+        },
+        "product_resolution": "selected_id",
+        "status": "answered"
+      }
+    },
+    {
+      "case_id": "P5",
+      "product_id": 1096725,
+      "question": "آیا این کرم به نرم شدن پوست خشک پا کمک می‌کند؟",
+      "expected_mode": "extractive",
+      "clues": [
+        "نرم",
+        "خشکی",
+        "ترک"
+      ],
+      "expected_intent": null,
+      "group": "topical_queries",
+      "pass": true,
+      "checks": {
+        "evidence_count": 8,
+        "exact_evidence_count": 8,
+        "all_evidence_exact_and_scoped": true,
+        "no_duplicate_ids": true,
+        "answer_references_in_evidence": true,
+        "stats_match_source": true,
+        "theme_references_valid": true
+      },
+      "keyword_check": true,
+      "result": {
+        "product_id": 1096725,
+        "answer_mode": "extractive",
+        "answer": "در دادهٔ واقعیِ در دسترس برای این محصول، 110 نظر ثبت شده است.\n26 نظر با شواهد مرتبط پیدا شد. نتیجهٔ بررسی موضوع‌های پرسش:\n• کارایی و عملکرد: در 26 نظر نشانهٔ مرتبط پیدا شد (نظر 47572694، نظر 19782115، نظر 13072081).\n  نشانهٔ روشن مثبت در 14 نظر از 110 نظر دارای متن (نظر 47572694، نظر 13072081، نظر 39774269).\nاین شمارش قاعده‌محور است و همهٔ معنای ضمنی نظرها را پوشش نمی‌دهد.\n• «روی کیفیت پوست پا خیلی تاثیر داره» (نظر 47572694)\n• «راضی نبودم.مرطوب کننده ی معمولی هست» (نظر 19782115)\n• «برای ترک پا عالیه و من برای خشکی دستمم استفاده کردم به خاطر استفاده از الکل و مواد شوینده پوست دستم چربیشو از دست داده بود ولی با این سریع خوب شد پوست دست و پام» (نظر 13072081)\n• «کرم خیلی خوبیه \nخشکی پاشنه پا رو از بین‌میبره و نرم و لطیف میکنه» (نظر 19485716)\nتجربه‌ها یکسان نیستند؛ نمونه‌های مثبت و منفی یا نظرهای ترکیبی را جداگانه بررسی کنید.",
+        "evidence": [
+          {
+            "comment_id": 47572694,
+            "product_id": 1096725,
+            "text": "روی کیفیت پوست پا خیلی تاثیر داره",
+            "source": "advantages_raw",
+            "polarity": "positive",
+            "recommendation_status": "recommended",
+            "rating_5": 5.0,
+            "score": 7.103125,
+            "themes": [
+              "کارایی و عملکرد",
+              "کیفیت و جنس"
+            ]
+          },
+          {
+            "comment_id": 19782115,
+            "product_id": 1096725,
+            "text": "راضی نبودم.مرطوب کننده ی معمولی هست",
+            "source": "body_raw",
+            "polarity": "negative",
+            "recommendation_status": "not_recommended",
+            "rating_5": 2.0,
+            "score": 5.60938,
+            "themes": [
+              "کارایی و عملکرد"
+            ]
+          },
+          {
+            "comment_id": 13072081,
+            "product_id": 1096725,
+            "text": "برای ترک پا عالیه و من برای خشکی دستمم استفاده کردم به خاطر استفاده از الکل و مواد شوینده پوست دستم چربیشو از دست داده بود ولی با این سریع خوب شد پوست دست و پام",
+            "source": "body_raw",
+            "polarity": "positive",
+            "recommendation_status": null,
+            "rating_5": 5.0,
+            "score": 8.5,
+            "themes": [
+              "راحتی و وزن",
+              "کارایی و عملکرد"
+            ]
+          },
+          {
+            "comment_id": 19485716,
+            "product_id": 1096725,
+            "text": "کرم خیلی خوبیه \nخشکی پاشنه پا رو از بین‌میبره و نرم و لطیف میکنه",
+            "source": "body_raw",
+            "polarity": "positive",
+            "recommendation_status": "recommended",
+            "rating_5": 5.0,
+            "score": 8.19688,
+            "themes": [
+              "راحتی و وزن",
+              "کارایی و عملکرد"
+            ]
+          },
+          {
+            "comment_id": 39774269,
+            "product_id": 1096725,
+            "text": "کف پارو نرم میکنه خوبه\nمن برای نرم شدن کف پام گرفتم ک راضی بودم",
+            "source": "body_raw",
+            "polarity": "positive",
+            "recommendation_status": "recommended",
+            "rating_5": 5.0,
+            "score": 8.19688,
+            "themes": [
+              "راحتی و وزن",
+              "کارایی و عملکرد"
+            ]
+          },
+          {
+            "comment_id": 45394608,
+            "product_id": 1096725,
+            "text": "بدیش بوی ویکس میده برای خشکی پوست خوبه",
+            "source": "body_raw",
+            "polarity": "positive",
+            "recommendation_status": "recommended",
+            "rating_5": 4.0,
+            "score": 8.11875,
+            "themes": [
+              "راحتی و وزن",
+              "مزه و بو",
+              "کارایی و عملکرد"
+            ]
+          },
+          {
+            "comment_id": 3508291,
+            "product_id": 1096725,
+            "text": "۶سالی دارم ازش استفاده میکنم .یه چند سالی میشه این کرم رو به سختی میشه تهیه کرد. واقعا کرم عالیه من پاهای خیلی خشکی دارم این کرم واقعا عالیه میخواستم از دیجی کالا سفارش بدم ولی دیدم قیمتش نسبت به شهر خودم خرم آباد گرونتره.مطمئن باشید استفاده کنید پشیمون نمیشید.با توجه به نایاب بودن محصول من هر وقت برای خریدش میرم حداقل ۴ یا ۵ تا ازش میخرم.نسبت به کرمهای خارجی ۱۰۰ درصد بهتره",
+            "source": "body_raw",
+            "polarity": "mixed",
+            "recommendation_status": null,
+            "rating_5": 4.25,
+            "score": 7.75,
+            "themes": [
+              "راحتی و وزن",
+              "قیمت و ارزش خرید",
+              "کارایی و عملکرد"
+            ]
+          },
+          {
+            "comment_id": 4730906,
+            "product_id": 1096725,
+            "text": "بو و حجمش مثل بقیه ی کرم های مخصوص پا بود اما حس میکنم تاثیرگذاری بیشتری داشت، با دو بار استفاده یک ماه مشکلی نداشتم از نظر خشکی کف پا",
+            "source": "body_raw",
+            "polarity": "unknown",
+            "recommendation_status": "no_idea",
+            "rating_5": 3.75,
+            "score": 7.16875,
+            "themes": [
+              "اندازه و تناسب",
+              "راحتی و وزن",
+              "مزه و بو",
+              "کارایی و عملکرد"
+            ]
+          }
+        ],
+        "scope": "indexed_catalogue",
+        "source": "catalog.sqlite3",
+        "stats": {
+          "total_reviews": 110,
+          "text_review_count": 110,
+          "relevant_review_count": 26,
+          "valid_label_count": 103,
+          "recommended_count": 90,
+          "not_recommended_count": 4,
+          "no_idea_count": 9,
+          "recommendation_rate": 0.8737864077669902,
+          "complete_for_product": true
+        },
+        "theme_counts": [
+          {
+            "theme": "کارایی و عملکرد",
+            "polarity": "positive",
+            "count": 14,
+            "denominator": 110,
+            "source": "explicit attributes and clear-sentiment text clauses",
+            "evidence_ids": [
+              47572694,
+              13072081,
+              39774269
+            ]
+          }
+        ],
+        "facet_coverage": [
+          {
+            "theme": "کارایی و عملکرد",
+            "matched_review_count": 26,
+            "evidence_ids": [
+              47572694,
+              19782115,
+              13072081
+            ]
+          }
+        ],
+        "intent": "aspect",
+        "requested_themes": [
+          "کارایی و عملکرد"
+        ],
+        "meta": {
+          "generation_mode": "extractive",
+          "retrieval_seconds": 0.028627,
+          "api_calls": 0,
+          "api_attempts": 0,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "usage_known": true,
+          "cached": false,
+          "citation_check": "exact source excerpts and product-scoped IDs",
+          "total_seconds": 0.028656,
+          "rag_total_seconds": 0.028976
+        },
+        "product": {
+          "product_id": 1096725,
+          "title_fa": "کرم پا عش مدل 3 in 1 حجم 75 میلی لیتر",
+          "category1": "مراقبت پوست",
+          "category2": "کرم و ژل ترمیم کننده",
+          "sub_category": "beauty",
+          "brand": "عش",
+          "price_recorded": 358000.0,
+          "price_toman": null,
+          "price_conflict": 1,
+          "rating_100": 84.0,
+          "rating_count": 183,
+          "review_count": 110,
+          "price_unit": "واحد ثبت‌شده (نامشخص)"
+        },
+        "product_resolution": "selected_id",
+        "status": "answered"
+      }
+    },
+    {
+      "case_id": "P6",
+      "product_id": 1126863,
+      "question": "کیفیت چاپ و ترجمه این کتاب چطور است؟",
+      "expected_mode": "extractive",
+      "clues": [
+        "چاپ",
+        "ترجمه",
+        "کاغذ",
+        "صفحه"
+      ],
+      "expected_intent": null,
+      "group": "topical_queries",
+      "pass": true,
+      "checks": {
+        "evidence_count": 8,
+        "exact_evidence_count": 8,
+        "all_evidence_exact_and_scoped": true,
+        "no_duplicate_ids": true,
+        "answer_references_in_evidence": true,
+        "stats_match_source": true,
+        "theme_references_valid": true
+      },
+      "keyword_check": true,
+      "result": {
+        "product_id": 1126863,
+        "answer_mode": "extractive",
+        "answer": "در دادهٔ واقعیِ در دسترس برای این محصول، 68 نظر ثبت شده است.\n32 نظر با شواهد مرتبط پیدا شد. نتیجهٔ بررسی موضوع‌های پرسش:\n• محتوا و چاپ: در 31 نظر نشانهٔ مرتبط پیدا شد (نظر 7842757، نظر 20355406، نظر 32351028).\n  نشانهٔ روشن مثبت در 15 نظر از 68 نظر دارای متن (نظر 7842757، نظر 20355406، نظر 52453615).\n  نشانهٔ روشن منفی در 8 نظر از 68 نظر دارای متن (نظر 32351028).\n• کیفیت و جنس: در 7 نظر نشانهٔ مرتبط پیدا شد (نظر 7842757، نظر 20355406، نظر 52453615).\n  نشانهٔ روشن مثبت در 6 نظر از 68 نظر دارای متن (نظر 7842757، نظر 20355406، نظر 52453615).\nاین شمارش قاعده‌محور است و همهٔ معنای ضمنی نظرها را پوشش نمی‌دهد.\n• «کتاب بسیار مفید و کاربردی و جنس کاغذش خیلی خوبه» (نظر 7842757)\n• «کیفیت چاپ و کاغذ» (نظر 20355406)\n• «ترجمه ای که مفهوم رو معکوس نشون میده» (نظر 32351028)\n• «با توجه به قیمت و جنس صفحات کتاب بسیار اقتصادی بود. از نظر محتوا حرف نداره. شک نکنید یکی از کتاب های خوب هست. از نظر چاپ هم باید بگم فونتش یه مقدار ریز بود. ریز تر از کتاب های معمولی که در بازار وجود داره» (نظر 52453615)\nتجربه‌ها یکسان نیستند؛ نمونه‌های مثبت و منفی یا نظرهای ترکیبی را جداگانه بررسی کنید.",
+        "evidence": [
+          {
+            "comment_id": 7842757,
+            "product_id": 1126863,
+            "text": "کتاب بسیار مفید و کاربردی و جنس کاغذش خیلی خوبه",
+            "source": "advantages_raw",
+            "polarity": "positive",
+            "recommendation_status": null,
+            "rating_5": 5.0,
+            "score": 7.146875,
+            "themes": [
+              "محتوا و چاپ",
+              "کارایی و عملکرد",
+              "کیفیت و جنس"
+            ]
+          },
+          {
+            "comment_id": 20355406,
+            "product_id": 1126863,
+            "text": "کیفیت چاپ و کاغذ",
+            "source": "advantages_raw",
+            "polarity": "positive",
+            "recommendation_status": null,
+            "rating_5": 4.1,
+            "score": 7.05,
+            "themes": [
+              "محتوا و چاپ",
+              "کیفیت و جنس"
+            ]
+          },
+          {
+            "comment_id": 32351028,
+            "product_id": 1126863,
+            "text": "ترجمه ای که مفهوم رو معکوس نشون میده",
+            "source": "disadvantages_raw",
+            "polarity": "negative",
+            "recommendation_status": "not_recommended",
+            "rating_5": 0.0,
+            "score": 7.1125,
+            "themes": [
+              "محتوا و چاپ"
+            ]
+          },
+          {
+            "comment_id": 52453615,
+            "product_id": 1126863,
+            "text": "با توجه به قیمت و جنس صفحات کتاب بسیار اقتصادی بود. از نظر محتوا حرف نداره. شک نکنید یکی از کتاب های خوب هست. از نظر چاپ هم باید بگم فونتش یه مقدار ریز بود. ریز تر از کتاب های معمولی که در بازار وجود داره",
+            "source": "body_raw",
+            "polarity": "positive",
+            "recommendation_status": "recommended",
+            "rating_5": 5.0,
+            "score": 12.3875,
+            "themes": [
+              "قیمت و ارزش خرید",
+              "محتوا و چاپ",
+              "کیفیت و جنس"
+            ]
+          },
+          {
+            "comment_id": 13257139,
+            "product_id": 1126863,
+            "text": "من این کتاب رو به توصیه ی یک روانشناس گرفتم و هنوز نخوندمش.کیفیت کاغذش هم خوب بود.",
+            "source": "body_raw",
+            "polarity": "positive",
+            "recommendation_status": "recommended",
+            "rating_5": 4.0,
+            "score": 12.00625,
+            "themes": [
+              "محتوا و چاپ",
+              "کیفیت و جنس"
+            ]
+          },
+          {
+            "comment_id": 11833773,
+            "product_id": 1126863,
+            "text": "کیفیت کاغذ",
+            "source": "advantages_raw",
+            "polarity": "positive",
+            "recommendation_status": "not_recommended",
+            "rating_5": 2.6,
+            "score": 11.89687,
+            "themes": [
+              "محتوا و چاپ",
+              "کیفیت و جنس"
+            ]
+          },
+          {
+            "comment_id": 16165015,
+            "product_id": 1126863,
+            "text": "جنس جلد و کاغذ و قیمت عالی",
+            "source": "body_raw",
+            "polarity": "positive",
+            "recommendation_status": "recommended",
+            "rating_5": 4.0,
+            "score": 10.58125,
+            "themes": [
+              "قیمت و ارزش خرید",
+              "محتوا و چاپ",
+              "کیفیت و جنس"
+            ]
+          },
+          {
+            "comment_id": 49045418,
+            "product_id": 1126863,
+            "text": "محتوا و چاپ و ترجمه و... عالی. قیمت مناسب. بسته بندی سلفون",
+            "source": "body_raw",
+            "polarity": "positive",
+            "recommendation_status": null,
+            "rating_5": 5.0,
+            "score": 8.18125,
+            "themes": [
+              "بسته‌بندی و ارسال",
+              "قیمت و ارزش خرید",
+              "محتوا و چاپ"
+            ]
+          }
+        ],
+        "scope": "indexed_catalogue",
+        "source": "catalog.sqlite3",
+        "stats": {
+          "total_reviews": 68,
+          "text_review_count": 68,
+          "relevant_review_count": 32,
+          "valid_label_count": 59,
+          "recommended_count": 47,
+          "not_recommended_count": 8,
+          "no_idea_count": 4,
+          "recommendation_rate": 0.7966101694915254,
+          "complete_for_product": true
+        },
+        "theme_counts": [
+          {
+            "theme": "محتوا و چاپ",
+            "polarity": "positive",
+            "count": 15,
+            "denominator": 68,
+            "source": "explicit attributes and clear-sentiment text clauses",
+            "evidence_ids": [
+              7842757,
+              20355406,
+              52453615
+            ]
+          },
+          {
+            "theme": "کیفیت و جنس",
+            "polarity": "positive",
+            "count": 6,
+            "denominator": 68,
+            "source": "explicit attributes and clear-sentiment text clauses",
+            "evidence_ids": [
+              7842757,
+              20355406,
+              52453615
+            ]
+          },
+          {
+            "theme": "محتوا و چاپ",
+            "polarity": "negative",
+            "count": 8,
+            "denominator": 68,
+            "source": "explicit attributes and clear-sentiment text clauses",
+            "evidence_ids": [
+              32351028
+            ]
+          }
+        ],
+        "facet_coverage": [
+          {
+            "theme": "محتوا و چاپ",
+            "matched_review_count": 31,
+            "evidence_ids": [
+              7842757,
+              20355406,
+              32351028
+            ]
+          },
+          {
+            "theme": "کیفیت و جنس",
+            "matched_review_count": 7,
+            "evidence_ids": [
+              7842757,
+              20355406,
+              52453615
+            ]
+          }
+        ],
+        "intent": "aspect",
+        "requested_themes": [
+          "محتوا و چاپ",
+          "کیفیت و جنس"
+        ],
+        "meta": {
+          "generation_mode": "extractive",
+          "retrieval_seconds": 0.029938,
+          "api_calls": 0,
+          "api_attempts": 0,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "usage_known": true,
+          "cached": false,
+          "citation_check": "exact source excerpts and product-scoped IDs",
+          "total_seconds": 0.029972,
+          "rag_total_seconds": 0.030308
+        },
+        "product": {
+          "product_id": 1126863,
+          "title_fa": "کتاب از حال بد به حال خوب اثر دیوید برنز انتشارات سیمای نور امید",
+          "category1": "کتاب علوم اجتماعی",
+          "category2": null,
+          "sub_category": "book & stationary & art",
+          "brand": "انتشارات سیمای نور امید",
+          "price_recorded": 1440000.0,
+          "price_toman": null,
+          "price_conflict": 0,
+          "rating_100": 86.0,
+          "rating_count": 105,
+          "review_count": 68,
+          "price_unit": "واحد ثبت‌شده (نامشخص)"
+        },
+        "product_resolution": "selected_id",
+        "status": "answered"
+      }
+    },
+    {
+      "case_id": "P7",
+      "product_id": 1126863,
+      "question": "باتری این محصول چند ساعت شارژ نگه می‌دارد؟",
+      "expected_mode": "insufficient_evidence",
+      "clues": [],
+      "expected_intent": null,
+      "group": "insufficient_evidence",
+      "pass": true,
+      "checks": {
+        "evidence_count": 0,
+        "exact_evidence_count": 0,
+        "all_evidence_exact_and_scoped": true,
+        "no_duplicate_ids": true,
+        "answer_references_in_evidence": true,
+        "stats_match_source": true,
+        "theme_references_valid": true
+      },
+      "keyword_check": null,
+      "result": {
+        "product_id": 1126863,
+        "answer_mode": "insufficient_evidence",
+        "answer": null,
+        "reason": "در متن نظرات این محصول شاهد مرتبط و قابل استناد برای این سؤال پیدا نشد.",
+        "evidence": [],
+        "scope": "indexed_catalogue",
+        "stats": {
+          "total_reviews": 68,
+          "text_review_count": 68,
+          "relevant_review_count": 0,
+          "valid_label_count": 59,
+          "recommended_count": 47,
+          "not_recommended_count": 8,
+          "no_idea_count": 4,
+          "recommendation_rate": 0.7966101694915254,
+          "complete_for_product": true
+        },
+        "meta": {
+          "generation_mode": "none",
+          "api_calls": 0,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "usage_known": true,
+          "total_seconds": 0.01954,
+          "retrieval_seconds": 0.019536,
+          "rag_total_seconds": 0.019904
+        },
+        "product": {
+          "product_id": 1126863,
+          "title_fa": "کتاب از حال بد به حال خوب اثر دیوید برنز انتشارات سیمای نور امید",
+          "category1": "کتاب علوم اجتماعی",
+          "category2": null,
+          "sub_category": "book & stationary & art",
+          "brand": "انتشارات سیمای نور امید",
+          "price_recorded": 1440000.0,
+          "price_toman": null,
+          "price_conflict": 0,
+          "rating_100": 86.0,
+          "rating_count": 105,
+          "review_count": 68,
+          "price_unit": "واحد ثبت‌شده (نامشخص)"
+        },
+        "product_resolution": "selected_id",
+        "status": "insufficient_evidence"
+      }
+    },
+    {
+      "case_id": "P8",
+      "product_id": 999999999,
+      "question": "کیفیت این محصول چگونه است؟",
+      "expected_mode": "insufficient_evidence",
+      "clues": [],
+      "expected_intent": null,
+      "group": "outside_sample",
+      "pass": true,
+      "checks": {
+        "evidence_count": 0,
+        "exact_evidence_count": 0,
+        "all_evidence_exact_and_scoped": true,
+        "no_duplicate_ids": true,
+        "answer_references_in_evidence": true,
+        "stats_match_source": true,
+        "theme_references_valid": true
+      },
+      "keyword_check": null,
+      "result": {
+        "product_id": 999999999,
+        "answer_mode": "insufficient_evidence",
+        "answer": null,
+        "reason": "این شناسه خارج از مجموعهٔ محصولات بسته است. برای پاسخ‌گویی از فایل کامل نظرات استفاده کن.",
+        "evidence": [],
+        "scope": "indexed_catalogue",
+        "stats": {
+          "total_reviews": 0,
+          "text_review_count": 0,
+          "relevant_review_count": 0,
+          "valid_label_count": 0,
+          "recommended_count": 0,
+          "not_recommended_count": 0,
+          "no_idea_count": 0,
+          "recommendation_rate": null,
+          "complete_for_product": false
+        },
+        "meta": {
+          "generation_mode": "none",
+          "api_calls": 0,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "usage_known": true,
+          "total_seconds": 0.000346,
+          "retrieval_seconds": 0.000343,
+          "rag_total_seconds": 0.000515
+        },
+        "product": null,
+        "product_resolution": "selected_id",
+        "status": "insufficient_evidence"
+      }
+    },
+    {
+      "case_id": "P9",
+      "product_id": 10133811,
+      "question": "سایزبندی و اندازهٔ کفش چطور است؟",
+      "expected_mode": "extractive",
+      "clues": [
+        "سایز",
+        "اندازه",
+        "تنگ",
+        "گشاد"
+      ],
+      "expected_intent": null,
+      "group": "topical_queries",
+      "pass": true,
+      "checks": {
+        "evidence_count": 8,
+        "exact_evidence_count": 8,
+        "all_evidence_exact_and_scoped": true,
+        "no_duplicate_ids": true,
+        "answer_references_in_evidence": true,
+        "stats_match_source": true,
+        "theme_references_valid": true
+      },
+      "keyword_check": true,
+      "result": {
+        "product_id": 10133811,
+        "answer_mode": "extractive",
+        "answer": "در دادهٔ واقعیِ در دسترس برای این محصول، 65 نظر ثبت شده است.\n14 نظر با شواهد مرتبط پیدا شد. نتیجهٔ بررسی موضوع‌های پرسش:\n• اندازه و تناسب: در 14 نظر نشانهٔ مرتبط پیدا شد (نظر 50714362، نظر 48288959، نظر 53712603).\n  نشانهٔ روشن مثبت در 4 نظر از 65 نظر دارای متن (نظر 50714362، نظر 51316955، نظر 51920742).\n  نشانهٔ روشن منفی در 3 نظر از 65 نظر دارای متن (نظر 48288959).\nاین شمارش قاعده‌محور است و همهٔ معنای ضمنی نظرها را پوشش نمی‌دهد.\n• «سایز بندی درست» (نظر 50714362)\n• «دقت کنین چون توپا سایز باز میکنه حتما یه سایز کوچکتر سفارش بدین که قشنگ پا رو بچسبه» (نظر 48288959)\n• «عالی\nفقط به سایزبندی خود کفش دقت کنین.\nمن کفشام ۴۴ هست ولی طبق سایزبندی این کفش ۴۳ سفارش دادم و دقیق اندازه هست.\nدر مجموع قیمتش ۷۰۰ نیست.» (نظر 53712603)\n• «فعلا تازه بدستم رسید از نظر  اندازه خوب بود  تا استفاده کنم ببینم چطور هست» (نظر 51316955)\nتجربه‌ها یکسان نیستند؛ نمونه‌های مثبت و منفی یا نظرهای ترکیبی را جداگانه بررسی کنید.",
+        "evidence": [
+          {
+            "comment_id": 50714362,
+            "product_id": 10133811,
+            "text": "سایز بندی درست",
+            "source": "advantages_raw",
+            "polarity": "positive",
+            "recommendation_status": "recommended",
+            "rating_5": 5.0,
+            "score": 7.04375,
+            "themes": [
+              "اندازه و تناسب"
+            ]
+          },
+          {
+            "comment_id": 48288959,
+            "product_id": 10133811,
+            "text": "دقت کنین چون توپا سایز باز میکنه حتما یه سایز کوچکتر سفارش بدین که قشنگ پا رو بچسبه",
+            "source": "body_raw",
+            "polarity": "negative",
+            "recommendation_status": null,
+            "rating_5": 5.0,
+            "score": 5.259375,
+            "themes": [
+              "اندازه و تناسب"
+            ]
+          },
+          {
+            "comment_id": 53712603,
+            "product_id": 10133811,
+            "text": "عالی\nفقط به سایزبندی خود کفش دقت کنین.\nمن کفشام ۴۴ هست ولی طبق سایزبندی این کفش ۴۳ سفارش دادم و دقیق اندازه هست.\nدر مجموع قیمتش ۷۰۰ نیست.",
+            "source": "body_raw",
+            "polarity": "positive",
+            "recommendation_status": "recommended",
+            "rating_5": 4.0,
+            "score": 8.42812,
+            "themes": [
+              "اندازه و تناسب",
+              "قیمت و ارزش خرید"
+            ]
+          },
+          {
+            "comment_id": 51316955,
+            "product_id": 10133811,
+            "text": "فعلا تازه بدستم رسید از نظر  اندازه خوب بود  تا استفاده کنم ببینم چطور هست",
+            "source": "body_raw",
+            "polarity": "positive",
+            "recommendation_status": "no_idea",
+            "rating_5": 4.0,
+            "score": 6.975,
+            "themes": [
+              "اندازه و تناسب"
+            ]
+          },
+          {
+            "comment_id": 51841671,
+            "product_id": 10133811,
+            "text": "پارچه روی کفش اندازه نبست و به پا فشار زیادی میاورد،",
+            "source": "body_raw",
+            "polarity": "unknown",
+            "recommendation_status": "no_idea",
+            "rating_5": 3.0,
+            "score": 6.9125,
+            "themes": [
+              "اندازه و تناسب",
+              "کیفیت و جنس"
+            ]
+          },
+          {
+            "comment_id": 51920742,
+            "product_id": 10133811,
+            "text": "سبک ، طبی و کاملا اندازه و با کیفیت..",
+            "source": "body_raw",
+            "polarity": "positive",
+            "recommendation_status": "recommended",
+            "rating_5": 5.0,
+            "score": 6.86562,
+            "themes": [
+              "اندازه و تناسب",
+              "راحتی و وزن",
+              "کیفیت و جنس"
+            ]
+          },
+          {
+            "comment_id": 51744218,
+            "product_id": 10133811,
+            "text": "اندازه ، درست کیفیت عالی",
+            "source": "body_raw",
+            "polarity": "positive",
+            "recommendation_status": "recommended",
+            "rating_5": 5.0,
+            "score": 6.825,
+            "themes": [
+              "اندازه و تناسب",
+              "کیفیت و جنس"
+            ]
+          },
+          {
+            "comment_id": 48459967,
+            "product_id": 10133811,
+            "text": "جنسش خوب بود جای چسب نداشت دقیقا مثل تصویر و اینکه دقیقا همون سایز پاتون بگیرید من یه سایز بزرگتر بنابر گفته دوستان سفارش دادم برام بزرگ بود ولی حوصله مرجوع کردن ندارم میدم به کسی چرا واقعا توصیه الکی میکنید",
+            "source": "body_raw",
+            "polarity": "mixed",
+            "recommendation_status": null,
+            "rating_5": 4.0,
+            "score": 6.14687,
+            "themes": [
+              "اندازه و تناسب",
+              "کیفیت و جنس"
+            ]
+          }
+        ],
+        "scope": "indexed_catalogue",
+        "source": "catalog.sqlite3",
+        "stats": {
+          "total_reviews": 65,
+          "text_review_count": 65,
+          "relevant_review_count": 14,
+          "valid_label_count": 57,
+          "recommended_count": 40,
+          "not_recommended_count": 4,
+          "no_idea_count": 13,
+          "recommendation_rate": 0.7017543859649122,
+          "complete_for_product": true
+        },
+        "theme_counts": [
+          {
+            "theme": "اندازه و تناسب",
+            "polarity": "positive",
+            "count": 4,
+            "denominator": 65,
+            "source": "explicit attributes and clear-sentiment text clauses",
+            "evidence_ids": [
+              50714362,
+              51316955,
+              51920742
+            ]
+          },
+          {
+            "theme": "اندازه و تناسب",
+            "polarity": "negative",
+            "count": 3,
+            "denominator": 65,
+            "source": "explicit attributes and clear-sentiment text clauses",
+            "evidence_ids": [
+              48288959
+            ]
+          }
+        ],
+        "facet_coverage": [
+          {
+            "theme": "اندازه و تناسب",
+            "matched_review_count": 14,
+            "evidence_ids": [
+              50714362,
+              48288959,
+              53712603
+            ]
+          }
+        ],
+        "intent": "aspect",
+        "requested_themes": [
+          "اندازه و تناسب"
+        ],
+        "meta": {
+          "generation_mode": "extractive",
+          "retrieval_seconds": 0.018567,
+          "api_calls": 0,
+          "api_attempts": 0,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "usage_known": true,
+          "cached": false,
+          "citation_check": "exact source excerpts and product-scoped IDs",
+          "total_seconds": 0.018595,
+          "rag_total_seconds": 0.018734
+        },
+        "product": {
+          "product_id": 10133811,
+          "title_fa": "کفش پیاده روی مدل کلاسیک MESKBAFT",
+          "category1": "کفش زنانه و مردانه",
+          "category2": "کفش ورزشی زنانه و مردانه",
+          "sub_category": "clothe",
+          "brand": "متفرقه",
+          "price_recorded": 7000000.0,
+          "price_toman": null,
+          "price_conflict": 0,
+          "rating_100": 82.0,
+          "rating_count": 60,
+          "review_count": 65,
+          "price_unit": "واحد ثبت‌شده (نامشخص)"
+        },
+        "product_resolution": "selected_id",
+        "status": "answered"
+      }
+    },
+    {
+      "case_id": "P10",
+      "product_id": 1096725,
+      "question": "نظر کاربران دربارهٔ قیمت و ارزش خرید این کرم چیست؟",
+      "expected_mode": "extractive",
+      "clues": [
+        "قیمت",
+        "ارزش",
+        "گرون",
+        "گران"
+      ],
+      "expected_intent": null,
+      "group": "topical_queries",
+      "pass": true,
+      "checks": {
+        "evidence_count": 8,
+        "exact_evidence_count": 8,
+        "all_evidence_exact_and_scoped": true,
+        "no_duplicate_ids": true,
+        "answer_references_in_evidence": true,
+        "stats_match_source": true,
+        "theme_references_valid": true
+      },
+      "keyword_check": true,
+      "result": {
+        "product_id": 1096725,
+        "answer_mode": "extractive",
+        "answer": "در دادهٔ واقعیِ در دسترس برای این محصول، 110 نظر ثبت شده است.\nاز 103 نظر دارای برچسب معتبر، 90 مورد خرید را پیشنهاد کرده‌اند (87.4%)، 4 مورد پیشنهاد نکرده‌اند و 9 مورد نظر مشخصی ثبت نکرده‌اند.\nدر میان نظرهای دارای برچسب، اکثریت خرید را پیشنهاد کرده‌اند.\nاین درصد یکی از نشانه‌های تجربهٔ کاربران است؛ ارزش خرید قطعی به نیاز و قیمت فعلی شما نیز بستگی دارد.\n• «باتوجه به قیمتش عالیه، خیلی زود ترکهای شدید رو جمع میکنه، اما برای رفع کامل ترکهای ریزتر باید مداوم و زیاد استفاده بشه طبیعتا، قیمتش هم که خیلی عالیه ، البته مدل کاسه ایش به صرفه تره» (نظر 24065443)\n• «قیمت» (نظر 5013003)\n• «من دوسش دارم قیمتش که خیلی خوبه و به نسبت کرم های دیگه برای من خوب کار کرد و من خیلی راضی بودم بوش رو هم من خیلی دوست داشتم بوی نعنا میده:)» (نظر 31207940)\n• «تعریفشو زیاد شنیدم ولی استفاده نکردم هنوز، قیمت دیجی کالا هم کمتر از قیمتی هست که روی کرم درج شده» (نظر 16146361)\nتجربه‌ها یکسان نیستند؛ نمونه‌های مثبت و منفی یا نظرهای ترکیبی را جداگانه بررسی کنید.",
+        "evidence": [
+          {
+            "comment_id": 24065443,
+            "product_id": 1096725,
+            "text": "باتوجه به قیمتش عالیه، خیلی زود ترکهای شدید رو جمع میکنه، اما برای رفع کامل ترکهای ریزتر باید مداوم و زیاد استفاده بشه طبیعتا، قیمتش هم که خیلی عالیه ، البته مدل کاسه ایش به صرفه تره",
+            "source": "body_raw",
+            "polarity": "positive",
+            "recommendation_status": "recommended",
+            "rating_5": 5.0,
+            "score": 10.31875,
+            "themes": [
+              "قیمت و ارزش خرید"
+            ]
+          },
+          {
+            "comment_id": 5013003,
+            "product_id": 1096725,
+            "text": "قیمت",
+            "source": "disadvantages_raw",
+            "polarity": "negative",
+            "recommendation_status": "recommended",
+            "rating_5": 0.0,
+            "score": 9.275,
+            "themes": [
+              "قیمت و ارزش خرید"
+            ]
+          },
+          {
+            "comment_id": 31207940,
+            "product_id": 1096725,
+            "text": "من دوسش دارم قیمتش که خیلی خوبه و به نسبت کرم های دیگه برای من خوب کار کرد و من خیلی راضی بودم بوش رو هم من خیلی دوست داشتم بوی نعنا میده:)",
+            "source": "body_raw",
+            "polarity": "positive",
+            "recommendation_status": "recommended",
+            "rating_5": 4.0,
+            "score": 10.18437,
+            "themes": [
+              "قیمت و ارزش خرید",
+              "مزه و بو"
+            ]
+          },
+          {
+            "comment_id": 16146361,
+            "product_id": 1096725,
+            "text": "تعریفشو زیاد شنیدم ولی استفاده نکردم هنوز، قیمت دیجی کالا هم کمتر از قیمتی هست که روی کرم درج شده",
+            "source": "body_raw",
+            "polarity": "unknown",
+            "recommendation_status": "recommended",
+            "rating_5": 0.0,
+            "score": 10.05312,
+            "themes": [
+              "قیمت و ارزش خرید"
+            ]
+          },
+          {
+            "comment_id": 53330146,
+            "product_id": 1096725,
+            "text": "تنها کرمی هست که واقعا معجزشو دیدم .. محصولات عش قیمت مناسب و واقعا خوبی داره و من همیشه میخرم .",
+            "source": "body_raw",
+            "polarity": "positive",
+            "recommendation_status": "recommended",
+            "rating_5": 5.0,
+            "score": 10.05,
+            "themes": [
+              "قیمت و ارزش خرید"
+            ]
+          },
+          {
+            "comment_id": 27377791,
+            "product_id": 1096725,
+            "text": "سالهاست فقط همین برند استفاده میکنم فقط قیمتش مثل همه اجناس بالاتر میره ولی لااقل کیفیتش خوبه",
+            "source": "body_raw",
+            "polarity": "positive",
+            "recommendation_status": "recommended",
+            "rating_5": 3.5,
+            "score": 10.04063,
+            "themes": [
+              "اصالت و مطابقت",
+              "قیمت و ارزش خرید",
+              "کیفیت و جنس"
+            ]
+          },
+          {
+            "comment_id": 18778557,
+            "product_id": 1096725,
+            "text": "پاها رو نرم و خیلی کم چرب میکنه، قیمتش نسبت به کاراییش خیلی خوبِ",
+            "source": "body_raw",
+            "polarity": "positive",
+            "recommendation_status": "recommended",
+            "rating_5": 0.0,
+            "score": 9.95,
+            "themes": [
+              "راحتی و وزن",
+              "قیمت و ارزش خرید",
+              "کارایی و عملکرد"
+            ]
+          },
+          {
+            "comment_id": 22440440,
+            "product_id": 1096725,
+            "text": "عالی بود نسبت به قیمت بازهر بهتر بود",
+            "source": "body_raw",
+            "polarity": "positive",
+            "recommendation_status": "recommended",
+            "rating_5": 5.0,
+            "score": 9.8625,
+            "themes": [
+              "قیمت و ارزش خرید"
+            ]
+          }
+        ],
+        "scope": "indexed_catalogue",
+        "source": "catalog.sqlite3",
+        "stats": {
+          "total_reviews": 110,
+          "text_review_count": 110,
+          "relevant_review_count": 105,
+          "valid_label_count": 103,
+          "recommended_count": 90,
+          "not_recommended_count": 4,
+          "no_idea_count": 9,
+          "recommendation_rate": 0.8737864077669902,
+          "complete_for_product": true
+        },
+        "theme_counts": [],
+        "facet_coverage": [
+          {
+            "theme": "قیمت و ارزش خرید",
+            "matched_review_count": 22,
+            "evidence_ids": [
+              24065443,
+              5013003,
+              31207940
+            ]
+          }
+        ],
+        "intent": "value",
+        "requested_themes": [
+          "قیمت و ارزش خرید"
+        ],
+        "meta": {
+          "generation_mode": "extractive",
+          "retrieval_seconds": 0.026898,
+          "api_calls": 0,
+          "api_attempts": 0,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "usage_known": true,
+          "cached": false,
+          "citation_check": "exact source excerpts and product-scoped IDs",
+          "total_seconds": 0.026925,
+          "rag_total_seconds": 0.027165
+        },
+        "product": {
+          "product_id": 1096725,
+          "title_fa": "کرم پا عش مدل 3 in 1 حجم 75 میلی لیتر",
+          "category1": "مراقبت پوست",
+          "category2": "کرم و ژل ترمیم کننده",
+          "sub_category": "beauty",
+          "brand": "عش",
+          "price_recorded": 358000.0,
+          "price_toman": null,
+          "price_conflict": 1,
+          "rating_100": 84.0,
+          "rating_count": 183,
+          "review_count": 110,
+          "price_unit": "واحد ثبت‌شده (نامشخص)"
+        },
+        "product_resolution": "selected_id",
+        "status": "answered"
+      }
+    }
+  ]
+}

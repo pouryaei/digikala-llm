@@ -1,0 +1,13 @@
+{
+  "search_actual_product": true,
+  "search_to_review_in_same_ui": {
+    "status": "answered",
+    "reviews": 200,
+    "evidence": 8
+  },
+  "comparison_in_ui": true,
+  "analytics_charts": 3,
+  "ml_prediction_in_ui": true,
+  "manager_question_in_ui": true,
+  "network_calls": 0
+}

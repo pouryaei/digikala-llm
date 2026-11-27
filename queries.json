@@ -1,0 +1,163 @@
+{
+  "version": "1.1",
+  "method": "Method A - Silver Ground Truth (Known-Item Search)",
+  "seed": 42,
+  "mapping_sha256": "24bdddb01321cbd012269ead38282423662b52ee42e20a1f54e581da9f1d27e7",
+  "total_queries": 22,
+  "queries": [
+    {
+      "query_id": "Q01",
+      "query": "لوسیون مرطوب کننده بیونیج",
+      "query_type": "short_keyword",
+      "target_product_id": "9935779",
+      "reference_title": "لوسیون مرطوب کننده بیونیج مدل Body Lotion حجم 250 میلی لیتر"
+    },
+    {
+      "query_id": "Q02",
+      "query": "کتاب بهترین سال زندگی",
+      "query_type": "short_keyword",
+      "target_product_id": "1918077",
+      "reference_title": "کتاب بهترین سال زندگی شما اثر دارن هاردی انتشارات معیار اندیشه"
+    },
+    {
+      "query_id": "Q03",
+      "query": "کتاب رمان نوجوان188 اثر",
+      "query_type": "short_keyword",
+      "target_product_id": "249084",
+      "reference_title": "کتاب رمان نوجوان188 اثر الی بنجامین"
+    },
+    {
+      "query_id": "Q04",
+      "query": "ادو پرفیوم مردانه ویزاری",
+      "query_type": "short_keyword",
+      "target_product_id": "11914833",
+      "reference_title": "ادو پرفیوم مردانه ویزاری مدل مستر پیس حجم 100 میلی لیتر"
+    },
+    {
+      "query_id": "Q05",
+      "query": "جامدادی گل",
+      "query_type": "short_keyword",
+      "target_product_id": "4282611",
+      "reference_title": "جامدادی مدل گل"
+    },
+    {
+      "query_id": "Q06",
+      "query": "پستانک مایا 1311",
+      "query_type": "short_keyword",
+      "target_product_id": "3855366",
+      "reference_title": "پستانک مایا مدل 1311"
+    },
+    {
+      "query_id": "Q07",
+      "query": "کفش زنانه اسپرت من",
+      "query_type": "short_keyword",
+      "target_product_id": "3538600",
+      "reference_title": "کفش زنانه اسپرت من مدل 39960-12"
+    },
+    {
+      "query_id": "Q08",
+      "query": "خرید کش مو دخترانه JE 100 با کیفیت مناسب",
+      "query_type": "semantic",
+      "target_product_id": "2379240",
+      "reference_title": "کش مو دخترانه مدل JE مجموعه 100 عددی"
+    },
+    {
+      "query_id": "Q09",
+      "query": "خرید شورت مردانه چیندکا 707 3 با کیفیت مناسب",
+      "query_type": "semantic",
+      "target_product_id": "11737778",
+      "reference_title": "شورت مردانه چیندکا کد 707 مجموعه 3 عددی"
+    },
+    {
+      "query_id": "Q10",
+      "query": "خرید سوزن نقشه کرون فاکس 01 با کیفیت مناسب",
+      "query_type": "semantic",
+      "target_product_id": "1806561",
+      "reference_title": "سوزن نقشه کرون فاکس کد 01 بسته 100 عددی"
+    },
+    {
+      "query_id": "Q11",
+      "query": "خرید پاکت هدیه درخت عشق با کیفیت مناسب",
+      "query_type": "semantic",
+      "target_product_id": "10598308",
+      "reference_title": "پاکت هدیه مدل درخت عشق"
+    },
+    {
+      "query_id": "Q12",
+      "query": "خرید مجله نجوم شماره 289 با کیفیت مناسب",
+      "query_type": "semantic",
+      "target_product_id": "11878879",
+      "reference_title": "مجله نجوم شماره 289"
+    },
+    {
+      "query_id": "Q13",
+      "query": "خرید هودی پسرانه چنگ گرگ A455 با کیفیت مناسب",
+      "query_type": "semantic",
+      "target_product_id": "8632892",
+      "reference_title": "هودی پسرانه مدل چنگ گرگ A455"
+    },
+    {
+      "query_id": "Q14",
+      "query": "خرید شامپو ضد شوره مو استم با کیفیت مناسب",
+      "query_type": "semantic",
+      "target_product_id": "1538794",
+      "reference_title": "شامپو ضد شوره مو استم سل مدل tea tree oil حجم 250 میلی لیتر"
+    },
+    {
+      "query_id": "Q15",
+      "query": "آیا کاربران از کیفیت و کارایی کفش روزمره زنانه بهشتیان سوزان راضی هستند؟",
+      "query_type": "review_qa",
+      "target_product_id": "9276416",
+      "reference_title": "کفش روزمره زنانه بهشتیان مدل سوزان کد 03910"
+    },
+    {
+      "query_id": "Q16",
+      "query": "آیا کاربران از کیفیت و کارایی کتاب جمهوری خلق نسیان اثر راضی هستند؟",
+      "query_type": "review_qa",
+      "target_product_id": "6761735",
+      "reference_title": "کتاب جمهوری خلق نسیان اثر لوئیزا لیم نشر ققنوس"
+    },
+    {
+      "query_id": "Q17",
+      "query": "آیا کاربران از کیفیت و کارایی کتاب آب بابا افلاطون اثر راضی هستند؟",
+      "query_type": "review_qa",
+      "target_product_id": "354365",
+      "reference_title": "کتاب آب بابا افلاطون اثر جان اسمیت"
+    },
+    {
+      "query_id": "Q18",
+      "query": "آیا کاربران از کیفیت و کارایی ادو پرفیوم مردانه گوچی Guilty راضی هستند؟",
+      "query_type": "review_qa",
+      "target_product_id": "336424",
+      "reference_title": "ادو پرفیوم مردانه گوچی مدل Guilty Absolute حجم 90 میلی لیتر"
+    },
+    {
+      "query_id": "Q19",
+      "query": "آیا کاربران از کیفیت و کارایی مانتو زنانه h 317 رنگ راضی هستند؟",
+      "query_type": "review_qa",
+      "target_product_id": "1650340",
+      "reference_title": "مانتو زنانه کد h 317 رنگ مشکی"
+    },
+    {
+      "query_id": "Q20",
+      "query": "آیا کاربران از کیفیت و کارایی کیف اداری ver-0988 راضی هستند؟",
+      "query_type": "review_qa",
+      "target_product_id": "3471887",
+      "reference_title": "کیف اداری مدل ver-0988"
+    },
+    {
+      "query_id": "Q21",
+      "query": "کدام دسته‌بندی بیشترین تعداد نظرات کاربران را دارد؟",
+      "query_type": "analytical",
+      "target_product_id": null,
+      "reference_title": null
+    },
+    {
+      "query_id": "Q22",
+      "query": "محصولاتی که اصلاً در فروشگاه وجود ندارند مثل خودروی تسلا",
+      "query_type": "edge_case_out_of_domain",
+      "target_product_id": null,
+      "reference_title": null
+    }
+  ]
+}

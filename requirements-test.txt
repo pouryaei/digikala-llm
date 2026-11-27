@@ -1,0 +1,4 @@
+-r requirements-llm.txt
+-r requirements-data.txt
+fastapi>=0.115,<1
+httpx>=0.27,<1

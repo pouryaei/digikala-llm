@@ -1,0 +1,99 @@
+{
+  "release": "Forouhar_100K_Final",
+  "dataset": "RadeAI/Digikala_comments_products",
+  "dataset_revision": "89c3133b169c8d3793db8834f56f32fee33d9db0",
+  "products": 100000,
+  "reviews": 1874457,
+  "source_products": 948352,
+  "source_reviews": 6151303,
+  "search_mode": "bm25",
+  "review_generation_mode": "extractive",
+  "dense_index_included": false,
+  "live_gateway_verified": false,
+  "real_api_calls": 0,
+  "data_integrity": {
+    "products": 100000,
+    "bm25_documents": 100000,
+    "reviews": 1874457,
+    "products_with_reviews": 100000,
+    "rows_with_review_text": 1874454,
+    "products_with_text_reviews": 100000,
+    "analytics_products": 100000,
+    "analytics_reviews": 1874457,
+    "analytics_orphan_reviews": 0,
+    "same_ids_and_order": true,
+    "exact_review_pairs_verified": true,
+    "dense_available": false,
+    "faiss_vectors": null,
+    "faiss_dimensions": null
+  },
+  "search_example": {
+    "product_id": 1696173,
+    "title_fa": "کفش پیاده روی مردانه مدل adi-super رنگ طوسی",
+    "verified_reviews": 200,
+    "evidence": 8,
+    "comparison_product_id": 2896502,
+    "out_of_scope_abstention": true,
+    "ambiguous_product_abstention": true,
+    "comparison_is_product_scoped": true,
+    "search_seconds": 1.156764,
+    "qa_seconds": 0.035703,
+    "real_api_calls": 0
+  },
+  "qa_evaluation": {
+    "cases": 16,
+    "passed": 16,
+    "answered": 10,
+    "abstained": 6,
+    "evidence": 60,
+    "exact_evidence": 60,
+    "median_seconds": 0.003735,
+    "p95_seconds": 0.04429,
+    "api_calls": 0,
+    "live_gateway_tested": false,
+    "human_semantic_judgments": false
+  },
+  "analytics_checks": {
+    "products": 100000,
+    "reviews": 1874457,
+    "categories": 191,
+    "brands_result": 10,
+    "price_rating_result": 1000,
+    "seconds": 1.317
+  },
+  "manager_questions_verified": 4,
+  "ui": {
+    "search_actual_product": true,
+    "search_to_review_in_same_ui": {
+      "status": "answered",
+      "reviews": 200,
+      "evidence": 8
+    },
+    "comparison_in_ui": true,
+    "analytics_charts": 3,
+    "ml_prediction_in_ui": true,
+    "manager_question_in_ui": true,
+    "network_calls": 0
+  },
+  "streamlit": {
+    "health": "ok",
+    "app_http_status": 200,
+    "server_command": "python -m streamlit run app.py",
+    "streamlit_port_used_for_test": 8753
+  },
+  "offline_regression": {
+    "tests_run": 68,
+    "status": "PASS",
+    "seconds": 23.88
+  },
+  "model_original_test_macro_f1": 0.6790791799331871,
+  "model_sha256_verified": true,
+  "original_hero_photographs_and_fonts_unchanged": true,
+  "validated_runtime": {
+    "python": "3.12.14",
+    "streamlit": "1.67.0",
+    "duckdb": "2.0.1",
+    "scikit_learn": "1.9.1",
+    "plotly": "7.2.0"
+  }
+}

@@ -1,0 +1,20 @@
+Products scanned: 1,283,496. Reading comments...
+{
+  "products": 1283496,
+  "unique_nonblank_product_ids": 948352,
+  "missing_product_ids": 0,
+  "extra_rows_with_duplicate_product_id": 335144,
+  "comments": 6156289,
+  "comments_matched_to_product": 6156289,
+  "comments_without_product_id": 0,
+  "comments_with_unknown_product_id": 0,
+  "join_coverage_pct": 100.0,
+  "blank_bodies": 0,
+  "status_counts": {
+    "not_recommended": 504903,
+    "recommended": 4162839,
+    "nan": 894426,
+    "no_idea": 594121
+  },
+  "elapsed_s": 20.3
+}

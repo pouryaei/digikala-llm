@@ -1,0 +1,300 @@
+{
+  "project": "QBC13 — Digikala AI Shopping & Review Intelligence",
+  "dataset": "evaluation_queries",
+  "version": "1.0",
+  "notes": [
+    "Do not fabricate relevant product IDs, review IDs, SQL answers, or benchmark scores; populate those only from verified project data and runs.",
+    "Finglish requires explicit transliteration and multilingual handling; Yeh/Kaf/ZWNJ normalization alone does not solve Finglish.",
+    "Manual Top-10 Yes/No relevance labels permit Precision@10 only.",
+    "Title-seeded Method A, using real product titles and real target IDs, is required for Hit Rate@1/@5 and MRR.",
+    "Analytics are separate deterministic SQL tasks, not retrieval scoring.",
+    "Before exact label analytics are frozen, check the schema for brand, sales, and timestamp fields and reconcile the known 39-row label-count discrepancy."
+  ],
+  "queries": [
+    {
+      "id": "PD-01",
+      "task_type": "product_discovery",
+      "query": "گوشی سامسونگ سری S با قیمت مناسب",
+      "language": "fa",
+      "features": [
+        "brand",
+        "series",
+        "price_intent"
+      ],
+      "note": "confirm relevant catalog products exist; broad intent needs relevance judgments"
+    },
+    {
+      "id": "PD-02",
+      "task_type": "product_discovery",
+      "query": "یه گوشی شیائومی با باتری قوی و شارژدهی طولانی",
+      "language": "fa",
+      "features": [
+        "colloquial",
+        "brand",
+        "battery"
+      ],
+      "note": "colloquial wording; verify catalog coverage"
+    },
+    {
+      "id": "PD-03",
+      "task_type": "product_discovery",
+      "query": "لپ‌تاپ ایسوس با رم ۱۶ گیگ برای برنامه‌نویسی",
+      "language": "fa",
+      "features": [
+        "brand",
+        "ram",
+        "use_case"
+      ],
+      "note": "confirm RAM/spec fields or relevant product descriptions"
+    },
+    {
+      "id": "PD-04",
+      "task_type": "product_discovery",
+      "query": "مانیتور ۲۷ اینچ خمیده برای بازی و کار",
+      "language": "fa",
+      "features": [
+        "size",
+        "shape",
+        "use_case"
+      ],
+      "note": "mixed constraints"
+    },
+    {
+      "id": "PD-05",
+      "task_type": "product_discovery",
+      "query": "هندزفری بلوتوسی شیائومی با حذف نویز",
+      "language": "fa",
+      "features": [
+        "intentional_typo",
+        "brand",
+        "feature"
+      ],
+      "note": "intentional typo in بلوتوسی; confirm noise-cancellation evidence"
+    },
+    {
+      "id": "PD-06",
+      "task_type": "product_discovery",
+      "query": "پاوربانک ۲۰۰۰۰ میلی‌آمپرساعت با شارژ سریع ۲۰ وات",
+      "language": "fa",
+      "features": [
+        "capacity",
+        "fast_charging"
+      ],
+      "note": "numeric/spec matching"
+    },
+    {
+      "id": "PD-07",
+      "task_type": "product_discovery",
+      "query": "کفش پیاده‌روی مردانه سبک و راحت",
+      "language": "fa",
+      "features": [
+        "category",
+        "gender",
+        "comfort"
+      ],
+      "note": "attribute intent"
+    },
+    {
+      "id": "PD-08",
+      "task_type": "product_discovery",
+      "query": "ماشین لباسشویی کم‌مصرف با ظرفیت حدود ۸ کیلو",
+      "language": "fa",
+      "features": [
+        "category",
+        "energy",
+        "capacity"
+      ],
+      "note": "confirm metadata availability"
+    },
+    {
+      "id": "RQ-09",
+      "task_type": "review_qa",
+      "query": "در نظرهای خریداران، بدنه کتری برقی موقع جوشیدن آب چقدر داغ می‌شود؟",
+      "language": "fa",
+      "features": [
+        "review_evidence",
+        "thermal_safety"
+      ],
+      "note": "label supporting and contradicting review evidence manually"
+    },
+    {
+      "id": "RQ-10",
+      "task_type": "review_qa",
+      "query": "آیا کابل شارژ تایپ‌سی با گوشی‌های قدیمی سامسونگ سازگار بوده؟",
+      "language": "fa",
+      "features": [
+        "review_evidence",
+        "compatibility"
+      ],
+      "note": "need product/model resolution; don't assume compatibility from category alone"
+    },
+    {
+      "id": "RQ-11",
+      "task_type": "review_qa",
+      "query": "کاربران درباره دوام باتری گوشی‌های شیائومی پس از چند ماه چه گفته‌اند؟",
+      "language": "fa",
+      "features": [
+        "review_evidence",
+        "durability",
+        "time_phrase"
+      ],
+      "note": "temporal phrase does not prove review timestamp; retrieve actual evidence"
+    },
+    {
+      "id": "RQ-12",
+      "task_type": "review_qa",
+      "query": "صدای فن لپ‌تاپ‌های گیمینگ هنگام کار معمولی آزاردهنده است؟",
+      "language": "fa",
+      "features": [
+        "review_evidence",
+        "noise",
+        "usage_context"
+      ],
+      "note": "need relevant product/review evidence"
+    },
+    {
+      "id": "RQ-13",
+      "task_type": "review_qa",
+      "query": "خریداران از کیفیت تصویر تلویزیون‌های ایکس‌ویژن راضی بوده‌اند؟",
+      "language": "fa",
+      "features": [
+        "review_evidence",
+        "brand",
+        "quality"
+      ],
+      "note": "separate individual anecdotes from aggregate claims"
+    },
+    {
+      "id": "RQ-14",
+      "task_type": "review_qa",
+      "query": "آیا در نظرات درباره خرابی زودهنگام جاروبرقی پارس‌خزر شکایتی هست؟",
+      "language": "fa",
+      "features": [
+        "review_evidence",
+        "negative_evidence",
+        "durability"
+      ],
+      "note": "avoid treating retrieved examples as population-wide rate"
+    },
+    {
+      "id": "RQ-15",
+      "task_type": "review_qa",
+      "query": "نظر خریداران درباره کیفیت میکروفون هدفون‌های بی‌سیم چیه؟",
+      "language": "fa",
+      "features": [
+        "colloquial",
+        "review_evidence",
+        "audio_quality"
+      ],
+      "note": "conversational Persian"
+    },
+    {
+      "id": "AN-16",
+      "task_type": "analytics",
+      "query": "کدام ۱۰ محصول بیشترین تعداد نظر ثبت‌شده را دارند؟",
+      "language": "fa",
+      "features": [
+        "deterministic_count",
+        "top_k"
+      ],
+      "note": "aggregate comments by product_id; check duplicate product metadata does not multiply counts"
+    },
+    {
+      "id": "AN-17",
+      "task_type": "analytics",
+      "query": "از بین نظرهای دارای برچسب معتبر، سهم هر یک از سه برچسب توصیه چقدر است؟",
+      "language": "fa",
+      "features": [
+        "label_distribution",
+        "denominator"
+      ],
+      "note": "use valid labels only and reconcile 39-row discrepancy before freezing exact expected values"
+    },
+    {
+      "id": "AN-18",
+      "task_type": "analytics",
+      "query": "کدام ۱۰ محصول بیشترین تعداد نظر «توصیه نمی‌کنم» را دارند؟",
+      "language": "fa",
+      "features": [
+        "label_filter",
+        "top_k"
+      ],
+      "note": "count only valid not_recommended labels; report denominators/coverage"
+    },
+    {
+      "id": "AN-19",
+      "task_type": "analytics",
+      "query": "در هر برند موبایل، نرخ «توصیه می‌کنم» چقدر است؟",
+      "language": "fa",
+      "features": [
+        "brand_aggregation",
+        "recommendation_rate"
+      ],
+      "note": "conditional on verified brand column/product mapping; define denominator and minimum sample size"
+    },
+    {
+      "id": "AN-20",
+      "task_type": "analytics",
+      "query": "کدام برند ساعت هوشمند امسال بیشترین فروش را داشته؟",
+      "language": "fa",
+      "features": [
+        "sales_analytics",
+        "temporal_scope"
+      ],
+      "note": "negative-capability test; do not answer unless verified sales data and year coverage exist; otherwise state limitation"
+    },
+    {
+      "id": "ST-01",
+      "variant_of": "PD-01",
+      "query": "gooshi samsung seri S ba gheymate monaseb",
+      "language": "finglish",
+      "features": [
+        "finglish",
+        "transliteration"
+      ]
+    },
+    {
+      "id": "ST-02",
+      "variant_of": "PD-03",
+      "query": "laptop asus ba ram 16 baraye barnamerizi",
+      "language": "finglish",
+      "features": [
+        "finglish",
+        "transliteration",
+        "numeric"
+      ]
+    },
+    {
+      "id": "ST-03",
+      "variant_of": "PD-06",
+      "query": "powerbank 20000 ba charge sari 20 watt",
+      "language": "finglish",
+      "features": [
+        "finglish",
+        "transliteration",
+        "numeric"
+      ]
+    },
+    {
+      "id": "ST-04",
+      "variant_of": "RQ-12",
+      "query": "sedaye fan laptop gaming vaghte kar-e mamooli aziyat konande ast?",
+      "language": "finglish",
+      "features": [
+        "finglish",
+        "review_qa"
+      ]
+    },
+    {
+      "id": "ST-05",
+      "variant_of": "RQ-13",
+      "query": "nazare kharidaran dar morede keifiat tasvire TV haye X-Vision chie?",
+      "language": "finglish",
+      "features": [
+        "finglish",
+        "review_qa",
+        "brand"
+      ]
+    }
+  ]
+}

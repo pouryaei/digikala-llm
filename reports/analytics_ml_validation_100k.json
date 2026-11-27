@@ -1,0 +1,91 @@
+{
+  "analytics": {
+    "products": 100000,
+    "reviews": 1874457,
+    "categories": 191,
+    "brands_result": 10,
+    "price_rating_result": 1000,
+    "seconds": 1.317
+  },
+  "manager_questions": [
+    {
+      "intent": "complaints",
+      "category": "کفش مردانه",
+      "product_count": 2251,
+      "review_count": 31867,
+      "rows": 12,
+      "evidence_count": 36,
+      "seconds": 1.56
+    },
+    {
+      "intent": "features",
+      "category": "کفش مردانه",
+      "product_count": 2251,
+      "review_count": 31867,
+      "rows": 12,
+      "evidence_count": 34,
+      "seconds": 1.364
+    },
+    {
+      "intent": "low_recommendation",
+      "category": "کفش مردانه",
+      "product_count": 2251,
+      "review_count": 31867,
+      "rows": 3,
+      "evidence_count": 0,
+      "seconds": 0.353
+    },
+    {
+      "intent": "brands",
+      "category": "کفش مردانه",
+      "product_count": 2251,
+      "review_count": 31867,
+      "rows": 5,
+      "evidence_count": 15,
+      "seconds": 0.967
+    }
+  ],
+  "prediction": {
+    "saved_model_sha256_verified": true,
+    "sample_predictions": [
+      {
+        "label": "recommended",
+        "probabilities_sum": 1.0001,
+        "valid": true
+      },
+      {
+        "label": "not_recommended",
+        "probabilities_sum": 1.0,
+        "valid": true
+      }
+    ],
+    "recorded_test": {
+      "test_count": 15000,
+      "accuracy": 0.7831333333333333,
+      "macro_f1": 0.6790791799331871,
+      "classes": [
+        "no_idea",
+        "not_recommended",
+        "recommended"
+      ],
+      "confusion_matrix": [
+        [
+          1156,
+          384,
+          321
+        ],
+        [
+          391,
+          1376,
+          42
+        ],
+        [
+          1833,
+          282,
+          9215
+        ]
+      ],
+      "matches_supplied_reports": true
+    }
+  }
+}

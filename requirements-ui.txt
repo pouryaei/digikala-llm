@@ -1,0 +1,2 @@
+-r requirements-m1.txt
+python-dotenv>=1,<2

@@ -1,0 +1,6 @@
+{
+  "health": "ok",
+  "app_http_status": 200,
+  "server_command": "python -m streamlit run app.py",
+  "streamlit_port_used_for_test": 8753
+}

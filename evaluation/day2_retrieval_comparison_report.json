@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-11-26T21:06:05.861781",
+  "corpus_size": 2000,
+  "benchmark_queries_count": 20,
+  "bm25_metrics": {
+    "Hit@1": 0.8,
+    "Hit@5": 0.9,
+    "MRR": 0.8338095238095239
+  },
+  "dense_metrics": {
+    "Hit@1": 0.85,
+    "Hit@5": 0.85,
+    "MRR": 0.85
+  },
+  "gate_analysis": {
+    "hit5_gap_percentage_points": -5.000000000000004,
+    "bm25_excluded_from_rrf": false
+  }
+}

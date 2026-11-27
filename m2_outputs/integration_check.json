@@ -1,0 +1,50 @@
+{
+  "model_sha256": "9d19f10f36b98bc15939bd9d5748500602dc7666e34871aff9b40db1e68b9d70",
+  "runtime": {
+    "scikit_learn": "1.9.1",
+    "joblib": "1.5.3"
+  },
+  "recorded_test": {
+    "test_count": 15000,
+    "accuracy": 0.7831333333333333,
+    "macro_f1": 0.6790791799331871,
+    "classes": [
+      "no_idea",
+      "not_recommended",
+      "recommended"
+    ],
+    "confusion_matrix": [
+      [
+        1156,
+        384,
+        321
+      ],
+      [
+        391,
+        1376,
+        42
+      ],
+      [
+        1833,
+        282,
+        9215
+      ]
+    ],
+    "matches_supplied_reports": true
+  },
+  "deployment_replay": {
+    "input": "Raw title and body joined to recorded test comment IDs; M2 service normalization and validation",
+    "test_count": 15000,
+    "valid_count": 14996,
+    "rejected_count": 4,
+    "rejected_reasons": {
+      "spam_repetition": 4
+    },
+    "same_label_as_recorded_count": 14669,
+    "accuracy_on_valid": 0.7772072552680714,
+    "macro_f1_on_valid": 0.6749452500905623,
+    "model_load_seconds": 0.9660364820001632,
+    "batch_seconds": 2.373542149000059,
+    "note": "Original training-time texts were not supplied. This raw title/body replay is a separate deployment check, not an exact reproduction of training-time preprocessing. Rejected inputs are not counted as no_idea predictions."
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "package": "Forouhar_RAG_Complete.zip",
+  "regression_unittests_passed": 33,
+  "legacy_offline_tests_passed": 6,
+  "tests_apis_are_mocked_or_local": true,
+  "optional_streamlit_selection_integration_passed": true,
+  "dense_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "model_revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+  "dense_encoder_checked_against_original_vectors": {
+    "positions": [
+      0,
+      30,
+      3710,
+      5000,
+      14999
+    ],
+    "all_cosine_above_0_99999": true,
+    "all_retrieved_own_position_first": true
+  },
+  "actual_FAISS_vectors_preserved": true,
+  "price_unit_from_initial_EDA": null,
+  "price_in_source_units_retained": true,
+  "human_semantic_evaluation_performed": false,
+  "gateway_live_tested": false,
+  "real_api_calls": 0,
+  "failure_modes_observed": {
+    "no_reviews": "Q15 and Q20 point to actual products without reviews in the clean corpus; no generated claims",
+    "unsupported_aspect": "P7 asks about battery of a book; no evidence returned",
+    "outside_catalogue": "P8 identifies a product outside the bundled scope; request the actual full review source",
+    "retrieval": "On this title-derived set, dense missed five queries and equal-weight RRF missed two; only BM25 scored 20/20. This does not establish a general quality ranking."
+  },
+  "coverage": {
+    "products": 15000,
+    "faiss_vectors": 15000,
+    "faiss_dimensions": 384,
+    "reviews": 26215,
+    "products_with_reviews": 3105,
+    "same_ids_and_order": true
+  }
+}

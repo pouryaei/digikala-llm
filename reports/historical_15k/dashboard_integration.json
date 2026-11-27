@@ -1,0 +1,19 @@
+{
+  "ui_base": "Original assembled Forouhar dashboard (not green Streamlit package)",
+  "theme": "Pink-blue reconstruction; exact historical palette was not available",
+  "embedded_font_photographs_and_main_tab_structure_unchanged": true,
+  "original_file_bridge_tested_without_rewriting_original": true,
+  "real_search_chat": {
+    "product_id": 10133811,
+    "total_reviews": 65,
+    "evidence": 8
+  },
+  "comparison_and_bundled_analytics_tested": true,
+  "trained_model_preserved_and_tested": true,
+  "live_api_tested": false,
+  "actual_api_calls": 0,
+  "tests": {
+    "rag_and_integration": 35,
+    "original_ui_assembly": 16
+  }
+}

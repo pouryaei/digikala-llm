@@ -1,0 +1,9 @@
+{
+  "extra_rows": 335144,
+  "repeated_ids": 258718,
+  "identical_only_ids": 246933,
+  "any_difference_ids": 11785,
+  "title_brand_or_category_diff_ids": 765,
+  "price_diff_ids": 8254,
+  "seller_diff_ids": 4036
+}

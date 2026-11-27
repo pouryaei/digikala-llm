@@ -1,0 +1,3 @@
+# Local, ready-to-run 100k Streamlit release
+-r requirements-ui.txt
+-r requirements-data.txt

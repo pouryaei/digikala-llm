@@ -1,0 +1,121 @@
+{
+  "generated_at": "2026-11-26T20:28:04.959279",
+  "model_name": "BAAI/bge-m3",
+  "embedding_dimension": 1024,
+  "similarity_metric": "cosine (IndexFlatIP with L2 norm)",
+  "index_corpus_size": 1000,
+  "total_corpus_available": 948352,
+  "note": "Qualitative evaluation of Dense baseline on a controlled sample of 1,000 products.",
+  "evaluation_results": [
+    {
+      "id": "PD-01",
+      "query": "گوشی سامسونگ سری S با قیمت مناسب",
+      "task_type": "product_discovery",
+      "retrieved_top3": [
+        {
+          "id": 9850702,
+          "title_fa": "برچسب کنسول بازی ایکس باکس series s مدل color کد 1 مجموعه 4 عددی",
+          "score": 0.4565
+        },
+        {
+          "id": 11627522,
+          "title_fa": "محافظ صفحه نمایش شیشه‌ای سوپرسی مدل SH-SC مناسب برای ساعت هوشمند الترا BW8 بسته سه عددی",
+          "score": 0.4444
+        },
+        {
+          "id": 7019494,
+          "title_fa": "پیرسینگ گوش مدل شش ضلعی کد S",
+          "score": 0.4429
+        }
+      ]
+    },
+    {
+      "id": "PD-02",
+      "query": "یه گوشی شیائومی با باتری قوی و شارژدهی طولانی",
+      "task_type": "product_discovery",
+      "retrieved_top3": [
+        {
+          "id": 9258132,
+          "title_fa": "برچسب ماهوت طرح Army_Green مناسب برای ساعت هوشمند هوآوی Watch Fit 2",
+          "score": 0.4332
+        },
+        {
+          "id": 9261131,
+          "title_fa": "برچسب ماهوت طرح Red_Printed_Circuit_Board مناسب برای ساعت هوشمند هوآوی Watch Fit 2",
+          "score": 0.42
+        },
+        {
+          "id": 7144854,
+          "title_fa": "محافظ صفحه نمایش آکوییلا مدل AAGM مناسب برای ساعت هوشمند امیزفیت GTS 2 Mini",
+          "score": 0.4191
+        }
+      ]
+    },
+    {
+      "id": "PD-03",
+      "query": "لپ‌تاپ ایسوس با رم ۱۶ گیگ برای برنامه‌نویسی",
+      "task_type": "product_discovery",
+      "retrieved_top3": [
+        {
+          "id": 6972906,
+          "title_fa": "کتاب Quick Start Guide to Dart Programming: Create High-Performance Applications for the Web and Mobile اثر Sanjib Sinha انتشارات مؤلفین طلایی",
+          "score": 0.4092
+        },
+        {
+          "id": 5166835,
+          "title_fa": "تیشرت آستین کوتاه مردانه طرح جاوا برنامه نویسی مدل T1160",
+          "score": 0.394
+        },
+        {
+          "id": 9899217,
+          "title_fa": "پاک کن مدل اگنس کد 15",
+          "score": 0.3857
+        }
+      ]
+    },
+    {
+      "id": "PD-04",
+      "query": "مانیتور ۲۷ اینچ خمیده برای بازی و کار",
+      "task_type": "product_discovery",
+      "retrieved_top3": [
+        {
+          "id": 11529147,
+          "title_fa": "عروسک مدل مینیون شاد و خندان ارتفاع 25 سانتی متر",
+          "score": 0.4737
+        },
+        {
+          "id": 10659704,
+          "title_fa": "هودی مردانه 27 مدل Made In Japan 1 کد MH308",
+          "score": 0.4641
+        },
+        {
+          "id": 4103955,
+          "title_fa": "تی شرت آستین کوتاه دخترانه 27 مدل مینی موس کد H11",
+          "score": 0.4574
+        }
+      ]
+    },
+    {
+      "id": "PD-05",
+      "query": "هندزفری بلوتوسی شیائومی با حذف نویز",
+      "task_type": "product_discovery",
+      "retrieved_top3": [
+        {
+          "id": 11627522,
+          "title_fa": "محافظ صفحه نمایش شیشه‌ای سوپرسی مدل SH-SC مناسب برای ساعت هوشمند الترا BW8 بسته سه عددی",
+          "score": 0.4008
+        },
+        {
+          "id": 9261131,
+          "title_fa": "برچسب ماهوت طرح Red_Printed_Circuit_Board مناسب برای ساعت هوشمند هوآوی Watch Fit 2",
+          "score": 0.3997
+        },
+        {
+          "id": 297836,
+          "title_fa": "ادو پرفیوم زرژوف کاساموراتی مدل Join The Club More Than Words حجم 50 میلی لیتر",
+          "score": 0.3881
+        }
+      ]
+    }
+  ]
+}
