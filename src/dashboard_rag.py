@@ -7,11 +7,13 @@ import unicodedata
 from functools import lru_cache
 
 from .bm25_index import tokenize_query
-from .catalog import open_catalog
+from .catalog import open_catalog, resolve_price_unit
 from .config import ROOT
 from .rag import compare_products, run_rag_pipeline
 from .review_data import BUNDLED_STORE, is_bundled_sample
 from .search_qa import search_products
+from .rag_query import search_request
+from .product_preferences import recorded_budget
 from .task2_review_store import ReviewDataError, identifier, ParquetReviewStore
 
 DATA_SCOPE = "indexed_catalogue"
@@ -67,26 +69,16 @@ def _dash_products(product_ids):
     rows = cat.get_products(product_ids)
     if not rows:
         return {}
-    ids = list(rows)
-    with cat.connection() as c:
-        stats = {}
-        for i in range(0, len(ids), 300):
-            part = ids[i:i+300]
-            marks = ",".join("?" for _ in part)
-            result = c.execute(f"""
-                SELECT product_id, COUNT(*) AS n,
-                       SUM(recommendation_status='recommended') AS positive,
-                       SUM(recommendation_status IN ('recommended','not_recommended','no_idea')) AS valid
-                FROM reviews WHERE product_id IN ({marks}) GROUP BY product_id
-                """, part)
-            stats.update({r[0]: (r[1] or 0, r[2] or 0, r[3] or 0) for r in result})
+    stats = cat.review_stats(rows)
+    unit = resolve_price_unit()
+    raw_unit = {"rial": "ریال", "toman": "تومان"}.get(unit, "واحد ثبت‌شده")
     output = {}
     for pid, r in rows.items():
         n, positive, valid = stats.get(pid, (0,0,0))
         output[pid] = {
             "product_id": pid, "title_fa": r["title_fa"], "category": r["category1"],
             "brand": r["brand"], "price": r["price_recorded"],
-            "price_unit": "واحد ثبت‌شده" if r["price_recorded"] is not None else None,
+            "price_unit": raw_unit if r["price_recorded"] is not None else None,
             "rating": r["rating_100"], "rating_scale": 100, "rating_count": r["rating_count"],
             "comment_count": n, "recommended_count": positive, "valid_label_count": valid,
             "recommendation_rate": positive/valid if valid else None,
@@ -124,15 +116,33 @@ def search(query, filters=None, limit=5):
         exact = identifier(query)
     except ValueError:
         exact = None
+    notes = []
     if exact is not None:
         selected = [exact] if allowed is None or str(exact) in allowed else []
     else:
         mode = os.environ.get("QBC13_UI_SEARCH_MODE", "bm25").strip().lower() or "bm25"
-        selected = [identifier(r["product_id"]) for r in search_products(
-            query, top_k=limit, mode=mode, allowed_product_ids=allowed)]
+        req = search_request(query)
+        if req.prefer_satisfaction:
+            notes.append("اولویت رضایت: ابتدا گزینه‌های مرتبط با دست‌کم ۵۰٪ پیشنهاد خرید، یا در نبود برچسب امتیاز دست‌کم ۷۰ از ۱۰۰ با حداقل دو رأی؛ سپس رتبه‌بندی با توجه به تعداد شواهد.")
+        if req.prefer_affordability:
+            notes.append("اولویت قیمت: قیمت ثبت‌شده میان گزینه‌های مرتبط مقایسه شد؛ ارزان‌بودن نسبی است.")
+        if req.scope_hint == "travel":
+            notes.append("دامنهٔ پیشنهادها: دسته‌های واقعی لوازم سفر و کمپینگ.")
+        elif req.scope_hint == "everyday_bag":
+            notes.append("دامنهٔ پیشنهادها: دسته‌های کیف زنانه و مردانه؛ کاربری از مشخصات ثبت‌شده فراتر است.")
+        if recorded_budget(req, open_catalog()):
+            notes.append("درخواست واحد پول مشخص نکرده است؛ بازه به واحد ثبت‌شدهٔ داده اعمال شد، نه لزوماً تومان.")
+        elif req.min_price is not None or req.max_price is not None:
+            notes.append("بازهٔ بودجهٔ نوشته‌شده در سؤال با واحد تومان و واحد منبعِ تأییدشده اعمال شد.")
+        results = search_products(query, top_k=limit, mode=mode, allowed_product_ids=allowed)
+        if req.prefer_satisfaction and any(not r.get("positive_feedback_signal") for r in results):
+            notes.append("برخی گزینه‌های مرتبط شواهد کافی از رضایت ندارند؛ آمار هر محصول را جدا بررسی کنید.")
+        if any(r.get("purpose_match_relaxed") for r in results):
+            notes.append("ویژگی‌های دقیق درخواست در عنوان‌ها یافت نشد؛ گزینه‌های هم‌نوع پیشنهاد شدند. کاربری، وزن یا سازگاری خاص تأیید نشده است.")
+        selected = [identifier(r["product_id"]) for r in results]
     metadata = _dash_products(selected)
     return {"items": [metadata[pid] for pid in selected if pid in metadata],
-            "applied_filters": filters, "scope": DATA_SCOPE}
+            "applied_filters": filters, "scope": DATA_SCOPE, "search_notes": notes}
 
 
 def get_product(product_id):
@@ -149,7 +159,9 @@ def categories():
 
 def ask(product_id, query, *, source=None):
     # Local answering is independent of the dashboard web backend address.
-    return run_rag_pipeline(query, product_id, source=source if source is not None else review_source())
+    # Direct product tab stays local; paid requests use ProfessionalWorkflow.
+    return run_rag_pipeline(query, product_id, source=source if source is not None else review_source(),
+                            generation_mode="extractive")
 
 
 def compare(product_ids, query=None):

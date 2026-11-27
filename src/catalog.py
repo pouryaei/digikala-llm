@@ -74,11 +74,44 @@ class Catalog:
             ).fetchall()
         return product["title_fa"], [dict(r) for r in rows]
 
-    def filtered_ids(self, *, min_price=None, max_price=None, min_rating=None, min_reviews=0, source_price_unit=None):
+    def review_stats(self, product_ids):
+        """Real recommendation counts for a bounded candidate set, never guessed."""
+        ids = list(dict.fromkeys(identifier(pid) for pid in product_ids))
+        out = {}
+        with self.connection() as con:
+            for i in range(0, len(ids), 250):
+                batch = ids[i:i+250]
+                marks = ",".join("?" for _ in batch)
+                rows = con.execute(f"""
+                    SELECT product_id, count(*) AS n,
+                           sum(recommendation_status='recommended') AS positive,
+                           sum(recommendation_status IN ('recommended','not_recommended','no_idea')) AS valid
+                      FROM reviews WHERE product_id IN ({marks}) GROUP BY product_id
+                """, batch)
+                out.update({row[0]: (row[1] or 0, row[2] or 0, row[3] or 0) for row in rows})
+        return {pid: out.get(pid, (0,0,0)) for pid in ids}
+
+    def preference_scope_ids(self, scope):
+        # Restrict only explicit, broad use-case queries. All conditions use
+        # actual catalogue categories; do not infer physical specifications.
+        conditions = {
+            "travel": "(category1 IN ('لوازم سفر','لوازم کمپینگ') OR category2 IN ('کیف و کوله سفری','ساک سفری','اجاق و ظرف سفری','چمدان','تجهیزات کمپینگ','تجهیزات کوهنوردی و صخره نوردی'))",
+            "everyday_bag": "(title_fa LIKE 'کیف%' AND category2 IN ('کیف زنانه','کیف مردانه','کیف زنانه و مردانه','کیف دست دوز پارچه ای','کیف چرمی دست دوز'))",
+            "backpack": "(category2 IN ('کوله پشتی زنانه و مردانه','کوله پشتی مردانه','کوله پشتی زنانه','کیف و کوله مدرسه') OR title_fa LIKE 'کوله%')",
+        }
+        if scope not in conditions:
+            raise ValueError("Unknown product preference scope.")
+        with self.connection() as con:
+            return {str(row[0]) for row in con.execute("SELECT product_id FROM products WHERE " + conditions[scope])}
+
+    def filtered_ids(self, *, min_price=None, max_price=None, min_rating=None, min_reviews=0, source_price_unit=None,
+                     price_in_recorded_units=False):
         unit = resolve_price_unit(source_price_unit)
-        if (min_price is not None or max_price is not None) and not unit and not self.metadata.get("supplied_price_unit_confirmed"):
+        if (min_price is not None or max_price is not None) and not price_in_recorded_units and not unit and not self.metadata.get("supplied_price_unit_confirmed"):
             raise ValueError("واحد قیمت در دادهٔ اصلی مشخص نشده؛ بودجهٔ تومانی را نمی‌توان اعمال کرد. فقط اگر واحد اصلی را می‌دانی، --source-price-unit rial یا toman را تعیین کن.")
-        price_column = {"rial": "COALESCE(price_toman, price_recorded/10.0)", "toman": "COALESCE(price_toman, price_recorded)"}.get(unit, "price_toman")
+        price_column = "price_recorded" if price_in_recorded_units else {
+            "rial": "COALESCE(price_toman, price_recorded/10.0)", "toman": "COALESCE(price_toman, price_recorded)"
+        }.get(unit, "price_toman")
         conditions, params = [], []
         for value, relation, column in ((min_price, ">=", price_column),
                                         (max_price, "<=", price_column),

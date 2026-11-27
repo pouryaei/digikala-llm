@@ -34,6 +34,7 @@ MAIN_TABS = (
     "جست‌وجوی محصول",
     "دستیار تحلیلی کالا (RAG)",
     "داشبورد و پیش‌بینی رضایت",
+    "آزمایشگاه شواهد و امتیازی",
 )
 CATALOG_TABS = ("جست‌وجو و کشف محصول", "مقایسهٔ محصولات")
 SEARCH_EXAMPLES = (
@@ -724,6 +725,11 @@ def show_filters(data, requested=False):
         st.text("  |  ".join(values))
     elif requested:
         st.warning("سرویس اعمال فیلترهای انتخاب‌شده را در پاسخ تأیید نکرد.")
+    notes = data.get("search_notes")
+    if isinstance(notes, list):
+        for note in notes:
+            if isinstance(note, str) and note.strip():
+                st.caption(note)
 
 
 def page_heading(title, detail=None):
@@ -1588,7 +1594,7 @@ def main():
         st.caption(f"دادهٔ همراه نسخه: {scope['product_count']:,} محصول و {scope['review_rows']:,} نظر واقعی")
     if "main_tabs" not in st.session_state:
         switch_page(st.session_state.get("page", PAGES[0]))
-    search_tab, review_tab, dashboard_tab = st.tabs(MAIN_TABS, key="main_tabs", on_change="rerun")
+    search_tab, review_tab, dashboard_tab, bonus_tab = st.tabs(MAIN_TABS, key="main_tabs", on_change="rerun")
     if search_tab.open:
         with search_tab:
             discovery_tab, comparison_tab = st.tabs(CATALOG_TABS, key="catalog_tabs", on_change="rerun")
@@ -1604,6 +1610,10 @@ def main():
     if dashboard_tab.open:
         with dashboard_tab:
             analytics()
+    if bonus_tab.open:
+        with bonus_tab:
+            from bonus.dashboard import render_bonus
+            render_bonus(open_review)
 
 
 # Embedded WebP and WOFF2 assets keep the app runnable as a single file.

@@ -1,0 +1,16 @@
+{
+  "experiment_executed": true,
+  "grid_candidates_fitted": 8,
+  "test_rows_evaluated_after_selection": 15000,
+  "candidate_model_reloaded_and_inferred": true,
+  "production_model_and_adapted_head_sha256_unchanged": true,
+  "tests": {
+    "test_hyperparameter_search.py": {"passed": 4, "skipped": 1},
+    "test_train_final.py": {"passed": 4, "skipped": 0},
+    "test_bonus_ui.py": {"passed": 1, "skipped": 1}
+  },
+  "ui_logic_tested_with_stand_in": true,
+  "actual_streamlit_smoke_test_executed": false,
+  "reason": "Streamlit, DuckDB and Altair are unavailable in this validation environment; the report-generation and UI panel logic tests passed.",
+  "slides_created": false
+}

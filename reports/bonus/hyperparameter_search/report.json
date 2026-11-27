@@ -1,0 +1,287 @@
+{
+  "method": "GridSearchCV with PredefinedSplit (one fixed validation fold)",
+  "model": "Character TF-IDF + LogisticRegression",
+  "selection_metric": "macro_f1",
+  "tie_break": "lower C, then balanced class weight",
+  "param_grid": {
+    "C": [
+      0.25,
+      1.0,
+      4.0,
+      10.0
+    ],
+    "class_weight": [
+      null,
+      "balanced"
+    ]
+  },
+  "n_trials": 8,
+  "trials": [
+    {
+      "C": 1.0,
+      "class_weight": null,
+      "validation_macro_f1": 0.6779000768686165,
+      "validation_accuracy": 0.8010854474315284,
+      "fit_seconds": 14.85623025894165,
+      "rank": 1
+    },
+    {
+      "C": 0.25,
+      "class_weight": null,
+      "validation_macro_f1": 0.6767918171705857,
+      "validation_accuracy": 0.8028524548782027,
+      "fit_seconds": 10.804075002670288,
+      "rank": 2
+    },
+    {
+      "C": 4.0,
+      "class_weight": null,
+      "validation_macro_f1": 0.6638837337985449,
+      "validation_accuracy": 0.7898523286633851,
+      "fit_seconds": 23.390555381774902,
+      "rank": 3
+    },
+    {
+      "C": 1.0,
+      "class_weight": "balanced",
+      "validation_macro_f1": 0.6633144222328496,
+      "validation_accuracy": 0.7786192098952417,
+      "fit_seconds": 11.356717824935913,
+      "rank": 4
+    },
+    {
+      "C": 0.25,
+      "class_weight": "balanced",
+      "validation_macro_f1": 0.6583789011938004,
+      "validation_accuracy": 0.7738230468256974,
+      "fit_seconds": 4.937534332275391,
+      "rank": 5
+    },
+    {
+      "C": 4.0,
+      "class_weight": "balanced",
+      "validation_macro_f1": 0.6514981335575311,
+      "validation_accuracy": 0.7707938912028273,
+      "fit_seconds": 22.193375825881958,
+      "rank": 6
+    },
+    {
+      "C": 10.0,
+      "class_weight": null,
+      "validation_macro_f1": 0.6502459948821158,
+      "validation_accuracy": 0.7772939543102361,
+      "fit_seconds": 32.26040720939636,
+      "rank": 7
+    },
+    {
+      "C": 10.0,
+      "class_weight": "balanced",
+      "validation_macro_f1": 0.6407854068662987,
+      "validation_accuracy": 0.7631578947368421,
+      "fit_seconds": 17.57146978378296,
+      "rank": 8
+    }
+  ],
+  "fixed_params": {
+    "tfidf": {
+      "analyzer": "char",
+      "ngram_range": [
+        2,
+        5
+      ],
+      "max_features": 200000,
+      "min_df": 2,
+      "sublinear_tf": true
+    },
+    "logistic_regression": {
+      "solver": "lbfgs",
+      "max_iter": 1000,
+      "tol": 0.0001
+    }
+  },
+  "best_params": {
+    "C": 1.0,
+    "class_weight": null
+  },
+  "best_validation": {
+    "precision": 0.6552510316841382,
+    "recall": 0.7262716980441856,
+    "macro_f1": 0.6779000768686165,
+    "accuracy": 0.8010854474315284
+  },
+  "baseline_validation": {
+    "C": 1.0,
+    "class_weight": "balanced",
+    "validation_macro_f1": 0.6633144222328496,
+    "validation_accuracy": 0.7786192098952417,
+    "fit_seconds": 11.356717824935913,
+    "rank": 4
+  },
+  "validation_delta_macro_f1": 0.014585654635766887,
+  "test": {
+    "precision": 0.6584510623233787,
+    "recall": 0.7227795812458592,
+    "macro_f1": 0.6782486819632599,
+    "accuracy": 0.7884
+  },
+  "recorded_test_reference": {
+    "matched_recorded_test_ids_and_labels": 15000,
+    "original": {
+      "precision": 0.6593205497063847,
+      "recall": 0.7317133669072192,
+      "macro_f1": 0.6790791799331871,
+      "accuracy": 0.7831333333333333
+    },
+    "original_predictions_sha256": "dcaa90e84dc23557f1f32a6928a35a1000015dfafcf339cbd6920b47e0a33fc1"
+  },
+  "test_classification_report": {
+    "no_idea": {
+      "precision": 0.34628862695125834,
+      "recall": 0.5840945728103171,
+      "f1-score": 0.4348,
+      "support": 1861.0
+    },
+    "not_recommended": {
+      "precision": 0.6765432098765433,
+      "recall": 0.7573244886677722,
+      "f1-score": 0.7146583202921231,
+      "support": 1809.0
+    },
+    "recommended": {
+      "precision": 0.9525213501423343,
+      "recall": 0.8269196822594881,
+      "f1-score": 0.8852877255976567,
+      "support": 11330.0
+    },
+    "accuracy": 0.7884,
+    "macro avg": {
+      "precision": 0.6584510623233787,
+      "recall": 0.7227795812458592,
+      "f1-score": 0.6782486819632599,
+      "support": 15000.0
+    },
+    "weighted avg": {
+      "precision": 0.8440251132357071,
+      "recall": 0.7884,
+      "f1-score": 0.80881930882866,
+      "support": 15000.0
+    }
+  },
+  "test_confusion_matrix": {
+    "labels": [
+      "no_idea",
+      "not_recommended",
+      "recommended"
+    ],
+    "matrix": [
+      [
+        1087,
+        378,
+        396
+      ],
+      [
+        368,
+        1370,
+        71
+      ],
+      [
+        1684,
+        277,
+        9369
+      ]
+    ]
+  },
+  "audit": {
+    "splits": {
+      "train": {
+        "rows": 53716,
+        "products": 34534,
+        "classes": {
+          "recommended": 21806,
+          "no_idea": 16560,
+          "not_recommended": 15350
+        }
+      },
+      "validation": {
+        "rows": 15846,
+        "products": 7130,
+        "classes": {
+          "recommended": 12318,
+          "not_recommended": 1672,
+          "no_idea": 1856
+        }
+      },
+      "test": {
+        "rows": 15000,
+        "products": 7029,
+        "classes": {
+          "not_recommended": 1809,
+          "recommended": 11330,
+          "no_idea": 1861
+        }
+      }
+    },
+    "shared_products": 0,
+    "duplicate_review_ids": 0,
+    "shared_text_keys": 0
+  },
+  "provenance": {
+    "mode": "deterministic_sample",
+    "source_payload_sha256": "45f4e589ddf47131172fda7b5fc0a00511b356342a2e94b668cbdc2d96c8d460",
+    "source_rows": 6151303,
+    "seed": 42,
+    "split_policy": "original product MD5 80/10/10; deterministic train/validation sample; unchanged recorded test IDs",
+    "shared_products": 0,
+    "shared_comparable_text_keys": 0,
+    "removed_sample_duplicates": {
+      "validation": 2550,
+      "train": 8203
+    },
+    "splits": {
+      "train": {
+        "rows": 53716,
+        "products": 34534,
+        "classes": {
+          "recommended": 21806,
+          "no_idea": 16560,
+          "not_recommended": 15350
+        }
+      },
+      "validation": {
+        "rows": 15846,
+        "products": 7130,
+        "classes": {
+          "recommended": 12318,
+          "not_recommended": 1672,
+          "no_idea": 1856
+        }
+      },
+      "test": {
+        "rows": 15000,
+        "products": 7029,
+        "classes": {
+          "not_recommended": 1809,
+          "recommended": 11330,
+          "no_idea": 1861
+        }
+      }
+    }
+  },
+  "vectorizer_fitted_on": "train",
+  "selected_on": "validation",
+  "candidate_fitted_on": "train",
+  "fitted_vocabulary_size": 200000,
+  "test_used_for_selection": false,
+  "production_model_replaced": false,
+  "protected_artifacts_sha256": {
+    "m2_outputs/best_model.joblib": "9d19f10f36b98bc15939bd9d5748500602dc7666e34871aff9b40db1e68b9d70",
+    "bonus_artifacts/adapted_head.npz": "9ebc1e019273a3252eb0eea273d4a977000133440bc8cbb515dd275e021369ff"
+  },
+  "candidate_sha256": "b65ad15be8398eba51501acdf7191f78bd6c6b2c43bec0e473da72e79799c609",
+  "candidate_file": "tuned_candidate.joblib",
+  "scikit_learn": "1.8.0",
+  "fit_seconds": 15.901438883999958,
+  "test_prediction_seconds": 1.8723740729999463,
+  "elapsed_seconds": 167.932931156,
+  "limitations": "This is a new fit of the same architecture, not a replacement of the deployed weights. If sampled, train and validation sizes differ from historical training, so only the grid trials share an identical training/validation sample. The recorded test is a reused holdout, not a new blind benchmark. Use the full fixed EDA splits for a full-scale rerun."
+}

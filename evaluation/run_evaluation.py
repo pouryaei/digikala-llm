@@ -31,7 +31,14 @@ sys.path.insert(0, str(ROOT))
 CASE_PATH = ROOT / "evaluation/cases.json"
 OUT = ROOT / "evaluation/results"
 CAT = ROOT / "storage/catalog.sqlite3"
-MODEL = ROOT / "m2_outputs/best_model.joblib"
+ACTIVE_CONFIG = ROOT / "m2_outputs/active_model.json"
+ACTIVE_KIND = (json.loads(ACTIVE_CONFIG.read_text(encoding="utf8")).get("kind")
+               if ACTIVE_CONFIG.is_file() else "logistic_regression")
+MODEL = {
+    "xgboost": ROOT / "m2_outputs/xgboost/report.json",
+    "lr_adapted": ROOT / "bonus_artifacts/adapted_head.npz",
+    "logistic_regression": ROOT / "m2_outputs/best_model.joblib",
+}[ACTIVE_KIND]
 FIELDS = ("title_raw", "body_raw", "advantages_raw", "disadvantages_raw")
 LABELS = ("no_idea", "not_recommended", "recommended")
 OFFLINE_ENV = {k: "" for k in ("QBC13_BACKEND_URL", "QBC13_SEARCH_FUNCTION", "QBC13_REVIEW_FUNCTION",
@@ -374,8 +381,26 @@ def evaluate_ml(out):
             # Show a high-confidence mistake per direction; not a selected-success demo.
             failures.append(max(cases,key=lambda row:row["confidence"]))
     print("ML original",recorded["n"],recorded["macro_f1"],"actual raw replay",len(output),len(valid),replay["macro_f1"],flush=True)
-    return {"model_sha256":file_hash(MODEL),"runtime":{"scikit_learn":sklearn.__version__,"joblib":joblib.__version__},
+    artifact = MODEL.parent / "model.ubj" if MODEL.suffix == ".json" else MODEL
+    hashes = ({"model_report_sha256":file_hash(MODEL),
+               "preprocessor_sha256":file_hash(MODEL.parent / "preprocessor.joblib")}
+              if MODEL.suffix == ".json" else {})
+    if ACTIVE_KIND == "lr_adapted":
+        comparison = read_json(ROOT/"reports/final_model/report.json")
+        final = next(row for row in comparison["models"] if row["id"] == comparison["selected_model"])
+        active_test = final["test"]
+        hashes["frozen_lr_pipeline_sha256"] = file_hash(ROOT/"m2_outputs/best_model.joblib")
+        active_name = "Logistic Regression (Head Fine-tuning)"
+    elif ACTIVE_KIND == "xgboost":
+        active_test = read_json(MODEL)["test"]
+        active_name = "XGBoost"
+    else:
+        active_test = recorded
+        active_name = "Logistic Regression"
+    return {"model_sha256":file_hash(artifact),"model_artifact":str(artifact.relative_to(ROOT)),**hashes,"runtime":{"scikit_learn":sklearn.__version__,"joblib":joblib.__version__},
             "recorded_test":recorded,"recorded_metrics_verified":verified["matches_supplied_reports"],
+            "active_full_test":active_test,
+            "active_model_kind":active_name,
             "majority_class":majority,"majority_recorded_baseline":baseline,
             "overlap_with_bundled_reviews":len(output),"missing_from_bundle":len(rows)-len(output),
             "recorded_metrics_for_overlap":overlap_recorded,"valid_replay":len(valid),

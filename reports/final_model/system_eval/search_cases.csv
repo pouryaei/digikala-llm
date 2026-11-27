@@ -1,0 +1,48 @@
+﻿case_id,split,query,kind,reference_count,returned,direct,hit_at_5,mrr_at_5,precision_at_5,ndcg_at_5,correct_empty,latency_ms,filter_grounding
+S01,dev,کفش پیاده‌روی مردانه,discovery,338,5,5,1,1.0,1.0,1.0,False,1288.9516789998652,True
+S02,dev,یه کرم مرطوب کننده دست از برند شون میخوام,discovery,4,5,4,1,1.0,0.8,1.0,False,205.75770799996462,True
+S03,dev,کتاب اثر مرکب دارن هاردی,discovery,9,5,5,1,1.0,1.0,1.0,False,355.24046899990935,True
+S04,dev,خودکار پلیکان,discovery,2,2,2,1,1.0,0.4,1.0,False,76.98959799995464,True
+S05,dev,هدفون مانیتورینگ برای میکس موسیقی,discovery,3,3,3,1,1.0,0.6,1.0,False,141.49080499987576,True
+S06,dev,شامپو برای موهای خشک,discovery,14,5,2,1,1.0,0.4,0.5531464700081438,False,132.7064209999662,True
+S07,dev,فلاسک کودک نیم لیتری 0.5 لیتر,discovery,9,5,5,1,1.0,1.0,1.0,False,210.9780050000154,True
+S08,dev,کفش پیاده‌روی پاما,discovery,10,5,5,1,1.0,1.0,1.0,False,563.1634880001002,True
+S09,dev,خودکار,discovery,53,5,5,1,1.0,1.0,1.0,False,82.14664999991328,True
+S10,dev,بلیط هواپیما از تهران به پاریس,discovery,0,0,0,0,0.0,0.0,,True,151.2330599998677,True
+S11,dev,خودروی واقعی تسلا مدل ایکس میخوام,discovery,0,0,0,0,0.0,0.0,,True,125.88376899998366,True
+S12,dev,کرم مرطوب کننده,discovery,0,0,0,0,0.0,0.0,,True,289.48106200004986,True
+S13,holdout,برای پیاده روی روزانه کفش زنانه میخوام,discovery,570,5,5,1,1.0,1.0,1.0,False,162.76577200005704,True
+S14,holdout,گلس محافظ صفحه گلکسی فیت 2 سامسونگ,discovery,6,5,0,0,0.0,0.0,0.0,False,179.16682999998557,True
+S15,holdout,چای سفید,discovery,1,1,1,1,1.0,0.2,1.0,False,81.3519839998662,True
+S16,holdout,کرم ضد آفتاب آردن,discovery,6,5,4,1,1.0,0.8,0.8687949224876583,False,164.44076300012966,True
+S17,holdout,پایه شارژر دسته پلی استیشن 5,discovery,6,5,5,1,1.0,1.0,1.0,False,175.41674700009935,True
+S18,holdout,پازل 54 تکه,discovery,37,5,5,1,1.0,1.0,1.0,False,121.57444500007841,True
+S19,holdout,کوله پشتی بچه برای مهد کودک,discovery,64,5,0,0,0.0,0.0,0.0,False,173.04038199995375,True
+S20,holdout,شامپو مو,discovery,105,5,5,1,1.0,1.0,1.0,False,196.56989500003874,True
+S21,holdout,پازل,discovery,0,0,0,0,0.0,0.0,,True,58.29308000011224,True
+S22,holdout,میخوام یک بلیت قطار تهران مشهد رزرو کنم,discovery,0,0,0,0,0.0,0.0,,True,178.9884819997951,True
+S23,holdout,qzvxnonexistent 847293q,discovery,0,0,0,0,0.0,0.0,,True,69.65560599996934,True
+S24,holdout,هدفون بی سیم بلوتوثی,discovery,1,0,0,0,0.0,0.0,0.0,False,152.15385499982403,True
+S25,holdout,کوله پشتی رنس X2-10616,known_item,1,5,1,1,1.0,0.2,1.0,False,164.0600099999574,True
+S26,dev,کفش پاما ساموئل G1423,known_item,1,5,1,1,1.0,0.2,1.0,False,146.02378200015664,True
+S27,holdout,1461200,known_item,1,1,1,1,1.0,0.2,1.0,False,0.3227560000595986,True
+TITLE_Q01,title_derived,لوسیون مرطوب کننده بیونیج,known_item,1,5,1,1,1.0,0.2,1.0,False,158.67072100013502,True
+TITLE_Q02,title_derived,کتاب بهترین سال زندگی,known_item,1,5,1,1,0.5,0.2,0.6309297535714574,False,140.31732299986288,True
+TITLE_Q03,title_derived,کتاب رمان نوجوان188 اثر,known_item,1,5,1,1,1.0,0.2,1.0,False,148.28194200003963,True
+TITLE_Q04,title_derived,ادو پرفیوم مردانه ویزاری,known_item,1,5,1,1,0.3333333333333333,0.2,0.5,False,146.60047200004556,True
+TITLE_Q05,title_derived,جامدادی گل,known_item,1,5,1,1,1.0,0.2,1.0,False,79.54643499988379,True
+TITLE_Q06,title_derived,پستانک مایا 1311,known_item,1,5,1,1,1.0,0.2,1.0,False,123.3816740000293,True
+TITLE_Q07,title_derived,کفش زنانه اسپرت من,known_item,1,5,1,1,1.0,0.2,1.0,False,175.2054749999843,True
+TITLE_Q08,title_derived,خرید کش مو دخترانه JE 100 با کیفیت مناسب,known_item,1,5,1,1,1.0,0.2,1.0,False,152.8459799999382,True
+TITLE_Q09,title_derived,خرید شورت مردانه چیندکا 707 3 با کیفیت مناسب,known_item,1,5,1,1,1.0,0.2,1.0,False,166.05911299984655,True
+TITLE_Q10,title_derived,خرید سوزن نقشه کرون فاکس 01 با کیفیت مناسب,known_item,1,5,1,1,1.0,0.2,1.0,False,151.89332600016314,True
+TITLE_Q11,title_derived,خرید پاکت هدیه درخت عشق با کیفیت مناسب,known_item,1,5,1,1,1.0,0.2,1.0,False,135.76394699998673,True
+TITLE_Q12,title_derived,خرید مجله نجوم شماره 289 با کیفیت مناسب,known_item,1,2,1,1,1.0,0.2,1.0,False,141.34070800014342,True
+TITLE_Q13,title_derived,خرید هودی پسرانه چنگ گرگ A455 با کیفیت مناسب,known_item,1,5,1,1,1.0,0.2,1.0,False,171.89646499991795,True
+TITLE_Q14,title_derived,خرید شامپو ضد شوره مو استم با کیفیت مناسب,known_item,1,5,1,1,1.0,0.2,1.0,False,158.82213300005787,True
+TITLE_Q15,title_derived,آیا کاربران از کیفیت و کارایی کفش روزمره زنانه بهشتیان سوزان راضی هستند؟,known_item,1,5,1,1,1.0,0.2,1.0,False,165.01531199992314,True
+TITLE_Q16,title_derived,آیا کاربران از کیفیت و کارایی کتاب جمهوری خلق نسیان اثر راضی هستند؟,known_item,1,5,1,1,1.0,0.2,1.0,False,158.6244950001401,True
+TITLE_Q17,title_derived,آیا کاربران از کیفیت و کارایی کتاب آب بابا افلاطون اثر راضی هستند؟,known_item,1,5,1,1,1.0,0.2,1.0,False,153.49941299996317,True
+TITLE_Q18,title_derived,آیا کاربران از کیفیت و کارایی ادو پرفیوم مردانه گوچی Guilty راضی هستند؟,known_item,1,5,1,1,1.0,0.2,1.0,False,158.1100509999942,True
+TITLE_Q19,title_derived,آیا کاربران از کیفیت و کارایی مانتو زنانه h 317 رنگ راضی هستند؟,known_item,1,5,1,1,1.0,0.2,1.0,False,157.46249599988005,True
+TITLE_Q20,title_derived,آیا کاربران از کیفیت و کارایی کیف اداری ver-0988 راضی هستند؟,known_item,1,5,1,1,1.0,0.2,1.0,False,172.30999699995664,True

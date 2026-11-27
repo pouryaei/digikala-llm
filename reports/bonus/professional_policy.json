@@ -1,0 +1,333 @@
+{
+  "mode": "offline_fixture",
+  "real_gateway_attempts": 0,
+  "cases": [
+    {
+      "case_id": "search",
+      "scenario": "جستجوی مستقیم",
+      "route": "search",
+      "status": "answered",
+      "local_attempts": 0,
+      "first_attempts": 0,
+      "repeat_attempts": 0,
+      "warm_cache_hit": true,
+      "local_facts_preserved": true,
+      "first_roles": [],
+      "decisions": [
+        {
+          "stage": "request",
+          "mode": "local",
+          "reason": "cache_miss_or_disabled"
+        },
+        {
+          "stage": "router",
+          "mode": "local",
+          "reason": "explicit_user_choice"
+        },
+        {
+          "stage": "search",
+          "mode": "local",
+          "reason": "existing_retrieval_preserves_constraints"
+        }
+      ]
+    },
+    {
+      "case_id": "qa_0",
+      "scenario": "آمار مستقیم از داده",
+      "route": "qa",
+      "status": "answered",
+      "local_attempts": 0,
+      "first_attempts": 0,
+      "repeat_attempts": 0,
+      "warm_cache_hit": true,
+      "local_facts_preserved": true,
+      "first_roles": [],
+      "decisions": [
+        {
+          "stage": "request",
+          "mode": "local",
+          "reason": "cache_miss_or_disabled"
+        },
+        {
+          "stage": "router",
+          "mode": "local",
+          "reason": "explicit_user_choice"
+        },
+        {
+          "stage": "qa",
+          "mode": "local",
+          "reason": "simple_question_local_answer_sufficient"
+        }
+      ]
+    },
+    {
+      "case_id": "qa_1",
+      "scenario": "شاهد مرتبط پیدا نشد",
+      "route": "qa",
+      "status": "insufficient_evidence",
+      "local_attempts": 0,
+      "first_attempts": 0,
+      "repeat_attempts": 0,
+      "warm_cache_hit": false,
+      "local_facts_preserved": true,
+      "first_roles": [],
+      "decisions": [
+        {
+          "stage": "request",
+          "mode": "local",
+          "reason": "cache_miss_or_disabled"
+        },
+        {
+          "stage": "router",
+          "mode": "local",
+          "reason": "explicit_user_choice"
+        },
+        {
+          "stage": "qa",
+          "mode": "local",
+          "reason": "insufficient_or_uncovered_evidence"
+        }
+      ]
+    },
+    {
+      "case_id": "qa_2",
+      "scenario": "پوشش ناقص معیارها",
+      "route": "qa",
+      "status": "answered",
+      "local_attempts": 0,
+      "first_attempts": 0,
+      "repeat_attempts": 0,
+      "warm_cache_hit": false,
+      "local_facts_preserved": true,
+      "first_roles": [],
+      "decisions": [
+        {
+          "stage": "request",
+          "mode": "local",
+          "reason": "cache_miss_or_disabled"
+        },
+        {
+          "stage": "router",
+          "mode": "local",
+          "reason": "explicit_user_choice"
+        },
+        {
+          "stage": "qa",
+          "mode": "local",
+          "reason": "insufficient_or_uncovered_evidence"
+        }
+      ]
+    },
+    {
+      "case_id": "qa_3",
+      "scenario": "جمع‌بندی چند معیار با شاهد",
+      "route": "qa",
+      "status": "answered",
+      "local_attempts": 0,
+      "first_attempts": 1,
+      "repeat_attempts": 0,
+      "warm_cache_hit": true,
+      "local_facts_preserved": true,
+      "first_roles": [
+        "qa"
+      ],
+      "decisions": [
+        {
+          "stage": "request",
+          "mode": "local",
+          "reason": "cache_miss_or_disabled"
+        },
+        {
+          "stage": "router",
+          "mode": "local",
+          "reason": "explicit_user_choice"
+        },
+        {
+          "stage": "qa",
+          "mode": "llm",
+          "reason": "additional_language_reasoning_needed"
+        },
+        {
+          "stage": "qa",
+          "mode": "llm",
+          "reason": "citations_validated"
+        }
+      ]
+    },
+    {
+      "case_id": "qa_4",
+      "scenario": "درخواست انتخاب محصول",
+      "route": "qa",
+      "status": "needs_product",
+      "local_attempts": 0,
+      "first_attempts": 0,
+      "repeat_attempts": 0,
+      "warm_cache_hit": false,
+      "local_facts_preserved": true,
+      "first_roles": [],
+      "decisions": [
+        {
+          "stage": "request",
+          "mode": "local",
+          "reason": "cache_miss_or_disabled"
+        },
+        {
+          "stage": "router",
+          "mode": "local",
+          "reason": "explicit_user_choice"
+        }
+      ]
+    },
+    {
+      "case_id": "ambiguity",
+      "scenario": "ابهام مسیر و جمع‌بندی",
+      "route": "qa",
+      "status": "answered",
+      "local_attempts": 0,
+      "first_attempts": 2,
+      "repeat_attempts": 0,
+      "warm_cache_hit": true,
+      "local_facts_preserved": true,
+      "first_roles": [
+        "router",
+        "qa"
+      ],
+      "decisions": [
+        {
+          "stage": "request",
+          "mode": "local",
+          "reason": "cache_miss_or_disabled"
+        },
+        {
+          "stage": "router",
+          "mode": "llm",
+          "reason": "additional_language_reasoning_needed"
+        },
+        {
+          "stage": "router",
+          "mode": "llm",
+          "reason": "router_output_validated"
+        },
+        {
+          "stage": "qa",
+          "mode": "llm",
+          "reason": "additional_language_reasoning_needed"
+        },
+        {
+          "stage": "qa",
+          "mode": "llm",
+          "reason": "citations_validated"
+        }
+      ]
+    },
+    {
+      "case_id": "compare",
+      "scenario": "مقایسه چندمعیاره",
+      "route": "compare",
+      "status": "compared",
+      "local_attempts": 0,
+      "first_attempts": 1,
+      "repeat_attempts": 0,
+      "warm_cache_hit": true,
+      "local_facts_preserved": true,
+      "first_roles": [
+        "compare"
+      ],
+      "decisions": [
+        {
+          "stage": "request",
+          "mode": "local",
+          "reason": "cache_miss_or_disabled"
+        },
+        {
+          "stage": "router",
+          "mode": "local",
+          "reason": "explicit_user_choice"
+        },
+        {
+          "stage": "compare",
+          "mode": "llm",
+          "reason": "additional_language_reasoning_needed"
+        },
+        {
+          "stage": "compare",
+          "mode": "llm",
+          "reason": "citations_validated"
+        }
+      ]
+    },
+    {
+      "case_id": "manager",
+      "scenario": "تحلیل مدیریتی",
+      "route": "manager",
+      "status": "answered",
+      "local_attempts": 0,
+      "first_attempts": 1,
+      "repeat_attempts": 0,
+      "warm_cache_hit": true,
+      "local_facts_preserved": true,
+      "first_roles": [
+        "manager"
+      ],
+      "decisions": [
+        {
+          "stage": "request",
+          "mode": "local",
+          "reason": "cache_miss_or_disabled"
+        },
+        {
+          "stage": "router",
+          "mode": "local",
+          "reason": "explicit_user_choice"
+        },
+        {
+          "stage": "manager",
+          "mode": "llm",
+          "reason": "additional_language_reasoning_needed"
+        },
+        {
+          "stage": "manager",
+          "mode": "llm",
+          "reason": "citations_validated"
+        }
+      ]
+    },
+    {
+      "case_id": "predict",
+      "scenario": "طبقه‌بندی نظر",
+      "route": "predict",
+      "status": "answered",
+      "local_attempts": 0,
+      "first_attempts": 0,
+      "repeat_attempts": 0,
+      "warm_cache_hit": false,
+      "local_facts_preserved": true,
+      "first_roles": [],
+      "decisions": [
+        {
+          "stage": "request",
+          "mode": "local",
+          "reason": "cache_miss_or_disabled"
+        },
+        {
+          "stage": "router",
+          "mode": "local",
+          "reason": "explicit_user_choice"
+        },
+        {
+          "stage": "predict",
+          "mode": "local",
+          "reason": "selected_head_fine_tuning_classifier"
+        }
+      ]
+    }
+  ],
+  "total_cases": 10,
+  "first_simulated_attempts": 5,
+  "repeat_simulated_attempts": 0,
+  "zero_attempt_cases": 6,
+  "warm_cache_hits": 6,
+  "facts_preserved_cases": 10,
+  "max_attempts_per_request": 2,
+  "note": "Fixtures test decisions, cache and structural validators; actual language quality, usage and costs are not measured."
+}

@@ -1,0 +1,175 @@
+{
+  "base_modified_files": [
+    ".env.example",
+    ".gitignore",
+    "README.md",
+    "app.py",
+    "ui_entrypoints/app.py"
+  ],
+  "base_removed_files": [],
+  "base_model_and_data_preserved": true,
+  "core_search_unchanged": 47,
+  "core_qa_unchanged": 29,
+  "bonus_unit_tests_passed": 8,
+  "bonus_optional_tests_skipped": 2,
+  "previous_preference_and_training_tests_rerun_passed": 9,
+  "actual_retrieval": {
+    "bm25": {
+      "cases": 24,
+      "answerable": 18,
+      "hit_at_5": 0.8333333333333334,
+      "p_at_5": 0.6777777777777778,
+      "returned_precision": 0.8026315789473685,
+      "mrr_at_5": 0.8333333333333334,
+      "ndcg_at_5": 0.8012189662497667,
+      "no_result_cases": 6,
+      "correct_no_result": 6,
+      "hybrid_runs": 0,
+      "latency": {
+        "median_ms": 155.80345600005785,
+        "mean_ms": 181.00720495829137,
+        "p95_ms": 480.80341400009274
+      },
+      "errors": 0
+    },
+    "hybrid_char": {
+      "cases": 24,
+      "answerable": 18,
+      "hit_at_5": 1.0,
+      "p_at_5": 0.8,
+      "returned_precision": 0.9113924050632911,
+      "mrr_at_5": 1.0,
+      "ndcg_at_5": 0.9632866780707564,
+      "no_result_cases": 6,
+      "correct_no_result": 6,
+      "hybrid_runs": 24,
+      "latency": {
+        "median_ms": 205.64091199980794,
+        "mean_ms": 221.50221966658515,
+        "p95_ms": 406.47150399991006
+      },
+      "errors": 0
+    },
+    "auto": {
+      "cases": 24,
+      "answerable": 18,
+      "hit_at_5": 1.0,
+      "p_at_5": 0.8,
+      "returned_precision": 0.935064935064935,
+      "mrr_at_5": 1.0,
+      "ndcg_at_5": 0.9632866780707564,
+      "no_result_cases": 6,
+      "correct_no_result": 6,
+      "hybrid_runs": 16,
+      "latency": {
+        "median_ms": 194.56832500009114,
+        "mean_ms": 203.41054787498555,
+        "p95_ms": 369.6078480002143
+      },
+      "errors": 0
+    }
+  },
+  "typo_stress": {
+    "bm25": {
+      "cases": 40,
+      "answerable": 40,
+      "hit_at_5": 0.7,
+      "p_at_5": 0.14,
+      "returned_precision": 0.5283018867924528,
+      "mrr_at_5": 0.6708333333333333,
+      "ndcg_at_5": 0.6782732438392864,
+      "no_result_cases": 0,
+      "correct_no_result": 0,
+      "hybrid_runs": 0,
+      "latency": {
+        "median_ms": 128.00505050017819,
+        "mean_ms": 134.93518392494934,
+        "p95_ms": 183.550754999942
+      },
+      "errors": 0
+    },
+    "hybrid_char": {
+      "cases": 40,
+      "answerable": 40,
+      "hit_at_5": 1.0,
+      "p_at_5": 0.2,
+      "returned_precision": 0.4,
+      "mrr_at_5": 1.0,
+      "ndcg_at_5": 1.0,
+      "no_result_cases": 0,
+      "correct_no_result": 0,
+      "hybrid_runs": 40,
+      "latency": {
+        "median_ms": 185.0888459998714,
+        "mean_ms": 190.48918997496003,
+        "p95_ms": 244.73847699982798
+      },
+      "errors": 0
+    },
+    "auto": {
+      "cases": 40,
+      "answerable": 40,
+      "hit_at_5": 1.0,
+      "p_at_5": 0.2,
+      "returned_precision": 0.4,
+      "mrr_at_5": 1.0,
+      "ndcg_at_5": 1.0,
+      "no_result_cases": 0,
+      "correct_no_result": 0,
+      "hybrid_runs": 40,
+      "latency": {
+        "median_ms": 179.2906724997465,
+        "mean_ms": 186.15975349997598,
+        "p95_ms": 250.91554199980237
+      },
+      "errors": 0
+    }
+  },
+  "actual_router": {
+    "intent_correct": 24,
+    "intent_total": 24,
+    "always_hybrid_invocations": 86,
+    "auto_hybrid_invocations": 71
+  },
+  "actual_cache": {
+    "total_warm_requests": 20,
+    "uncached_global_median_ms": 54.71892049990856,
+    "cached_global_median_ms": 0.46055749976403604,
+    "outputs_identical": true
+  },
+  "actual_model_test": {
+    "baseline": {
+      "macro_f1": 0.6790791799331871,
+      "accuracy": 0.7831333333333333
+    },
+    "adapted": {
+      "macro_f1": 0.6923143723471491,
+      "accuracy": 0.8163333333333334
+    },
+    "new_model_type": "fine-tuned classical head, not transformer LoRA"
+  },
+  "quality_gap": {
+    "status": "answered",
+    "scope": "all 100k products",
+    "thresholds": {
+      "min_labels": 20,
+      "min_ratings": 10,
+      "min_rating_100": 70,
+      "min_gap": 0.15
+    },
+    "rated_and_labeled_products": 68898,
+    "eligible_products": 15984,
+    "naive_flags": 14132,
+    "naive_flags_insufficient_support": 13202,
+    "conservative_flags": 37,
+    "seconds": 5.582574398000361,
+    "note": "Rating and recommendation measure different user populations. Flags are for manual investigation, not proven defects; the Wilson interval is for the observed labeled recommendation proportion only."
+  },
+  "human_review_count": 0,
+  "mentor_approval_confirmed": false,
+  "langgraph_sdk_executed_here": false,
+  "langfuse_live_export_verified": false,
+  "streamlit_browser_tested_here": false,
+  "actual_api_calls": 0,
+  "presentation_pages": 10
+}

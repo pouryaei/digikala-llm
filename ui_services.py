@@ -195,12 +195,12 @@ def _invoke_prediction(function, text, title):
             returned = returned.model_dump()
     except FileNotFoundError:
         raise APIError(
-            "فایل مدل آموزش‌دیده پیدا نشد. sentiment_model.joblib را در پوشهٔ models قرار دهید "
+            "فایل مدل آموزش‌دیده پیدا نشد. پوشهٔ m2_outputs/xgboost یا sentiment_model.joblib را بررسی کنید "
             "یا مسیر DIGIKALA_MODEL_PATH را تنظیم کنید.", unavailable=True,
         ) from None
     except ImportError:
         raise APIError(
-            "وابستگی‌های مدل بارگذاری نشدند. joblib و نسخهٔ scikit-learn سازگار با آموزش مدل را نصب کنید.",
+            "وابستگی‌های مدل بارگذاری نشدند. xgboost، joblib و نسخهٔ scikit-learn سازگار با آموزش را نصب کنید.",
             unavailable=True,
         ) from None
     except Exception as error:
@@ -213,7 +213,7 @@ def _invoke_prediction(function, text, title):
 
 
 def predict_recommendation(text: str, title: str | None = None) -> dict:
-    """Use Hanieh's actual saved-pipeline service; otherwise try the team's API."""
+    """Use the configured local model; otherwise try the team's API."""
     direct_error = None
     try:
         function = _python_callable("QBC13_PREDICT_FUNCTION", "predict_recommendation", (

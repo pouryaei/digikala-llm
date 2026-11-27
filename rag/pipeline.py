@@ -18,6 +18,10 @@ def _json(data):
 
 
 def _print_candidates(candidates):
+    if any(item.get("budget_unit") == "recorded" for item in candidates):
+        print("بودجه به واحد ثبت‌شدهٔ منبع اعمال شد؛ واحد تومان تأیید نشده است.")
+    if any(item.get("purpose_match_relaxed") for item in candidates):
+        print("گزینه‌های هم‌نوع؛ ویژگی‌های دقیق کاربری تأیید نشده‌اند.")
     for rank, candidate in enumerate(candidates, 1):
         details = []
         if (price := candidate.get("price_toman")) is not None:

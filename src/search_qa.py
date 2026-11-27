@@ -9,6 +9,7 @@ from .bm25_index import BM25IndexManager, mapping_digest, mapping_ids
 from .catalog import open_catalog
 from .config import Config, ROOT, DenseUnavailable
 from .rag_query import _check, search_request
+from .product_preferences import recorded_budget, rerank
 
 COMMENTS_PATH = Path(Config.COMMENTS_PARQUET)
 PRODUCTS_PATH = Path(Config.PRODUCTS_PARQUET)
@@ -77,13 +78,30 @@ def search_products(query, *, top_k=5, mode="bm25", min_price=None, max_price=No
         raise ValueError("min_reviews must be a non-negative integer.")
     cat = open_catalog()
     allowed = None if allowed_product_ids is None else set(map(str, allowed_product_ids))
+    if request.scope_hint:
+        scope_ids = cat.preference_scope_ids(request.scope_hint)
+        allowed = scope_ids if allowed is None else allowed & scope_ids
+    raw_budget = recorded_budget(request, cat, source_price_unit)
     if request.min_price is not None or request.max_price is not None or min_rating is not None or min_reviews:
         matches = cat.filtered_ids(min_price=request.min_price, max_price=request.max_price,
-                                   min_rating=min_rating, min_reviews=min_reviews, source_price_unit=source_price_unit)
+                                   min_rating=min_rating, min_reviews=min_reviews, source_price_unit=source_price_unit,
+                                   price_in_recorded_units=raw_budget)
         allowed = matches if allowed is None else allowed & matches
-    hits = load_search_engine(mode).search(request.text, top_k=int(top_k), mode=mode, allowed_ids=allowed)
+    use_preferences = request.prefer_satisfaction or request.prefer_affordability
+    candidate_k = max(int(top_k), min(100, max(50, int(top_k) * 5))) if use_preferences else int(top_k)
+    engine = load_search_engine(mode)
+    hits = engine.search(request.text, top_k=candidate_k, mode=mode, allowed_ids=allowed)
+    relaxed = False
+    if not hits and request.fallback_text:
+        hits = engine.search(request.fallback_text, top_k=candidate_k, mode=mode, allowed_ids=allowed)
+        relaxed = bool(hits)
     products = cat.get_products((hit["product_id"] for hit in hits), source_price_unit=source_price_unit)
-    return [{**hit, **products.get(int(hit["product_id"]), {}), "product_id": str(hit["product_id"])} for hit in hits]
+    if use_preferences:
+        stats = cat.review_stats(hit["product_id"] for hit in hits) if request.prefer_satisfaction else {}
+        hits = rerank(hits, products, stats, request, int(top_k))
+    return [{**hit, **products.get(int(hit["product_id"]), {}), "product_id": str(hit["product_id"]),
+             **({"purpose_match_relaxed": True} if relaxed else {}),
+             **({"budget_unit": "recorded"} if raw_budget else {})} for hit in hits]
 
 
 def get_review_evidence(product_id, question, *, comments_path=None, top_k=8):

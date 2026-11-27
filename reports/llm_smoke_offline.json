@@ -1,0 +1,219 @@
+{
+  "product_id": 1696173,
+  "question": "ایرادهای پرتکرار این محصول چیست؟",
+  "offline_pass": true,
+  "offline": {
+    "product_id": 1696173,
+    "answer_mode": "extractive",
+    "answer": "در دادهٔ واقعیِ در دسترس برای این محصول، 200 نظر ثبت شده است.\nدر 200 نظر دارای متن، موضوع‌های منفی زیر با قواعد مشخص روی فیلدهای مزایا/معایب و جمله‌های دارای نشانهٔ روشنِ رضایت یا نارضایتی شناسایی شدند:\n• کیفیت و جنس: 20 نظر از 200 (نظر 45465673، نظر 42090964، نظر 50395851؛ نمونهٔ شاهد).\n• اندازه و تناسب: 9 نظر از 200 (نظر 50267452، نظر 43580328؛ نمونهٔ شاهد).\n• ظاهر و رنگ: 6 نظر از 200 (نظر 47405200، نظر 44252884؛ نمونهٔ شاهد).\nهر نظر در هر موضوع یک‌بار شمرده می‌شود. این شمارش فقط اشاره‌های صریحی را پوشش می‌دهد که قواعد شناسایی کرده‌اند.\n• «کیفیت افتضاح پول رو آشغال بریزید ولی اینو نخرید» (نظر 45465673)\n• «کوچک باتوجه به سایز اعلامی» (نظر 50267452)\n• «کاملا با عکس کالا متفاوت بود» (نظر 47405200)\n• «کلا جنسش خوب نیس» (نظر 42090964)\nتجربه‌ها یکسان نیستند؛ نمونه‌های مثبت و منفی یا نظرهای ترکیبی را جداگانه بررسی کنید.",
+    "evidence": [
+      {
+        "comment_id": 45465673,
+        "product_id": 1696173,
+        "text": "کیفیت افتضاح پول رو آشغال بریزید ولی اینو نخرید",
+        "source": "disadvantages_raw",
+        "polarity": "negative",
+        "recommendation_status": "not_recommended",
+        "rating_5": 1.0,
+        "score": 7.146875,
+        "themes": [
+          "کیفیت و جنس"
+        ]
+      },
+      {
+        "comment_id": 50267452,
+        "product_id": 1696173,
+        "text": "کوچک باتوجه به سایز اعلامی",
+        "source": "disadvantages_raw",
+        "polarity": "negative",
+        "recommendation_status": "not_recommended",
+        "rating_5": 1.0,
+        "score": 7.08125,
+        "themes": [
+          "اندازه و تناسب"
+        ]
+      },
+      {
+        "comment_id": 47405200,
+        "product_id": 1696173,
+        "text": "کاملا با عکس کالا متفاوت بود",
+        "source": "disadvantages_raw",
+        "polarity": "negative",
+        "recommendation_status": null,
+        "rating_5": 4.0,
+        "score": 7.0875,
+        "themes": [
+          "ظاهر و رنگ"
+        ]
+      },
+      {
+        "comment_id": 42090964,
+        "product_id": 1696173,
+        "text": "کلا جنسش خوب نیس",
+        "source": "disadvantages_raw",
+        "polarity": "negative",
+        "recommendation_status": "no_idea",
+        "rating_5": 3.0,
+        "score": 4.75,
+        "themes": [
+          "اندازه و تناسب",
+          "ظاهر و رنگ",
+          "مزه و بو",
+          "کیفیت و جنس"
+        ]
+      },
+      {
+        "comment_id": 44252884,
+        "product_id": 1696173,
+        "text": "این رنگ زود کثیف میشه",
+        "source": "disadvantages_raw",
+        "polarity": "negative",
+        "recommendation_status": "recommended",
+        "rating_5": 3.0,
+        "score": 4.62812,
+        "themes": [
+          "ظاهر و رنگ"
+        ]
+      },
+      {
+        "comment_id": 50395851,
+        "product_id": 1696173,
+        "text": "کم دوام ۱۳ روز هم دوام نیاورد",
+        "source": "disadvantages_raw",
+        "polarity": "negative",
+        "recommendation_status": "recommended",
+        "rating_5": 5.0,
+        "score": 4.60625,
+        "themes": [
+          "کیفیت و جنس"
+        ]
+      },
+      {
+        "comment_id": 46061918,
+        "product_id": 1696173,
+        "text": "جنس کفی بد",
+        "source": "disadvantages_raw",
+        "polarity": "negative",
+        "recommendation_status": "no_idea",
+        "rating_5": 4.0,
+        "score": 4.59687,
+        "themes": [
+          "کیفیت و جنس"
+        ]
+      },
+      {
+        "comment_id": 43580328,
+        "product_id": 1696173,
+        "text": "زیاد اندازه دقیق پام نبود",
+        "source": "disadvantages_raw",
+        "polarity": "negative",
+        "recommendation_status": "recommended",
+        "rating_5": 4.0,
+        "score": 4.59375,
+        "themes": [
+          "اندازه و تناسب"
+        ]
+      }
+    ],
+    "scope": "indexed_catalogue",
+    "source": "catalog.sqlite3",
+    "stats": {
+      "total_reviews": 200,
+      "text_review_count": 200,
+      "relevant_review_count": 47,
+      "valid_label_count": 177,
+      "recommended_count": 128,
+      "not_recommended_count": 23,
+      "no_idea_count": 26,
+      "recommendation_rate": 0.7231638418079096,
+      "complete_for_product": true
+    },
+    "theme_counts": [
+      {
+        "theme": "کیفیت و جنس",
+        "polarity": "negative",
+        "count": 20,
+        "denominator": 200,
+        "source": "explicit attributes and clear-sentiment text clauses",
+        "evidence_ids": [
+          45465673,
+          42090964,
+          50395851
+        ]
+      },
+      {
+        "theme": "اندازه و تناسب",
+        "polarity": "negative",
+        "count": 9,
+        "denominator": 200,
+        "source": "explicit attributes and clear-sentiment text clauses",
+        "evidence_ids": [
+          50267452,
+          43580328
+        ]
+      },
+      {
+        "theme": "ظاهر و رنگ",
+        "polarity": "negative",
+        "count": 6,
+        "denominator": 200,
+        "source": "explicit attributes and clear-sentiment text clauses",
+        "evidence_ids": [
+          47405200,
+          44252884
+        ]
+      }
+    ],
+    "facet_coverage": [],
+    "intent": "negative",
+    "requested_themes": [],
+    "meta": {
+      "generation_mode": "extractive",
+      "retrieval_seconds": 0.06545,
+      "api_calls": 0,
+      "api_attempts": 0,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "usage_known": true,
+      "cached": false,
+      "citation_check": "exact source excerpts and product-scoped IDs",
+      "total_seconds": 0.065494,
+      "rag_total_seconds": 0.067652
+    },
+    "product": {
+      "product_id": 1696173,
+      "title_fa": "کفش پیاده روی مردانه مدل adi-super رنگ طوسی",
+      "category1": "کفش مردانه",
+      "category2": "کفش ورزشی مردانه",
+      "sub_category": "clothe",
+      "brand": "متفرقه",
+      "price_recorded": 1990000.0,
+      "price_toman": null,
+      "price_conflict": 0,
+      "rating_100": 72.0,
+      "rating_count": 2538,
+      "review_count": 200,
+      "price_unit": "واحد ثبت‌شده (نامشخص)"
+    },
+    "product_resolution": "selected_id",
+    "status": "answered"
+  },
+  "live_requested": false,
+  "live_verified": false,
+  "live_result": null,
+  "real_gateway_calls": 0,
+  "status": "OFFLINE_PASS",
+  "cost": {
+    "records": 1,
+    "calls": 0,
+    "attempts": 0,
+    "prompt_tokens_reported": 0,
+    "completion_tokens_reported": 0,
+    "records_with_unknown_or_retry_usage": 0,
+    "input_usd_per_million": null,
+    "output_usd_per_million": null,
+    "cost_from_reported_tokens_usd": 0.0,
+    "complete_cost_estimate_usd": 0.0,
+    "note": "Not a provider invoice. Rates must be from your actual gateway. Failed/retried requests with unknown usage cannot be priced as zero; cost from reported tokens may be incomplete. Cached answers consume zero current API tokens if reported as such."
+  }
+}

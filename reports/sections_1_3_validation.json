@@ -1,0 +1,502 @@
+{
+  "scope": "Actual 100K service-level offline regression; not a Streamlit browser test",
+  "dataset": {
+    "revision": "89c3133b169c8d3793db8834f56f32fee33d9db0",
+    "products": 100000,
+    "reviews": 1874457,
+    "runtime_asset_checksums_verified": true,
+    "sqlite_integrity": true,
+    "orphan_reviews": 0,
+    "index_mapping_count": 100000
+  },
+  "search": {
+    "official_and_preference_demos": [
+      {
+        "query": "یک کیف برای استفاده‌ی روزمره می‌خوام که خیلی گرون نباشه و خریدارها هم ازش راضی باشن.",
+        "scope": "everyday_bag",
+        "items": [
+          {
+            "product_id": 3595857,
+            "title_fa": "کیف کمری مردانه مدل 5472",
+            "category": "اکسسوری مردانه",
+            "brand": "متفرقه",
+            "price": 1100000.0,
+            "price_unit": "واحد ثبت‌شده",
+            "rating": 86.0,
+            "rating_scale": 100,
+            "rating_count": 36,
+            "comment_count": 27,
+            "recommended_count": 24,
+            "valid_label_count": 25,
+            "recommendation_rate": 0.96
+          },
+          {
+            "product_id": 1862835,
+            "title_fa": "کیف کمری مردانه مدل 2631",
+            "category": "اکسسوری مردانه",
+            "brand": "متفرقه",
+            "price": 1200000.0,
+            "price_unit": "واحد ثبت‌شده",
+            "rating": 82.0,
+            "rating_scale": 100,
+            "rating_count": 130,
+            "comment_count": 95,
+            "recommended_count": 80,
+            "valid_label_count": 92,
+            "recommendation_rate": 0.8695652173913043
+          },
+          {
+            "product_id": 3666565,
+            "title_fa": "کیف دستی زنانه مدل fm",
+            "category": "اکسسوری زنانه",
+            "brand": "متفرقه",
+            "price": 1190000.0,
+            "price_unit": "واحد ثبت‌شده",
+            "rating": 80.0,
+            "rating_scale": 100,
+            "rating_count": 481,
+            "comment_count": 200,
+            "recommended_count": 132,
+            "valid_label_count": 164,
+            "recommendation_rate": 0.8048780487804879
+          },
+          {
+            "product_id": 1533495,
+            "title_fa": "کیف رودوشی مدل Z- 02",
+            "category": "اکسسوری مردانه",
+            "brand": "متفرقه",
+            "price": 1700000.0,
+            "price_unit": "واحد ثبت‌شده",
+            "rating": 80.0,
+            "rating_scale": 100,
+            "rating_count": 478,
+            "comment_count": 200,
+            "recommended_count": 164,
+            "valid_label_count": 193,
+            "recommendation_rate": 0.8497409326424871
+          },
+          {
+            "product_id": 1865987,
+            "title_fa": "کیف کمری مردانه کد 226370",
+            "category": "اکسسوری مردانه",
+            "brand": "متفرقه",
+            "price": 890000.0,
+            "price_unit": "واحد ثبت‌شده",
+            "rating": null,
+            "rating_scale": 100,
+            "rating_count": 0,
+            "comment_count": 2,
+            "recommended_count": 2,
+            "valid_label_count": 2,
+            "recommendation_rate": 1.0
+          }
+        ],
+        "notes": [
+          "اولویت رضایت: ابتدا گزینه‌های مرتبط با دست‌کم ۵۰٪ پیشنهاد خرید، یا در نبود برچسب امتیاز دست‌کم ۷۰ از ۱۰۰ با حداقل دو رأی؛ سپس رتبه‌بندی با توجه به تعداد شواهد.",
+          "اولویت قیمت: قیمت ثبت‌شده میان گزینه‌های مرتبط مقایسه شد؛ ارزان‌بودن نسبی است.",
+          "دامنهٔ پیشنهادها: دسته‌های کیف زنانه و مردانه؛ کاربری از مشخصات ثبت‌شده فراتر است.",
+          "ویژگی‌های دقیق درخواست در عنوان‌ها یافت نشد؛ گزینه‌های هم‌نوع پیشنهاد شدند. کاربری، وزن یا سازگاری خاص تأیید نشده است."
+        ]
+      },
+      {
+        "query": "چند وسیله‌ی کاربردی برای سفر معرفی کن که نظر کاربران درباره‌شون خوب باشه.",
+        "scope": "travel",
+        "items": [
+          {
+            "product_id": 1096325,
+            "title_fa": "کاور چمدان مدل GLASS20",
+            "category": "لوازم سفر",
+            "brand": "متفرقه",
+            "price": 690000.0,
+            "price_unit": "واحد ثبت‌شده",
+            "rating": 74.0,
+            "rating_scale": 100,
+            "rating_count": 161,
+            "comment_count": 118,
+            "recommended_count": 90,
+            "valid_label_count": 106,
+            "recommendation_rate": 0.8490566037735849
+          },
+          {
+            "product_id": 2259689,
+            "title_fa": "ساک ورزشی مدل F12",
+            "category": "لوازم سفر",
+            "brand": "متفرقه",
+            "price": 980000.0,
+            "price_unit": "واحد ثبت‌شده",
+            "rating": 86.0,
+            "rating_scale": 100,
+            "rating_count": 113,
+            "comment_count": 93,
+            "recommended_count": 73,
+            "valid_label_count": 81,
+            "recommendation_rate": 0.9012345679012346
+          },
+          {
+            "product_id": 559594,
+            "title_fa": "کاور چمدان مدلAK20 - G",
+            "category": "لوازم سفر",
+            "brand": "متفرقه",
+            "price": 1750000.0,
+            "price_unit": "واحد ثبت‌شده",
+            "rating": 76.0,
+            "rating_scale": 100,
+            "rating_count": 13,
+            "comment_count": 10,
+            "recommended_count": 7,
+            "valid_label_count": 8,
+            "recommendation_rate": 0.875
+          },
+          {
+            "product_id": 7387503,
+            "title_fa": "ساک سفری کد 9878",
+            "category": "لوازم سفر",
+            "brand": "متفرقه",
+            "price": 1890000.0,
+            "price_unit": "واحد ثبت‌شده",
+            "rating": 84.0,
+            "rating_scale": 100,
+            "rating_count": 46,
+            "comment_count": 52,
+            "recommended_count": 34,
+            "valid_label_count": 37,
+            "recommendation_rate": 0.918918918918919
+          },
+          {
+            "product_id": 492677,
+            "title_fa": "ساک ورزشی مدل WH",
+            "category": "لوازم سفر",
+            "brand": "متفرقه",
+            "price": 1095000.0,
+            "price_unit": "واحد ثبت‌شده",
+            "rating": 86.0,
+            "rating_scale": 100,
+            "rating_count": 198,
+            "comment_count": 200,
+            "recommended_count": 137,
+            "valid_label_count": 155,
+            "recommendation_rate": 0.8838709677419355
+          }
+        ],
+        "notes": [
+          "اولویت رضایت: ابتدا گزینه‌های مرتبط با دست‌کم ۵۰٪ پیشنهاد خرید، یا در نبود برچسب امتیاز دست‌کم ۷۰ از ۱۰۰ با حداقل دو رأی؛ سپس رتبه‌بندی با توجه به تعداد شواهد.",
+          "دامنهٔ پیشنهادها: دسته‌های واقعی لوازم سفر و کمپینگ."
+        ]
+      },
+      {
+        "query": "هدفون با رضایت کاربران",
+        "before": [
+          {
+            "product_id": 6845196,
+            "title_fa": "هدفون حرفه ای زوم مدل ZPH-1",
+            "category": "تجهیزات استودیویی",
+            "brand": "زوم",
+            "price": 26000000.0,
+            "price_unit": "واحد ثبت‌شده",
+            "rating": 96.0,
+            "rating_scale": 100,
+            "rating_count": 4,
+            "comment_count": 5,
+            "recommended_count": 5,
+            "valid_label_count": 5,
+            "recommendation_rate": 1.0
+          },
+          {
+            "product_id": 2328532,
+            "title_fa": "هدفون استودیو آدیو-تکنیکا مدل ATH-M20x",
+            "category": "تجهیزات استودیویی",
+            "brand": "آدیو-تکنیکا",
+            "price": 34300000.0,
+            "price_unit": "واحد ثبت‌شده",
+            "rating": 86.0,
+            "rating_scale": 100,
+            "rating_count": 23,
+            "comment_count": 28,
+            "recommended_count": 17,
+            "valid_label_count": 20,
+            "recommendation_rate": 0.85
+          },
+          {
+            "product_id": 9337815,
+            "title_fa": "هدفون استودیو آدیو-تکنیکا مدل ATH-AVC500",
+            "category": "تجهیزات استودیویی",
+            "brand": "آدیو-تکنیکا",
+            "price": 43000000.0,
+            "price_unit": "واحد ثبت‌شده",
+            "rating": 100.0,
+            "rating_scale": 100,
+            "rating_count": 2,
+            "comment_count": 1,
+            "recommended_count": 0,
+            "valid_label_count": 0,
+            "recommendation_rate": null
+          },
+          {
+            "product_id": 3904739,
+            "title_fa": "هدفون مانیتورینگ سنهایزر مدل HD 200 Pro",
+            "category": "تجهیزات استودیویی",
+            "brand": "ای کی جی",
+            "price": 37200000.0,
+            "price_unit": "واحد ثبت‌شده",
+            "rating": 76.0,
+            "rating_scale": 100,
+            "rating_count": 13,
+            "comment_count": 13,
+            "recommended_count": 7,
+            "valid_label_count": 8,
+            "recommendation_rate": 0.875
+          },
+          {
+            "product_id": 148150,
+            "title_fa": "هدفون حرفه‌ای مانیتورینگ آدیو-تکنیکا مدل ATH-M40x",
+            "category": "تجهیزات استودیویی",
+            "brand": "آدیو-تکنیکا",
+            "price": 62500000.0,
+            "price_unit": "واحد ثبت‌شده",
+            "rating": 76.0,
+            "rating_scale": 100,
+            "rating_count": 19,
+            "comment_count": 14,
+            "recommended_count": 3,
+            "valid_label_count": 3,
+            "recommendation_rate": 1.0
+          }
+        ],
+        "after": [
+          {
+            "product_id": 6845196,
+            "title_fa": "هدفون حرفه ای زوم مدل ZPH-1",
+            "category": "تجهیزات استودیویی",
+            "brand": "زوم",
+            "price": 26000000.0,
+            "price_unit": "واحد ثبت‌شده",
+            "rating": 96.0,
+            "rating_scale": 100,
+            "rating_count": 4,
+            "comment_count": 5,
+            "recommended_count": 5,
+            "valid_label_count": 5,
+            "recommendation_rate": 1.0
+          },
+          {
+            "product_id": 2328532,
+            "title_fa": "هدفون استودیو آدیو-تکنیکا مدل ATH-M20x",
+            "category": "تجهیزات استودیویی",
+            "brand": "آدیو-تکنیکا",
+            "price": 34300000.0,
+            "price_unit": "واحد ثبت‌شده",
+            "rating": 86.0,
+            "rating_scale": 100,
+            "rating_count": 23,
+            "comment_count": 28,
+            "recommended_count": 17,
+            "valid_label_count": 20,
+            "recommendation_rate": 0.85
+          },
+          {
+            "product_id": 3904739,
+            "title_fa": "هدفون مانیتورینگ سنهایزر مدل HD 200 Pro",
+            "category": "تجهیزات استودیویی",
+            "brand": "ای کی جی",
+            "price": 37200000.0,
+            "price_unit": "واحد ثبت‌شده",
+            "rating": 76.0,
+            "rating_scale": 100,
+            "rating_count": 13,
+            "comment_count": 13,
+            "recommended_count": 7,
+            "valid_label_count": 8,
+            "recommendation_rate": 0.875
+          },
+          {
+            "product_id": 148150,
+            "title_fa": "هدفون حرفه‌ای مانیتورینگ آدیو-تکنیکا مدل ATH-M40x",
+            "category": "تجهیزات استودیویی",
+            "brand": "آدیو-تکنیکا",
+            "price": 62500000.0,
+            "price_unit": "واحد ثبت‌شده",
+            "rating": 76.0,
+            "rating_scale": 100,
+            "rating_count": 19,
+            "comment_count": 14,
+            "recommended_count": 3,
+            "valid_label_count": 3,
+            "recommendation_rate": 1.0
+          },
+          {
+            "product_id": 9337815,
+            "title_fa": "هدفون استودیو آدیو-تکنیکا مدل ATH-AVC500",
+            "category": "تجهیزات استودیویی",
+            "brand": "آدیو-تکنیکا",
+            "price": 43000000.0,
+            "price_unit": "واحد ثبت‌شده",
+            "rating": 100.0,
+            "rating_scale": 100,
+            "rating_count": 2,
+            "comment_count": 1,
+            "recommended_count": 0,
+            "valid_label_count": 0,
+            "recommendation_rate": null
+          }
+        ],
+        "notes": [
+          "اولویت رضایت: ابتدا گزینه‌های مرتبط با دست‌کم ۵۰٪ پیشنهاد خرید، یا در نبود برچسب امتیاز دست‌کم ۷۰ از ۱۰۰ با حداقل دو رأی؛ سپس رتبه‌بندی با توجه به تعداد شواهد."
+        ]
+      },
+      {
+        "query": "ساعت ضد آب تا ۵ میلیون",
+        "items": [
+          {
+            "product_id": 10633844,
+            "title_fa": "ساعت مچی دیجیتال دخترانه مدل لمسی ضد آب کد O8",
+            "category": "دخترانه",
+            "brand": "متفرقه",
+            "price": 695000.0,
+            "price_unit": "واحد ثبت‌شده",
+            "rating": 66.0,
+            "rating_scale": 100,
+            "rating_count": 3,
+            "comment_count": 1,
+            "recommended_count": 0,
+            "valid_label_count": 1,
+            "recommendation_rate": 0.0
+          },
+          {
+            "product_id": 9806619,
+            "title_fa": "ساعت مچی دیجیتال دخترانه مدل ضد آب سیلیکونی یونیکورن کد W U PER 4",
+            "category": "دخترانه",
+            "brand": "متفرقه",
+            "price": 850000.0,
+            "price_unit": "واحد ثبت‌شده",
+            "rating": 82.0,
+            "rating_scale": 100,
+            "rating_count": 8,
+            "comment_count": 5,
+            "recommended_count": 5,
+            "valid_label_count": 5,
+            "recommendation_rate": 1.0
+          },
+          {
+            "product_id": 9706323,
+            "title_fa": "ساعت مچی دیجیتال دخترانه مدل ضد آب سیلیکونی دخترک فانتزی کد W G SBz 44",
+            "category": "دخترانه",
+            "brand": "متفرقه",
+            "price": 572000.0,
+            "price_unit": "واحد ثبت‌شده",
+            "rating": 88.0,
+            "rating_scale": 100,
+            "rating_count": 10,
+            "comment_count": 10,
+            "recommended_count": 6,
+            "valid_label_count": 7,
+            "recommendation_rate": 0.8571428571428571
+          },
+          {
+            "product_id": 9706365,
+            "title_fa": "ساعت مچی دیجیتال دخترانه مدل ضد آب سیلیکونی فانتزی دخترک مدل W G PIN 22",
+            "category": "دخترانه",
+            "brand": "متفرقه",
+            "price": 890000.0,
+            "price_unit": "واحد ثبت‌شده",
+            "rating": 80.0,
+            "rating_scale": 100,
+            "rating_count": 18,
+            "comment_count": 16,
+            "recommended_count": 9,
+            "valid_label_count": 12,
+            "recommendation_rate": 0.75
+          },
+          {
+            "product_id": 8830806,
+            "title_fa": "ساعت مچی دیجیتال مدل لمسی ضد آب طرح گربه",
+            "category": "مد و پوشاک دخترانه و پسرانه",
+            "brand": "متفرقه",
+            "price": 464100.0,
+            "price_unit": "واحد ثبت‌شده",
+            "rating": 92.0,
+            "rating_scale": 100,
+            "rating_count": 5,
+            "comment_count": 6,
+            "recommended_count": 3,
+            "valid_label_count": 3,
+            "recommendation_rate": 1.0
+          }
+        ],
+        "notes": [
+          "درخواست واحد پول مشخص نکرده است؛ بازه به واحد ثبت‌شدهٔ داده اعمال شد، نه لزوماً تومان."
+        ]
+      }
+    ],
+    "currency_guard": true,
+    "configured_currency_test_pass": true,
+    "original_cases": 47,
+    "unchanged_ranked_results": 47,
+    "changed_cases": []
+  },
+  "review_qa": {
+    "original_cases": 29,
+    "unchanged_fingerprints": 29,
+    "changed_fingerprints": [],
+    "exact_scoped_evidence": 85
+  },
+  "comparison": [
+    {
+      "ids": [
+        1696173,
+        2896502
+      ],
+      "verified_evidence": 12,
+      "pass": true
+    },
+    {
+      "ids": [
+        8217413,
+        11405303,
+        4176458
+      ],
+      "verified_evidence": 16,
+      "pass": true
+    },
+    {
+      "ids": [
+        1696173,
+        2896502,
+        8217413,
+        11405303,
+        4176458
+      ],
+      "verified_evidence": 28,
+      "pass": true
+    }
+  ],
+  "prediction_full_replay_report": "model_replay_complete.json",
+  "manager": {
+    "implementation_changed": false,
+    "prior_validation_cases": 8,
+    "rerun_here": false,
+    "note": "Run the original full evaluator for DuckDB analytics and Streamlit tests in the pinned environment."
+  },
+  "api_calls": 0,
+  "live_llm_verified": false,
+  "elapsed_seconds": 10.687,
+  "optional_dependencies_here": {
+    "duckdb": false,
+    "streamlit": false,
+    "rank_bm25": false,
+    "openai": false
+  },
+  "additional_test_run": {
+    "passing_tests": 49,
+    "skipped_parquet_tests": 2,
+    "not_rerun": [
+      "DuckDB analytics",
+      "Streamlit browser",
+      "original deep check_rag"
+    ],
+    "new_preference_tests": 5,
+    "new_training_tests": 4,
+    "actual_model_three_class_samples_passed": 3,
+    "asset_restore_new_and_idempotent_passed": true,
+    "note": "Counts from separate selective offline test runs in this environment; full dependency suite not claimed."
+  }
+}

@@ -113,14 +113,8 @@ def _insufficient(product_id, reason, *, scope="unavailable", stats=None, starte
                      "usage_known": True, "total_seconds": round(perf_counter()-started, 6) if started is not None else 0.0}}
 
 
-def ask_reviews(product_id, query, *, source=None, data_dir=None, store=None, generation_mode=None, llm=None, top_k=8, use_cache=True, product_title=None):
-    started = perf_counter()
-    pid = identifier(product_id)
-    if not isinstance(query, str) or not query.strip() or len(query.strip()) > 1000:
-        raise ValueError("سؤال باید متن غیرخالی و حداکثر ۱۰۰۰ کاراکتر باشد.")
-    query = query.strip()
-    mode = (generation_mode or os.environ.get("QBC13_REVIEW_GENERATION_MODE", "extractive")).lower().strip()
-    if mode not in {"extractive", "llm"}: raise ValueError("generation_mode must be extractive or llm")
+def retrieve_review_selection(pid, query, *, source=None, data_dir=None, store=None, top_k=8, product_title=None, started=None):
+    """Load and select witnesses once; use the existing typed failure response."""
     try:
         store = store if store is not None else resolve_review_store(source=source, data_dir=data_dir)
         selector = EvidenceSelector(store, top_k=top_k)
@@ -130,12 +124,16 @@ def ask_reviews(product_id, query, *, source=None, data_dir=None, store=None, ge
             batch = replace(batch, title=product_title)
         if batch.product_id != pid:
             raise ReviewDataError("شناسهٔ نظرات با محصول انتخاب‌شده یکسان نیست.")
-        selection = selector.select_batch(query, batch)
+        return selector.select_batch(query, batch), None
     except ReviewDataError as exc:
-        return _insufficient(pid, str(exc), started=started)
+        return None, _insufficient(pid, str(exc), started=started)
     except (OSError, ValueError, KeyError):
-        return _insufficient(pid, "خواندن دادهٔ نظرها ناموفق بود؛ مسیر و ساختار فایل را بررسی کن.", started=started)
-    retrieval_time = perf_counter() - started
+        return None, _insufficient(pid, "خواندن دادهٔ نظرها ناموفق بود؛ مسیر و ساختار فایل را بررسی کن.", started=started)
+
+
+def build_extractive_review(pid, selection, *, started, retrieval_seconds):
+    """Build the existing response contract from an already-computed selection."""
+    retrieval_time = retrieval_seconds
     stats = _stats(selection)
     if selection.insufficient:
         result = _insufficient(pid, selection.reason, scope=selection.scope, stats=stats, started=started)
@@ -143,11 +141,33 @@ def ask_reviews(product_id, query, *, source=None, data_dir=None, store=None, ge
         return result
     evidence = selection.evidence
     answer = _extractive_answer(selection)
-    actual_mode = "extractive"
     meta = {"generation_mode": "extractive", "retrieval_seconds": round(retrieval_time, 6),
             "api_calls": 0, "api_attempts": 0, "prompt_tokens": 0, "completion_tokens": 0,
             "usage_known": True, "cached": False, "citation_check": "exact source excerpts and product-scoped IDs"}
+    meta["total_seconds"] = round(perf_counter()-started, 6)
+    return {"product_id": pid, "answer_mode": "extractive", "answer": answer, "evidence": evidence,
+            "scope": selection.scope, "source": selection.source, "stats": stats,
+            "theme_counts": selection.theme_counts, "facet_coverage": selection.facet_coverage, "intent": selection.intent, "requested_themes": selection.requested_themes,
+            "meta": meta}
+
+
+def ask_reviews(product_id, query, *, source=None, data_dir=None, store=None, generation_mode=None, llm=None, top_k=8, use_cache=True, product_title=None):
+    started = perf_counter()
+    pid = identifier(product_id)
+    if not isinstance(query, str) or not query.strip() or len(query.strip()) > 1000:
+        raise ValueError("سؤال باید متن غیرخالی و حداکثر ۱۰۰۰ کاراکتر باشد.")
+    query = query.strip()
+    mode = (generation_mode or os.environ.get("QBC13_REVIEW_GENERATION_MODE", "extractive")).lower().strip()
+    if mode not in {"extractive", "llm"}: raise ValueError("generation_mode must be extractive or llm")
+    selection, failure = retrieve_review_selection(pid, query, source=source, data_dir=data_dir, store=store,
+                                                   top_k=top_k, product_title=product_title, started=started)
+    if failure is not None:
+        return failure
+    answer = build_extractive_review(pid, selection, started=started, retrieval_seconds=perf_counter()-started)
+    if answer["answer"] is None:
+        return answer
     if mode == "llm" or llm is not None:
+        evidence, meta = answer["evidence"], answer["meta"]
         try:
             from .phase4_llm.service import LLMService
             result = LLMService(llm=llm, require_quotes=True, use_cache=use_cache).answer(query, evidence)
@@ -158,8 +178,8 @@ def ask_reviews(product_id, query, *, source=None, data_dir=None, store=None, ge
                          "cached": gen_meta.get("cached", False), "model": gen_meta.get("model")})
             points = _safe_model_points(result, evidence)
             if points:
-                answer += "\n\nجمع‌بندی مدل زبانی از همین شواهد (استنتاج محدود):\n" + "\n".join(points)
-                actual_mode = "grounded"
+                answer["answer"] += "\n\nجمع‌بندی مدل زبانی از همین شواهد (استنتاج محدود):\n" + "\n".join(points)
+                answer["answer_mode"] = "grounded"
                 meta["generation_mode"] = "llm"
                 meta["citation_check"] = "verified retrieved IDs and verbatim model quotes; semantic assessment remains separate"
             else:
@@ -168,8 +188,5 @@ def ask_reviews(product_id, query, *, source=None, data_dir=None, store=None, ge
             # Initialization failure (no SDK/key) or validation failure: retain
             # the already verified deterministic answer; do not expose secrets.
             meta["fallback_reason"] = type(exc).__name__
-    meta["total_seconds"] = round(perf_counter()-started, 6)
-    return {"product_id": pid, "answer_mode": actual_mode, "answer": answer, "evidence": evidence,
-            "scope": selection.scope, "source": selection.source, "stats": stats,
-            "theme_counts": selection.theme_counts, "facet_coverage": selection.facet_coverage, "intent": selection.intent, "requested_themes": selection.requested_themes,
-            "meta": meta}
+    answer["meta"]["total_seconds"] = round(perf_counter()-started, 6)
+    return answer

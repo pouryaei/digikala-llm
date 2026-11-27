@@ -1,0 +1,66 @@
+{
+  "selected_model": "lr_adapted",
+  "selection_metric": "validation_macro_f1",
+  "all_four_validation_and_test_metrics_reproduced": true,
+  "same_recorded_test_ids": 15000,
+  "active_model_in_streamlit": "lr_adapted",
+  "real_streamlit_tests_passed": true,
+  "tests": {
+    "new_final_model": 6,
+    "regression_pytest": 71,
+    "passed_total": 77,
+    "pytest_subtests_passed": 11,
+    "failures": 0
+  },
+  "data": {
+    "products": 100000,
+    "reviews": 1874457
+  },
+  "offline_system_evaluation": {
+    "search_cases": 47,
+    "qa_cases": 29,
+    "scoped_evidence_exact": 85,
+    "scoped_evidence_total": 85,
+    "comparison_cases_passed": 3,
+    "manager_cases_passed": 8,
+    "api_calls": 0,
+    "api_cost_usd": 0.0
+  },
+  "raw_review_service_replay": {
+    "matched": 4537,
+    "valid": 4536,
+    "macro_f1": 0.7007181484950964,
+    "accuracy": 0.8196649029982364
+  },
+  "dataset_inference_smoke_test": {
+    "model_version": "Character TF-IDF + Logistic Regression (Head Fine-tuning)",
+    "rows": 10000,
+    "valid": 9997,
+    "invalid": 3,
+    "predicted_class_counts": {
+      "recommended": 7499,
+      "no_idea": 1488,
+      "not_recommended": 1010
+    },
+    "invalid_reasons": {
+      "spam_repetition": 2,
+      "symbols_or_emoji_only": 1
+    },
+    "elapsed_seconds": 3.801
+  },
+  "qa_graph": {
+    "engine": "LangGraph",
+    "offline_parity_matches": 36,
+    "offline_parity_cases": 36,
+    "stub_always_attempts": 3,
+    "stub_selective_attempts": 1,
+    "live_langfuse_server_verified": false
+  },
+  "limitations": [
+    "The package uses the same 100k product subset; an additional batch inference command supports the user's full cleaned CSV/Parquet.",
+    "The recorded test is reused, not a fresh blind benchmark. No model is newly trained in the final integration.",
+    "Human ratings, mentor approval, live LLM quality and delivery to the user's Langfuse server remain external validations.",
+    "The older tuned LR and retrieval vectorizer produce a scikit-learn version warning under 1.9.1; the recorded metrics and regression tests reproduced successfully."
+  ],
+  "slides_generated": false
+}

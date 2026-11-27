@@ -1,0 +1,30 @@
+{
+  "new_xgboost_grid_trained": true,
+  "test_exact_model_replay_matches": 15000,
+  "test_rows": 15000,
+  "production_model": "XGBoost",
+  "active_artifact": "m2_outputs/xgboost/model.ubj",
+  "historical_lr_and_head_hashes_unchanged": true,
+  "streamlit_main_prediction_and_new_report": "passed",
+  "streamlit_bonus_grid_and_three_model_demo": "passed",
+  "service_raw_replay_overlap": 4537,
+  "service_raw_replay_valid": 4536,
+  "service_raw_replay_rejected": 1,
+  "service_raw_replay_macro_f1": 0.6764126812323621,
+  "test_suites": {
+    "test_xgboost_model.py": 5,
+    "test_train_final.py": 4,
+    "test_hyperparameter_search.py": 5,
+    "test_bonus_ui.py": 2,
+    "test_bonus_lab.py": 8,
+    "test_ui_assembly.py:selected_historical_compatibility": 4
+  },
+  "tests_passed": 28,
+  "tests_failed": 0,
+  "tests_skipped": 0,
+  "notes": [
+    "Real Streamlit AppTest executed under streamlit 1.67.0, duckdb 2.0.1, scikit-learn 1.9.1 and CPU XGBoost 3.4.1.",
+    "Historical hybrid-retrieval vectorizer generated with sklearn 1.8.0 emits a compatibility warning under 1.9.1; retrieval regression passed.",
+    "Previous evaluation reports are historical. New classification results and replay are in m2_outputs/xgboost. No slides generated."
+  ]
+}

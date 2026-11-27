@@ -1,0 +1,28 @@
+{
+  "source_archive": "Forouhar_M1_Complete.zip",
+  "source_payload_sha256": "45f4e589ddf47131172fda7b5fc0a00511b356342a2e94b668cbdc2d96c8d460",
+  "source_clean_rows": 6151303,
+  "all_test_ids_and_labels_match": true,
+  "model_sha256": "9d19f10f36b98bc15939bd9d5748500602dc7666e34871aff9b40db1e68b9d70",
+  "runtime_scikit_learn": "1.8.0",
+  "training_feature": "text_title_body",
+  "model_replay": {
+    "n": 15000,
+    "same_as_recorded": 15000,
+    "exact_match": true,
+    "macro_f1": 0.6790791799331871,
+    "accuracy": 0.7831333333333333
+  },
+  "service_replay": {
+    "valid": 14996,
+    "rejected": 4,
+    "rejected_reasons": {
+      "spam_repetition": 4
+    },
+    "same_as_recorded_on_valid": 14996,
+    "macro_f1_valid": 0.6790184101037126,
+    "accuracy_valid": 0.7830754867964791
+  },
+  "elapsed_seconds": 24.965,
+  "note": "Actual artifact replay on the full recorded test set. Invalid-input rejection is kept separate. This verifies the feature and existing model, not a new full training run."
+}

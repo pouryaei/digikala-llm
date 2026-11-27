@@ -104,6 +104,24 @@ def _needs_product(query, candidate_ids, search_mode, *, multiple_ids=False):
     }
 
 
+def resolve_rag_product(query, product_id=None, *, search_mode="bm25"):
+    """Product resolution shared by the original and experimental QA paths."""
+    resolved = "selected_id"
+    if product_id is None:
+        explicit = explicit_product_ids(query)
+        if len(explicit) > 1:
+            return None, None, None, _needs_product(query, explicit, search_mode, multiple_ids=True)
+        if explicit:
+            product_id, resolved = explicit[0], "question_id"
+        else:
+            product_id, resolved = _resolve_title(query)
+            if product_id is None:
+                return None, None, None, _needs_product(query, resolved, search_mode)
+    pid = identifier(product_id)
+    product = open_catalog().get_products((pid,)).get(pid)
+    return pid, product, resolved, None
+
+
 def run_rag_pipeline(user_query, product_id=None, *, source=None, search_mode="bm25",
                      generation_mode=None, llm=None, top_k=8, use_cache=True):
     """Run one QA request. A product ID may be passed, selected or resolved."""
@@ -113,19 +131,9 @@ def run_rag_pipeline(user_query, product_id=None, *, source=None, search_mode="b
         raise ValueError("Invalid search mode.")
     if not isinstance(top_k, int) or isinstance(top_k, bool) or not 1 <= top_k <= 20:
         raise ValueError("تعداد شواهد باید بین ۱ و ۲۰ باشد.")
-    resolved = "selected_id"
-    if product_id is None:
-        explicit = explicit_product_ids(query)
-        if len(explicit) > 1:
-            return _needs_product(query, explicit, search_mode, multiple_ids=True)
-        if explicit:
-            product_id, resolved = explicit[0], "question_id"
-        else:
-            product_id, resolved = _resolve_title(query)
-            if product_id is None:
-                return _needs_product(query, resolved, search_mode)
-    pid = identifier(product_id)
-    product = open_catalog().get_products((pid,)).get(pid)
+    pid, product, resolved, unresolved = resolve_rag_product(query, product_id, search_mode=search_mode)
+    if unresolved is not None:
+        return unresolved
     result = ask_reviews(pid, query, source=source, top_k=top_k, generation_mode=generation_mode,
                          llm=llm, use_cache=use_cache, product_title=product["title_fa"] if product else None)
     result["product"] = product

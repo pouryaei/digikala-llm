@@ -1,0 +1,319 @@
+{
+  "schema_version": 1,
+  "model": "XGBoost",
+  "method": "Fixed validation grid over boosting histories and checkpoints",
+  "selection_metric": "macro_f1",
+  "selected_on": "validation",
+  "test_used_for_selection": false,
+  "tie_break": "fewer boosting rounds, shallower depth, lower learning rate",
+  "param_grid": {
+    "max_depth": [
+      4,
+      6
+    ],
+    "learning_rate": [
+      0.1,
+      0.2
+    ],
+    "n_estimators": [
+      120,
+      240
+    ]
+  },
+  "n_trials": 8,
+  "n_training_histories": 4,
+  "fixed_params": {
+    "objective": "multi:softprob",
+    "num_class": 3,
+    "tree_method": "hist",
+    "device": "cpu",
+    "max_bin": 32,
+    "subsample": 0.85,
+    "colsample_bytree": 0.5,
+    "min_child_weight": 3.0,
+    "reg_lambda": 2.0,
+    "reg_alpha": 0.0,
+    "seed": 42,
+    "verbosity": 0
+  },
+  "best_params": {
+    "max_depth": 6,
+    "learning_rate": 0.2,
+    "n_estimators": 240
+  },
+  "best_validation": {
+    "precision": 0.6501050535409014,
+    "recall": 0.7247693045790431,
+    "macro_f1": 0.672397777084516,
+    "accuracy": 0.7940174176448315
+  },
+  "trials": [
+    {
+      "max_depth": 6,
+      "learning_rate": 0.2,
+      "n_estimators": 240,
+      "validation_macro_f1": 0.672397777084516,
+      "validation_accuracy": 0.7940174176448315,
+      "history_fit_seconds": 16.42192200400001,
+      "history_max_rounds": 240,
+      "rank": 1
+    },
+    {
+      "max_depth": 4,
+      "learning_rate": 0.2,
+      "n_estimators": 240,
+      "validation_macro_f1": 0.6715193143743518,
+      "validation_accuracy": 0.7936387731919727,
+      "history_fit_seconds": 9.675385516000006,
+      "history_max_rounds": 240,
+      "rank": 2
+    },
+    {
+      "max_depth": 6,
+      "learning_rate": 0.1,
+      "n_estimators": 240,
+      "validation_macro_f1": 0.6706701229743407,
+      "validation_accuracy": 0.7926921620598258,
+      "history_fit_seconds": 18.826809947000015,
+      "history_max_rounds": 240,
+      "rank": 3
+    },
+    {
+      "max_depth": 6,
+      "learning_rate": 0.2,
+      "n_estimators": 120,
+      "validation_macro_f1": 0.6683855425445824,
+      "validation_accuracy": 0.7908620472043418,
+      "history_fit_seconds": 16.42192200400001,
+      "history_max_rounds": 240,
+      "rank": 4
+    },
+    {
+      "max_depth": 4,
+      "learning_rate": 0.1,
+      "n_estimators": 240,
+      "validation_macro_f1": 0.660788968815593,
+      "validation_accuracy": 0.7864445285876562,
+      "history_fit_seconds": 10.24826434900001,
+      "history_max_rounds": 240,
+      "rank": 5
+    },
+    {
+      "max_depth": 4,
+      "learning_rate": 0.2,
+      "n_estimators": 120,
+      "validation_macro_f1": 0.6589449149946375,
+      "validation_accuracy": 0.7839202322352644,
+      "history_fit_seconds": 9.675385516000006,
+      "history_max_rounds": 240,
+      "rank": 6
+    },
+    {
+      "max_depth": 6,
+      "learning_rate": 0.1,
+      "n_estimators": 120,
+      "validation_macro_f1": 0.6574086852324235,
+      "validation_accuracy": 0.7822794396062097,
+      "history_fit_seconds": 18.826809947000015,
+      "history_max_rounds": 240,
+      "rank": 7
+    },
+    {
+      "max_depth": 4,
+      "learning_rate": 0.1,
+      "n_estimators": 120,
+      "validation_macro_f1": 0.6499763861663875,
+      "validation_accuracy": 0.7773570617190458,
+      "history_fit_seconds": 10.24826434900001,
+      "history_max_rounds": 240,
+      "rank": 8
+    }
+  ],
+  "test": {
+    "precision": 0.6513846943408971,
+    "recall": 0.7169504369115808,
+    "macro_f1": 0.6697943287751981,
+    "accuracy": 0.7796
+  },
+  "test_classification_report": {
+    "no_idea": {
+      "precision": 0.3358685731670216,
+      "recall": 0.5932294465341215,
+      "f1-score": 0.4289044289044289,
+      "support": 1861.0
+    },
+    "not_recommended": {
+      "precision": 0.6641901931649331,
+      "recall": 0.7412935323383084,
+      "f1-score": 0.700626959247649,
+      "support": 1809.0
+    },
+    "recommended": {
+      "precision": 0.9540953166907366,
+      "recall": 0.8163283318623125,
+      "f1-score": 0.879851598173516,
+      "support": 11330.0
+    },
+    "accuracy": 0.7796,
+    "macro avg": {
+      "precision": 0.6513846943408971,
+      "recall": 0.7169504369115808,
+      "f1-score": 0.6697943287751981,
+      "support": 15000.0
+    },
+    "weighted avg": {
+      "precision": 0.8424314274803492,
+      "recall": 0.7796,
+      "f1-score": 0.8022895945850718,
+      "support": 15000.0
+    }
+  },
+  "test_confusion_matrix": {
+    "labels": [
+      "no_idea",
+      "not_recommended",
+      "recommended"
+    ],
+    "matrix": [
+      [
+        1104,
+        378,
+        379
+      ],
+      [
+        402,
+        1341,
+        66
+      ],
+      [
+        1781,
+        300,
+        9249
+      ]
+    ]
+  },
+  "labels": [
+    "no_idea",
+    "not_recommended",
+    "recommended"
+  ],
+  "preprocessing": {
+    "tfidf": {
+      "analyzer": "char",
+      "ngram_range": [
+        2,
+        5
+      ],
+      "max_features": 200000,
+      "min_df": 2,
+      "sublinear_tf": true,
+      "dtype": "float32"
+    },
+    "selector": "SelectKBest(chi2)",
+    "max_selected_features": 4096,
+    "fitted_vocabulary_size": 200000,
+    "selected_features": 4096,
+    "fitted_on": "train",
+    "text_feature": "text_title_body"
+  },
+  "audit": {
+    "splits": {
+      "train": {
+        "rows": 53716,
+        "products": 34534,
+        "classes": {
+          "recommended": 21806,
+          "no_idea": 16560,
+          "not_recommended": 15350
+        }
+      },
+      "validation": {
+        "rows": 15846,
+        "products": 7130,
+        "classes": {
+          "recommended": 12318,
+          "not_recommended": 1672,
+          "no_idea": 1856
+        }
+      },
+      "test": {
+        "rows": 15000,
+        "products": 7029,
+        "classes": {
+          "not_recommended": 1809,
+          "recommended": 11330,
+          "no_idea": 1861
+        }
+      }
+    },
+    "shared_products": 0,
+    "duplicate_review_ids": 0,
+    "shared_text_keys": 0
+  },
+  "provenance": {
+    "mode": "deterministic_sample",
+    "source_payload_sha256": "45f4e589ddf47131172fda7b5fc0a00511b356342a2e94b668cbdc2d96c8d460",
+    "source_rows": 6151303,
+    "seed": 42,
+    "split_policy": "original product MD5 80/10/10; deterministic train/validation sample; unchanged recorded test IDs",
+    "shared_products": 0,
+    "shared_comparable_text_keys": 0,
+    "removed_sample_duplicates": {
+      "validation": 2550,
+      "train": 8203
+    },
+    "splits": {
+      "train": {
+        "rows": 53716,
+        "products": 34534,
+        "classes": {
+          "recommended": 21806,
+          "no_idea": 16560,
+          "not_recommended": 15350
+        }
+      },
+      "validation": {
+        "rows": 15846,
+        "products": 7130,
+        "classes": {
+          "recommended": 12318,
+          "not_recommended": 1672,
+          "no_idea": 1856
+        }
+      },
+      "test": {
+        "rows": 15000,
+        "products": 7029,
+        "classes": {
+          "not_recommended": 1809,
+          "recommended": 11330,
+          "no_idea": 1861
+        }
+      }
+    }
+  },
+  "recorded_test_reference": {
+    "matched_recorded_test_ids_and_labels": 15000,
+    "original": {
+      "precision": 0.6593205497063847,
+      "recall": 0.7317133669072192,
+      "macro_f1": 0.6790791799331871,
+      "accuracy": 0.7831333333333333
+    },
+    "original_predictions_sha256": "dcaa90e84dc23557f1f32a6928a35a1000015dfafcf339cbd6920b47e0a33fc1"
+  },
+  "historical_artifacts_sha256": {
+    "m2_outputs/best_model.joblib": "9d19f10f36b98bc15939bd9d5748500602dc7666e34871aff9b40db1e68b9d70",
+    "bonus_artifacts/adapted_head.npz": "9ebc1e019273a3252eb0eea273d4a977000133440bc8cbb515dd275e021369ff"
+  },
+  "artifacts": {
+    "model.ubj": "213b3e25dfa473f7ce177d69da965327fb9404d1d7a80730e8b03387e3ffba06",
+    "preprocessor.joblib": "97dee6761709b2297cb604a00474bc0e73eacc1eeb66ca4f84b80f482ad10ad5"
+  },
+  "xgboost_version": "3.4.1",
+  "scikit_learn_version": "1.9.1",
+  "preprocessing_seconds": 11.294095259000017,
+  "test_prediction_seconds": 2.1350740230000156,
+  "elapsed_seconds": 72.86330759099997,
+  "limitations": "A new XGBoost fit on the fixed sampled train/validation data. The historical LR was not necessarily fitted on the same number of training rows. The recorded test is reused for comparison, not a new blind benchmark. Test scores were not used to select hyperparameters."
+}

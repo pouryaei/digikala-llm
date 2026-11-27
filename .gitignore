@@ -28,7 +28,9 @@ btq/
 .env
 .env.*
 !.env.example
-
+*.pyc
+.pytest_cache/
+bonus_state/
 
 # Local copies and generated artifacts
 /day1/
@@ -60,3 +62,28 @@ btq/
 /Forouhar_Submission_Addon/
 
 /fix_forouhar_submission.py
+
+# Local reproducible retraining outputs (do not replace the submitted model)
+/m2_outputs/retrained/
+/bonus_state/
+/bonus_artifacts/retrieval/
+
+# Local-only paired answers and review excerpts
+/reports/bonus/qa_graph_live_local.json
+
+storage/
+data/raw/
+data/analytics_100000/
+processed_repo_based/
+*.duckdb
+*.zip
+bonus_artifacts/retrieval/
+/Forouhar_100K_Final_Professional/
+*.zip
+.env
+.env.*
+!.env.example
+/storage/
+/data/analytics_100000/
+/bonus_artifacts/retrieval/
+/bonus_state/

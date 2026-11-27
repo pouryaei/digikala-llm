@@ -1,0 +1,757 @@
+{
+  "router": {
+    "cases": [
+      {
+        "query": "کفش پیاده روی مردانه",
+        "expected": "search",
+        "actual": "search",
+        "reason": "shopping_discovery_default",
+        "correct": true
+      },
+      {
+        "query": "یک کیف ارزان میخوام که خریدارها راضی باشن",
+        "expected": "search",
+        "actual": "search",
+        "reason": "shopping_discovery_default",
+        "correct": true
+      },
+      {
+        "query": "ساعت ضد آب تا ۵ میلیون",
+        "expected": "search",
+        "actual": "search",
+        "reason": "shopping_discovery_default",
+        "correct": true
+      },
+      {
+        "query": "معرفی وسیله مناسب سفر",
+        "expected": "search",
+        "actual": "search",
+        "reason": "shopping_discovery_default",
+        "correct": true
+      },
+      {
+        "query": "هدفون بی سیم بلوتوثی",
+        "expected": "search",
+        "actual": "search",
+        "reason": "shopping_discovery_default",
+        "correct": true
+      },
+      {
+        "query": "ایرادهای پرتکرار این محصول چیست؟",
+        "expected": "qa",
+        "actual": "qa",
+        "reason": "product_review_question",
+        "correct": true
+      },
+      {
+        "query": "ارزش خرید این کالا چطور است؟",
+        "expected": "qa",
+        "actual": "qa",
+        "reason": "product_review_question",
+        "correct": true
+      },
+      {
+        "query": "نقاط قوت و ضعف از دید کاربران",
+        "expected": "qa",
+        "actual": "qa",
+        "reason": "product_review_question",
+        "correct": true
+      },
+      {
+        "query": "کیفیت این محصول را بگو",
+        "expected": "qa",
+        "actual": "qa",
+        "reason": "product_review_question",
+        "correct": true
+      },
+      {
+        "query": "درباره کیفیت کفش چه گفته‌اند؟",
+        "expected": "qa",
+        "actual": "qa",
+        "reason": "product_review_question",
+        "correct": true
+      },
+      {
+        "query": "این دو محصول را مقایسه کن",
+        "expected": "compare",
+        "actual": "compare",
+        "reason": "multi_product_comparison",
+        "correct": true
+      },
+      {
+        "query": "کدام بهتر است و چرا؟",
+        "expected": "compare",
+        "actual": "compare",
+        "reason": "multi_product_comparison",
+        "correct": true
+      },
+      {
+        "query": "مقایسه قیمت و نظر کاربران",
+        "expected": "compare",
+        "actual": "compare",
+        "reason": "multi_product_comparison",
+        "correct": true
+      },
+      {
+        "query": "پرتکرارترین شکایت کاربران در این دسته چیست؟",
+        "expected": "manager",
+        "actual": "manager",
+        "reason": "population_level_analysis",
+        "correct": true
+      },
+      {
+        "query": "بازخورد برندها را در دسته کفش مردانه مقایسه کن",
+        "expected": "manager",
+        "actual": "manager",
+        "reason": "population_level_analysis",
+        "correct": true
+      },
+      {
+        "query": "کدام محصولات پرنظر نرخ پیشنهاد خرید پایین دارند؟",
+        "expected": "manager",
+        "actual": "manager",
+        "reason": "population_level_analysis",
+        "correct": true
+      },
+      {
+        "query": "پیش بینی وضعیت پیشنهاد خرید این نظر را انجام بده",
+        "expected": "predict",
+        "actual": "predict",
+        "reason": "explicit_prediction_intent",
+        "correct": true
+      },
+      {
+        "query": "طبقه بندی متن نظر",
+        "expected": "predict",
+        "actual": "predict",
+        "reason": "explicit_prediction_intent",
+        "correct": true
+      },
+      {
+        "query": "برچسب این نظر چیست؟",
+        "expected": "predict",
+        "actual": "predict",
+        "reason": "explicit_prediction_intent",
+        "correct": true
+      },
+      {
+        "query": "اختلاف امتیاز ثبت شده و نرخ پیشنهاد خرید",
+        "expected": "audit",
+        "actual": "audit",
+        "reason": "rating_recommendation_disagreement",
+        "correct": true
+      },
+      {
+        "query": "محصولات دارای تعارض امتیاز و رضایت",
+        "expected": "audit",
+        "actual": "audit",
+        "reason": "rating_recommendation_disagreement",
+        "correct": true
+      },
+      {
+        "query": "شکاف رضایت را پیدا کن",
+        "expected": "audit",
+        "actual": "audit",
+        "reason": "rating_recommendation_disagreement",
+        "correct": true
+      },
+      {
+        "query": "سلام",
+        "expected": "clarify",
+        "actual": "clarify",
+        "reason": "insufficient_intent",
+        "correct": true
+      },
+      {
+        "query": "درود",
+        "expected": "clarify",
+        "actual": "clarify",
+        "reason": "insufficient_intent",
+        "correct": true
+      }
+    ],
+    "correct": 24,
+    "total": 24,
+    "note": "Intent labels authored manually for a bounded routing test, not semantic answer annotations."
+  },
+  "cache": {
+    "cases": [
+      {
+        "query": "هدفون",
+        "intent": "search",
+        "uncached_ms": [
+          56.58510900002511,
+          52.714354999977786,
+          54.517739000004894,
+          55.80014900004926,
+          60.289774000011676
+        ],
+        "cached_ms": [
+          2.1427140000014333,
+          1.5793169999938073,
+          1.4572019999832264,
+          1.3548790000186273,
+          1.3081079999892609
+        ],
+        "uncached_median_ms": 55.80014900004926,
+        "cached_median_ms": 1.4572019999832264,
+        "speedup": 38.29266567071111,
+        "warm_hits": 5,
+        "outputs_identical": true
+      },
+      {
+        "query": "کوله پشتی بچه برای مهد کودک",
+        "intent": "search",
+        "uncached_ms": [
+          192.58810200000198,
+          195.16688299995621,
+          196.99687600001425,
+          200.84482599997955,
+          198.42636699996774
+        ],
+        "cached_ms": [
+          1.781240000013895,
+          1.4604369999915434,
+          1.3553800000067895,
+          1.3465260000202761,
+          1.3044730000046911
+        ],
+        "uncached_median_ms": 196.99687600001425,
+        "cached_median_ms": 1.3553800000067895,
+        "speedup": 145.34438755111293,
+        "warm_hits": 5,
+        "outputs_identical": true
+      },
+      {
+        "query": "ایرادهای پرتکرار این محصول چیست؟",
+        "intent": "qa",
+        "uncached_ms": [
+          38.9276719999998,
+          34.67528300001277,
+          34.50280300000941,
+          36.42460499997924,
+          36.25913700000183
+        ],
+        "cached_ms": [
+          1.7465079999965383,
+          1.4150289999861343,
+          1.651845000026242,
+          1.468480000028194,
+          1.3322339999604083
+        ],
+        "uncached_median_ms": 36.25913700000183,
+        "cached_median_ms": 1.468480000028194,
+        "speedup": 24.69161105313363,
+        "warm_hits": 5,
+        "outputs_identical": true
+      },
+      {
+        "query": "ارزش خرید این محصول را جمع‌بندی کن",
+        "intent": "qa",
+        "uncached_ms": [
+          49.23822499995367,
+          51.75036500003216,
+          51.16085700001349,
+          51.605526999992435,
+          51.635241999974824
+        ],
+        "cached_ms": [
+          1.7671690000042872,
+          1.4166020000061508,
+          1.4075580000394439,
+          1.4279580000220449,
+          1.5011289999620203
+        ],
+        "uncached_median_ms": 51.605526999992435,
+        "cached_median_ms": 1.4279580000220449,
+        "speedup": 36.139387152280214,
+        "warm_hits": 5,
+        "outputs_identical": true
+      }
+    ],
+    "total_warm_requests": 20,
+    "uncached_global_median_ms": 52.232360000004974,
+    "cached_global_median_ms": 1.4425800000026356,
+    "outputs_identical": true,
+    "measurement": "5 repeated calls per scenario after process/index warmup, measured end-to-end including local trace recording; warm request cache primed once and not priced as API savings."
+  },
+  "workflow_runs": [
+    {
+      "query": "هدفون",
+      "route": "search",
+      "status": "answered",
+      "trace": {
+        "trace_id": "ffd3bf7d0d974a76b43727c5805a1721",
+        "created_at": "2026-11-27T18:57:53.403755+00:00",
+        "route": "search",
+        "route_reason": "explicit_user_choice",
+        "engine": "LangGraph",
+        "status": "answered",
+        "cached": false,
+        "elapsed_ms": 53.824876000021504,
+        "api_calls": 0,
+        "api_attempts": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "usage_known": true,
+        "retrieval_method": "bm25",
+        "llm_policy": "not_needed_for_structured_retrieval",
+        "evidence_count": null,
+        "uncovered_facets": null,
+        "model_outcome": null,
+        "langfuse_status": "disabled",
+        "langfuse_trace_id": null,
+        "events": [
+          {
+            "node": "route_intent",
+            "status": "ok",
+            "ms": 0.002293000022746128,
+            "route": "search"
+          },
+          {
+            "node": "cache_lookup",
+            "status": "ok",
+            "ms": 0.0014020000094205898,
+            "cached": false
+          },
+          {
+            "node": "search",
+            "status": "ok",
+            "ms": 52.13435299998537,
+            "llm_policy": "not_needed_for_structured_retrieval",
+            "retrieval_method": "bm25"
+          },
+          {
+            "node": "finalize",
+            "status": "ok",
+            "ms": 0.002854000001661916
+          }
+        ]
+      },
+      "api_calls": 0
+    },
+    {
+      "query": "کوله پشتی بچه برای مهد کودک",
+      "route": "search",
+      "status": "answered",
+      "trace": {
+        "trace_id": "83f9b49090b4489dad75ccb40f48bbcc",
+        "created_at": "2026-11-27T18:57:53.658431+00:00",
+        "route": "search",
+        "route_reason": "explicit_user_choice",
+        "engine": "LangGraph",
+        "status": "answered",
+        "cached": false,
+        "elapsed_ms": 254.37374000000545,
+        "api_calls": 0,
+        "api_attempts": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "usage_known": true,
+        "retrieval_method": "hybrid_char",
+        "llm_policy": "not_needed_for_structured_retrieval",
+        "evidence_count": null,
+        "uncovered_facets": null,
+        "model_outcome": null,
+        "langfuse_status": "disabled",
+        "langfuse_trace_id": null,
+        "events": [
+          {
+            "node": "route_intent",
+            "status": "ok",
+            "ms": 0.004286000034880999,
+            "route": "search"
+          },
+          {
+            "node": "cache_lookup",
+            "status": "ok",
+            "ms": 0.002062999953977851,
+            "cached": false
+          },
+          {
+            "node": "search",
+            "status": "ok",
+            "ms": 252.24331399999755,
+            "llm_policy": "not_needed_for_structured_retrieval",
+            "retrieval_method": "hybrid_char"
+          },
+          {
+            "node": "finalize",
+            "status": "ok",
+            "ms": 0.004257000000507105
+          }
+        ]
+      },
+      "api_calls": 0
+    },
+    {
+      "query": "ایرادهای پرتکرار این محصول چیست؟",
+      "route": "qa",
+      "status": "answered",
+      "trace": {
+        "trace_id": "e81fd92e4eb249d687adcec9e3fb9447",
+        "created_at": "2026-11-27T18:57:53.697742+00:00",
+        "route": "qa",
+        "route_reason": "explicit_user_choice",
+        "engine": "LangGraph",
+        "status": "answered",
+        "cached": false,
+        "elapsed_ms": 38.57051199997841,
+        "api_calls": 0,
+        "api_attempts": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "usage_known": true,
+        "retrieval_method": null,
+        "llm_policy": "offline_by_default",
+        "evidence_count": 8,
+        "uncovered_facets": 0,
+        "model_outcome": null,
+        "langfuse_status": "disabled",
+        "langfuse_trace_id": null,
+        "events": [
+          {
+            "node": "route_intent",
+            "status": "ok",
+            "ms": 0.004486999955588544,
+            "route": "qa"
+          },
+          {
+            "node": "cache_lookup",
+            "status": "ok",
+            "ms": 0.002904999973907252,
+            "cached": false
+          },
+          {
+            "node": "qa_resolve",
+            "status": "ok",
+            "ms": 0.23022599998512305
+          },
+          {
+            "node": "qa_retrieve",
+            "status": "ok",
+            "ms": 35.73641799999905,
+            "evidence_count": 8
+          },
+          {
+            "node": "qa_policy",
+            "status": "ok",
+            "ms": 0.027111000008517294,
+            "llm_policy": "offline_by_default",
+            "uncovered_facets": 0
+          },
+          {
+            "node": "qa_extractive",
+            "status": "ok",
+            "ms": 0.034051000000090426
+          },
+          {
+            "node": "finalize",
+            "status": "ok",
+            "ms": 0.0018720000412031368
+          }
+        ]
+      },
+      "api_calls": 0
+    },
+    {
+      "query": "ارزش خرید این محصول را جمع‌بندی کن",
+      "route": "qa",
+      "status": "answered",
+      "trace": {
+        "trace_id": "0220c494f80f4d99a3133fc523685430",
+        "created_at": "2026-11-27T18:57:53.749316+00:00",
+        "route": "qa",
+        "route_reason": "explicit_user_choice",
+        "engine": "LangGraph",
+        "status": "answered",
+        "cached": false,
+        "elapsed_ms": 51.21050100001412,
+        "api_calls": 0,
+        "api_attempts": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "usage_known": true,
+        "retrieval_method": null,
+        "llm_policy": "offline_by_default",
+        "evidence_count": 8,
+        "uncovered_facets": 0,
+        "model_outcome": null,
+        "langfuse_status": "disabled",
+        "langfuse_trace_id": null,
+        "events": [
+          {
+            "node": "route_intent",
+            "status": "ok",
+            "ms": 0.003044999971280049,
+            "route": "qa"
+          },
+          {
+            "node": "cache_lookup",
+            "status": "ok",
+            "ms": 0.0018729999737843173,
+            "cached": false
+          },
+          {
+            "node": "qa_resolve",
+            "status": "ok",
+            "ms": 0.22340599997505706
+          },
+          {
+            "node": "qa_retrieve",
+            "status": "ok",
+            "ms": 48.555036000038854,
+            "evidence_count": 8
+          },
+          {
+            "node": "qa_policy",
+            "status": "ok",
+            "ms": 0.028101999987484305,
+            "llm_policy": "offline_by_default",
+            "uncovered_facets": 0
+          },
+          {
+            "node": "qa_extractive",
+            "status": "ok",
+            "ms": 0.03145699997730844
+          },
+          {
+            "node": "finalize",
+            "status": "ok",
+            "ms": 0.0017919999777404882
+          }
+        ]
+      },
+      "api_calls": 0
+    },
+    {
+      "query": "این دو محصول را مقایسه کن",
+      "route": "compare",
+      "status": "compared",
+      "trace": {
+        "trace_id": "91162ba862594d9cbcf7c5c1553bb2ec",
+        "created_at": "2026-11-27T18:57:53.958378+00:00",
+        "route": "compare",
+        "route_reason": "multi_product_comparison",
+        "engine": "LangGraph",
+        "status": "compared",
+        "cached": false,
+        "elapsed_ms": 208.69001399995568,
+        "api_calls": 0,
+        "api_attempts": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "usage_known": true,
+        "retrieval_method": null,
+        "llm_policy": "comparison_local",
+        "evidence_count": null,
+        "uncovered_facets": null,
+        "model_outcome": null,
+        "langfuse_status": "disabled",
+        "langfuse_trace_id": null,
+        "events": [
+          {
+            "node": "route_intent",
+            "status": "ok",
+            "ms": 0.35038800001530035,
+            "route": "compare"
+          },
+          {
+            "node": "cache_lookup",
+            "status": "ok",
+            "ms": 0.0023640000108571257,
+            "cached": false
+          },
+          {
+            "node": "compare",
+            "status": "ok",
+            "ms": 206.46043899995448,
+            "llm_policy": "comparison_local"
+          },
+          {
+            "node": "finalize",
+            "status": "ok",
+            "ms": 0.003456000001733628
+          }
+        ]
+      },
+      "api_calls": 0
+    },
+    {
+      "query": "کیفیت عالی است و خرید را پیشنهاد می‌کنم",
+      "route": "predict",
+      "status": "answered",
+      "trace": {
+        "trace_id": "8a0677219b344ee4bc14cefc3a76facc",
+        "created_at": "2026-11-27T18:57:54.896235+00:00",
+        "route": "predict",
+        "route_reason": "explicit_user_choice",
+        "engine": "LangGraph",
+        "status": "answered",
+        "cached": false,
+        "elapsed_ms": 937.2579340000016,
+        "api_calls": 0,
+        "api_attempts": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "usage_known": true,
+        "retrieval_method": null,
+        "llm_policy": "local_classifier",
+        "evidence_count": null,
+        "uncovered_facets": null,
+        "model_outcome": null,
+        "langfuse_status": "disabled",
+        "langfuse_trace_id": null,
+        "events": [
+          {
+            "node": "route_intent",
+            "status": "ok",
+            "ms": 0.00478700002304322,
+            "route": "predict"
+          },
+          {
+            "node": "cache_lookup",
+            "status": "ok",
+            "ms": 0.0021230000015748374,
+            "cached": false
+          },
+          {
+            "node": "predict",
+            "status": "ok",
+            "ms": 935.3149710000253,
+            "llm_policy": "local_classifier"
+          },
+          {
+            "node": "finalize",
+            "status": "ok",
+            "ms": 0.0036360000308377494
+          }
+        ]
+      },
+      "api_calls": 0
+    },
+    {
+      "query": "اختلاف امتیاز و پیشنهاد خرید محصولات",
+      "route": "audit",
+      "status": "answered",
+      "trace": {
+        "trace_id": "d21f103c85674225a570d42bb2341aae",
+        "created_at": "2026-11-27T18:57:58.986899+00:00",
+        "route": "audit",
+        "route_reason": "rating_recommendation_disagreement",
+        "engine": "LangGraph",
+        "status": "answered",
+        "cached": false,
+        "elapsed_ms": 4090.2237610000043,
+        "api_calls": 0,
+        "api_attempts": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "usage_known": true,
+        "retrieval_method": null,
+        "llm_policy": "local_statistical_audit",
+        "evidence_count": null,
+        "uncovered_facets": null,
+        "model_outcome": null,
+        "langfuse_status": "disabled",
+        "langfuse_trace_id": null,
+        "events": [
+          {
+            "node": "route_intent",
+            "status": "ok",
+            "ms": 0.028954000015346537,
+            "route": "audit"
+          },
+          {
+            "node": "cache_lookup",
+            "status": "ok",
+            "ms": 0.002402999996320432,
+            "cached": false
+          },
+          {
+            "node": "audit",
+            "status": "ok",
+            "ms": 4088.300566999976,
+            "llm_policy": "local_statistical_audit"
+          },
+          {
+            "node": "finalize",
+            "status": "ok",
+            "ms": 0.0034249999885105353
+          }
+        ]
+      },
+      "api_calls": 0
+    },
+    {
+      "query": "سلام",
+      "route": "clarify",
+      "status": "needs_clarification",
+      "trace": {
+        "trace_id": "432021302b0a43d4a7382317a0a3bcbe",
+        "created_at": "2026-11-27T18:57:58.989322+00:00",
+        "route": "clarify",
+        "route_reason": "insufficient_intent",
+        "engine": "LangGraph",
+        "status": "needs_clarification",
+        "cached": false,
+        "elapsed_ms": 2.125938999995469,
+        "api_calls": 0,
+        "api_attempts": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "usage_known": true,
+        "retrieval_method": null,
+        "llm_policy": "clarification_no_api",
+        "evidence_count": null,
+        "uncovered_facets": null,
+        "model_outcome": null,
+        "langfuse_status": "disabled",
+        "langfuse_trace_id": null,
+        "events": [
+          {
+            "node": "route_intent",
+            "status": "ok",
+            "ms": 0.4854100000102335,
+            "route": "clarify"
+          },
+          {
+            "node": "cache_lookup",
+            "status": "ok",
+            "ms": 0.0025230000346709858,
+            "cached": false
+          },
+          {
+            "node": "clarify",
+            "status": "ok",
+            "ms": 0.0030950000109442044,
+            "llm_policy": "clarification_no_api"
+          },
+          {
+            "node": "finalize",
+            "status": "ok",
+            "ms": 0.0012820000279134547
+          }
+        ]
+      },
+      "api_calls": 0
+    }
+  ],
+  "recorded_trace_count": 52,
+  "executed_engines": [
+    "LangGraph"
+  ],
+  "actual_api_calls": 0,
+  "llm_policy_simulation": {
+    "case_count": 29,
+    "decisions": {
+      "simple_question_local_answer_sufficient": 17,
+      "too_few_distinct_witnesses": 5,
+      "explicit_opt_in_complex_grounded_synthesis": 3,
+      "missing_or_insufficient_evidence": 3,
+      "requested_facets_uncovered": 1
+    },
+    "note": "Policy eligibility only (key availability simulated). No network calls or measured monetary saving."
+  },
+  "langfuse_live_tested": false
+}

@@ -1,0 +1,278 @@
+{
+  "method": "Supervised fine-tuning of the saved logistic classifier head; frozen character TF-IDF vectorizer. Not LLM/LoRA.",
+  "audit": {
+    "source_payload_sha256": "45f4e589ddf47131172fda7b5fc0a00511b356342a2e94b668cbdc2d96c8d460",
+    "source_rows": 6151303,
+    "seed": 42,
+    "split_policy": "original product MD5 80/10/10; deterministic train/validation sample; unchanged recorded test IDs",
+    "shared_products": 0,
+    "shared_comparable_text_keys": 0,
+    "removed_sample_duplicates": {
+      "validation": 2550,
+      "train": 8203
+    },
+    "splits": {
+      "train": {
+        "rows": 53716,
+        "products": 34534,
+        "classes": {
+          "recommended": 21806,
+          "no_idea": 16560,
+          "not_recommended": 15350
+        }
+      },
+      "validation": {
+        "rows": 15846,
+        "products": 7130,
+        "classes": {
+          "recommended": 12318,
+          "not_recommended": 1672,
+          "no_idea": 1856
+        }
+      },
+      "test": {
+        "rows": 15000,
+        "products": 7029,
+        "classes": {
+          "not_recommended": 1809,
+          "recommended": 11330,
+          "no_idea": 1861
+        }
+      }
+    }
+  },
+  "original_model_sha256": "9d19f10f36b98bc15939bd9d5748500602dc7666e34871aff9b40db1e68b9d70",
+  "adapted_head_sha256": "9ebc1e019273a3252eb0eea273d4a977000133440bc8cbb515dd275e021369ff",
+  "validation_trials": [
+    {
+      "name": "saved_head",
+      "validation": {
+        "macro_f1": 0.6865961830999731,
+        "accuracy": 0.8010854474315284
+      }
+    },
+    {
+      "name": "bias_only",
+      "validation": {
+        "macro_f1": 0.7039408973906748,
+        "accuracy": 0.8375615297235895
+      },
+      "bias": [
+        -0.6499999761581421,
+        -0.6499999761581421,
+        0.0
+      ]
+    },
+    {
+      "name": "head_adapted",
+      "rate": 0.4,
+      "epoch": 1,
+      "validation": {
+        "macro_f1": 0.7051701766983248,
+        "accuracy": 0.8364255963650132
+      },
+      "validation_without_bias": {
+        "macro_f1": 0.6943837075354219,
+        "accuracy": 0.8123185661996718
+      },
+      "bias": [
+        -0.44999998807907104,
+        -0.4625000059604645,
+        0.0
+      ]
+    },
+    {
+      "name": "head_adapted",
+      "rate": 0.4,
+      "epoch": 2,
+      "validation": {
+        "macro_f1": 0.7047864470981219,
+        "accuracy": 0.8357945222769153
+      },
+      "validation_without_bias": {
+        "macro_f1": 0.694137731003002,
+        "accuracy": 0.8116243847027641
+      },
+      "bias": [
+        -0.44999998807907104,
+        -0.4625000059604645,
+        0.0
+      ]
+    },
+    {
+      "name": "head_adapted",
+      "rate": 0.4,
+      "epoch": 3,
+      "validation": {
+        "macro_f1": 0.705041004071275,
+        "accuracy": 0.8362993815473937
+      },
+      "validation_without_bias": {
+        "macro_f1": 0.6935848496774711,
+        "accuracy": 0.8115612772939543
+      },
+      "bias": [
+        -0.44999998807907104,
+        -0.4625000059604645,
+        0.0
+      ]
+    },
+    {
+      "name": "head_adapted",
+      "rate": 0.4,
+      "epoch": 4,
+      "validation": {
+        "macro_f1": 0.7047454780852539,
+        "accuracy": 0.836804240817872
+      },
+      "validation_without_bias": {
+        "macro_f1": 0.6938138684203651,
+        "accuracy": 0.812570995834911
+      },
+      "bias": [
+        -0.44999998807907104,
+        -0.4625000059604645,
+        0.0
+      ]
+    },
+    {
+      "name": "head_adapted",
+      "rate": 1.2,
+      "epoch": 1,
+      "validation": {
+        "macro_f1": 0.7042121077043727,
+        "accuracy": 0.8347848037359586
+      },
+      "validation_without_bias": {
+        "macro_f1": 0.6929201120276526,
+        "accuracy": 0.8099835920737094
+      },
+      "bias": [
+        -0.44999998807907104,
+        -0.4625000059604645,
+        0.0
+      ]
+    },
+    {
+      "name": "head_adapted",
+      "rate": 1.2,
+      "epoch": 2,
+      "validation": {
+        "macro_f1": 0.7039413046660018,
+        "accuracy": 0.8462703521393412
+      },
+      "validation_without_bias": {
+        "macro_f1": 0.6963404661390028,
+        "accuracy": 0.8173040514956456
+      },
+      "bias": [
+        -0.6499999761581421,
+        -0.6499999761581421,
+        0.0
+      ]
+    },
+    {
+      "name": "head_adapted",
+      "rate": 1.2,
+      "epoch": 3,
+      "validation": {
+        "macro_f1": 0.7037502474238929,
+        "accuracy": 0.8354158778240566
+      },
+      "validation_without_bias": {
+        "macro_f1": 0.6924271004464474,
+        "accuracy": 0.8106146661618074
+      },
+      "bias": [
+        -0.44999998807907104,
+        -0.4625000059604645,
+        0.0
+      ]
+    },
+    {
+      "name": "head_adapted",
+      "rate": 1.2,
+      "epoch": 4,
+      "validation": {
+        "macro_f1": 0.7038477127595096,
+        "accuracy": 0.8354789852328663
+      },
+      "validation_without_bias": {
+        "macro_f1": 0.6927624233280328,
+        "accuracy": 0.8109302032058564
+      },
+      "bias": [
+        -0.44999998807907104,
+        -0.4625000059604645,
+        0.0
+      ]
+    }
+  ],
+  "selected_on_validation_only": {
+    "name": "head_adapted",
+    "rate": 0.4,
+    "epoch": 1,
+    "validation": {
+      "macro_f1": 0.7051701766983248,
+      "accuracy": 0.8364255963650132
+    },
+    "validation_without_bias": {
+      "macro_f1": 0.6943837075354219,
+      "accuracy": 0.8123185661996718
+    },
+    "bias": [
+      -0.44999998807907104,
+      -0.4625000059604645,
+      0.0
+    ]
+  },
+  "original_test_reproduced_all": 15000,
+  "test": {
+    "baseline": {
+      "macro_f1": 0.6790791799331871,
+      "accuracy": 0.7831333333333333
+    },
+    "adapted": {
+      "macro_f1": 0.6923143723471491,
+      "accuracy": 0.8163333333333334
+    },
+    "delta_macro_f1": 0.013235192413961983,
+    "adapted_classification_report": {
+      "no_idea": {
+        "precision": 0.3847953216374269,
+        "recall": 0.5303600214938206,
+        "f1-score": 0.44600090375056484,
+        "support": 1861.0
+      },
+      "not_recommended": {
+        "precision": 0.7120726495726496,
+        "recall": 0.7368711995577667,
+        "f1-score": 0.7242597120347731,
+        "support": 1809.0
+      },
+      "recommended": {
+        "precision": 0.9396004922843889,
+        "recall": 0.8759929390997352,
+        "f1-score": 0.9066825012561093,
+        "support": 11330.0
+      },
+      "accuracy": 0.8163333333333334,
+      "macro avg": {
+        "precision": 0.6788228211648217,
+        "recall": 0.7144080533837741,
+        "f1-score": 0.6923143723471491,
+        "support": 15000.0
+      },
+      "weighted avg": {
+        "precision": 0.8433278062817534,
+        "recall": 0.8163333333333334,
+        "f1-score": 0.8275270826788282,
+        "support": 15000.0
+      }
+    }
+  },
+  "improved_on_validation_and_test": true,
+  "production_model_replaced": false,
+  "limitations": "Original holdout is a previously recorded test set, not a new blind benchmark; no test results used to select the head. Classical head adaptation, not transformer fine-tuning. The sampled validation is from the original validation product buckets, not necessarily the exact original EDA validation rows. No overlap is verified across the newly sampled splits and recorded test; original full training text was not available for an additional historical-validation-overlap audit.",
+  "elapsed_seconds": 16.844
+}

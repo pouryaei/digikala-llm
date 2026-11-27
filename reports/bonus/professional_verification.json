@@ -1,0 +1,29 @@
+{
+  "tests_passed": 95,
+  "new_professional_tests": 18,
+  "subtests_passed": 11,
+  "failures": 0,
+  "real_streamlit_apptest": true,
+  "real_langgraph": true,
+  "data_and_model_artifacts_changed": false,
+  "controlled_evaluation": {
+    "mode": "offline_fixture",
+    "real_gateway_attempts": 0,
+    "total_cases": 10,
+    "first_simulated_attempts": 5,
+    "repeat_simulated_attempts": 0,
+    "zero_attempt_cases": 6,
+    "warm_cache_hits": 6,
+    "facts_preserved_cases": 10,
+    "max_attempts_per_request": 2,
+    "note": "Fixtures test decisions, cache and structural validators; actual language quality, usage and costs are not measured."
+  },
+  "live_gateway_verified": false,
+  "real_gateway_attempts": 0,
+  "live_langfuse_server_verified": false,
+  "notes": [
+    "Language model transports were fixtures, not live provider responses.",
+    "Historical LR and retrieval artifacts may warn about scikit-learn versions; compatibility tests passed.",
+    "Actual dollar rates and best task model selection require a live benchmark with the group's key."
+  ]
+}

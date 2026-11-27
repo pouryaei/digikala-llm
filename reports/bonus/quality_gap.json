@@ -1,0 +1,725 @@
+{
+  "new_problem": "Disagreement between catalogue rating and labeled recommendation; conservative investigation queue",
+  "mentor_approval_confirmed": false,
+  "report": {
+    "status": "answered",
+    "scope": "all 100k products",
+    "thresholds": {
+      "min_labels": 20,
+      "min_ratings": 10,
+      "min_rating_100": 70,
+      "min_gap": 0.15
+    },
+    "rated_and_labeled_products": 68898,
+    "eligible_products": 15984,
+    "naive_flags": 14132,
+    "naive_flags_insufficient_support": 13202,
+    "conservative_flags": 37,
+    "items": [
+      {
+        "product_id": 9379096,
+        "title": "میکروفن یقه ای لاوالیر مدل GL-119",
+        "category": "لوازم جانبی آلات موسیقی",
+        "brand": "متفرقه",
+        "rating_100": 78.0,
+        "rating_count": 10,
+        "review_count": 25,
+        "valid_labels": 21,
+        "recommended": 6,
+        "recommendation_rate": 0.2857142857142857,
+        "wilson_upper": 0.49956773822837586,
+        "naive_gap": 0.49428571428571433,
+        "conservative_gap": 0.28043226177162417,
+        "evidence": [
+          {
+            "comment_id": 52871567,
+            "product_id": 9379096,
+            "text": "اصلا خوب نیس میکروفون خود گوشی خیلی بهتره صداش مثلا میکروفونه این ؟!!!!!!!"
+          },
+          {
+            "comment_id": 53062466,
+            "product_id": 9379096,
+            "text": "برای من خراب بود دارم مرجوعش میکنم"
+          },
+          {
+            "comment_id": 53393502,
+            "product_id": 9379096,
+            "text": "هیچ گونه به گوشی وصل نمیشه ،نمیدونم چرا من دیر رسیده به دستم نبودم فکر نکنم بشه مرجوعش کرد."
+          }
+        ]
+      },
+      {
+        "product_id": 5408382,
+        "title": "هاشور ابرو هداموجی شماره 02",
+        "category": "آرایش ابرو",
+        "brand": "متفرقه",
+        "rating_100": 70.0,
+        "rating_count": 73,
+        "review_count": 62,
+        "valid_labels": 49,
+        "recommended": 16,
+        "recommendation_rate": 0.32653061224489793,
+        "wilson_upper": 0.4662105631259371,
+        "naive_gap": 0.373469387755102,
+        "conservative_gap": 0.23378943687406284,
+        "evidence": [
+          {
+            "comment_id": 22812310,
+            "product_id": 5408382,
+            "text": "اصلا ماندگاری نداره میزنی سریع پاک میشه.پررنگ نیست..خیلی به قرمزی میزنه..حیف پول..حیف"
+          },
+          {
+            "comment_id": 23040843,
+            "product_id": 5408382,
+            "text": "کاملا خشک بود  و غیرقابل استفاده بود ای کاش به نظر دوستان اهمیت میدادم و پولم هدر نمیرفت"
+          },
+          {
+            "comment_id": 23712214,
+            "product_id": 5408382,
+            "text": "['خشک شده. بی رنگ ']"
+          }
+        ]
+      },
+      {
+        "product_id": 4512127,
+        "title": "سوتین زنانه آذین مدل دکلته 3617-W",
+        "category": "لباس زنانه",
+        "brand": "آذین",
+        "rating_100": 74.0,
+        "rating_count": 70,
+        "review_count": 61,
+        "valid_labels": 55,
+        "recommended": 21,
+        "recommendation_rate": 0.38181818181818183,
+        "wilson_upper": 0.5139102071760762,
+        "naive_gap": 0.35818181818181816,
+        "conservative_gap": 0.22608979282392383,
+        "evidence": [
+          {
+            "comment_id": 20226054,
+            "product_id": 4512127,
+            "text": "بند نامریی اتصالی از پشت قابل تنظیم نیست واگر بخواهید از بند نامریی سر شانه استفاده کنید جای قلاب سمت دیگر را نذاشته اند وخودتان باید بند را تهیه کنیدوفکری هم برای جای قلاب آن طرف بکنید اگر میشو مرجوع میکردم"
+          },
+          {
+            "comment_id": 20493777,
+            "product_id": 4512127,
+            "text": "جنسش واقعا افتضاح یعنی یکبارمصرفه من با یه باراستفاده درعرض ۵ ساعت هم رنگ گرفت هم بند پشتش وارفت بنظرم قیمتش نسبت به جنسش باید خیلی پایین تر میذاشتن مدلشم تیز وامیسته که اصلا تو لباس قشنگ نیست"
+          },
+          {
+            "comment_id": 28689393,
+            "product_id": 4512127,
+            "text": "مقوا بود با این ک من ۲۰تومن گرفتم ارزش همونم نداشت ظاهرا خوبه ولی اگه فشار بدی مقوا میره داخل باید باز با دستت درست کنی ک صاف بشه بعد ی حالت تیزی داره گرد نیست اصلا"
+          }
+        ]
+      },
+      {
+        "product_id": 6426152,
+        "title": "حباب ساز مدل شیپوری کد 222",
+        "category": "اسباب بازی",
+        "brand": "متفرقه",
+        "rating_100": 76.0,
+        "rating_count": 31,
+        "review_count": 33,
+        "valid_labels": 26,
+        "recommended": 9,
+        "recommendation_rate": 0.34615384615384615,
+        "wilson_upper": 0.53779770990367,
+        "naive_gap": 0.41384615384615386,
+        "conservative_gap": 0.22220229009632997,
+        "evidence": [
+          {
+            "comment_id": 29668507,
+            "product_id": 6426152,
+            "text": "زیاد جالب نبود و شکسته بود ارزش مرجوع کردن نداشت.\r\nمتاسفم برای فروشنده"
+          },
+          {
+            "comment_id": 30263772,
+            "product_id": 6426152,
+            "text": "پلاستیک بازیافتی خشک و خیلی جنس بدی داره"
+          },
+          {
+            "comment_id": 32411510,
+            "product_id": 6426152,
+            "text": "افتضاح"
+          }
+        ]
+      },
+      {
+        "product_id": 2480656,
+        "title": "گوشواره زنانه بهار گالری طرح قلب کد 207140",
+        "category": "اکسسوری زنانه",
+        "brand": "متفرقه",
+        "rating_100": 86.0,
+        "rating_count": 23,
+        "review_count": 32,
+        "valid_labels": 29,
+        "recommended": 14,
+        "recommendation_rate": 0.4827586206896552,
+        "wilson_upper": 0.6556926202943085,
+        "naive_gap": 0.3772413793103448,
+        "conservative_gap": 0.20430737970569146,
+        "evidence": [
+          {
+            "comment_id": 36290022,
+            "product_id": 2480656,
+            "text": "خیلی ظریف و بدرد نخوره .برجسته که نیست زنجیرش هم کوتاهه اصلا اونی که در تصویر هست نیست.پولمو انداختم سطل اشغال ...."
+          },
+          {
+            "comment_id": 40673091,
+            "product_id": 2480656,
+            "text": "کلا یه چیز دیگه فرستادن ،حوصله مرجوع نداشتم وگرنه ارزش نگه داشتن نداشت ،خیلی چرت"
+          },
+          {
+            "comment_id": 41858091,
+            "product_id": 2480656,
+            "text": "اصلا به درد نمیخورد"
+          }
+        ]
+      },
+      {
+        "product_id": 226782,
+        "title": "کرم ضد آفتاب اوریاژ مدل Hyseac SPF50 حجم 50 میلی لیتر",
+        "category": "مراقبت پوست",
+        "brand": "اوریاژ",
+        "rating_100": 70.0,
+        "rating_count": 342,
+        "review_count": 190,
+        "valid_labels": 162,
+        "recommended": 69,
+        "recommendation_rate": 0.42592592592592593,
+        "wilson_upper": 0.5029206840300801,
+        "naive_gap": 0.274074074074074,
+        "conservative_gap": 0.1970793159699199,
+        "evidence": [
+          {
+            "comment_id": 3843770,
+            "product_id": 226782,
+            "text": "['حفاظت خوبی نداره']"
+          },
+          {
+            "comment_id": 4049177,
+            "product_id": 226782,
+            "text": "خرید نکنین دیجی کالا کرم پودری بهتون می ده در صورتی که روش ننوشته رنگی و  کرم پودری"
+          },
+          {
+            "comment_id": 4161139,
+            "product_id": 226782,
+            "text": "['رنگی']"
+          }
+        ]
+      },
+      {
+        "product_id": 10343777,
+        "title": "محافظ صفحه نمایش گلادیاتور مدل GWP1000 مناسب برای ساعت هوشمند شیائومی Mibro Lite 2",
+        "category": "لوازم جانبی ساعت و مچ بند هوشمند",
+        "brand": "گلادیاتور",
+        "rating_100": 74.0,
+        "rating_count": 37,
+        "review_count": 61,
+        "valid_labels": 59,
+        "recommended": 25,
+        "recommendation_rate": 0.423728813559322,
+        "wilson_upper": 0.5506574452716337,
+        "naive_gap": 0.316271186440678,
+        "conservative_gap": 0.18934255472836625,
+        "evidence": [
+          {
+            "comment_id": 49435952,
+            "product_id": 10343777,
+            "text": "بعد از ۱۲ ساعت از ساعت جدا می‌شود."
+          },
+          {
+            "comment_id": 49531848,
+            "product_id": 10343777,
+            "text": "۴۸ تومن بریزین تو سطل اشغال تا الکی منتظر نمونین😁"
+          },
+          {
+            "comment_id": 49793962,
+            "product_id": 10343777,
+            "text": "بسیار مزخرف بود و هوا میفته"
+          }
+        ]
+      },
+      {
+        "product_id": 4301800,
+        "title": "مداد لب تروکاور مدل پرو لانگ ور شماره 164",
+        "category": "آرایش لب",
+        "brand": "تروکاور",
+        "rating_100": 72.0,
+        "rating_count": 75,
+        "review_count": 50,
+        "valid_labels": 42,
+        "recommended": 16,
+        "recommendation_rate": 0.38095238095238093,
+        "wilson_upper": 0.5318623178000363,
+        "naive_gap": 0.33904761904761904,
+        "conservative_gap": 0.18813768219996363,
+        "evidence": [
+          {
+            "comment_id": 17459030,
+            "product_id": 4301800,
+            "text": "رنگش واقعا بد بود و چیزی که انتظار داشتم نبود\r\nاصلا برای لب های روشن توصیه نمیکنم عکسشو گذاشتم\r\n\r\nو اینکه سرش جدا شد همون اول و خراب بود"
+          },
+          {
+            "comment_id": 17646240,
+            "product_id": 4301800,
+            "text": "رنگش خیلی خیلی روشنه. اصلا رنگ کالباسی نیست."
+          },
+          {
+            "comment_id": 18351916,
+            "product_id": 4301800,
+            "text": "خیلی بدوافتضاح"
+          }
+        ]
+      },
+      {
+        "product_id": 11106349,
+        "title": "رژ لب جامد مرو مدل Nude کد 01",
+        "category": "آرایش لب",
+        "brand": "مرو",
+        "rating_100": 78.0,
+        "rating_count": 16,
+        "review_count": 24,
+        "valid_labels": 23,
+        "recommended": 9,
+        "recommendation_rate": 0.391304347826087,
+        "wilson_upper": 0.5921482039625401,
+        "naive_gap": 0.38869565217391305,
+        "conservative_gap": 0.18785179603745994,
+        "evidence": [
+          {
+            "comment_id": 51416669,
+            "product_id": 11106349,
+            "text": "اصلا خوب نیست پولم حروم شد"
+          },
+          {
+            "comment_id": 52405968,
+            "product_id": 11106349,
+            "text": "خیلی چرب به نظر میاد."
+          },
+          {
+            "comment_id": 52675729,
+            "product_id": 11106349,
+            "text": "بسیار خشک است و به صورت روان روی لب کشیده نمیشود"
+          }
+        ]
+      },
+      {
+        "product_id": 8329939,
+        "title": "زعفران سرگل قاینات- 4.608 گرم",
+        "category": "مواد غذایی",
+        "brand": "متفرقه",
+        "rating_100": 78.0,
+        "rating_count": 50,
+        "review_count": 48,
+        "valid_labels": 29,
+        "recommended": 12,
+        "recommendation_rate": 0.41379310344827586,
+        "wilson_upper": 0.5926247152148476,
+        "naive_gap": 0.36620689655172417,
+        "conservative_gap": 0.18737528478515242,
+        "evidence": [
+          {
+            "comment_id": 36652380,
+            "product_id": 8329939,
+            "text": "بعداز استفاده نظرم رو اصلاح میکنم.... فقط شبیه به زعفران هس... در اصل تقلبی هس... گول قیمت و تخفیف رو نخورید"
+          },
+          {
+            "comment_id": 36762023,
+            "product_id": 8329939,
+            "text": "فکر کنم به ته زعفران اسانس ورنگ زده اند حالت مرطوب دارد در بسته بندی"
+          },
+          {
+            "comment_id": 36812264,
+            "product_id": 8329939,
+            "text": "خیلی بد"
+          }
+        ]
+      },
+      {
+        "product_id": 9212798,
+        "title": "ادوپرفیوم تلان پرفیوم مدل باکارات رژ 540 حجم 100 میلی لیتر",
+        "category": "عطر و ادکلن زنانه",
+        "brand": "متفرقه",
+        "rating_100": 72.0,
+        "rating_count": 38,
+        "review_count": 38,
+        "valid_labels": 33,
+        "recommended": 12,
+        "recommendation_rate": 0.36363636363636365,
+        "wilson_upper": 0.5338412737846591,
+        "naive_gap": 0.3563636363636363,
+        "conservative_gap": 0.1861587262153409,
+        "evidence": [
+          {
+            "comment_id": 40474301,
+            "product_id": 9212798,
+            "text": "اصلا ماندگاری ندارد؛ کاملا بوی الکل حس میشه. ارزش خرید نداره."
+          },
+          {
+            "comment_id": 40523781,
+            "product_id": 9212798,
+            "text": "ماندگاری صفر"
+          },
+          {
+            "comment_id": 40625283,
+            "product_id": 9212798,
+            "text": "نه موندگاری داره ن بو"
+          }
+        ]
+      },
+      {
+        "product_id": 10103788,
+        "title": "ادو پرفیوم مردانه نیفتی مدل کرید اونتوس حجم 120 میلی لیتر",
+        "category": "عطر و ادکلن مردانه",
+        "brand": "نیفتی",
+        "rating_100": 74.0,
+        "rating_count": 90,
+        "review_count": 70,
+        "valid_labels": 42,
+        "recommended": 17,
+        "recommendation_rate": 0.40476190476190477,
+        "wilson_upper": 0.5550595447182258,
+        "naive_gap": 0.3352380952380952,
+        "conservative_gap": 0.18494045528177416,
+        "evidence": [
+          {
+            "comment_id": 43525661,
+            "product_id": 10103788,
+            "text": "افتضاح"
+          },
+          {
+            "comment_id": 43595518,
+            "product_id": 10103788,
+            "text": "['ماندگاری کم \\r', 'پخش بو ضعیف']"
+          },
+          {
+            "comment_id": 45556823,
+            "product_id": 10103788,
+            "text": "ماندگاری خوبی نداره و بوی اونتوس نداره"
+          }
+        ]
+      },
+      {
+        "product_id": 10150624,
+        "title": "جوراب نوزادی مدل مادر و کودک یلدایی کد 2 مجموعه 2 عددی",
+        "category": "نوزاد",
+        "brand": "متفرقه",
+        "rating_100": 70.0,
+        "rating_count": 41,
+        "review_count": 34,
+        "valid_labels": 25,
+        "recommended": 8,
+        "recommendation_rate": 0.32,
+        "wilson_upper": 0.515900862654233,
+        "naive_gap": 0.37999999999999995,
+        "conservative_gap": 0.184099137345767,
+        "evidence": [
+          {
+            "comment_id": 43220438,
+            "product_id": 10150624,
+            "text": "سایز اشتباه فرستادن من 6 تا 8 سال زدم اما خیلی کوچیکتر اومده همینطور سایز بزرگشم کوچیکه"
+          },
+          {
+            "comment_id": 43250252,
+            "product_id": 10150624,
+            "text": "زده جوراب کودک و مادر بعد سفارش دادم دو جفتش یک سایزه و برای کودک اندازه بود بعد رنگشم اون چیزی ک تو عکس بود نیست و رنگش سفیده"
+          },
+          {
+            "comment_id": 43266275,
+            "product_id": 10150624,
+            "text": "خیلی کوچیکه بی کیفیت"
+          }
+        ]
+      },
+      {
+        "product_id": 10528351,
+        "title": "فرمر کاشت ناخن مدل BW بسته 30 عددی",
+        "category": "بهداشت و زیبایی ناخن",
+        "brand": "متفرقه",
+        "rating_100": 74.0,
+        "rating_count": 50,
+        "review_count": 56,
+        "valid_labels": 44,
+        "recommended": 18,
+        "recommendation_rate": 0.4090909090909091,
+        "wilson_upper": 0.5559050735339343,
+        "naive_gap": 0.3309090909090909,
+        "conservative_gap": 0.18409492646606573,
+        "evidence": [
+          {
+            "comment_id": 46156580,
+            "product_id": 10528351,
+            "text": "وسط کار همش از هم جدا میشه ، کاغذی نیست که بچسبه و بمونه"
+          },
+          {
+            "comment_id": 47935147,
+            "product_id": 10528351,
+            "text": "خیلی بیخود بود سریع باز میشد"
+          },
+          {
+            "comment_id": 49526359,
+            "product_id": 10528351,
+            "text": "چسب خیلی بده . سریع باز میشه"
+          }
+        ]
+      },
+      {
+        "product_id": 207888,
+        "title": "کتاب اصول گرامر اثر جرالدین وودز انتشارات آوند دانش",
+        "category": "کتاب زبان",
+        "brand": "انتشارات آوند دانش",
+        "rating_100": 82.0,
+        "rating_count": 58,
+        "review_count": 39,
+        "valid_labels": 35,
+        "recommended": 17,
+        "recommendation_rate": 0.4857142857142857,
+        "wilson_upper": 0.6443146037328836,
+        "naive_gap": 0.33428571428571424,
+        "conservative_gap": 0.17568539626711632,
+        "evidence": [
+          {
+            "comment_id": 3111044,
+            "product_id": 207888,
+            "text": "انگار داری مقاله می‌خونی درباره زبان. من فکر می‌کردم کلی تمرین داره و چیزهای جدید یاد می‌ده اما پر از متن فارسی بود. در واقع انگار داری درباره اهمیت زبان و اینکه چقدر آسونه یه مقاله فارسی می‌خونی."
+          },
+          {
+            "comment_id": 3681382,
+            "product_id": 207888,
+            "text": "به نظر من ترجمه خوبی نداره\r\nروان نیست"
+          },
+          {
+            "comment_id": 16167932,
+            "product_id": 207888,
+            "text": "پول خود را دور نریزید حتی اگر مفت هم دادن نخرید، به جاش گرامر کامل زبان انگلیسی ریموند مورفی و ویلیلم اسمالز ترجمه حمید بلوچ را بگیرید که هم کامل و اصولیه هم از مثال ها و کلمات ساده برای فهم مطلب استفاده کرده هم ترجمه دارد و کلمات و جملات دوستانه و مودبانه استفاده کرده اند و تقریبا از هر گرامر دیگه ای بی نیاز میشید"
+          }
+        ]
+      },
+      {
+        "product_id": 9661802,
+        "title": "برچسب مدل دخترانه طرح گل کد 01 مجموعه 2 عددی",
+        "category": "دفتر و کاغذ و مقوا",
+        "brand": "متفرقه",
+        "rating_100": 74.0,
+        "rating_count": 85,
+        "review_count": 81,
+        "valid_labels": 71,
+        "recommended": 32,
+        "recommendation_rate": 0.4507042253521127,
+        "wilson_upper": 0.5659913960765885,
+        "naive_gap": 0.2892957746478873,
+        "conservative_gap": 0.17400860392341144,
+        "evidence": [
+          {
+            "comment_id": 42492788,
+            "product_id": 9661802,
+            "text": "جای ببرش و پرفراژ نداره و خودمون باید برش بزنیم ."
+          },
+          {
+            "comment_id": 42553464,
+            "product_id": 9661802,
+            "text": "['کیفیت خیلی خیلی پایین']"
+          },
+          {
+            "comment_id": 42590782,
+            "product_id": 9661802,
+            "text": "['تصاویر بی کیفیت و مات', 'برش نخورده']"
+          }
+        ]
+      },
+      {
+        "product_id": 10848771,
+        "title": "کفش مردانه مدل BK.1660",
+        "category": "کفش مردانه",
+        "brand": "متفرقه",
+        "rating_100": 74.0,
+        "rating_count": 15,
+        "review_count": 25,
+        "valid_labels": 20,
+        "recommended": 7,
+        "recommendation_rate": 0.35,
+        "wilson_upper": 0.5671494897805353,
+        "naive_gap": 0.39,
+        "conservative_gap": 0.17285051021946474,
+        "evidence": [
+          {
+            "comment_id": 47558665,
+            "product_id": 10848771,
+            "text": "['بسیار بی کیفیت حتی به عنوان دمپایی قابل استفاده نیست', 'چرم روش انگار نایلونه جمع میشه یکم ']"
+          },
+          {
+            "comment_id": 50561721,
+            "product_id": 10848771,
+            "text": "['کیفیت پایین', 'قالب بد فرم']"
+          },
+          {
+            "comment_id": 50775832,
+            "product_id": 10848771,
+            "text": "جنس پلاستیک خالی \nبوی پلاستیک همه جارو میگیره"
+          }
+        ]
+      },
+      {
+        "product_id": 8378138,
+        "title": "ست تی شرت و شلوارک پسرانه چیندکا مدل خرسی کد 147",
+        "category": "پسرانه",
+        "brand": "چیندکا",
+        "rating_100": 78.0,
+        "rating_count": 116,
+        "review_count": 87,
+        "valid_labels": 58,
+        "recommended": 28,
+        "recommendation_rate": 0.4827586206896552,
+        "wilson_upper": 0.6083795657078657,
+        "naive_gap": 0.29724137931034483,
+        "conservative_gap": 0.17162043429213436,
+        "evidence": [
+          {
+            "comment_id": 34887983,
+            "product_id": 8378138,
+            "text": "جنس تیشرت خیلی نازک هست. و در کل جنس قابل قبولی نداره. از لحاظ اندازه مناسب بود ولی کیفیت جنس خوبی نداره"
+          },
+          {
+            "comment_id": 34954053,
+            "product_id": 8378138,
+            "text": "اصلا ارزش خرید نداره حتی تو شگفت انگیز.جنس لباس خیلی نازکه وجنس بد"
+          },
+          {
+            "comment_id": 35192191,
+            "product_id": 8378138,
+            "text": "جنسش خوب نبود جوری که تو تن بچه اذیت میکرد"
+          }
+        ]
+      },
+      {
+        "product_id": 6682247,
+        "title": "میکروفن کندانسر مدل USB-01",
+        "category": "تجهیزات استودیویی",
+        "brand": "متفرقه",
+        "rating_100": 88.0,
+        "rating_count": 31,
+        "review_count": 41,
+        "valid_labels": 31,
+        "recommended": 17,
+        "recommendation_rate": 0.5483870967741935,
+        "wilson_upper": 0.7083851716341388,
+        "naive_gap": 0.3316129032258065,
+        "conservative_gap": 0.17161482836586117,
+        "evidence": [
+          {
+            "comment_id": 37515599,
+            "product_id": 6682247,
+            "text": "['اسم رسم(برند) مخصول مشخص نیست\\r', 'درجعبه دفترچه راهنما کامل نبود\\r', 'کابل رابط جنس خوبی نبود']"
+          },
+          {
+            "comment_id": 38367127,
+            "product_id": 6682247,
+            "text": "کلا درخواست مرجوعی دادم. چرا وقتی مشکل داره با 60 درصد تخفیف مردم رو تو درد سر می اندازید. حتی شکل جعبه هم عوض شده و به جز یک برگه دفترچه راهنما هم نداره!!!"
+          },
+          {
+            "comment_id": 39104602,
+            "product_id": 6682247,
+            "text": "['عدم ضبط صدا در بیشتر مواقع\\r', 'در صورت ضبط دارای نویز فراوان\\r', 'نداشتن حتی نام برای جستجو در اینترنت']"
+          }
+        ]
+      },
+      {
+        "product_id": 4727953,
+        "title": "فوم محرک رشد مو دلتازکس مدل ماینوکسیدیل 5% وزن 60 گرم",
+        "category": "شامپو و مراقبت مو",
+        "brand": "متفرقه",
+        "rating_100": 76.0,
+        "rating_count": 230,
+        "review_count": 137,
+        "valid_labels": 123,
+        "recommended": 62,
+        "recommendation_rate": 0.5040650406504065,
+        "wilson_upper": 0.5909543551560261,
+        "naive_gap": 0.25593495934959354,
+        "conservative_gap": 0.16904564484397389,
+        "evidence": [
+          {
+            "comment_id": 19945860,
+            "product_id": 4727953,
+            "text": "کیفیت ندارد"
+          },
+          {
+            "comment_id": 22809627,
+            "product_id": 4727953,
+            "text": "من قبلا استفاده میکردم خوب بود ولی الان زرد شده و داره برعکس عمل میکنه در نهایت افتضاحه منم سه تا خریدم رو دستم موند باید بریزم دور"
+          },
+          {
+            "comment_id": 23315320,
+            "product_id": 4727953,
+            "text": "خیلی آبکی و شل بود شبیه فوم نبود و بجای سفید زرد تیره بود"
+          }
+        ]
+      }
+    ],
+    "seconds": 5.582574398000361,
+    "note": "Rating and recommendation measure different user populations. Flags are for manual investigation, not proven defects; the Wilson interval is for the observed labeled recommendation proportion only."
+  },
+  "sensitivity": [
+    {
+      "min_labels": 10,
+      "gap": 0.1,
+      "eligible": 24354,
+      "flagged": 234
+    },
+    {
+      "min_labels": 10,
+      "gap": 0.15,
+      "eligible": 24354,
+      "flagged": 71
+    },
+    {
+      "min_labels": 10,
+      "gap": 0.2,
+      "eligible": 24354,
+      "flagged": 11
+    },
+    {
+      "min_labels": 20,
+      "gap": 0.1,
+      "eligible": 15984,
+      "flagged": 149
+    },
+    {
+      "min_labels": 20,
+      "gap": 0.15,
+      "eligible": 15984,
+      "flagged": 37
+    },
+    {
+      "min_labels": 20,
+      "gap": 0.2,
+      "eligible": 15984,
+      "flagged": 5
+    },
+    {
+      "min_labels": 50,
+      "gap": 0.1,
+      "eligible": 8188,
+      "flagged": 84
+    },
+    {
+      "min_labels": 50,
+      "gap": 0.15,
+      "eligible": 8188,
+      "flagged": 16
+    },
+    {
+      "min_labels": 50,
+      "gap": 0.2,
+      "eligible": 8188,
+      "flagged": 1
+    }
+  ],
+  "source_checks": {
+    "top_rows": 20,
+    "count_checks_pass": true,
+    "exact_evidence_checks_pass": true
+  },
+  "limitation": "No ground-truth defect labels in this dataset. Evaluation validates arithmetic and evidence only; usefulness and mentor approval require real review."
+}

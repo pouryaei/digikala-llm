@@ -1,0 +1,758 @@
+{
+  "mode": "offline_stub",
+  "offline_parity": {
+    "engine": "LangGraph",
+    "matched": 36,
+    "total": 36,
+    "core_p50_ms": 3.577,
+    "graph_p50_ms": 5.94,
+    "timing_note": "warm, alternating paired order, result-cache and trace export disabled; dataset-specific",
+    "cases": [
+      {
+        "case_id": "QA01",
+        "core_status": "answered",
+        "graph_status": "answered",
+        "same": true,
+        "witness_ids": [
+          53683105,
+          54038581,
+          40240393,
+          35237832
+        ],
+        "core_ms": 4.505,
+        "graph_ms": 6.793
+      },
+      {
+        "case_id": "QA02",
+        "core_status": "answered",
+        "graph_status": "answered",
+        "same": true,
+        "witness_ids": [
+          40240393,
+          54038581
+        ],
+        "core_ms": 3.784,
+        "graph_ms": 6.806
+      },
+      {
+        "case_id": "QA03",
+        "core_status": "answered",
+        "graph_status": "answered",
+        "same": true,
+        "witness_ids": [
+          54441985,
+          51816235,
+          48293272
+        ],
+        "core_ms": 2.652,
+        "graph_ms": 3.809
+      },
+      {
+        "case_id": "QA04",
+        "core_status": "answered",
+        "graph_status": "answered",
+        "same": true,
+        "witness_ids": [
+          53762979
+        ],
+        "core_ms": 1.59,
+        "graph_ms": 3.954
+      },
+      {
+        "case_id": "QA05",
+        "core_status": "answered",
+        "graph_status": "answered",
+        "same": true,
+        "witness_ids": [
+          44118520,
+          39784824,
+          50143371
+        ],
+        "core_ms": 3.424,
+        "graph_ms": 4.82
+      },
+      {
+        "case_id": "QA06",
+        "core_status": "insufficient_evidence",
+        "graph_status": "insufficient_evidence",
+        "same": true,
+        "witness_ids": [],
+        "core_ms": 2.103,
+        "graph_ms": 4.601
+      },
+      {
+        "case_id": "QA07",
+        "core_status": "answered",
+        "graph_status": "answered",
+        "same": true,
+        "witness_ids": [
+          51925868,
+          31654510,
+          26541734,
+          27525867
+        ],
+        "core_ms": 5.585,
+        "graph_ms": 7.22
+      },
+      {
+        "case_id": "QA08",
+        "core_status": "answered",
+        "graph_status": "answered",
+        "same": true,
+        "witness_ids": [
+          26541734
+        ],
+        "core_ms": 4.399,
+        "graph_ms": 6.947
+      },
+      {
+        "case_id": "QA09",
+        "core_status": "answered",
+        "graph_status": "answered",
+        "same": true,
+        "witness_ids": [
+          44819092,
+          31654510
+        ],
+        "core_ms": 5.784,
+        "graph_ms": 6.927
+      },
+      {
+        "case_id": "QA10",
+        "core_status": "answered",
+        "graph_status": "answered",
+        "same": true,
+        "witness_ids": [
+          38281200,
+          30728632,
+          25845204,
+          8917704
+        ],
+        "core_ms": 2.066,
+        "graph_ms": 4.788
+      },
+      {
+        "case_id": "QA11",
+        "core_status": "answered",
+        "graph_status": "answered",
+        "same": true,
+        "witness_ids": [
+          42512173,
+          30728632,
+          25845204,
+          24270248,
+          3876719,
+          8917704,
+          38281200
+        ],
+        "core_ms": 3.023,
+        "graph_ms": 4.517
+      },
+      {
+        "case_id": "QA12",
+        "core_status": "answered",
+        "graph_status": "answered",
+        "same": true,
+        "witness_ids": [
+          51519350,
+          53878022,
+          53694641,
+          53465855,
+          52370549,
+          53957909
+        ],
+        "core_ms": 5.281,
+        "graph_ms": 7.945
+      },
+      {
+        "case_id": "QA13",
+        "core_status": "answered",
+        "graph_status": "answered",
+        "same": true,
+        "witness_ids": [
+          53878022,
+          52086245,
+          53496896,
+          51519350,
+          53694641,
+          53957909,
+          52370549,
+          53680674
+        ],
+        "core_ms": 6.108,
+        "graph_ms": 7.742
+      },
+      {
+        "case_id": "QA14",
+        "core_status": "answered",
+        "graph_status": "answered",
+        "same": true,
+        "witness_ids": [
+          53985305
+        ],
+        "core_ms": 1.866,
+        "graph_ms": 4.255
+      },
+      {
+        "case_id": "QA15",
+        "core_status": "answered",
+        "graph_status": "answered",
+        "same": true,
+        "witness_ids": [
+          53883200
+        ],
+        "core_ms": 2.221,
+        "graph_ms": 3.832
+      },
+      {
+        "case_id": "QA16",
+        "core_status": "answered",
+        "graph_status": "answered",
+        "same": true,
+        "witness_ids": [
+          49600590,
+          52108480,
+          49499846,
+          49518522,
+          50675580,
+          53855610
+        ],
+        "core_ms": 3.592,
+        "graph_ms": 6.188
+      },
+      {
+        "case_id": "QA17",
+        "core_status": "answered",
+        "graph_status": "answered",
+        "same": true,
+        "witness_ids": [
+          50675580,
+          49552492,
+          49524191,
+          49600590
+        ],
+        "core_ms": 3.561,
+        "graph_ms": 5.692
+      },
+      {
+        "case_id": "QA18",
+        "core_status": "answered",
+        "graph_status": "answered",
+        "same": true,
+        "witness_ids": [
+          16027669,
+          23772184
+        ],
+        "core_ms": 2.309,
+        "graph_ms": 4.923
+      },
+      {
+        "case_id": "QA19",
+        "core_status": "answered",
+        "graph_status": "answered",
+        "same": true,
+        "witness_ids": [
+          16027669,
+          23772184,
+          40198248,
+          33036511
+        ],
+        "core_ms": 2.484,
+        "graph_ms": 5.397
+      },
+      {
+        "case_id": "QA20",
+        "core_status": "answered",
+        "graph_status": "answered",
+        "same": true,
+        "witness_ids": [
+          39427559,
+          32617631,
+          43356050
+        ],
+        "core_ms": 5.167,
+        "graph_ms": 9.658
+      },
+      {
+        "case_id": "QA21",
+        "core_status": "answered",
+        "graph_status": "answered",
+        "same": true,
+        "witness_ids": [
+          39427559,
+          32617631,
+          43356050
+        ],
+        "core_ms": 5.228,
+        "graph_ms": 7.142
+      },
+      {
+        "case_id": "QA22",
+        "core_status": "answered",
+        "graph_status": "answered",
+        "same": true,
+        "witness_ids": [
+          38489384,
+          32617631,
+          42780993,
+          39427559
+        ],
+        "core_ms": 4.536,
+        "graph_ms": 6.859
+      },
+      {
+        "case_id": "QA23",
+        "core_status": "answered",
+        "graph_status": "answered",
+        "same": true,
+        "witness_ids": [
+          45710147,
+          24555559,
+          44381013
+        ],
+        "core_ms": 2.746,
+        "graph_ms": 3.946
+      },
+      {
+        "case_id": "QA24",
+        "core_status": "insufficient_evidence",
+        "graph_status": "insufficient_evidence",
+        "same": true,
+        "witness_ids": [],
+        "core_ms": 1.527,
+        "graph_ms": 3.597
+      },
+      {
+        "case_id": "QA25",
+        "core_status": "answered",
+        "graph_status": "answered",
+        "same": true,
+        "witness_ids": [
+          53625458
+        ],
+        "core_ms": 1.924,
+        "graph_ms": 3.232
+      },
+      {
+        "case_id": "QA26",
+        "core_status": "insufficient_evidence",
+        "graph_status": "insufficient_evidence",
+        "same": true,
+        "witness_ids": [],
+        "core_ms": 1.277,
+        "graph_ms": 3.704
+      },
+      {
+        "case_id": "QA27",
+        "core_status": "answered",
+        "graph_status": "answered",
+        "same": true,
+        "witness_ids": [
+          51489668
+        ],
+        "core_ms": 2.235,
+        "graph_ms": 3.591
+      },
+      {
+        "case_id": "QA28",
+        "core_status": "answered",
+        "graph_status": "answered",
+        "same": true,
+        "witness_ids": [
+          18372759,
+          18648280,
+          18747504,
+          18484823
+        ],
+        "core_ms": 4.52,
+        "graph_ms": 9.549
+      },
+      {
+        "case_id": "QA29",
+        "core_status": "answered",
+        "graph_status": "answered",
+        "same": true,
+        "witness_ids": [
+          18747504,
+          23143590,
+          18648280
+        ],
+        "core_ms": 3.709,
+        "graph_ms": 6.527
+      },
+      {
+        "case_id": "E01",
+        "core_status": "insufficient_evidence",
+        "graph_status": "insufficient_evidence",
+        "same": true,
+        "witness_ids": [],
+        "core_ms": 0.519,
+        "graph_ms": 3.05
+      },
+      {
+        "case_id": "E02",
+        "core_status": "needs_product",
+        "graph_status": "needs_product",
+        "same": true,
+        "witness_ids": [],
+        "core_ms": 2036.729,
+        "graph_ms": 71.429
+      },
+      {
+        "case_id": "E03",
+        "core_status": "needs_product",
+        "graph_status": "needs_product",
+        "same": true,
+        "witness_ids": [],
+        "core_ms": 0.249,
+        "graph_ms": 2.515
+      },
+      {
+        "case_id": "E04",
+        "core_status": "answered",
+        "graph_status": "answered",
+        "same": true,
+        "witness_ids": [
+          43399874,
+          45465673,
+          50630703,
+          40705919,
+          49910378,
+          50984384,
+          50267452,
+          47405200
+        ],
+        "core_ms": 63.484,
+        "graph_ms": 63.503
+      },
+      {
+        "case_id": "V01",
+        "core_status": "answered",
+        "graph_status": "answered",
+        "same": true,
+        "witness_ids": [
+          45465673,
+          50267452,
+          47405200,
+          42090964,
+          44252884,
+          50395851,
+          46061918,
+          43580328
+        ],
+        "core_ms": 33.443,
+        "graph_ms": 34.547
+      },
+      {
+        "case_id": "V02",
+        "core_status": "answered",
+        "graph_status": "answered",
+        "same": true,
+        "witness_ids": [
+          28105723,
+          22528820,
+          31366978,
+          11926157,
+          14528909,
+          13996547,
+          11789058,
+          40892959
+        ],
+        "core_ms": 43.437,
+        "graph_ms": 46.338
+      },
+      {
+        "case_id": "V03",
+        "core_status": "answered",
+        "graph_status": "answered",
+        "same": true,
+        "witness_ids": [
+          54471180,
+          47783871,
+          49888933,
+          49910378,
+          45642217,
+          51622933,
+          47067845,
+          49491176
+        ],
+        "core_ms": 41.794,
+        "graph_ms": 42.132
+      }
+    ]
+  },
+  "comparison": {
+    "always_model_attempts": 3,
+    "selective_model_attempts": 1
+  },
+  "paired_cases": [
+    {
+      "case_id": "QA-D1",
+      "label": "آمار مستقیم از داده",
+      "expected_selective_policy": "simple_question_local_answer_sufficient",
+      "always": {
+        "policy": "always_generate_baseline",
+        "model_outcome": "citations_verified",
+        "status": "answered",
+        "answer_mode": "grounded",
+        "api_attempts": 1,
+        "api_calls": 1,
+        "usage_known": false,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "elapsed_ms": 67.59,
+        "evidence_count": 8,
+        "path": [
+          "route_intent",
+          "cache_lookup",
+          "qa_resolve",
+          "qa_retrieve",
+          "qa_policy",
+          "qa_generate",
+          "qa_validate",
+          "finalize"
+        ]
+      },
+      "selective": {
+        "policy": "simple_question_local_answer_sufficient",
+        "model_outcome": null,
+        "status": "answered",
+        "answer_mode": "extractive",
+        "api_attempts": 0,
+        "api_calls": 0,
+        "usage_known": true,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "elapsed_ms": 87.035,
+        "evidence_count": 8,
+        "path": [
+          "route_intent",
+          "cache_lookup",
+          "qa_resolve",
+          "qa_retrieve",
+          "qa_policy",
+          "qa_extractive",
+          "finalize"
+        ]
+      }
+    },
+    {
+      "case_id": "QA-D2",
+      "label": "شاهد مرتبط پیدا نشد",
+      "expected_selective_policy": "missing_or_insufficient_evidence",
+      "selective": {
+        "policy": "missing_or_insufficient_evidence",
+        "model_outcome": null,
+        "status": "insufficient_evidence",
+        "answer_mode": "insufficient_evidence",
+        "api_attempts": 0,
+        "api_calls": 0,
+        "usage_known": true,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "elapsed_ms": 48.187,
+        "evidence_count": 0,
+        "path": [
+          "route_intent",
+          "cache_lookup",
+          "qa_resolve",
+          "qa_retrieve",
+          "qa_policy",
+          "qa_insufficient",
+          "finalize"
+        ]
+      },
+      "always": {
+        "policy": "missing_or_insufficient_evidence",
+        "model_outcome": null,
+        "status": "insufficient_evidence",
+        "answer_mode": "insufficient_evidence",
+        "api_attempts": 0,
+        "api_calls": 0,
+        "usage_known": true,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "elapsed_ms": 36.723,
+        "evidence_count": 0,
+        "path": [
+          "route_intent",
+          "cache_lookup",
+          "qa_resolve",
+          "qa_retrieve",
+          "qa_policy",
+          "qa_insufficient",
+          "finalize"
+        ]
+      }
+    },
+    {
+      "case_id": "QA-D3",
+      "label": "پوشش ناقص معیارها",
+      "expected_selective_policy": "requested_facets_uncovered",
+      "always": {
+        "policy": "always_generate_baseline",
+        "model_outcome": "citations_verified",
+        "status": "answered",
+        "answer_mode": "grounded",
+        "api_attempts": 1,
+        "api_calls": 1,
+        "usage_known": false,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "elapsed_ms": 48.696,
+        "evidence_count": 8,
+        "path": [
+          "route_intent",
+          "cache_lookup",
+          "qa_resolve",
+          "qa_retrieve",
+          "qa_policy",
+          "qa_generate",
+          "qa_validate",
+          "finalize"
+        ]
+      },
+      "selective": {
+        "policy": "requested_facets_uncovered",
+        "model_outcome": null,
+        "status": "answered",
+        "answer_mode": "extractive",
+        "api_attempts": 0,
+        "api_calls": 0,
+        "usage_known": true,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "elapsed_ms": 47.376,
+        "evidence_count": 8,
+        "path": [
+          "route_intent",
+          "cache_lookup",
+          "qa_resolve",
+          "qa_retrieve",
+          "qa_policy",
+          "qa_extractive",
+          "finalize"
+        ]
+      }
+    },
+    {
+      "case_id": "QA-D4",
+      "label": "جمع‌بندی چند معیار با شاهد",
+      "expected_selective_policy": "explicit_opt_in_complex_grounded_synthesis",
+      "selective": {
+        "policy": "explicit_opt_in_complex_grounded_synthesis",
+        "model_outcome": "citations_verified",
+        "status": "answered",
+        "answer_mode": "grounded",
+        "api_attempts": 1,
+        "api_calls": 1,
+        "usage_known": false,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "elapsed_ms": 46.588,
+        "evidence_count": 8,
+        "path": [
+          "route_intent",
+          "cache_lookup",
+          "qa_resolve",
+          "qa_retrieve",
+          "qa_policy",
+          "qa_generate",
+          "qa_validate",
+          "finalize"
+        ]
+      },
+      "always": {
+        "policy": "always_generate_baseline",
+        "model_outcome": "citations_verified",
+        "status": "answered",
+        "answer_mode": "grounded",
+        "api_attempts": 1,
+        "api_calls": 1,
+        "usage_known": false,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "elapsed_ms": 44.673,
+        "evidence_count": 8,
+        "path": [
+          "route_intent",
+          "cache_lookup",
+          "qa_resolve",
+          "qa_retrieve",
+          "qa_policy",
+          "qa_generate",
+          "qa_validate",
+          "finalize"
+        ]
+      }
+    },
+    {
+      "case_id": "QA-D5",
+      "label": "درخواست انتخاب محصول",
+      "expected_selective_policy": "product_clarification_no_api",
+      "always": {
+        "policy": "product_clarification_no_api",
+        "model_outcome": null,
+        "status": "needs_product",
+        "answer_mode": "needs_product",
+        "api_attempts": 0,
+        "api_calls": 0,
+        "usage_known": true,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "elapsed_ms": 69.552,
+        "evidence_count": null,
+        "path": [
+          "route_intent",
+          "cache_lookup",
+          "qa_resolve",
+          "finalize"
+        ]
+      },
+      "selective": {
+        "policy": "product_clarification_no_api",
+        "model_outcome": null,
+        "status": "needs_product",
+        "answer_mode": "needs_product",
+        "api_attempts": 0,
+        "api_calls": 0,
+        "usage_known": true,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "elapsed_ms": 117.254,
+        "evidence_count": null,
+        "path": [
+          "route_intent",
+          "cache_lookup",
+          "qa_resolve",
+          "finalize"
+        ]
+      }
+    }
+  ],
+  "invalid_citation_simulation": {
+    "policy": "explicit_opt_in_complex_grounded_synthesis",
+    "model_outcome": "model_evidence_validation_failed",
+    "status": "answered",
+    "answer_mode": "extractive",
+    "api_attempts": 2,
+    "api_calls": 2,
+    "usage_known": false,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "elapsed_ms": 62.48,
+    "evidence_count": 8,
+    "path": [
+      "route_intent",
+      "cache_lookup",
+      "qa_resolve",
+      "qa_retrieve",
+      "qa_policy",
+      "qa_generate",
+      "qa_validate",
+      "qa_fallback",
+      "finalize"
+    ]
+  },
+  "limitations": "Five targeted cases, not representative. Offline fixture tests execution, not quality, tokens, or money. Live quality needs blind human review."
+}

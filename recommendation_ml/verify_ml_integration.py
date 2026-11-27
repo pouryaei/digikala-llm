@@ -14,7 +14,7 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 from analytics_service import open_analytics_tables, resolve_analytics_files
 
 
-OUTPUTS = Path(__file__).resolve().parent / "m2_outputs"
+OUTPUTS = Path(__file__).resolve().parents[1] / "m2_outputs"
 LABELS = ("no_idea", "not_recommended", "recommended")
 
 
@@ -51,8 +51,8 @@ def verify_integration(data_dir=None):
 
     rows, recorded = verify_recorded_test()
     model_file = OUTPUTS / "best_model.joblib"
-    if ml_service.MODEL_PATH.resolve() != model_file.resolve():
-        raise ValueError(f"For this verification set DIGIKALA_MODEL_PATH to {model_file}")
+    if ml_service.LEGACY_MODEL_PATH.resolve() != model_file.resolve():
+        raise ValueError(f"Historical LR artifact must be {model_file}")
     with open_analytics_tables(resolve_analytics_files(data_dir)) as con:
         matches = con.execute("""
             SELECT CAST(r.comment_id AS VARCHAR), r.recommendation_status, r.title_raw, r.body_raw
@@ -68,10 +68,10 @@ def verify_integration(data_dir=None):
         raise ValueError("Test labels differ from the cleaned review data")
 
     start = perf_counter()
-    ml_service.load_model()
+    ml_service.load_legacy_model()
     load_seconds = perf_counter() - start
     start = perf_counter()
-    predictions = ml_service.predict_recommendation_batch([row[2] for row in ordered], [row[1] for row in ordered])
+    predictions = ml_service.predict_legacy_recommendation_batch([row[2] for row in ordered], [row[1] for row in ordered])
     batch_seconds = perf_counter() - start
     valid = [(row, result) for row, result in zip(rows, predictions) if result["valid"]]
     if not valid:

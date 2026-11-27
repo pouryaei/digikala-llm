@@ -34,6 +34,7 @@ MAIN_TABS = (
     "جست‌وجوی محصول",
     "دستیار تحلیلی کالا (RAG)",
     "داشبورد و پیش‌بینی رضایت",
+    "آزمایشگاه شواهد و امتیازی",
 )
 CATALOG_TABS = ("جست‌وجو و کشف محصول", "مقایسهٔ محصولات")
 SEARCH_EXAMPLES = (
@@ -724,6 +725,11 @@ def show_filters(data, requested=False):
         st.text("  |  ".join(values))
     elif requested:
         st.warning("سرویس اعمال فیلترهای انتخاب‌شده را در پاسخ تأیید نکرد.")
+    notes = data.get("search_notes")
+    if isinstance(notes, list):
+        for note in notes:
+            if isinstance(note, str) and note.strip():
+                st.caption(note)
 
 
 def page_heading(title, detail=None):
@@ -1568,6 +1574,11 @@ def _load_local_settings():
     load_dotenv(Path(__file__).resolve().parent / ".env", override=False)
 
 
+def open_professional():
+    st.session_state["main_tabs"] = MAIN_TABS[3]
+    st.session_state["bonus_lab_tabs"] = "مسیریاب و مانیتورینگ"
+
+
 def main():
     from analytics_service import bundled_catalog_scope
     _load_local_settings()
@@ -1588,7 +1599,10 @@ def main():
         st.caption(f"دادهٔ همراه نسخه: {scope['product_count']:,} محصول و {scope['review_rows']:,} نظر واقعی")
     if "main_tabs" not in st.session_state:
         switch_page(st.session_state.get("page", PAGES[0]))
-    search_tab, review_tab, dashboard_tab = st.tabs(MAIN_TABS, key="main_tabs", on_change="rerun")
+    with st.container(horizontal=True,vertical_alignment="center"):
+        st.button("دستیار حرفه‌ای · انتخاب خودکار مدل",on_click=open_professional,key="open_professional",icon=":material/auto_awesome:")
+        st.caption("برای درخواست آزاد و تحلیل پیچیده، دستیار حرفه‌ای را باز کنید؛ تب‌های تخصصی برای کار مستقیم و محلی‌اند.")
+    search_tab, review_tab, dashboard_tab, bonus_tab = st.tabs(MAIN_TABS, key="main_tabs", on_change="rerun")
     if search_tab.open:
         with search_tab:
             discovery_tab, comparison_tab = st.tabs(CATALOG_TABS, key="catalog_tabs", on_change="rerun")
@@ -1604,6 +1618,10 @@ def main():
     if dashboard_tab.open:
         with dashboard_tab:
             analytics()
+    if bonus_tab.open:
+        with bonus_tab:
+            from bonus.dashboard import render_bonus
+            render_bonus(open_review)
 
 
 # Embedded WebP and WOFF2 assets keep the app runnable as a single file.

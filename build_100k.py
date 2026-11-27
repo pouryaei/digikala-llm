@@ -16,6 +16,36 @@ import sqlite3
 from tempfile import TemporaryDirectory
 
 ROOT = Path(__file__).resolve().parent
+REFERENCE_REVISION = "89c3133b169c8d3793db8834f56f32fee33d9db0"
+
+
+def locate_clean_data_dir(explicit=None):
+    if explicit is not None:
+        choices = [Path(explicit).expanduser()]
+    else:
+        choices = [ROOT / name for name in ("processed_repo_based", "data/processed_repo_based",
+                                            "digikala/processed_repo_based", "docs/processed_repo_based")]
+    for path in choices:
+        if all((path / name).is_file() for name in ("products_clean.parquet", "comments_clean.parquet")):
+            return path.resolve()
+    raise FileNotFoundError("Clean datasets not found; run docs/QBC13_EDA_and_Cleaning.ipynb or pass --data-dir with both clean Parquet files.")
+
+
+def source_provenance(data_dir):
+    """Keep declared provenance without assigning an old manifest to new data."""
+    report_path = data_dir / "preprocessing_report.json"
+    if not report_path.is_file():
+        return {"dataset_revision": "unknown",
+                "dataset_revision_note": "No preprocessing_report.json; source revision not independently verified."}
+    report = json.loads(report_path.read_text(encoding="utf-8-sig"))
+    if any(report.get("checks_expected_zero", {}).values()):
+        raise ValueError("Preprocessing validation contains failures.")
+    revision = report.get("expected_source_revision")
+    if revision is not None and revision != REFERENCE_REVISION:
+        raise ValueError("The preprocessing report names a different dataset revision.")
+    return {"dataset_revision": revision or "unknown",
+            "dataset_revision_note": "Declared expected revision in the preprocessing report; raw file hashes not reverified by this builder.",
+            "preprocessing_report_sha256": sha(report_path)}
 
 
 def sha(path):
@@ -254,13 +284,13 @@ def build(data_dir, limit, dense):
             if review_rows != valid_ids:
                 raise ValueError("Duplicate or invalid review IDs in chosen data. Use the deduplicated clean files.")
             mapping = [{"product_id": str(r["product_id"]), "title_fa": r["title_fa"]} for r in products]
-            old = ROOT / "storage" / "catalog_manifest.json"
-            previous = json.loads(old.read_text(encoding="utf-8")) if old.exists() else {}
             info = {
-                "dataset": previous.get("dataset", "RadeAI/Digikala_comments_products"),
-                "dataset_revision": previous.get("dataset_revision", "unknown"),
+                "dataset": "RadeAI/Digikala_comments_products",
+                **source_provenance(data_dir),
                 "source_products": str(paths[0]),
                 "source_reviews": str(paths[1]),
+                "source_products_sha256": sha(paths[0]),
+                "source_reviews_sha256": sha(paths[1]),
                 "selection": "deterministic product-id hash sample of products with at least one textual review",
                 "coverage": "All supplied clean reviews for selected product IDs.",
                 "product_count": limit,
@@ -338,7 +368,7 @@ def build(data_dir, limit, dense):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--data-dir", type=Path, default=ROOT / "processed_repo_based")
+    parser.add_argument("--data-dir", type=Path, help="Folder with both clean Parquet files; common EDA output directories are detected.")
     parser.add_argument("--limit", type=int, default=100000)
     parser.add_argument("--dense", action="store_true", help="Also build aligned FAISS with the local encoder.")
     args = parser.parse_args()
@@ -346,7 +376,7 @@ def main():
         parser.error("--limit must be positive")
     if not (ROOT / "app.py").is_file() or not (ROOT / "scripts" / "build_review_store.py").is_file():
         parser.error("Put this script beside app.py in the Forouhar_Pink_Blue project.")
-    build(args.data_dir.expanduser().resolve(), args.limit, args.dense)
+    build(locate_clean_data_dir(args.data_dir), args.limit, args.dense)
 
 
 if __name__ == "__main__":
