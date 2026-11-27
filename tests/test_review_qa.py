@@ -204,7 +204,7 @@ class PayloadTests(unittest.TestCase):
             store=PayloadReviewStore(path, cache_dir=root/"cache");r=store.get_many([10,20,30])
             self.assertEqual([len(r[x].reviews) for x in [10,20,30]],[1,1,0])
             self.assertEqual(r[10].reviews[0]["comment_id"],1)
-            f=store.cache_dir/"10.json";v=json.loads(f.read_text());v["reviews"][0]["body_raw"]="tampered";f.write_text(json.dumps(v))
+            f=store.cache_dir/"10.json";v=json.loads(f.read_text(encoding="utf-8"));v["reviews"][0]["body_raw"]="tampered";f.write_text(json.dumps(v), encoding="utf-8")
             fresh=PayloadReviewStore(path, cache_dir=root/"cache")
             self.assertEqual(fresh.get(10).reviews[0]["body_raw"],"کیفیت خوب است")
 

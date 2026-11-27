@@ -1,0 +1,13 @@
+{
+  "records": 94,
+  "calls": 0,
+  "attempts": 0,
+  "prompt_tokens_reported": 0,
+  "completion_tokens_reported": 0,
+  "records_with_unknown_or_retry_usage": 0,
+  "input_usd_per_million": null,
+  "output_usd_per_million": null,
+  "cost_from_reported_tokens_usd": 0.0,
+  "complete_cost_estimate_usd": 0.0,
+  "note": "Not a provider invoice. Rates must be from your actual gateway. Failed/retried requests with unknown usage cannot be priced as zero; cost from reported tokens may be incomplete. Cached answers consume zero current API tokens if reported as such."
+}

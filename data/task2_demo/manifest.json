@@ -1,0 +1,151 @@
+{
+  "source_dataset": "RadeAI/Digikala_comments_products",
+  "dataset_revision": "89c3133b169c8d3793db8834f56f32fee33d9db0",
+  "source_archive": "Forouhar_M1_Complete.zip",
+  "source_payload_sha256": "45f4e589ddf47131172fda7b5fc0a00511b356342a2e94b668cbdc2d96c8d460",
+  "source_total_clean_reviews": 6151303,
+  "selection": "All reviews for 6 existing review-QA target products plus up to 5 distinct product groups chosen for sufficient real review coverage; not a random benchmark of the entire catalogue.",
+  "complete_for_listed_product_ids": true,
+  "row_count": 260,
+  "reviews_sha256": "0b438ddd431626123379d7695f1a3c642b8a9ce1c8299cc046e4e41de1da7d5c",
+  "products": [
+    {
+      "product_id": 1096725,
+      "title": "کرم پا عش مدل 3 in 1 حجم 75 میلی لیتر",
+      "review_count": 110,
+      "selection_reason": "coverage_for_demo",
+      "nonempty_fields": {
+        "title_raw": 66,
+        "body_raw": 110,
+        "advantages_raw": 17,
+        "disadvantages_raw": 12
+      }
+    },
+    {
+      "product_id": 1126863,
+      "title": "کتاب از حال بد به حال خوب اثر دیوید برنز انتشارات سیمای نور امید",
+      "review_count": 68,
+      "selection_reason": "coverage_for_demo",
+      "nonempty_fields": {
+        "title_raw": 37,
+        "body_raw": 68,
+        "advantages_raw": 13,
+        "disadvantages_raw": 12
+      }
+    },
+    {
+      "product_id": 10002507,
+      "title": "ماش دستچین زرین برکت - 1 کیلوگرم",
+      "review_count": 10,
+      "selection_reason": "existing_qa_target",
+      "nonempty_fields": {
+        "body_raw": 10,
+        "title_raw": 3,
+        "advantages_raw": 1
+      }
+    },
+    {
+      "product_id": 10002536,
+      "title": "پلیور زنانه مدل ax7",
+      "review_count": 2,
+      "selection_reason": "existing_qa_target",
+      "nonempty_fields": {
+        "title_raw": 2,
+        "body_raw": 2
+      }
+    },
+    {
+      "product_id": 10006791,
+      "title": "کیف رودوشی گودیکا مدل 5120",
+      "review_count": 2,
+      "selection_reason": "existing_qa_target",
+      "nonempty_fields": {
+        "title_raw": 2,
+        "body_raw": 2
+      }
+    },
+    {
+      "product_id": 10023647,
+      "title": "صندل مردانه مدل 254005802",
+      "review_count": 0,
+      "selection_reason": "existing_qa_target",
+      "nonempty_fields": {}
+    },
+    {
+      "product_id": 10046185,
+      "title": "کیف پول مردانه کویین مدل Q50",
+      "review_count": 3,
+      "selection_reason": "existing_qa_target",
+      "nonempty_fields": {
+        "body_raw": 3,
+        "title_raw": 1,
+        "advantages_raw": 1,
+        "disadvantages_raw": 1
+      }
+    },
+    {
+      "product_id": 10065041,
+      "title": "اسپری تمیز کننده کفش بلرتو مدل BE1170 کد Bl150",
+      "review_count": 0,
+      "selection_reason": "existing_qa_target",
+      "nonempty_fields": {}
+    },
+    {
+      "product_id": 10133811,
+      "title": "کفش پیاده روی مدل کلاسیک MESKBAFT",
+      "review_count": 65,
+      "selection_reason": "coverage_for_demo",
+      "nonempty_fields": {
+        "body_raw": 65,
+        "title_raw": 41,
+        "advantages_raw": 12,
+        "disadvantages_raw": 7
+      }
+    }
+  ],
+  "qa_queries": [
+    {
+      "query_id": "Q15",
+      "query": "آیا کاربران از کیفیت و کارایی اسپری تمیز کننده کفش بلرتو راضی هستند؟",
+      "query_type": "review_qa",
+      "target_product_id": "10065041",
+      "reference_title": "اسپری تمیز کننده کفش بلرتو مدل BE1170 کد Bl150"
+    },
+    {
+      "query_id": "Q16",
+      "query": "آیا کاربران از کیفیت و کارایی کیف پول مردانه کویین Q50 راضی هستند؟",
+      "query_type": "review_qa",
+      "target_product_id": "10046185",
+      "reference_title": "کیف پول مردانه کویین مدل Q50"
+    },
+    {
+      "query_id": "Q17",
+      "query": "آیا کاربران از کیفیت و کارایی پلیور زنانه ax7 راضی هستند؟",
+      "query_type": "review_qa",
+      "target_product_id": "10002536",
+      "reference_title": "پلیور زنانه مدل ax7"
+    },
+    {
+      "query_id": "Q18",
+      "query": "آیا کاربران از کیفیت و کارایی ماش دستچین زرین برکت - راضی هستند؟",
+      "query_type": "review_qa",
+      "target_product_id": "10002507",
+      "reference_title": "ماش دستچین زرین برکت - 1 کیلوگرم"
+    },
+    {
+      "query_id": "Q19",
+      "query": "آیا کاربران از کیفیت و کارایی کیف رودوشی گودیکا 5120 راضی هستند؟",
+      "query_type": "review_qa",
+      "target_product_id": "10006791",
+      "reference_title": "کیف رودوشی گودیکا مدل 5120"
+    },
+    {
+      "query_id": "Q20",
+      "query": "آیا کاربران از کیفیت و کارایی صندل مردانه 254005802 راضی هستند؟",
+      "query_type": "review_qa",
+      "target_product_id": "10023647",
+      "reference_title": "صندل مردانه مدل 254005802"
+    }
+  ],
+  "source_scan_seconds": 20.031
+}

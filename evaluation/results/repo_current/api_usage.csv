@@ -1,0 +1,95 @@
+﻿scenario,case_id,api_calls,api_attempts,prompt_tokens,completion_tokens,usage_known
+search,S01,0,0,0,0,True
+search,S02,0,0,0,0,True
+search,S03,0,0,0,0,True
+search,S04,0,0,0,0,True
+search,S05,0,0,0,0,True
+search,S06,0,0,0,0,True
+search,S07,0,0,0,0,True
+search,S08,0,0,0,0,True
+search,S09,0,0,0,0,True
+search,S10,0,0,0,0,True
+search,S11,0,0,0,0,True
+search,S12,0,0,0,0,True
+search,S13,0,0,0,0,True
+search,S14,0,0,0,0,True
+search,S15,0,0,0,0,True
+search,S16,0,0,0,0,True
+search,S17,0,0,0,0,True
+search,S18,0,0,0,0,True
+search,S19,0,0,0,0,True
+search,S20,0,0,0,0,True
+search,S21,0,0,0,0,True
+search,S22,0,0,0,0,True
+search,S23,0,0,0,0,True
+search,S24,0,0,0,0,True
+search,S25,0,0,0,0,True
+search,S26,0,0,0,0,True
+search,S27,0,0,0,0,True
+search,TITLE_Q01,0,0,0,0,True
+search,TITLE_Q02,0,0,0,0,True
+search,TITLE_Q03,0,0,0,0,True
+search,TITLE_Q04,0,0,0,0,True
+search,TITLE_Q05,0,0,0,0,True
+search,TITLE_Q06,0,0,0,0,True
+search,TITLE_Q07,0,0,0,0,True
+search,TITLE_Q08,0,0,0,0,True
+search,TITLE_Q09,0,0,0,0,True
+search,TITLE_Q10,0,0,0,0,True
+search,TITLE_Q11,0,0,0,0,True
+search,TITLE_Q12,0,0,0,0,True
+search,TITLE_Q13,0,0,0,0,True
+search,TITLE_Q14,0,0,0,0,True
+search,TITLE_Q15,0,0,0,0,True
+search,TITLE_Q16,0,0,0,0,True
+search,TITLE_Q17,0,0,0,0,True
+search,TITLE_Q18,0,0,0,0,True
+search,TITLE_Q19,0,0,0,0,True
+search,TITLE_Q20,0,0,0,0,True
+qa,QA01,0,0,0,0,True
+qa,QA02,0,0,0,0,True
+qa,QA03,0,0,0,0,True
+qa,QA04,0,0,0,0,True
+qa,QA05,0,0,0,0,True
+qa,QA06,0,0,0,0,True
+qa,QA07,0,0,0,0,True
+qa,QA08,0,0,0,0,True
+qa,QA09,0,0,0,0,True
+qa,QA10,0,0,0,0,True
+qa,QA11,0,0,0,0,True
+qa,QA12,0,0,0,0,True
+qa,QA13,0,0,0,0,True
+qa,QA14,0,0,0,0,True
+qa,QA15,0,0,0,0,True
+qa,QA16,0,0,0,0,True
+qa,QA17,0,0,0,0,True
+qa,QA18,0,0,0,0,True
+qa,QA19,0,0,0,0,True
+qa,QA20,0,0,0,0,True
+qa,QA21,0,0,0,0,True
+qa,QA22,0,0,0,0,True
+qa,QA23,0,0,0,0,True
+qa,QA24,0,0,0,0,True
+qa,QA25,0,0,0,0,True
+qa,QA26,0,0,0,0,True
+qa,QA27,0,0,0,0,True
+qa,QA28,0,0,0,0,True
+qa,QA29,0,0,0,0,True
+stress_qa,V01,0,0,0,0,True
+stress_qa,V02,0,0,0,0,True
+stress_qa,V03,0,0,0,0,True
+edge_qa,E01,0,0,0,0,True
+edge_qa,E02,0,0,0,0,True
+edge_qa,E03,0,0,0,0,True
+edge_qa,E04,0,0,0,0,True
+comparison,C01,0,0,0,0,True
+comparison,C02,0,0,0,0,True
+comparison,C03,0,0,0,0,True
+manager,complaints / کفش مردانه,0,0,0,0,True
+manager,features / کفش مردانه,0,0,0,0,True
+manager,low_recommendation / کفش مردانه,0,0,0,0,True
+manager,brands / کفش مردانه,0,0,0,0,True
+manager,complaints / کتاب شعر و ادبیات,0,0,0,0,True
+manager,features / کتاب شعر و ادبیات,0,0,0,0,True
+manager,low_recommendation / کتاب شعر و ادبیات,0,0,0,0,True
+manager,brands / کتاب شعر و ادبیات,0,0,0,0,True

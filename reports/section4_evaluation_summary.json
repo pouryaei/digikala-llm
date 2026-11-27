@@ -1,0 +1,101 @@
+{
+  "release": "Forouhar_100K_Final",
+  "stage": "section4_system_evaluation",
+  "products": 100000,
+  "reviews": 1874457,
+  "search": {
+    "cases": 47,
+    "known_item_cases": 23,
+    "known_hit_at_5": 1,
+    "known_mrr_at_5": 0.9492753623188406,
+    "discovery_answerable": 18,
+    "discovery_p_at_5": 0.6777777777777778,
+    "discovery_precision_returned_micro": 0.8026315789473685,
+    "discovery_hit_at_5": 0.8333333333333334,
+    "discovery_ndcg_at_5": 0.8012189662497667,
+    "no_result_cases": 6,
+    "correct_no_result": 6,
+    "no_result_accuracy": 1,
+    "all_filter_and_catalogue_checks": true,
+    "latency": {
+      "n": 47,
+      "mean_ms": 201.73660978723595,
+      "median_ms": 165.08206499997868,
+      "p95_ms": 374.41267200006223,
+      "min_ms": 0.39072799995665264,
+      "max_ms": 1664.5980890000374
+    }
+  },
+  "review_retrieval": {
+    "cases": 29,
+    "answerable": 26,
+    "unanswerable": 3,
+    "answered": 26,
+    "status_accuracy": 1,
+    "answerable_with_direct_evidence": 26,
+    "answerable_hit_rate": 1,
+    "correct_abstention": 3,
+    "abstention_accuracy": 1,
+    "review_strict_precision_micro": 0.8117647058823529,
+    "review_relaxed_precision_micro": 0.9647058823529412,
+    "review_macro_recall_at_8": 0.8670329670329671,
+    "review_macro_ndcg_at_8": 0.8501440046416355,
+    "evidence_total": 85,
+    "exact_scoped_evidence": 85,
+    "quote_total": 74,
+    "quotes_exact": 74,
+    "grounding_structural_pass": 29,
+    "latency": {
+      "n": 29,
+      "mean_ms": 5.1230132069279,
+      "median_ms": 4.480290999936187,
+      "p95_ms": 11.2961060001453,
+      "min_ms": 2.047090000132812,
+      "max_ms": 12.640780000083396
+    }
+  },
+  "answer_quality": {
+    "reviewed": 29,
+    "total_cases": 29,
+    "unreviewed": 0,
+    "quality_mean_0_to_2": 1.5862068965517242,
+    "quality_full": 18,
+    "quality_partial": 10,
+    "quality_failed": 1,
+    "semantic_grounding_mean_0_to_2": 1.7586206896551724,
+    "semantic_grounding_full": 22,
+    "semantic_grounding_partial": 7,
+    "semantic_grounding_failed": 0,
+    "excerpt_count": 85,
+    "excerpt_grade2": 63,
+    "excerpt_grade1": 17,
+    "method": "Frozen case-by-case semantic assessment by ChatGPT during report preparation, reading the question, all source reviews, independently authored reference notes, actual system answer, and exact displayed excerpts. No automated provider-API LLM-as-a-judge, no independent human evaluator. Same fingerprint required to reuse judgments."
+  },
+  "prediction": {
+    "recorded_n": 15000,
+    "recorded_macro_f1": 0.6790791799331871,
+    "matched_raw_replay": 4537,
+    "valid_raw_replay": 4536,
+    "raw_replay_macro_f1": 0.6794579373626125
+  },
+  "latency_observations": 79,
+  "cost": {
+    "api_calls": 0,
+    "api_attempts": 0,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "usage_known": true,
+    "api_cost_usd": 0.0,
+    "live_llm_evaluated": false,
+    "note": "Offline extractive/BM25/sklearn/SQL only, no paid request. Latency repeats and model replay are also local. CPU/RAM/storage/electricity not included. API model price must be supplied for a live run; no guessed rate."
+  },
+  "regressions": {
+    "existing_offline_tests_passed": 74,
+    "new_eval_tests_passed": 5,
+    "baseline_core_reproduced": true
+  },
+  "full_results": "evaluation/results/final/evaluation.json",
+  "report": "evaluation/report_fa.pdf",
+  "presentation": "evaluation/presentation_fa.pdf",
+  "human_review_independent_completed": false
+}

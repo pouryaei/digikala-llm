@@ -1,0 +1,429 @@
+{
+  "method": "Intermediate experiment: remove generic request words and require ceiling 60% of remaining distinct terms; no title-anchor fallback. Used to identify over-abstention and select a measured tradeoff.",
+  "baseline_search": {
+    "all": {
+      "cases": 47,
+      "known_item_cases": 23,
+      "known_hit_at_5": 1,
+      "known_mrr_at_5": 0.9492753623188406,
+      "discovery_answerable": 18,
+      "discovery_p_at_5": 0.6777777777777778,
+      "discovery_precision_returned_micro": 0.6777777777777778,
+      "discovery_hit_at_5": 0.8333333333333334,
+      "discovery_ndcg_at_5": 0.8012189662497667,
+      "no_result_cases": 6,
+      "correct_no_result": 3,
+      "no_result_accuracy": 0.5,
+      "all_filter_and_catalogue_checks": true
+    },
+    "dev": {
+      "cases": 13,
+      "known_item_cases": 1,
+      "known_hit_at_5": 1,
+      "known_mrr_at_5": 1.0,
+      "discovery_answerable": 9,
+      "discovery_p_at_5": 0.8,
+      "discovery_precision_returned_micro": 0.8,
+      "discovery_hit_at_5": 1,
+      "discovery_ndcg_at_5": 0.9503496077786826,
+      "no_result_cases": 3,
+      "correct_no_result": 1,
+      "no_result_accuracy": 0.3333333333333333,
+      "all_filter_and_catalogue_checks": true
+    },
+    "holdout": {
+      "cases": 14,
+      "known_item_cases": 2,
+      "known_hit_at_5": 1,
+      "known_mrr_at_5": 1.0,
+      "discovery_answerable": 9,
+      "discovery_p_at_5": 0.5555555555555556,
+      "discovery_precision_returned_micro": 0.5555555555555556,
+      "discovery_hit_at_5": 0.6666666666666666,
+      "discovery_ndcg_at_5": 0.6520883247208509,
+      "no_result_cases": 3,
+      "correct_no_result": 2,
+      "no_result_accuracy": 0.6666666666666666,
+      "all_filter_and_catalogue_checks": true
+    },
+    "title_derived": {
+      "cases": 20,
+      "known_item_cases": 20,
+      "known_hit_at_5": 1,
+      "known_mrr_at_5": 0.9416666666666667,
+      "discovery_answerable": 0,
+      "discovery_p_at_5": null,
+      "discovery_precision_returned_micro": null,
+      "discovery_hit_at_5": null,
+      "discovery_ndcg_at_5": null,
+      "no_result_cases": 0,
+      "correct_no_result": 0,
+      "no_result_accuracy": null,
+      "all_filter_and_catalogue_checks": true
+    }
+  },
+  "guard60_search": {
+    "all": {
+      "cases": 47,
+      "known_item_cases": 23,
+      "known_hit_at_5": 1,
+      "known_mrr_at_5": 0.9492753623188406,
+      "discovery_answerable": 18,
+      "discovery_p_at_5": 0.6555555555555556,
+      "discovery_precision_returned_micro": 0.855072463768116,
+      "discovery_hit_at_5": 0.8333333333333334,
+      "discovery_ndcg_at_5": 0.753778319018806,
+      "no_result_cases": 6,
+      "correct_no_result": 6,
+      "no_result_accuracy": 1,
+      "all_filter_and_catalogue_checks": true
+    },
+    "dev": {
+      "cases": 13,
+      "known_item_cases": 1,
+      "known_hit_at_5": 1,
+      "known_mrr_at_5": 1.0,
+      "discovery_answerable": 9,
+      "discovery_p_at_5": 0.7333333333333334,
+      "discovery_precision_returned_micro": 0.8918918918918919,
+      "discovery_hit_at_5": 0.8888888888888888,
+      "discovery_ndcg_at_5": 0.8392384966675716,
+      "no_result_cases": 3,
+      "correct_no_result": 3,
+      "no_result_accuracy": 1,
+      "all_filter_and_catalogue_checks": true
+    },
+    "holdout": {
+      "cases": 14,
+      "known_item_cases": 2,
+      "known_hit_at_5": 1,
+      "known_mrr_at_5": 1.0,
+      "discovery_answerable": 9,
+      "discovery_p_at_5": 0.5777777777777778,
+      "discovery_precision_returned_micro": 0.8125,
+      "discovery_hit_at_5": 0.7777777777777778,
+      "discovery_ndcg_at_5": 0.6683181413700405,
+      "no_result_cases": 3,
+      "correct_no_result": 3,
+      "no_result_accuracy": 1,
+      "all_filter_and_catalogue_checks": true
+    },
+    "title_derived": {
+      "cases": 20,
+      "known_item_cases": 20,
+      "known_hit_at_5": 1,
+      "known_mrr_at_5": 0.9416666666666667,
+      "discovery_answerable": 0,
+      "discovery_p_at_5": null,
+      "discovery_precision_returned_micro": null,
+      "discovery_hit_at_5": null,
+      "discovery_ndcg_at_5": null,
+      "no_result_cases": 0,
+      "correct_no_result": 0,
+      "no_result_accuracy": null,
+      "all_filter_and_catalogue_checks": true
+    }
+  },
+  "final_anchor_search": {
+    "all": {
+      "cases": 47,
+      "known_item_cases": 23,
+      "known_hit_at_5": 1,
+      "known_mrr_at_5": 0.9492753623188406,
+      "discovery_answerable": 18,
+      "discovery_p_at_5": 0.6777777777777778,
+      "discovery_precision_returned_micro": 0.8026315789473685,
+      "discovery_hit_at_5": 0.8333333333333334,
+      "discovery_ndcg_at_5": 0.8012189662497667,
+      "no_result_cases": 6,
+      "correct_no_result": 6,
+      "no_result_accuracy": 1,
+      "all_filter_and_catalogue_checks": true
+    },
+    "dev": {
+      "cases": 13,
+      "known_item_cases": 1,
+      "known_hit_at_5": 1,
+      "known_mrr_at_5": 1.0,
+      "discovery_answerable": 9,
+      "discovery_p_at_5": 0.8,
+      "discovery_precision_returned_micro": 0.9,
+      "discovery_hit_at_5": 1,
+      "discovery_ndcg_at_5": 0.9503496077786826,
+      "no_result_cases": 3,
+      "correct_no_result": 3,
+      "no_result_accuracy": 1,
+      "all_filter_and_catalogue_checks": true
+    },
+    "holdout": {
+      "cases": 14,
+      "known_item_cases": 2,
+      "known_hit_at_5": 1,
+      "known_mrr_at_5": 1.0,
+      "discovery_answerable": 9,
+      "discovery_p_at_5": 0.5555555555555556,
+      "discovery_precision_returned_micro": 0.6944444444444444,
+      "discovery_hit_at_5": 0.6666666666666666,
+      "discovery_ndcg_at_5": 0.6520883247208509,
+      "no_result_cases": 3,
+      "correct_no_result": 3,
+      "no_result_accuracy": 1,
+      "all_filter_and_catalogue_checks": true
+    },
+    "title_derived": {
+      "cases": 20,
+      "known_item_cases": 20,
+      "known_hit_at_5": 1,
+      "known_mrr_at_5": 0.9416666666666667,
+      "discovery_answerable": 0,
+      "discovery_p_at_5": null,
+      "discovery_precision_returned_micro": null,
+      "discovery_hit_at_5": null,
+      "discovery_ndcg_at_5": null,
+      "no_result_cases": 0,
+      "correct_no_result": 0,
+      "no_result_accuracy": null,
+      "all_filter_and_catalogue_checks": true
+    }
+  },
+  "s05": [
+    {
+      "case_id": "S05",
+      "split": "dev",
+      "query": "هدفون مانیتورینگ برای میکس موسیقی",
+      "filters": {},
+      "kind": "discovery",
+      "target_product_id": null,
+      "criteria": {
+        "categories": [
+          "تجهیزات استودیویی"
+        ],
+        "title_prefix_any": [
+          "هدفون",
+          "هدوفون"
+        ],
+        "title_has_all_groups": [
+          [
+            "مانیتورینگ",
+            "مانیتور"
+          ]
+        ],
+        "title_exclude_any": [],
+        "brand": null
+      },
+      "expected": null,
+      "reference_note": "",
+      "reference_count": 3,
+      "reference_sample_ids": [
+        148150,
+        148215,
+        3904739
+      ],
+      "metrics": {
+        "returned": 5,
+        "direct": 3,
+        "partial": 0,
+        "strict_precision_returned": 0.6,
+        "strict_precision_at_k": 0.6,
+        "relaxed_precision_returned": 0.6,
+        "direct_recall_at_k": 1.0,
+        "hit_at_k": 1,
+        "mrr_at_k": 1.0,
+        "ndcg_at_k": 1.0
+      },
+      "results": [
+        {
+          "product_id": 3904739,
+          "title": "هدفون مانیتورینگ سنهایزر مدل HD 200 Pro",
+          "category": "تجهیزات استودیویی",
+          "brand": "ای کی جی",
+          "price": 37200000.0,
+          "grade": 2
+        },
+        {
+          "product_id": 148150,
+          "title": "هدفون حرفه‌ای مانیتورینگ آدیو-تکنیکا مدل ATH-M40x",
+          "category": "تجهیزات استودیویی",
+          "brand": "آدیو-تکنیکا",
+          "price": 62500000.0,
+          "grade": 2
+        },
+        {
+          "product_id": 148215,
+          "title": "هدفون حرفه‌ای مانیتورینگ آدیو-تکنیکا مدل ATH-M30x",
+          "category": "تجهیزات استودیویی",
+          "brand": "آدیو-تکنیکا",
+          "price": 42000000.0,
+          "grade": 2
+        },
+        {
+          "product_id": 2499127,
+          "title": "آمپلی فایر هدفون گیتار جویو مدل JA-03",
+          "category": "لوازم جانبی آلات موسیقی",
+          "brand": "جویو",
+          "price": 5000000.0,
+          "grade": 0
+        },
+        {
+          "product_id": 4759046,
+          "title": "آلبوم موسیقی برامس برای آرامش اثر یوهانس برامس",
+          "category": "موسیقی بی‌کلام",
+          "brand": "متفرقه",
+          "price": 1000000.0,
+          "grade": 0
+        }
+      ],
+      "seconds": 0.1506839389999186,
+      "error": null,
+      "correct_empty": false,
+      "catalogue_and_filters_valid": true,
+      "usage": {
+        "api_calls": 0,
+        "api_attempts": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "usage_known": true
+      }
+    },
+    {
+      "case_id": "S05",
+      "split": "dev",
+      "query": "هدفون مانیتورینگ برای میکس موسیقی",
+      "filters": {},
+      "kind": "discovery",
+      "target_product_id": null,
+      "criteria": {
+        "categories": [
+          "تجهیزات استودیویی"
+        ],
+        "title_prefix_any": [
+          "هدفون",
+          "هدوفون"
+        ],
+        "title_has_all_groups": [
+          [
+            "مانیتورینگ",
+            "مانیتور"
+          ]
+        ],
+        "title_exclude_any": [],
+        "brand": null
+      },
+      "expected": null,
+      "reference_note": "",
+      "reference_count": 3,
+      "reference_sample_ids": [
+        148150,
+        148215,
+        3904739
+      ],
+      "metrics": {
+        "returned": 0,
+        "direct": 0,
+        "partial": 0,
+        "strict_precision_returned": null,
+        "strict_precision_at_k": 0.0,
+        "relaxed_precision_returned": null,
+        "direct_recall_at_k": 0.0,
+        "hit_at_k": 0,
+        "mrr_at_k": 0.0,
+        "ndcg_at_k": 0.0
+      },
+      "results": [],
+      "seconds": 0.12599121499988541,
+      "error": null,
+      "correct_empty": false,
+      "catalogue_and_filters_valid": true,
+      "usage": {
+        "api_calls": 0,
+        "api_attempts": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "usage_known": true
+      }
+    },
+    {
+      "case_id": "S05",
+      "split": "dev",
+      "query": "هدفون مانیتورینگ برای میکس موسیقی",
+      "filters": {},
+      "kind": "discovery",
+      "target_product_id": null,
+      "criteria": {
+        "categories": [
+          "تجهیزات استودیویی"
+        ],
+        "title_prefix_any": [
+          "هدفون",
+          "هدوفون"
+        ],
+        "title_has_all_groups": [
+          [
+            "مانیتورینگ",
+            "مانیتور"
+          ]
+        ],
+        "title_exclude_any": [],
+        "brand": null
+      },
+      "expected": null,
+      "reference_note": "",
+      "reference_count": 3,
+      "reference_sample_ids": [
+        148150,
+        148215,
+        3904739
+      ],
+      "metrics": {
+        "returned": 3,
+        "direct": 3,
+        "partial": 0,
+        "strict_precision_returned": 1.0,
+        "strict_precision_at_k": 0.6,
+        "relaxed_precision_returned": 1.0,
+        "direct_recall_at_k": 1.0,
+        "hit_at_k": 1,
+        "mrr_at_k": 1.0,
+        "ndcg_at_k": 1.0
+      },
+      "results": [
+        {
+          "product_id": 3904739,
+          "title": "هدفون مانیتورینگ سنهایزر مدل HD 200 Pro",
+          "category": "تجهیزات استودیویی",
+          "brand": "ای کی جی",
+          "price": 37200000.0,
+          "grade": 2
+        },
+        {
+          "product_id": 148150,
+          "title": "هدفون حرفه‌ای مانیتورینگ آدیو-تکنیکا مدل ATH-M40x",
+          "category": "تجهیزات استودیویی",
+          "brand": "آدیو-تکنیکا",
+          "price": 62500000.0,
+          "grade": 2
+        },
+        {
+          "product_id": 148215,
+          "title": "هدفون حرفه‌ای مانیتورینگ آدیو-تکنیکا مدل ATH-M30x",
+          "category": "تجهیزات استودیویی",
+          "brand": "آدیو-تکنیکا",
+          "price": 42000000.0,
+          "grade": 2
+        }
+      ],
+      "seconds": 0.15516945499985013,
+      "error": null,
+      "correct_empty": false,
+      "catalogue_and_filters_valid": true,
+      "usage": {
+        "api_calls": 0,
+        "api_attempts": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "usage_known": true
+      }
+    }
+  ],
+  "notes": "Only the search experiment is retained here. The fixed query set was unchanged; the wording of edge case E03 was clarified to use full explicit IDs (not part of the ranked search dataset). Holdout outcomes were inspected after baseline, so final comparison is diagnostic rather than a pristine prospective holdout."
+}

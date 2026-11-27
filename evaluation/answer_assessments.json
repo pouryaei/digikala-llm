@@ -1,0 +1,620 @@
+{
+  "method": "Frozen case-by-case semantic assessment by ChatGPT during report preparation, reading the question, all source reviews, independently authored reference notes, actual system answer, and exact displayed excerpts. No automated provider-API LLM-as-a-judge, no independent human evaluator. Same fingerprint required to reuse judgments.",
+  "scoring": {
+    "quality": {
+      "2": "direct, useful and adequately complete (or correct justified abstention)",
+      "1": "partially answers, misses an important facet or includes distracting material",
+      "0": "does not meet user need / materially wrong or unjustified abstention"
+    },
+    "grounding": {
+      "2": "material claims or abstention accurately reflect shown source/context",
+      "1": "literal provenance holds but at least one thematic, polarity or scope inference is weak/misleading",
+      "0": "material claim unsupported by supplied product or review evidence"
+    },
+    "excerpt": {
+      "2": "quote directly bears on requested question/facet",
+      "1": "indirect or incomplete context",
+      "0": "irrelevant to the specific question"
+    }
+  },
+  "cases": [
+    {
+      "case_id": "QA01",
+      "fingerprint": "7d57b320b86f7d074069f4b7ab26e8248a04c14ae06964a45f3a919524136fc3",
+      "quality_score": 2,
+      "grounding_score": 2,
+      "rationale_fa": "پاسخ اختلاف تجربه‌های سایز را با چهار نقل واقعی نشان می‌دهد؛ توصیه قطعی نمی‌کند.",
+      "evidence_grades": [
+        {
+          "comment_id": 53683105,
+          "grade": 2
+        },
+        {
+          "comment_id": 54038581,
+          "grade": 2
+        },
+        {
+          "comment_id": 40240393,
+          "grade": 2
+        },
+        {
+          "comment_id": 35237832,
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "case_id": "QA02",
+      "fingerprint": "564e468a45c02bcd5c4779819e378683d163bc5fc293b8fa16368e6a2d724fee",
+      "quality_score": 2,
+      "grounding_score": 2,
+      "rationale_fa": "دو گزارش خرابی چسب یا جنس، با محدودیت حجم نظرها. نظر دوم درباره سفارش‌های قبلی است و همین متن حفظ شده.",
+      "evidence_grades": [
+        {
+          "comment_id": 40240393,
+          "grade": 2
+        },
+        {
+          "comment_id": 54038581,
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "case_id": "QA03",
+      "fingerprint": "a8fba39a479ea2095cdff1d3e23347ce675ca51185a8f075194fdd9b2270f1ef",
+      "quality_score": 2,
+      "grounding_score": 2,
+      "rationale_fa": "هر سه نظر مربوط به نرم‌کنندگی بازیابی شده‌اند؛ ادعای اثربخشی قطعی ندارد.",
+      "evidence_grades": [
+        {
+          "comment_id": 54441985,
+          "grade": 2
+        },
+        {
+          "comment_id": 51816235,
+          "grade": 2
+        },
+        {
+          "comment_id": 48293272,
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "case_id": "QA04",
+      "fingerprint": "b4e8eee372c3958492130318f6e675603a77cfb058187f672221b4c15077cce7",
+      "quality_score": 2,
+      "grounding_score": 2,
+      "rationale_fa": "تنها گزارش کاربر درباره پارابن نقل شده و محدودیت تعمیم بیان شده است؛ تأیید پزشکی یا ترکیب محصول نیست.",
+      "evidence_grades": [
+        {
+          "comment_id": 53762979,
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "case_id": "QA05",
+      "fingerprint": "798d08e53ce753124e670a6b1dbb485178d098d1373320dd5ed1fa88445c179c",
+      "quality_score": 1,
+      "grounding_score": 2,
+      "rationale_fa": "کاغذ و ترجمه هر دو پوشش داده شده‌اند، اما گزارش کاغذ کاهی (38056728) حذف شده و تفاوت احتمالی نوع کاغذ روشن نیست.",
+      "evidence_grades": [
+        {
+          "comment_id": 44118520,
+          "grade": 2
+        },
+        {
+          "comment_id": 39784824,
+          "grade": 2
+        },
+        {
+          "comment_id": 50143371,
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "case_id": "QA06",
+      "fingerprint": "ee2f0da5c77b88562a3bb3ddf3e4066fcbb06c3a257aaef2023984f51f6ee635",
+      "quality_score": 2,
+      "grounding_score": 2,
+      "rationale_fa": "امتناع درست: هیچ نظر مربوط به باتری کتاب نیست.",
+      "evidence_grades": []
+    },
+    {
+      "case_id": "QA07",
+      "fingerprint": "486c1ee39feb95134ae661a564b29bbfe845739833b2a8acd30533d8d910dd72",
+      "quality_score": 1,
+      "grounding_score": 1,
+      "rationale_fa": "شواهد بیس مثبت/منفی وجود دارد اما نقل 31654510 تنها کیفیت کلی صدا را می‌گوید و تفکیک حذف شده. شمارش مثبت صدا، عبارت «بیس خیلی خوبی نداره» را هم در بر می‌گیرد؛ جهت احساس نیازمند بازبینی است.",
+      "evidence_grades": [
+        {
+          "comment_id": 51925868,
+          "grade": 1
+        },
+        {
+          "comment_id": 31654510,
+          "grade": 1
+        },
+        {
+          "comment_id": 26541734,
+          "grade": 2
+        },
+        {
+          "comment_id": 27525867,
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "case_id": "QA08",
+      "fingerprint": "89d9198b6aa6a90827bcec18baba747ca79d1e5b93e7b4aa21c6c17aefe67512",
+      "quality_score": 1,
+      "grounding_score": 2,
+      "rationale_fa": "نقل «راحتی روی گوش» مربوط است اما مدت طولانی را نمی‌گوید؛ بخش صریح طولانی‌مدت و نظر 18204368 جا افتاده‌اند.",
+      "evidence_grades": [
+        {
+          "comment_id": 26541734,
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "case_id": "QA09",
+      "fingerprint": "bdae36172304ee2d9a135a35a63f4858a3681c680f07bc0a874a1c94f685bc3c",
+      "quality_score": 2,
+      "grounding_score": 2,
+      "rationale_fa": "دو دیدگاه صریح مخالف و موافق میکس و مسترینگ ارائه شده‌اند؛ اختلاف تجربه حفظ شده است.",
+      "evidence_grades": [
+        {
+          "comment_id": 44819092,
+          "grade": 2
+        },
+        {
+          "comment_id": 31654510,
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "case_id": "QA10",
+      "fingerprint": "ccc9a94bafe385d50c8878844ebb9d27a59f694187187f680d3804b0d652b4cb",
+      "quality_score": 2,
+      "grounding_score": 2,
+      "rationale_fa": "پاسخ هم روان بودن و هم قطع نوشتار/جوهر را با نقل‌های روشن پوشش می‌دهد.",
+      "evidence_grades": [
+        {
+          "comment_id": 38281200,
+          "grade": 2
+        },
+        {
+          "comment_id": 30728632,
+          "grade": 2
+        },
+        {
+          "comment_id": 25845204,
+          "grade": 2
+        },
+        {
+          "comment_id": 8917704,
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "case_id": "QA11",
+      "fingerprint": "4dfc336b8b0ac5155df5445fa133383ff309254a04bc14404f28ae8dc5f884ee",
+      "quality_score": 2,
+      "grounding_score": 2,
+      "rationale_fa": "محاسبه ۴ از ۷ و 57.1٪ درست است؛ تجربه‌های منفی درباره ارزش نیز نقل و از توصیه قطعی اجتناب شده.",
+      "evidence_grades": [
+        {
+          "comment_id": 42512173,
+          "grade": 1
+        },
+        {
+          "comment_id": 30728632,
+          "grade": 2
+        },
+        {
+          "comment_id": 25845204,
+          "grade": 1
+        },
+        {
+          "comment_id": 24270248,
+          "grade": 2
+        },
+        {
+          "comment_id": 3876719,
+          "grade": 1
+        },
+        {
+          "comment_id": 8917704,
+          "grade": 1
+        },
+        {
+          "comment_id": 38281200,
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "case_id": "QA12",
+      "fingerprint": "f9ea1606db07432c0ee1017af13cb25ffdac7557c3106bb67fcee07eeb891cbc",
+      "quality_score": 2,
+      "grounding_score": 2,
+      "rationale_fa": "جاداری و گزارش کلاس اول/سوم و چهارم از کاربران مشخص است؛ یک گزارش دیگر سن مدرسه بازیابی نشده ولی پاسخ کاربردی است.",
+      "evidence_grades": [
+        {
+          "comment_id": 51519350,
+          "grade": 2
+        },
+        {
+          "comment_id": 53878022,
+          "grade": 2
+        },
+        {
+          "comment_id": 53694641,
+          "grade": 2
+        },
+        {
+          "comment_id": 53465855,
+          "grade": 2
+        },
+        {
+          "comment_id": 52370549,
+          "grade": 2
+        },
+        {
+          "comment_id": 53957909,
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "case_id": "QA13",
+      "fingerprint": "0f50256094004a8244b1b7a8d50db153880fdd8f4a2426c558158e24ec7cc51a",
+      "quality_score": 1,
+      "grounding_score": 1,
+      "rationale_fa": "دو شاهد مستقیم پارگی وجود دارد ولی جنس/ظرفیت عمومی زیاد وارد پاسخ شده. شمارش مثبت «کیفیت و جنس» اثبات خوب بودن بند نیست.",
+      "evidence_grades": [
+        {
+          "comment_id": 53878022,
+          "grade": 1
+        },
+        {
+          "comment_id": 52086245,
+          "grade": 2
+        },
+        {
+          "comment_id": 53496896,
+          "grade": 2
+        },
+        {
+          "comment_id": 51519350,
+          "grade": 0
+        },
+        {
+          "comment_id": 53694641,
+          "grade": 1
+        },
+        {
+          "comment_id": 53957909,
+          "grade": 1
+        },
+        {
+          "comment_id": 52370549,
+          "grade": 0
+        },
+        {
+          "comment_id": 53680674,
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "case_id": "QA14",
+      "fingerprint": "f93cbe23fb52cebb38fb88170a35932ae0e5a17406a5beab27e1d952c026b521",
+      "quality_score": 2,
+      "grounding_score": 2,
+      "rationale_fa": "تفاوت درب معمولی و نی‌دار دقیقاً از یک نظر نقل و محدودیت تعمیم ذکر شده.",
+      "evidence_grades": [
+        {
+          "comment_id": 53985305,
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "case_id": "QA15",
+      "fingerprint": "f0cbfd121d07e0748369631bc33ca76f7101bcf36b6af9f071b4fc8a4514f6ea",
+      "quality_score": 2,
+      "grounding_score": 2,
+      "rationale_fa": "گنجایش گزارش‌شده توسط کاربر (دو لیوان و نیم) و جا نشدن کنار کیف با متن اصلی آمده‌اند.",
+      "evidence_grades": [
+        {
+          "comment_id": 53883200,
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "case_id": "QA16",
+      "fingerprint": "e190e3ff29c7fb37575119648088568e45451595e9674c4fa1c1065f91192a39",
+      "quality_score": 1,
+      "grounding_score": 1,
+      "rationale_fa": "کیفیت ساخت و تفاوت تجربه‌ها پوشش داده شده، اما جمله خرابی کفش قدیمی و دوام مدل کنونی در شمارش منفی قرار گرفته. «جنسش» بدون زمینه کافی استناد ضعیف دارد.",
+      "evidence_grades": [
+        {
+          "comment_id": 49600590,
+          "grade": 2
+        },
+        {
+          "comment_id": 52108480,
+          "grade": 2
+        },
+        {
+          "comment_id": 49499846,
+          "grade": 2
+        },
+        {
+          "comment_id": 49518522,
+          "grade": 2
+        },
+        {
+          "comment_id": 50675580,
+          "grade": 1
+        },
+        {
+          "comment_id": 53855610,
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "case_id": "QA17",
+      "fingerprint": "eaba5c8e5b4f19894e84bf0ff0c9eaba934ccaf51ad2a1698ae73316e45fcf26",
+      "quality_score": 2,
+      "grounding_score": 2,
+      "rationale_fa": "چهار نظر با اشاره صریح به راحتی بازیابی شده‌اند.",
+      "evidence_grades": [
+        {
+          "comment_id": 50675580,
+          "grade": 2
+        },
+        {
+          "comment_id": 49552492,
+          "grade": 2
+        },
+        {
+          "comment_id": 49524191,
+          "grade": 2
+        },
+        {
+          "comment_id": 49600590,
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "case_id": "QA18",
+      "fingerprint": "bb8fcd13d08a959727c56cb8990aaf3fc7f82bbfb96d214eec90fd8d4fc88146",
+      "quality_score": 2,
+      "grounding_score": 2,
+      "rationale_fa": "هر دو شاهد صریح درباره بوی خوش و احتیاط حجم کم.",
+      "evidence_grades": [
+        {
+          "comment_id": 16027669,
+          "grade": 2
+        },
+        {
+          "comment_id": 23772184,
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "case_id": "QA19",
+      "fingerprint": "de9494c3b61b42cebb5ec04474e41a4d024412fe8536a12f7c533d1d349abd7f",
+      "quality_score": 2,
+      "grounding_score": 2,
+      "rationale_fa": "هر چهار اشاره مستقیم موهای خشک/نرمی بازیابی شده؛ غلط تایپی یک منبع عیناً حفظ شده.",
+      "evidence_grades": [
+        {
+          "comment_id": 16027669,
+          "grade": 2
+        },
+        {
+          "comment_id": 23772184,
+          "grade": 2
+        },
+        {
+          "comment_id": 40198248,
+          "grade": 2
+        },
+        {
+          "comment_id": 33036511,
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "case_id": "QA20",
+      "fingerprint": "f0b2f145f09479b806776149d4ff1a8ce3bb5aa02b8faa73b4780e47143ce480",
+      "quality_score": 1,
+      "grounding_score": 1,
+      "rationale_fa": "نقل خط افتادن ساعت ربط مستقیم به چسب/فیت ندارد. «صفحه» به اشتباه در موضوع محتوا و چاپ طبقه‌بندی شده؛ متن مرتبط چسب ضعیف در همان نظر انتخاب نشده.",
+      "evidence_grades": [
+        {
+          "comment_id": 39427559,
+          "grade": 0
+        },
+        {
+          "comment_id": 32617631,
+          "grade": 2
+        },
+        {
+          "comment_id": 43356050,
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "case_id": "QA21",
+      "fingerprint": "f0b2f145f09479b806776149d4ff1a8ce3bb5aa02b8faa73b4780e47143ce480",
+      "quality_score": 1,
+      "grounding_score": 1,
+      "rationale_fa": "فقط نظر 43356050 مستقیماً لمس را پوشش می‌دهد؛ دو نقل دیگر نامرتبط و عنوان محتوا و چاپ نامناسب است.",
+      "evidence_grades": [
+        {
+          "comment_id": 39427559,
+          "grade": 0
+        },
+        {
+          "comment_id": 32617631,
+          "grade": 0
+        },
+        {
+          "comment_id": 43356050,
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "case_id": "QA22",
+      "fingerprint": "83b76b6445b7dea4694eec58d8f3b7f6e06219c4a2007c3f3135b8ea42550b99",
+      "quality_score": 1,
+      "grounding_score": 1,
+      "rationale_fa": "نقل‌ها درباره ایراد واقعی‌اند و «بد نبود» حذف شده، اما طبقه‌بندی لبه محافظ به محتوا و چاپ نادرست و بخشی از ایرادها بازیابی نشده‌اند.",
+      "evidence_grades": [
+        {
+          "comment_id": 38489384,
+          "grade": 2
+        },
+        {
+          "comment_id": 32617631,
+          "grade": 2
+        },
+        {
+          "comment_id": 42780993,
+          "grade": 2
+        },
+        {
+          "comment_id": 39427559,
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "case_id": "QA23",
+      "fingerprint": "794889ad50d8f92e3a8283eadc2a9dbf1a31702d8acb8a5e7c5df36d1a1bd531",
+      "quality_score": 1,
+      "grounding_score": 1,
+      "rationale_fa": "دو گزارش مشخص درباره ضعف دستبند، اما «خوب محکم» جزء موردنظر را مشخص نمی‌کند؛ جمع‌بندی تفاوت تجربیات درباره دستبند باید محتاط‌تر باشد.",
+      "evidence_grades": [
+        {
+          "comment_id": 45710147,
+          "grade": 1
+        },
+        {
+          "comment_id": 24555559,
+          "grade": 2
+        },
+        {
+          "comment_id": 44381013,
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "case_id": "QA24",
+      "fingerprint": "ee2f0da5c77b88562a3bb3ddf3e4066fcbb06c3a257aaef2023984f51f6ee635",
+      "quality_score": 2,
+      "grounding_score": 2,
+      "rationale_fa": "امتناع درست: هیچ شاهد درباره مدت باتری بیسیم نیست.",
+      "evidence_grades": []
+    },
+    {
+      "case_id": "QA25",
+      "fingerprint": "6cc27790e62ccef7ac6671a98c9617ae6f9cf48e059cba6f287484b61aa558a6",
+      "quality_score": 0,
+      "grounding_score": 2,
+      "rationale_fa": "با وجود دو گزارش واقعی ۲۲/۲۳ گرم در برابر ۵۰، تنها عنوان «مغایرت مشخصات» آمده؛ نیاز عددی کاربر برآورده نشده. ادعای نبود شاهد در شواهد انتخاب‌شده درست اما ناشی از بازیابی ضعیف است.",
+      "evidence_grades": [
+        {
+          "comment_id": 53625458,
+          "grade": 1
+        }
+      ]
+    },
+    {
+      "case_id": "QA26",
+      "fingerprint": "ee2f0da5c77b88562a3bb3ddf3e4066fcbb06c3a257aaef2023984f51f6ee635",
+      "quality_score": 2,
+      "grounding_score": 2,
+      "rationale_fa": "امتناع درست برای طعم یا عطر بدون شاهد صریح.",
+      "evidence_grades": []
+    },
+    {
+      "case_id": "QA27",
+      "fingerprint": "c490691085bfca3cbef7e9ae410045ef03e5f15975caba44550e0954c30bc43e",
+      "quality_score": 2,
+      "grounding_score": 2,
+      "rationale_fa": "تنها اشاره صریح چربی با نقل واقعی و عدم تعمیم.",
+      "evidence_grades": [
+        {
+          "comment_id": 51489668,
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "case_id": "QA28",
+      "fingerprint": "88df939612efebfc5fc1502e67cf26223d81ea49768999f86cbe5bfc272b2a5b",
+      "quality_score": 2,
+      "grounding_score": 2,
+      "rationale_fa": "پنجه پهن، سفتی/راحتی و تفاوت سایز از متن واقعی پوشش داده شده‌اند.",
+      "evidence_grades": [
+        {
+          "comment_id": 18372759,
+          "grade": 1
+        },
+        {
+          "comment_id": 18648280,
+          "grade": 2
+        },
+        {
+          "comment_id": 18747504,
+          "grade": 2
+        },
+        {
+          "comment_id": 18484823,
+          "grade": 2
+        }
+      ]
+    },
+    {
+      "case_id": "QA29",
+      "fingerprint": "ace372b57ce06fd01ca5686e4142933864cfd2b8150507071232e7331bdcbd40",
+      "quality_score": 1,
+      "grounding_score": 2,
+      "rationale_fa": "سه شاهد مرتبط درباره قیمت، چسب و راحتی؛ چند ایراد دیگر (عدم تطابق دو لنگه) جا افتاده. شمارش با قید قاعده‌محور ارائه شده.",
+      "evidence_grades": [
+        {
+          "comment_id": 18747504,
+          "grade": 2
+        },
+        {
+          "comment_id": 23143590,
+          "grade": 2
+        },
+        {
+          "comment_id": 18648280,
+          "grade": 2
+        }
+      ]
+    }
+  ]
+}

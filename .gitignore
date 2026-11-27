@@ -29,3 +29,34 @@ btq/
 .env.*
 !.env.example
 
+
+# Local copies and generated artifacts
+/day1/
+/day3/
+/day4/
+/day5/
+/day6/
+/day7/
+/day8/
+/finall/
+/storage/
+/data/analytics_100000/
+/notebook/m2_outputs/
+/notebook/phase4_llm/
+/notebook/data_and_catalog.ipynb
+/notebook/to_txt.ipynb
+/audit_files.py
+/check_finall_imports.py
+/codebase_inspection_report.json
+/complete_finall_rename.py
+/fix_finall_structure.py
+/inspect_codebase.py
+/organize_project.py
+/package_manifest.json
+/QBC13_Day1_Interface_Contract.patch
+/QBC13_Digikala_AI_Project_Master_Specification_v2.2.txt
+
+/Forouhar_Submission_Addon.zip
+/Forouhar_Submission_Addon/
+
+/fix_forouhar_submission.py

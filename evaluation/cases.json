@@ -1,0 +1,1499 @@
+{
+  "version": "1.0",
+  "dataset_scope": "Forouhar 100000 products / 1874457 reviews",
+  "design": {
+    "qa": "Complete review-level relevance judgments for every review of 14 selected real products. Question and qrels authored before any evaluation-run ranking; grades 2/1/0. Assistant-assisted reference annotation, not independent human labels.",
+    "split": "Product-disjoint QA dev/holdout; search dev and holdout have different intents/examples; fixed before improvement.",
+    "search": "Independent catalogue conditions (title/category/brand/recorded price), not ranking scores. They are a conservative relevance proxy.",
+    "grade_2": "explicitly answers at least one requested facet or reports a directly relevant experience",
+    "grade_1": "indirectly relevant context (related facet, generic sentiment or label where appropriate)",
+    "grade_0": "unrelated or no evidence on the requested facet",
+    "caveat": "Small purposefully diverse suite, not a random estimate for the full store. No live LLM-as-judge."
+  },
+  "search": [
+    {
+      "case_id": "S01",
+      "split": "dev",
+      "query": "کفش پیاده‌روی مردانه",
+      "filters": {},
+      "kind": "discovery",
+      "target_product_id": null,
+      "criteria": {
+        "categories": [
+          "کفش مردانه"
+        ],
+        "title_prefix_any": [
+          "کفش"
+        ],
+        "title_has_all_groups": [
+          [
+            "پیاده روی",
+            "پیاده‌روی"
+          ]
+        ],
+        "title_exclude_any": [],
+        "brand": null
+      },
+      "expected": null,
+      "reference_note": "کفش مردانه مخصوص پیاده‌روی، نه سایر دسته‌ها."
+    },
+    {
+      "case_id": "S02",
+      "split": "dev",
+      "query": "یه کرم مرطوب کننده دست از برند شون میخوام",
+      "filters": {},
+      "kind": "discovery",
+      "target_product_id": null,
+      "criteria": {
+        "categories": [
+          "مراقبت پوست"
+        ],
+        "title_prefix_any": [
+          "کرم"
+        ],
+        "title_has_all_groups": [
+          [
+            "مرطوب کننده",
+            "مرطوب‌کننده"
+          ],
+          [
+            "دست"
+          ]
+        ],
+        "title_exclude_any": [],
+        "brand": "شون"
+      },
+      "expected": null,
+      "reference_note": ""
+    },
+    {
+      "case_id": "S03",
+      "split": "dev",
+      "query": "کتاب اثر مرکب دارن هاردی",
+      "filters": {},
+      "kind": "discovery",
+      "target_product_id": null,
+      "criteria": {
+        "categories": [],
+        "title_prefix_any": [
+          "کتاب"
+        ],
+        "title_has_all_groups": [
+          [
+            "اثر مرکب"
+          ],
+          [
+            "دارن هاردی"
+          ]
+        ],
+        "title_exclude_any": [],
+        "brand": null
+      },
+      "expected": null,
+      "reference_note": ""
+    },
+    {
+      "case_id": "S04",
+      "split": "dev",
+      "query": "خودکار پلیکان",
+      "filters": {},
+      "kind": "discovery",
+      "target_product_id": null,
+      "criteria": {
+        "categories": [
+          "نوشت افزار"
+        ],
+        "title_prefix_any": [
+          "خودکار"
+        ],
+        "title_has_all_groups": [],
+        "title_exclude_any": [
+          "یدک"
+        ],
+        "brand": "پلیکان"
+      },
+      "expected": null,
+      "reference_note": ""
+    },
+    {
+      "case_id": "S05",
+      "split": "dev",
+      "query": "هدفون مانیتورینگ برای میکس موسیقی",
+      "filters": {},
+      "kind": "discovery",
+      "target_product_id": null,
+      "criteria": {
+        "categories": [
+          "تجهیزات استودیویی"
+        ],
+        "title_prefix_any": [
+          "هدفون",
+          "هدوفون"
+        ],
+        "title_has_all_groups": [
+          [
+            "مانیتورینگ",
+            "مانیتور"
+          ]
+        ],
+        "title_exclude_any": [],
+        "brand": null
+      },
+      "expected": null,
+      "reference_note": ""
+    },
+    {
+      "case_id": "S06",
+      "split": "dev",
+      "query": "شامپو برای موهای خشک",
+      "filters": {},
+      "kind": "discovery",
+      "target_product_id": null,
+      "criteria": {
+        "categories": [
+          "شامپو و مراقبت مو"
+        ],
+        "title_prefix_any": [
+          "شامپو"
+        ],
+        "title_has_all_groups": [
+          [
+            "خشک",
+            "dry hair",
+            "dry"
+          ]
+        ],
+        "title_exclude_any": [],
+        "brand": null
+      },
+      "expected": null,
+      "reference_note": ""
+    },
+    {
+      "case_id": "S07",
+      "split": "dev",
+      "query": "فلاسک کودک نیم لیتری 0.5 لیتر",
+      "filters": {},
+      "kind": "discovery",
+      "target_product_id": null,
+      "criteria": {
+        "categories": [
+          "قمقمه و فلاسک کودک و نوزاد"
+        ],
+        "title_prefix_any": [],
+        "title_has_all_groups": [
+          [
+            "فلاسک"
+          ],
+          [
+            "0.5",
+            "500",
+            "نیم لیتر"
+          ]
+        ],
+        "title_exclude_any": [
+          "درب",
+          "شیشه فلاسک"
+        ],
+        "brand": null
+      },
+      "expected": null,
+      "reference_note": ""
+    },
+    {
+      "case_id": "S08",
+      "split": "dev",
+      "query": "کفش پیاده‌روی پاما",
+      "filters": {
+        "category": "کفش مردانه",
+        "brand": "پاما",
+        "max_price": 20000000
+      },
+      "kind": "discovery",
+      "target_product_id": null,
+      "criteria": {
+        "categories": [
+          "کفش مردانه"
+        ],
+        "title_prefix_any": [
+          "کفش"
+        ],
+        "title_has_all_groups": [
+          [
+            "پیاده روی",
+            "پیاده‌روی"
+          ]
+        ],
+        "title_exclude_any": [],
+        "brand": "پاما"
+      },
+      "expected": null,
+      "reference_note": "حداکثر قیمت فیلد ثبت‌شده است، نه تومان."
+    },
+    {
+      "case_id": "S09",
+      "split": "dev",
+      "query": "خودکار",
+      "filters": {
+        "category": "نوشت افزار",
+        "max_price": 200000
+      },
+      "kind": "discovery",
+      "target_product_id": null,
+      "criteria": {
+        "categories": [
+          "نوشت افزار"
+        ],
+        "title_prefix_any": [
+          "خودکار"
+        ],
+        "title_has_all_groups": [],
+        "title_exclude_any": [],
+        "brand": null
+      },
+      "expected": null,
+      "reference_note": "فیلتر صریح قیمت در واحد ثبت‌شده."
+    },
+    {
+      "case_id": "S10",
+      "split": "dev",
+      "query": "بلیط هواپیما از تهران به پاریس",
+      "filters": {},
+      "kind": "discovery",
+      "target_product_id": null,
+      "criteria": {
+        "categories": [],
+        "title_prefix_any": [
+          "بلیط هواپیما",
+          "بلیت هواپیما"
+        ],
+        "title_has_all_groups": [],
+        "title_exclude_any": [],
+        "brand": null
+      },
+      "expected": "empty",
+      "reference_note": "خرید بلیت واقعی، نه کتاب یا اسباب‌بازی با نام هواپیما."
+    },
+    {
+      "case_id": "S11",
+      "split": "dev",
+      "query": "خودروی واقعی تسلا مدل ایکس میخوام",
+      "filters": {},
+      "kind": "discovery",
+      "target_product_id": null,
+      "criteria": {
+        "categories": [],
+        "title_prefix_any": [
+          "خودروی تسلا",
+          "خودرو تسلا",
+          "تسلا مدل"
+        ],
+        "title_has_all_groups": [],
+        "title_exclude_any": [
+          "اسباب بازی",
+          "ماکت",
+          "کنترلی"
+        ],
+        "brand": null
+      },
+      "expected": "empty",
+      "reference_note": ""
+    },
+    {
+      "case_id": "S12",
+      "split": "dev",
+      "query": "کرم مرطوب کننده",
+      "filters": {
+        "brand": "brand-not-in-catalog-5821"
+      },
+      "kind": "discovery",
+      "target_product_id": null,
+      "criteria": {
+        "categories": [],
+        "title_prefix_any": [
+          "کرم"
+        ],
+        "title_has_all_groups": [
+          [
+            "مرطوب کننده",
+            "مرطوب‌کننده"
+          ]
+        ],
+        "title_exclude_any": [],
+        "brand": null
+      },
+      "expected": "empty",
+      "reference_note": ""
+    },
+    {
+      "case_id": "S13",
+      "split": "holdout",
+      "query": "برای پیاده روی روزانه کفش زنانه میخوام",
+      "filters": {},
+      "kind": "discovery",
+      "target_product_id": null,
+      "criteria": {
+        "categories": [
+          "کفش زنانه"
+        ],
+        "title_prefix_any": [
+          "کفش"
+        ],
+        "title_has_all_groups": [
+          [
+            "پیاده روی",
+            "پیاده‌روی",
+            "روزمره"
+          ]
+        ],
+        "title_exclude_any": [],
+        "brand": null
+      },
+      "expected": null,
+      "reference_note": ""
+    },
+    {
+      "case_id": "S14",
+      "split": "holdout",
+      "query": "گلس محافظ صفحه گلکسی فیت 2 سامسونگ",
+      "filters": {},
+      "kind": "discovery",
+      "target_product_id": null,
+      "criteria": {
+        "categories": [
+          "لوازم جانبی ساعت و مچ بند هوشمند"
+        ],
+        "title_prefix_any": [],
+        "title_has_all_groups": [
+          [
+            "محافظ صفحه",
+            "گلس"
+          ],
+          [
+            "fit 2",
+            "fit2",
+            "فیت 2",
+            "فیت2"
+          ]
+        ],
+        "title_exclude_any": [],
+        "brand": null
+      },
+      "expected": null,
+      "reference_note": ""
+    },
+    {
+      "case_id": "S15",
+      "split": "holdout",
+      "query": "چای سفید",
+      "filters": {},
+      "kind": "discovery",
+      "target_product_id": null,
+      "criteria": {
+        "categories": [
+          "مواد غذایی"
+        ],
+        "title_prefix_any": [
+          "چای سفید"
+        ],
+        "title_has_all_groups": [],
+        "title_exclude_any": [],
+        "brand": null
+      },
+      "expected": null,
+      "reference_note": ""
+    },
+    {
+      "case_id": "S16",
+      "split": "holdout",
+      "query": "کرم ضد آفتاب آردن",
+      "filters": {},
+      "kind": "discovery",
+      "target_product_id": null,
+      "criteria": {
+        "categories": [
+          "مراقبت پوست"
+        ],
+        "title_prefix_any": [
+          "کرم",
+          "لوسیون",
+          "فلوئید",
+          "ژل"
+        ],
+        "title_has_all_groups": [
+          [
+            "ضد آفتاب",
+            "ضدآفتاب",
+            "ضد افتاب",
+            "ضدافتاب"
+          ]
+        ],
+        "title_exclude_any": [],
+        "brand": "آردن"
+      },
+      "expected": null,
+      "reference_note": ""
+    },
+    {
+      "case_id": "S17",
+      "split": "holdout",
+      "query": "پایه شارژر دسته پلی استیشن 5",
+      "filters": {},
+      "kind": "discovery",
+      "target_product_id": null,
+      "criteria": {
+        "categories": [
+          "لوازم جانبی کنسول بازی"
+        ],
+        "title_prefix_any": [],
+        "title_has_all_groups": [
+          [
+            "پایه شارژر",
+            "استند شارژ",
+            "شارژر دسته"
+          ],
+          [
+            "پلی استیشن 5",
+            "ps5",
+            "ps 5",
+            "ps-5"
+          ]
+        ],
+        "title_exclude_any": [],
+        "brand": null
+      },
+      "expected": null,
+      "reference_note": ""
+    },
+    {
+      "case_id": "S18",
+      "split": "holdout",
+      "query": "پازل 54 تکه",
+      "filters": {},
+      "kind": "discovery",
+      "target_product_id": null,
+      "criteria": {
+        "categories": [
+          "اسباب بازی"
+        ],
+        "title_prefix_any": [
+          "پازل"
+        ],
+        "title_has_all_groups": [
+          [
+            "54",
+            "۵۴"
+          ]
+        ],
+        "title_exclude_any": [],
+        "brand": null
+      },
+      "expected": null,
+      "reference_note": ""
+    },
+    {
+      "case_id": "S19",
+      "split": "holdout",
+      "query": "کوله پشتی بچه برای مهد کودک",
+      "filters": {},
+      "kind": "discovery",
+      "target_product_id": null,
+      "criteria": {
+        "categories": [],
+        "title_prefix_any": [
+          "کوله پشتی",
+          "کوله"
+        ],
+        "title_has_all_groups": [
+          [
+            "بچگانه",
+            "کودک",
+            "مهد",
+            "دخترانه",
+            "پسرانه"
+          ]
+        ],
+        "title_exclude_any": [],
+        "brand": null
+      },
+      "expected": null,
+      "reference_note": ""
+    },
+    {
+      "case_id": "S20",
+      "split": "holdout",
+      "query": "شامپو مو",
+      "filters": {
+        "category": "شامپو و مراقبت مو",
+        "max_price": 500000
+      },
+      "kind": "discovery",
+      "target_product_id": null,
+      "criteria": {
+        "categories": [
+          "شامپو و مراقبت مو"
+        ],
+        "title_prefix_any": [
+          "شامپو"
+        ],
+        "title_has_all_groups": [],
+        "title_exclude_any": [],
+        "brand": null
+      },
+      "expected": null,
+      "reference_note": ""
+    },
+    {
+      "case_id": "S21",
+      "split": "holdout",
+      "query": "پازل",
+      "filters": {
+        "category": "اسباب بازی",
+        "max_price": 50000
+      },
+      "kind": "discovery",
+      "target_product_id": null,
+      "criteria": {
+        "categories": [
+          "اسباب بازی"
+        ],
+        "title_prefix_any": [
+          "پازل"
+        ],
+        "title_has_all_groups": [],
+        "title_exclude_any": [],
+        "brand": null
+      },
+      "expected": null,
+      "reference_note": "در صورت نبود کالای منطبق باید نتیجه خالی باشد."
+    },
+    {
+      "case_id": "S22",
+      "split": "holdout",
+      "query": "میخوام یک بلیت قطار تهران مشهد رزرو کنم",
+      "filters": {},
+      "kind": "discovery",
+      "target_product_id": null,
+      "criteria": {
+        "categories": [],
+        "title_prefix_any": [
+          "بلیت قطار",
+          "بلیط قطار"
+        ],
+        "title_has_all_groups": [],
+        "title_exclude_any": [],
+        "brand": null
+      },
+      "expected": "empty",
+      "reference_note": ""
+    },
+    {
+      "case_id": "S23",
+      "split": "holdout",
+      "query": "qzvxnonexistent 847293q",
+      "filters": {},
+      "kind": "discovery",
+      "target_product_id": null,
+      "criteria": {
+        "categories": [],
+        "title_prefix_any": [
+          "qzvxnonexistent"
+        ],
+        "title_has_all_groups": [],
+        "title_exclude_any": [],
+        "brand": null
+      },
+      "expected": "empty",
+      "reference_note": ""
+    },
+    {
+      "case_id": "S24",
+      "split": "holdout",
+      "query": "هدفون بی سیم بلوتوثی",
+      "filters": {},
+      "kind": "discovery",
+      "target_product_id": null,
+      "criteria": {
+        "categories": [],
+        "title_prefix_any": [
+          "هدفون",
+          "هندزفری",
+          "هدست"
+        ],
+        "title_has_all_groups": [
+          [
+            "بی سیم",
+            "بی‌سیم",
+            "بلوتوث",
+            "bluetooth",
+            "wireless"
+          ]
+        ],
+        "title_exclude_any": [],
+        "brand": null
+      },
+      "expected": null,
+      "reference_note": "هدفون واقعی نه طرح چاپی یا لوازم جانبی؛ اگر در زیرمجموعه نیست، نتیجه مناسب خالی است."
+    },
+    {
+      "case_id": "S25",
+      "split": "holdout",
+      "query": "کوله پشتی رنس X2-10616",
+      "filters": {},
+      "kind": "known_item",
+      "target_product_id": 7885341,
+      "criteria": {
+        "categories": [],
+        "title_prefix_any": [],
+        "title_has_all_groups": [],
+        "title_exclude_any": [],
+        "brand": null
+      },
+      "expected": null,
+      "reference_note": "شناسه مرجع از کاتالوگ، پرسش کوتاه شده."
+    },
+    {
+      "case_id": "S26",
+      "split": "dev",
+      "query": "کفش پاما ساموئل G1423",
+      "filters": {},
+      "kind": "known_item",
+      "target_product_id": 4176458,
+      "criteria": {
+        "categories": [],
+        "title_prefix_any": [],
+        "title_has_all_groups": [],
+        "title_exclude_any": [],
+        "brand": null
+      },
+      "expected": null,
+      "reference_note": "محصول شناخته‌شده؛ شکل کوتاه عنوان."
+    },
+    {
+      "case_id": "S27",
+      "split": "holdout",
+      "query": "1461200",
+      "filters": {},
+      "kind": "known_item",
+      "target_product_id": 1461200,
+      "criteria": {
+        "categories": [],
+        "title_prefix_any": [],
+        "title_has_all_groups": [],
+        "title_exclude_any": [],
+        "brand": null
+      },
+      "expected": null,
+      "reference_note": "جست‌وجوی مستقیم شناسه."
+    }
+  ],
+  "qa": [
+    {
+      "case_id": "QA01",
+      "split": "dev",
+      "product_id": 8217413,
+      "product_title": "کفش پیاده روی مدل K-22",
+      "question": "سایزبندی این کفش چطور است؟ سایز معمول خودم را بگیرم؟",
+      "expected": "answered",
+      "reference_review_count": 6,
+      "source_review_ids_sha256": "7353fbe11c4aced43b0fc206f6959f100bf0715482083cbb30b895b57380ff72",
+      "qrels": {
+        "35237832": 2,
+        "37781209": 0,
+        "40240393": 2,
+        "40696666": 0,
+        "53683105": 2,
+        "54038581": 2
+      },
+      "reference_note": "تجربه‌ها یکسان نیست: یک خریدار سایز بزرگ‌تر، دو نفر سایز مناسب و یک نفر پیشنهاد سایز ۴۳ برای پای ۴۲ داده‌اند؛ توصیه قطعی ممکن نیست.",
+      "requested_facets": [
+        "سایزبندی"
+      ]
+    },
+    {
+      "case_id": "QA02",
+      "split": "dev",
+      "product_id": 8217413,
+      "product_title": "کفش پیاده روی مدل K-22",
+      "question": "آیا چسب و بدنه کفش بعد از مدتی خراب یا پاره می‌شود؟",
+      "expected": "answered",
+      "reference_review_count": 6,
+      "source_review_ids_sha256": "7353fbe11c4aced43b0fc206f6959f100bf0715482083cbb30b895b57380ff72",
+      "qrels": {
+        "35237832": 0,
+        "37781209": 0,
+        "40240393": 2,
+        "40696666": 0,
+        "53683105": 0,
+        "54038581": 2
+      },
+      "reference_note": "نظر ۳ بعد از چند ماه خرابی چسب و پلاستیک پشت کفش را می‌گوید؛ نظر ۶ مشکل چسب پاره در سفارش‌های قبلی و سالم رسیدن سفارش فعلی را گزارش می‌کند.",
+      "requested_facets": [
+        "دوام",
+        "چسب"
+      ]
+    },
+    {
+      "case_id": "QA03",
+      "split": "dev",
+      "product_id": 7185667,
+      "product_title": "کرم مرطوب کننده دست و صورت شون مدل بادام حجم 75 میلی لیتر مجموعه 2 عددی",
+      "question": "نظر خریداران درباره نرم شدن دست خشک با این کرم چیست؟",
+      "expected": "answered",
+      "reference_review_count": 9,
+      "source_review_ids_sha256": "cd549078b99dde1997a70f19e1e91afdf7bc93be9438b5decf601752b1d50aa7",
+      "qrels": {
+        "41363906": 0,
+        "45137946": 0,
+        "48293272": 2,
+        "49107413": 0,
+        "50062409": 0,
+        "51375099": 0,
+        "51816235": 2,
+        "53762979": 0,
+        "54441985": 2
+      },
+      "reference_note": "نظرهای ۷ و ۹ تجربه نرم شدن دست و نظر ۳ اشاره به نرم‌کنندگی دارند.",
+      "requested_facets": [
+        "نرم‌کنندگی دست"
+      ]
+    },
+    {
+      "case_id": "QA04",
+      "split": "dev",
+      "product_id": 7185667,
+      "product_title": "کرم مرطوب کننده دست و صورت شون مدل بادام حجم 75 میلی لیتر مجموعه 2 عددی",
+      "question": "کسی درباره پارابن یا استفاده برای صورت در نظرها چیزی گفته؟",
+      "expected": "answered",
+      "reference_review_count": 9,
+      "source_review_ids_sha256": "cd549078b99dde1997a70f19e1e91afdf7bc93be9438b5decf601752b1d50aa7",
+      "qrels": {
+        "41363906": 0,
+        "45137946": 0,
+        "48293272": 0,
+        "49107413": 0,
+        "50062409": 0,
+        "51375099": 0,
+        "51816235": 0,
+        "53762979": 2,
+        "54441985": 0
+      },
+      "reference_note": "تنها یک خریدار به پارابن و استفاده نکردن روی صورت اشاره کرده؛ ادعای پزشکی یا ترکیب قطعی محصول نیست.",
+      "requested_facets": [
+        "پارابن",
+        "صورت"
+      ]
+    },
+    {
+      "case_id": "QA05",
+      "split": "dev",
+      "product_id": 1508262,
+      "product_title": "کتاب اثر مرکب اثر دارن هاردی نشر بوکتاب",
+      "question": "کیفیت کاغذ و ترجمه این کتاب چگونه بوده؟",
+      "expected": "answered",
+      "reference_review_count": 10,
+      "source_review_ids_sha256": "227b47244dd20b456af82ec82e83048c549ab34ba982ae58a96ba865cd7aa9d6",
+      "qrels": {
+        "6011976": 0,
+        "6051406": 0,
+        "38056728": 2,
+        "39784824": 2,
+        "43148400": 0,
+        "43518046": 0,
+        "44118520": 2,
+        "44540446": 0,
+        "49340368": 0,
+        "50143371": 2
+      },
+      "reference_note": "کاغذ کاهی و کاغذ شبیه A5 سفید گزارش شده؛ دو نظر ترجمه روان یا عالی را ذکر کرده‌اند. نظر ۷ هر دو موضوع را پوشش می‌دهد.",
+      "requested_facets": [
+        "کاغذ",
+        "ترجمه"
+      ]
+    },
+    {
+      "case_id": "QA06",
+      "split": "dev",
+      "product_id": 1508262,
+      "product_title": "کتاب اثر مرکب اثر دارن هاردی نشر بوکتاب",
+      "question": "باتری این کتاب چند ساعت شارژ نگه می‌دارد؟",
+      "expected": "insufficient_evidence",
+      "reference_review_count": 10,
+      "source_review_ids_sha256": "227b47244dd20b456af82ec82e83048c549ab34ba982ae58a96ba865cd7aa9d6",
+      "qrels": {
+        "6011976": 0,
+        "6051406": 0,
+        "38056728": 0,
+        "39784824": 0,
+        "43148400": 0,
+        "43518046": 0,
+        "44118520": 0,
+        "44540446": 0,
+        "49340368": 0,
+        "50143371": 0
+      },
+      "reference_note": "هیچ شاهدی درباره باتری کتاب وجود ندارد. پاسخ باید عدم کفایت شواهد باشد.",
+      "requested_facets": [
+        "باتری"
+      ]
+    },
+    {
+      "case_id": "QA07",
+      "split": "dev",
+      "product_id": 3904739,
+      "product_title": "هدفون مانیتورینگ سنهایزر مدل HD 200 Pro",
+      "question": "بیس و تفکیک صدای این هدفون چطور است؟",
+      "expected": "answered",
+      "reference_review_count": 13,
+      "source_review_ids_sha256": "60e272a27ef4d3f9deb970a2317dbac6fa3ecb934f894739bf10125d1a30d0d3",
+      "qrels": {
+        "18204368": 0,
+        "19990940": 0,
+        "26541734": 2,
+        "27308285": 0,
+        "27525867": 2,
+        "30680317": 0,
+        "31654510": 2,
+        "37397195": 0,
+        "43524738": 0,
+        "44819092": 0,
+        "46454313": 0,
+        "51925868": 1,
+        "54370497": 0
+      },
+      "reference_note": "دو تجربه متفاوت درباره بیس؛ یک شکایت از بیس کدر و تفکیک پایین؛ نظر ۱۲ فقط حجم صدا و کارت صدا را توضیح می‌دهد.",
+      "requested_facets": [
+        "بیس",
+        "تفکیک صدا"
+      ]
+    },
+    {
+      "case_id": "QA08",
+      "split": "dev",
+      "product_id": 3904739,
+      "product_title": "هدفون مانیتورینگ سنهایزر مدل HD 200 Pro",
+      "question": "برای استفاده طولانی روی گوش راحت است؟",
+      "expected": "answered",
+      "reference_review_count": 13,
+      "source_review_ids_sha256": "60e272a27ef4d3f9deb970a2317dbac6fa3ecb934f894739bf10125d1a30d0d3",
+      "qrels": {
+        "18204368": 2,
+        "19990940": 0,
+        "26541734": 2,
+        "27308285": 0,
+        "27525867": 0,
+        "30680317": 0,
+        "31654510": 1,
+        "37397195": 0,
+        "43524738": 0,
+        "44819092": 0,
+        "46454313": 0,
+        "51925868": 0,
+        "54370497": 0
+      },
+      "reference_note": "دو نظر صریحاً از راحتی روی گوش و فشار کم می‌گویند؛ نظر ۷ کاربرد روزانه را پیشنهاد می‌کند اما درباره فشار گوش چیزی نمی‌گوید.",
+      "requested_facets": [
+        "راحتی گوش"
+      ]
+    },
+    {
+      "case_id": "QA09",
+      "split": "dev",
+      "product_id": 3904739,
+      "product_title": "هدفون مانیتورینگ سنهایزر مدل HD 200 Pro",
+      "question": "آیا خریداران آن را برای میکس و مسترینگ مناسب دانسته‌اند؟",
+      "expected": "answered",
+      "reference_review_count": 13,
+      "source_review_ids_sha256": "60e272a27ef4d3f9deb970a2317dbac6fa3ecb934f894739bf10125d1a30d0d3",
+      "qrels": {
+        "18204368": 0,
+        "19990940": 0,
+        "26541734": 0,
+        "27308285": 0,
+        "27525867": 0,
+        "30680317": 0,
+        "31654510": 2,
+        "37397195": 0,
+        "43524738": 0,
+        "44819092": 2,
+        "46454313": 0,
+        "51925868": 1,
+        "54370497": 0
+      },
+      "reference_note": "نظر ۷ شدیداً مخالف و نظر ۱۰ موافق است؛ جمع‌بندی باید اختلاف تجربه را حفظ کند.",
+      "requested_facets": [
+        "میکس و مسترینگ"
+      ]
+    },
+    {
+      "case_id": "QA10",
+      "split": "dev",
+      "product_id": 1461200,
+      "product_title": "خودکار پلیکان مدل Stickpro کد 3434",
+      "question": "خودکار روان می‌نویسد یا جوهرش قطع می‌شود؟",
+      "expected": "answered",
+      "reference_review_count": 7,
+      "source_review_ids_sha256": "0f5f77f6d3802690863c41d4dd4c964f6008d04135a2d6ff476339f6116d3dab",
+      "qrels": {
+        "3876719": 1,
+        "8917704": 2,
+        "24270248": 2,
+        "25845204": 2,
+        "30728632": 2,
+        "38281200": 2,
+        "42512173": 0
+      },
+      "reference_note": "نظرهای ۲ و ۶ روانی نوشتار؛ ۳ و ۴ و ۵ مشکل جوهر؛ ۱ ضخامت نوک را توضیح می‌دهد.",
+      "requested_facets": [
+        "روانی نوشتار",
+        "جوهر"
+      ]
+    },
+    {
+      "case_id": "QA11",
+      "split": "dev",
+      "product_id": 1461200,
+      "product_title": "خودکار پلیکان مدل Stickpro کد 3434",
+      "question": "با توجه به نظرهای ثبت‌شده آیا ارزش خرید دارد؟ چند درصد پیشنهاد کرده‌اند؟",
+      "expected": "answered",
+      "reference_review_count": 7,
+      "source_review_ids_sha256": "0f5f77f6d3802690863c41d4dd4c964f6008d04135a2d6ff476339f6116d3dab",
+      "qrels": {
+        "3876719": 1,
+        "8917704": 1,
+        "24270248": 2,
+        "25845204": 1,
+        "30728632": 2,
+        "38281200": 1,
+        "42512173": 1
+      },
+      "reference_note": "۲ نظر صریحاً ارزش خرید پایین را مطرح کرده‌اند؛ ۴ از ۷ نظر دارای برچسب معتبر پیشنهاد کرده‌اند. تجربه‌ها باید جدا از عدد تفسیر شوند.",
+      "requested_facets": [
+        "ارزش خرید",
+        "نرخ پیشنهاد"
+      ]
+    },
+    {
+      "case_id": "QA12",
+      "split": "dev",
+      "product_id": 10720956,
+      "product_title": "کوله پشتی بچگانه مدل PRX-L-150001",
+      "question": "این کوله جادار است و برای کدام کلاس مدرسه مناسب است؟",
+      "expected": "answered",
+      "reference_review_count": 13,
+      "source_review_ids_sha256": "623a873adb09d3a0810a05e1795c9163b04b228211e9832d8f010501707e2696",
+      "qrels": {
+        "49972620": 0,
+        "51519350": 2,
+        "51607889": 2,
+        "52086245": 0,
+        "52278455": 0,
+        "52370549": 2,
+        "53465855": 2,
+        "53496896": 0,
+        "53680674": 0,
+        "53694641": 2,
+        "53848296": 0,
+        "53878022": 2,
+        "53957909": 2
+      },
+      "reference_note": "نظرهای ۲،۳،۱۰ و ۱۲ گروه سنی/کلاس متفاوت ذکر می‌کنند؛ سایر نظرهای مستقیم درباره جاداری‌اند.",
+      "requested_facets": [
+        "جاداری",
+        "کلاس مدرسه"
+      ]
+    },
+    {
+      "case_id": "QA13",
+      "split": "dev",
+      "product_id": 10720956,
+      "product_title": "کوله پشتی بچگانه مدل PRX-L-150001",
+      "question": "آیا بند یا دسته کوله پشتی در استفاده پاره شده است؟",
+      "expected": "answered",
+      "reference_review_count": 13,
+      "source_review_ids_sha256": "623a873adb09d3a0810a05e1795c9163b04b228211e9832d8f010501707e2696",
+      "qrels": {
+        "49972620": 0,
+        "51519350": 1,
+        "51607889": 1,
+        "52086245": 2,
+        "52278455": 0,
+        "52370549": 0,
+        "53465855": 0,
+        "53496896": 2,
+        "53680674": 1,
+        "53694641": 1,
+        "53848296": 0,
+        "53878022": 1,
+        "53957909": 1
+      },
+      "reference_note": "دو گزارش صریح پاره شدن دسته یا بند؛ توضیحات دیگر درباره جنس، دوخت یا زیپ فقط زمینه مرتبط هستند.",
+      "requested_facets": [
+        "پارگی بند یا دسته"
+      ]
+    },
+    {
+      "case_id": "QA14",
+      "split": "dev",
+      "product_id": 9976298,
+      "product_title": "فلاسک کودکطرح حیوانات گنجایش 0.5 لیتر",
+      "question": "آیا درب فلاسک نشتی دارد و چکه می‌کند؟",
+      "expected": "answered",
+      "reference_review_count": 8,
+      "source_review_ids_sha256": "44c8d5c193edd47fb9fe0aacfa4ef6d4649aa7f8e5c957265b55282c375e70a5",
+      "qrels": {
+        "52820415": 0,
+        "53045058": 0,
+        "53066791": 0,
+        "53406343": 0,
+        "53485027": 0,
+        "53883200": 0,
+        "53985305": 2,
+        "54151558": 0
+      },
+      "reference_note": "تنها نظر ۷ می‌گوید درب معمولی چکه می‌کند ولی درب نی‌دار مشکل ندارد. نباید همه درب‌ها را نشتی‌دار معرفی کرد.",
+      "requested_facets": [
+        "نشتی",
+        "نوع درب"
+      ]
+    },
+    {
+      "case_id": "QA15",
+      "split": "dev",
+      "product_id": 9976298,
+      "product_title": "فلاسک کودکطرح حیوانات گنجایش 0.5 لیتر",
+      "question": "گنجایش واقعی فلاسک چقدر است و در کیف جا می‌شود؟",
+      "expected": "answered",
+      "reference_review_count": 8,
+      "source_review_ids_sha256": "44c8d5c193edd47fb9fe0aacfa4ef6d4649aa7f8e5c957265b55282c375e70a5",
+      "qrels": {
+        "52820415": 0,
+        "53045058": 0,
+        "53066791": 0,
+        "53406343": 0,
+        "53485027": 0,
+        "53883200": 2,
+        "53985305": 0,
+        "54151558": 0
+      },
+      "reference_note": "فقط نظر ۶ دو لیوان و نیم و جا نشدن در کنار کیف دخترش را گزارش می‌کند؛ اندازه رسمی از نظر کاربر اثبات نمی‌شود.",
+      "requested_facets": [
+        "گنجایش",
+        "جا شدن در کیف"
+      ]
+    },
+    {
+      "case_id": "QA16",
+      "split": "holdout",
+      "product_id": 11405303,
+      "product_title": "کفش پیاده روی زنانه مدل آل استار ساقدار کد BNR",
+      "question": "نظر خریداران درباره کیفیت ساخت و دوام این کفش چیست؟",
+      "expected": "answered",
+      "reference_review_count": 12,
+      "source_review_ids_sha256": "6a43dcba25049bd48ba9dc2b99621c1a2f8c3c291967c21facb743d8462e0787",
+      "qrels": {
+        "49499846": 2,
+        "49518522": 2,
+        "49524191": 2,
+        "49552492": 0,
+        "49600590": 2,
+        "50258053": 2,
+        "50448976": 0,
+        "50675580": 2,
+        "52108480": 2,
+        "53753487": 0,
+        "53829510": 0,
+        "53855610": 1
+      },
+      "reference_note": "کیفیت مثبت چند نظر، چسبی بودن، بلند شدن رویه و دوام چندماهه در داده آمده‌اند؛ اختلاف نظر حفظ شود.",
+      "requested_facets": [
+        "کیفیت ساخت",
+        "دوام"
+      ]
+    },
+    {
+      "case_id": "QA17",
+      "split": "holdout",
+      "product_id": 11405303,
+      "product_title": "کفش پیاده روی زنانه مدل آل استار ساقدار کد BNR",
+      "question": "آیا کفش برای پا راحت است؟",
+      "expected": "answered",
+      "reference_review_count": 12,
+      "source_review_ids_sha256": "6a43dcba25049bd48ba9dc2b99621c1a2f8c3c291967c21facb743d8462e0787",
+      "qrels": {
+        "49499846": 0,
+        "49518522": 0,
+        "49524191": 2,
+        "49552492": 2,
+        "49600590": 2,
+        "50258053": 1,
+        "50448976": 0,
+        "50675580": 2,
+        "52108480": 0,
+        "53753487": 0,
+        "53829510": 0,
+        "53855610": 0
+      },
+      "reference_note": "چهار نظر صریح درباره راحتی؛ بند کوتاه در یک نظر زمینه فرعی است.",
+      "requested_facets": [
+        "راحتی"
+      ]
+    },
+    {
+      "case_id": "QA18",
+      "split": "holdout",
+      "product_id": 4224987,
+      "product_title": "شامپو مو لابورن مدل Soft And Smooth حجم 300 میلی لیتر",
+      "question": "رایحه و بوی شامپو چگونه توصیف شده؟",
+      "expected": "answered",
+      "reference_review_count": 9,
+      "source_review_ids_sha256": "0f218acfb50142ff93966d8c695f981a333aef02711657478fcbb5cb405017bf",
+      "qrels": {
+        "16027669": 2,
+        "23772184": 2,
+        "31369895": 0,
+        "33036511": 0,
+        "33923018": 0,
+        "39095208": 0,
+        "40198248": 0,
+        "46560573": 0,
+        "52977973": 0
+      },
+      "reference_note": "فقط دو نظر به بوی خوش اشاره مستقیم کرده‌اند.",
+      "requested_facets": [
+        "بو"
+      ]
+    },
+    {
+      "case_id": "QA19",
+      "split": "holdout",
+      "product_id": 4224987,
+      "product_title": "شامپو مو لابورن مدل Soft And Smooth حجم 300 میلی لیتر",
+      "question": "برای موهای خشک و نرم شدن مو مناسب بوده است؟",
+      "expected": "answered",
+      "reference_review_count": 9,
+      "source_review_ids_sha256": "0f218acfb50142ff93966d8c695f981a333aef02711657478fcbb5cb405017bf",
+      "qrels": {
+        "16027669": 2,
+        "23772184": 2,
+        "31369895": 0,
+        "33036511": 2,
+        "33923018": 0,
+        "39095208": 0,
+        "40198248": 2,
+        "46560573": 0,
+        "52977973": 0
+      },
+      "reference_note": "دو نظر مناسب برای موهای خشک، یک نظر نرم شدن و یک نظر درباره خشک نکردن (با تایپ ناقص) دارد.",
+      "requested_facets": [
+        "موهای خشک",
+        "نرمی"
+      ]
+    },
+    {
+      "case_id": "QA20",
+      "split": "holdout",
+      "product_id": 4899358,
+      "product_title": "محافظ صفحه نمایش بادیگارد مدل PMMA مناسب برای ساعت هوشمند سامسونگ Galaxy Fit 2",
+      "question": "لبه‌های محافظ روی صفحه فیت می‌شود و چسب آن خوب است؟",
+      "expected": "answered",
+      "reference_review_count": 12,
+      "source_review_ids_sha256": "fc85185ec99e16657daf765fbbd56296a540d4293380142467b922760db949da",
+      "qrels": {
+        "32617631": 2,
+        "35793980": 0,
+        "37168766": 2,
+        "38379788": 0,
+        "38489384": 0,
+        "38763245": 0,
+        "39427559": 2,
+        "42780993": 0,
+        "42986660": 2,
+        "43051747": 2,
+        "43356050": 2,
+        "44897203": 0
+      },
+      "reference_note": "نظرهای مثبت و گزارش فاصله لبه، حباب یا چسب ضعیف؛ کیفیت کلی را با فیت بودن یکی نگیریم.",
+      "requested_facets": [
+        "فیت و لبه",
+        "چسب"
+      ]
+    },
+    {
+      "case_id": "QA21",
+      "split": "holdout",
+      "product_id": 4899358,
+      "product_title": "محافظ صفحه نمایش بادیگارد مدل PMMA مناسب برای ساعت هوشمند سامسونگ Galaxy Fit 2",
+      "question": "این محافظ لمس صفحه را مختل می‌کند؟",
+      "expected": "answered",
+      "reference_review_count": 12,
+      "source_review_ids_sha256": "fc85185ec99e16657daf765fbbd56296a540d4293380142467b922760db949da",
+      "qrels": {
+        "32617631": 0,
+        "35793980": 0,
+        "37168766": 0,
+        "38379788": 0,
+        "38489384": 0,
+        "38763245": 0,
+        "39427559": 0,
+        "42780993": 0,
+        "42986660": 0,
+        "43051747": 0,
+        "43356050": 2,
+        "44897203": 0
+      },
+      "reference_note": "فقط نظر ۱۱ صراحتاً مختل نکردن لمس را می‌گوید.",
+      "requested_facets": [
+        "لمس صفحه"
+      ]
+    },
+    {
+      "case_id": "QA22",
+      "split": "holdout",
+      "product_id": 4899358,
+      "product_title": "محافظ صفحه نمایش بادیگارد مدل PMMA مناسب برای ساعت هوشمند سامسونگ Galaxy Fit 2",
+      "question": "ایرادهای پرتکرار این محافظ چیست؟",
+      "expected": "answered",
+      "reference_review_count": 12,
+      "source_review_ids_sha256": "fc85185ec99e16657daf765fbbd56296a540d4293380142467b922760db949da",
+      "qrels": {
+        "32617631": 2,
+        "35793980": 0,
+        "37168766": 2,
+        "38379788": 0,
+        "38489384": 2,
+        "38763245": 0,
+        "39427559": 2,
+        "42780993": 2,
+        "42986660": 0,
+        "43051747": 2,
+        "43356050": 2,
+        "44897203": 0
+      },
+      "reference_note": "لبه و کنده شدن، حباب، ارسال اشتباه، چسب ضعیف و خط افتادن. «بد نبود» در نظر ۲ شکایت صریح نیست.",
+      "requested_facets": [
+        "ایرادهای واقعی"
+      ]
+    },
+    {
+      "case_id": "QA23",
+      "split": "holdout",
+      "product_id": 6076908,
+      "product_title": "بیسیم و دستبند اسباب بازی کد PLC 200 مجموعه دو عددی",
+      "question": "آیا دستبند اسباب بازی زود می‌شکند و محکم است؟",
+      "expected": "answered",
+      "reference_review_count": 8,
+      "source_review_ids_sha256": "1f3075de296184e9af01dd4b2a0b7097ae55cc7fad3a60c9a7ebd69b3abe6e67",
+      "qrels": {
+        "24423497": 2,
+        "24555559": 2,
+        "41690232": 0,
+        "44381013": 2,
+        "45710147": 2,
+        "47260848": 0,
+        "48302292": 0,
+        "48998505": 1
+      },
+      "reference_note": "سه نظر درباره شکست یا محکم نبودن دستبند؛ یک نظر کلی «خوب محکم» بدون مشخص کردن جزء. نظر ۸ فقط نارضایتی کلی.",
+      "requested_facets": [
+        "شکستن",
+        "استحکام"
+      ]
+    },
+    {
+      "case_id": "QA24",
+      "split": "holdout",
+      "product_id": 6076908,
+      "product_title": "بیسیم و دستبند اسباب بازی کد PLC 200 مجموعه دو عددی",
+      "question": "باتری بیسیم چند ساعت کار می‌کند؟",
+      "expected": "insufficient_evidence",
+      "reference_review_count": 8,
+      "source_review_ids_sha256": "1f3075de296184e9af01dd4b2a0b7097ae55cc7fad3a60c9a7ebd69b3abe6e67",
+      "qrels": {
+        "24423497": 0,
+        "24555559": 0,
+        "41690232": 0,
+        "44381013": 0,
+        "45710147": 0,
+        "47260848": 0,
+        "48302292": 0,
+        "48998505": 0
+      },
+      "reference_note": "هیچ نظر درباره مدت باتری وجود ندارد؛ پاسخ عددی مجاز نیست.",
+      "requested_facets": [
+        "باتری"
+      ]
+    },
+    {
+      "case_id": "QA25",
+      "split": "holdout",
+      "product_id": 10695185,
+      "product_title": "چای سفید نات لاین - 50 گرم",
+      "question": "آیا وزن چای سفید با وزن درج‌شده روی مشخصات مطابقت دارد؟",
+      "expected": "answered",
+      "reference_review_count": 7,
+      "source_review_ids_sha256": "baffc118452515ec16984fe62c344b495271d546caffa326a9931bcddb47b99d",
+      "qrels": {
+        "48436528": 0,
+        "48504488": 0,
+        "48507211": 0,
+        "49732011": 2,
+        "49871718": 0,
+        "52031920": 0,
+        "53625458": 2
+      },
+      "reference_note": "دو نظر وزن ۲۲ و ۲۳ گرم در برابر ۵۰ گرم درج‌شده؛ فقط گزارش کاربران است.",
+      "requested_facets": [
+        "وزن",
+        "مغایرت"
+      ]
+    },
+    {
+      "case_id": "QA26",
+      "split": "holdout",
+      "product_id": 10695185,
+      "product_title": "چای سفید نات لاین - 50 گرم",
+      "question": "طعم و عطر چای را خریداران چگونه توصیف کرده‌اند؟",
+      "expected": "insufficient_evidence",
+      "reference_review_count": 7,
+      "source_review_ids_sha256": "baffc118452515ec16984fe62c344b495271d546caffa326a9931bcddb47b99d",
+      "qrels": {
+        "48436528": 0,
+        "48504488": 0,
+        "48507211": 0,
+        "49732011": 0,
+        "49871718": 0,
+        "52031920": 0,
+        "53625458": 0
+      },
+      "reference_note": "هیچ اشاره صریح به طعم یا رایحه نیست. کیفیت یا خاصیت کلی پاسخ مستقیم نیست.",
+      "requested_facets": [
+        "طعم",
+        "عطر"
+      ]
+    },
+    {
+      "case_id": "QA27",
+      "split": "holdout",
+      "product_id": 9403601,
+      "product_title": "لوسیون ضدآفتاب آردن مدل 001 وزن 75 گرم مجموعه 2 عددی",
+      "question": "آیا کسی درباره چرب بودن این ضدآفتاب نظر داده است؟",
+      "expected": "answered",
+      "reference_review_count": 10,
+      "source_review_ids_sha256": "b00204813a358d8919dbaae5058ef80c57f08a660561e6e9e147d61df10e854a",
+      "qrels": {
+        "49555364": 0,
+        "49659359": 0,
+        "50579381": 0,
+        "51267662": 0,
+        "51489668": 2,
+        "51833038": 0,
+        "52489880": 0,
+        "52525173": 0,
+        "54216079": 0,
+        "54290369": 0
+      },
+      "reference_note": "فقط نظر ۵ چربی را ذکر می‌کند؛ تجربه عمومی رضایت جایگزین پاسخ نیست.",
+      "requested_facets": [
+        "چربی"
+      ]
+    },
+    {
+      "case_id": "QA28",
+      "split": "holdout",
+      "product_id": 4176458,
+      "product_title": "کفش پیاده روی مردانه پاما مدل ساموئل کد G1423",
+      "question": "برای پای پهن و پیاده روی از نظر راحتی و اندازه چطور است؟",
+      "expected": "answered",
+      "reference_review_count": 6,
+      "source_review_ids_sha256": "c4c3bc8adabb4a79b07e14a33e2caeb05e0c9651fbb6d796a90aae84f14e1a0f",
+      "qrels": {
+        "18372759": 1,
+        "18484009": 0,
+        "18484823": 2,
+        "18648280": 2,
+        "18747504": 2,
+        "23143590": 0
+      },
+      "reference_note": "دو شکایت از راحتی و پنجه، و یک گزارش نامساوی بودن دو لنگه؛ نظر ۱ سبک بودن را گفته.",
+      "requested_facets": [
+        "راحتی",
+        "پنجه پهن",
+        "اندازه"
+      ]
+    },
+    {
+      "case_id": "QA29",
+      "split": "holdout",
+      "product_id": 4176458,
+      "product_title": "کفش پیاده روی مردانه پاما مدل ساموئل کد G1423",
+      "question": "ایرادها و شکایت‌های واقعی خریداران این کفش چیست؟",
+      "expected": "answered",
+      "reference_review_count": 6,
+      "source_review_ids_sha256": "c4c3bc8adabb4a79b07e14a33e2caeb05e0c9651fbb6d796a90aae84f14e1a0f",
+      "qrels": {
+        "18372759": 0,
+        "18484009": 2,
+        "18484823": 2,
+        "18648280": 2,
+        "18747504": 2,
+        "23143590": 2
+      },
+      "reference_note": "مشکل کیفیت ساخت، اختلاف سایز، فشار پا، چسب‌کاری و ارزش خرید؛ نظر مثبت ۱ شاهد شکایت نیست.",
+      "requested_facets": [
+        "ایرادهای واقعی"
+      ]
+    }
+  ],
+  "edge_qa": [
+    {
+      "case_id": "E01",
+      "query": "کیفیت این محصول چگونه است؟",
+      "product_id": 999999999,
+      "expected": "insufficient_evidence",
+      "note": "شناسه خارج از بسته"
+    },
+    {
+      "case_id": "E02",
+      "query": "ایرادهای پرتکرار چیست؟",
+      "product_id": null,
+      "expected": "needs_product",
+      "note": "پرسش بدون نام یا شناسه"
+    },
+    {
+      "case_id": "E03",
+      "query": "کیفیت محصول با شناسه محصول 1696173 و شناسه محصول 2896502 چطور است؟",
+      "product_id": null,
+      "expected": "needs_product",
+      "note": "دو شناسه؛ انتخاب یا مقایسه لازم است"
+    },
+    {
+      "case_id": "E04",
+      "query": "کیفیت کفش پیاده روی مردانه مدل adi-super رنگ طوسی چگونه است؟",
+      "product_id": null,
+      "expected": "answered",
+      "expected_product_id": 1696173,
+      "note": "حل نام دقیق عنوان واقعی"
+    }
+  ],
+  "stress_qa": [
+    {
+      "case_id": "V01",
+      "product_id": 1696173,
+      "question": "ایرادهای پرتکرار این محصول چیست؟",
+      "note": "۲۰۰ نظر واقعی؛ تحلیل حجم بیشتر"
+    },
+    {
+      "case_id": "V02",
+      "product_id": 2896502,
+      "question": "خریداران درباره کیفیت ساخت و اندازه چه گفته‌اند؟",
+      "note": "۱۵۷ نظر واقعی؛ دو جنبه"
+    },
+    {
+      "case_id": "V03",
+      "product_id": 1696173,
+      "question": "آیا خریدش را پیشنهاد کرده‌اند؟",
+      "note": "نرخ پیشنهاد و مخرج معتبر"
+    }
+  ]
+}
